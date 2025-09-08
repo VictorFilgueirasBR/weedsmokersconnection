@@ -1,0 +1,134 @@
+/* src/pages/Profile.scss */
+
+// Cores e variáveis
+$background-dark: #1C1C1C;
+$text-color-light: #E0E0E0;
+
+// Importamos as variáveis do HeroSlides se já existirem em global,
+// mas como não há referência aqui, vamos replicar localmente.
+$glass-bg-color-subtle: rgba(0, 255, 221, 0.07); // Fundo MUITO sutil
+$glass-border-color-subtle: rgba(255, 255, 255, 0.08); // Borda quase invisível
+$glass-border-color-subtle-bg: rgba(182, 182, 182, 0.09); // Borda quase invisível
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  color: $text-color-light;
+}
+
+.profile-body-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Divisor entre seções */
+.divider-section {
+  padding-top: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  /* Estilo herdado de .hero-content-overlay (sem position) */
+  background: $glass-bg-color-subtle;
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  border: 1.5px outset $glass-border-color-subtle-bg;
+  padding: 1.2rem 1.8rem;
+  box-shadow: 0 2px 15px rgba(0, 39, 37, 0.15);
+  color: $text-color-light;
+  transition: all 0.5s ease;
+
+  @media (max-width: 1200px) {
+    padding: 0.9rem 1.3rem;
+    gap: 0.6rem;
+  }
+  @media (max-width: 1024px) {
+    padding: 0.7rem 1.1rem;
+    gap: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    padding: 0.6rem 0.9rem;
+    max-width: 87%;
+    gap: 0.4rem;
+  }
+  @media (max-width: 380px) {
+    padding: 0.6rem 0.9rem;
+    max-width: 87%;
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .divider-section {
+    padding-top: 10px;
+  }
+}
+
+.divider-line {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #8b8b8ba1;
+  height: 1px;
+}
+
+.divider-text {
+  font-family: 'Anton', sans-serif;
+  font-size: 1rem;
+  color: #8b8b8ba1;
+  white-space: nowrap;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* --- Novos estilos para ProfileFooter --- */
+.profile-footer {
+  width: 100%;
+  background-color: #ffffff;
+  color: #616161; 
+  padding: 1.5rem 1rem; /* Aumentei o padding para mais espaço vertical */
+  text-align: center;
+  margin-top: auto; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6; /* Aumentei o line-height para melhor legibilidade */
+  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.08); /* Sombra mais visível para separar o footer */
+  border-top: 1px solid rgba(220, 220, 220, 0.6); /* Borda superior sutil */
+
+  p {
+    margin: 0.4rem 0; /* Espaçamento entre as linhas de texto do footer */
+    color: #4a4a4a67; // Cor do texto ligeiramente mais escura para melhor contraste
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+// --- Novos estilos para o Popup ---
+.edit-profile-popup-container {
+    position: fixed;
+    top: 10rem;    // 5rem de margem do topo
+    right: 6rem;  // 1rem de margem da direita
+    z-index: 50;  // Garante que o popup fique acima dos outros elementos
+
+    @media (max-width: 430px) {
+    right: 4rem;
+  }
+}
+
+
+

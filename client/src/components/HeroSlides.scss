@@ -1,0 +1,375 @@
+/* client/src/components/HeroSlides.scss - Refinamento Profissional */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,400&display=swap');
+// Variáveis para manter a consistência
+$primary-color: #007bff;
+$text-color-light: #ffffffa1;
+$text-color-dark: #333; // Usado para elementos que precisam de alto contraste
+$glass-bg-color-subtle: rgba(15, 15, 15, 0.03); // Fundo MUITO mais sutil, quase transparente
+$glass-border-color-subtle: rgba(255, 255, 255, 0.08); // Borda quase invisível
+
+:root {
+  --framer-font-family-italic: 'Satoshi', sans-serif;
+}
+
+.hero-slides {
+  position: relative;
+  width: 100%;
+  height: 95vh; /* Ocupa a maior parte da tela, deixando espaço para o header */
+  overflow: hidden;
+    
+  // Overlay escuro sobre as imagens para melhor contraste do texto
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15); /* Overlay sutilmente escuro, menos que antes */
+    z-index: 1;
+  }
+
+  // Wrapper para as imagens de fundo que deslizam
+  .slides-background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+    z-index: 0;
+  }
+
+  .background-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  /* hero-title fora do overlay, posicionado independentemente */
+  .hero-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(3.8rem, 7vw, 5rem); /* << AJUSTADO: Font-size maior para destaque >> */
+    font-weight: 1000; /* Peso da fonte conforme a referência */
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 0.85;
+    margin: 0;
+    position: absolute;
+    bottom: 33%; /* << AJUSTADO: Mais para cima para melhor alinhamento >> */
+    left: 2%; /* << AJUSTADO: Levemente para dentro para não colar na borda >> */
+    z-index: 2;
+    color: $text-color-light;
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.205);
+    max-width: 60%; /* Para quebrar a linha se necessário */
+    letter-spacing: -0.1em; /* << diminui o espaço entre letras */
+
+    @media (max-width: 1200px) {
+      font-size: clamp(3.8rem, 7vw, 5rem);
+      bottom: 30%;
+      left: 2%;
+      max-width: 70%;
+    }
+    @media (max-width: 768px) {
+      font-size: clamp(3.8rem, 7vw, 5rem);
+      bottom: 30%;
+      left: 2%;
+      max-width: 90%;
+    }
+    @media (max-width: 480px) {
+      font-size: clamp(4rem, 8vw, 2.5rem);
+      bottom: 30%;
+      left: 2%;
+    }
+
+    @media (max-width: 390px) {
+      font-size: clamp(3rem, 8vw, 2.5rem);
+      bottom: 35%;
+      left: 2%;
+    }
+    @media (max-width: 390px) {
+      font-size: clamp(3rem, 8vw, 2.5rem);
+      bottom: 35%;
+      left: 2%;
+    }
+  }
+
+  /* Estilo para o botão CADASTRE-SE principal, posicionado abaixo do título */
+  .hero-main-cta-button {
+    position: absolute;
+    bottom: calc(35% - 4.5rem); /* << AJUSTADO: Posição relativa ao bottom do título e altura do título >> */
+    left: 2%; /* << AJUSTADO: Alinhado com a esquerda do título >> */
+    z-index: 3;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background: linear-gradient(
+      129.981deg,
+      rgba(160, 236, 250, 0.7) 0%,
+      rgba(30, 77, 94, 0.75) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: $text-color-light;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 1200px) {
+      bottom: calc(29% - 4rem); /* Ajuste de posição */
+      left: 2%;
+      padding: 12px 30px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      bottom: calc(30% - 3.5rem); /* Ajuste de posição para mobile */
+      left: 2%;
+      padding: 12px 30px;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 480px) {
+      bottom: calc(27% - 2.8rem); /* Ajuste de posição para mobile menor */
+      width: 80%;
+      padding: 1rem;
+      font-size: 01.1rem;
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: 390px) {
+      bottom: calc(27% - 1rem); /* Ajuste de posição para mobile menor */
+      width: 80%;
+      padding: 1rem;
+      font-size: 01.1rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // Conteúdo fixo sobre o slider de fundo, com estilo glassmorphism (apenas para o subtítulo)
+  .hero-content-overlay {
+    position: absolute;
+    bottom: 8%; /* << AJUSTADO: Posiciona mais abaixo para não colidir com o botão >> */
+    left: 2%; /* << AJUSTADO: Alinha à esquerda >> */
+    z-index: 2;
+    background: $glass-bg-color-subtle;
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    border: 1.5px solid $glass-border-color-subtle;
+    padding: 1.2rem 1.8rem;
+    max-width: 70%;
+    text-align: left;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    color: $text-color-light;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    transition: all 0.5s ease;
+
+    @media (max-width: 1200px) {
+      bottom: 5%;
+      left: 2%;
+      padding: 0.9rem 1.3rem;
+      max-width: 70%;
+      gap: 0.6rem;
+    }
+    @media (max-width: 1024px) {
+      bottom: 10%;
+      left: 2%;
+      padding: 0.7rem 1.1rem;
+      max-width: 70%;
+      gap: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      bottom: 8%; /* << AJUSTADO: Posicionamento bem baixo para mobile >> */
+      left: 2%;
+      transform: none;
+      padding: 0.6rem 0.9rem;
+      max-width: 87%;
+      gap: 0.4rem;
+    }
+    @media (max-width: 380px) {
+      bottom: 3%; /* << AJUSTADO: Posicionamento bem baixo para mobile >> */
+      left: 2%;
+      transform: none;
+      padding: 0.6rem 0.9rem;
+      max-width: 87%;
+      gap: 0.4rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.1rem);
+    font-weight: 100;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 100%;
+    text-shadow: 0.25px 0.25px 1px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.1rem, 3.5vw, 1.1rem);
+    }
+    @media (max-width: 480px) {
+      font-size: clamp(1rem, 3vw, 1rem);
+    }
+  }
+
+  // 🔹 Botões de navegação para o slider de fundo
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 25%;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 4;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &.prev {
+      left: 0.8rem;
+    }
+
+    &.next {
+      right: 0.8rem;
+    }
+  }
+
+  // 🔹 Paginação para o slider de fundo
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    .bullet {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.7);
+        transform: scale(1.1);
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}
+
+/* A classe submit-gradient-btn deve ser definida globalmente ou importada */
+/* Certifique-se de que a versão que você tem globalmente seja compatível */
+.submit-gradient-btn {
+  width: auto;
+  padding: 5px 52px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(
+    129.981deg,
+    rgba(160, 236, 250, 0.6) 0%,
+    rgba(30, 77, 94, 0.65) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    rgba(255, 255, 255, 0.03) 0 2px 8px inset,
+    rgba(59, 142, 223, 0.1) 0 3px 15px;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: var(--x, 50%);
+    top: var(--y, 50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.15) 35%,
+      rgba(255, 255, 255, 0.00) 70%
+    );
+    pointer-events: none;
+    z-index: -1;
+    transition: width 0.28s ease, height 0.28s ease, opacity 0.2s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+    box-shadow:
+      rgba(255, 255, 255, 0.05) 0 2px 10px inset,
+      rgba(59, 142, 223, 0.15) 0 4px 20px;
+  }
+
+  &:hover::before {
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+  }
+
+  &:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}
