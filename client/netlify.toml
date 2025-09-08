@@ -7,5 +7,5 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://api.weedsmokersconnection.com/:splat"
+  to = "https://54.90.176.166:5000/:splat"
   status = 200
