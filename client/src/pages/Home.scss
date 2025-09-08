@@ -1,0 +1,14 @@
+.home {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+
+  width: 100%;        // garante largura relativa
+  max-width: 100%;   // impede que passe da viewport
+  overflow-x: hidden; // bloqueia rolagem lateral
+  box-sizing: border-box;
+  background: #fff;
+  background-color: #fff;
+}
+
+
