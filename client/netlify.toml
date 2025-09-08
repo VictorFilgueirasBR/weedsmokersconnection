@@ -1,29 +1,16 @@
 # Netlify Configuration File
 
-
-
-# Regra 1: Redireciona as requisições do chatbot para a sua API
-
-# Esta regra é mais específica e deve vir antes da regra genérica.
-
+# Redireciona todas as requisições que não correspondem a um arquivo
+# existente para o index.html. Isso é essencial para Single Page Applications (SPAs).
 [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-  from = "/api/*"
-
-  to = "https://api.weedsmokersconnection.com/:splat"
-
-  status = 200
-
-
-
-# Regra 2: Redireciona todas as outras requisições para o index.html
-
-# Isso permite que o React Router lide com todas as rotas do seu site.
-
+# Redireciona as requisições da sua API para o backend na EC2.
+# Isso funciona como um proxy, permitindo que o frontend use um caminho
+# relativo (ex: /api/auth) sem se preocupar com problemas de CORS.
 [[redirects]]
-
-  from = "/*"
-
-  to = "/index.html"
-
-  status = 200
+  from = "/api/*"
+  to = "https://54.90.176.166:5000/:splat"
+  status = 200
