@@ -1,0 +1,29 @@
+# Netlify Configuration File
+
+
+
+# Regra 1: Redireciona as requisições do chatbot para a sua API
+
+# Esta regra é mais específica e deve vir antes da regra genérica.
+
+[[redirects]]
+
+  from = "/api/*"
+
+  to = "https://api.weedsmokersconnection.com/:splat"
+
+  status = 200
+
+
+
+# Regra 2: Redireciona todas as outras requisições para o index.html
+
+# Isso permite que o React Router lide com todas as rotas do seu site.
+
+[[redirects]]
+
+  from = "/*"
+
+  to = "/index.html"
+
+  status = 200
