@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import Footer from '../components/Footer';
 import { AuthContext } from '../App';
 import './Login.scss';
+import API_BASE_URL from '../apiConfig'; // Importação adicionada
 
 const Login = () => {
   const { setUser, setToken } = useContext(AuthContext);
@@ -54,7 +55,7 @@ const Login = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await axios.post('/api/auth/login', {
+      const response = await axios.post(`${API_BASE_URL}/api/auth/login`, { // Alteração feita aqui
         email: formData.email,
         password: formData.password,
       });
@@ -97,7 +98,7 @@ const Login = () => {
     setIsSubmitting(true);
 
     try {
-      const backendResponse = await axios.post('/api/auth/google-login', {
+      const backendResponse = await axios.post(`${API_BASE_URL}/api/auth/google-login`, { // Alteração feita aqui
         id_token: response.credential,
       });
 
