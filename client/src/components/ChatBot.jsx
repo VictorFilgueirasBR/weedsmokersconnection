@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FaPaperPlane, FaBed, FaLeaf, FaBrain, FaHeartbeat } from "react-icons/fa";
 import "./ChatBot.scss";
-
+ 
 // Estrutura do quiz aprimorada com fluxo conversacional
 const quizSteps = [
   {
