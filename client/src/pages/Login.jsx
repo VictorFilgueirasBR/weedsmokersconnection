@@ -98,7 +98,7 @@ const Login = () => {
     setIsSubmitting(true);
 
     try {
-      const backendResponse = await axios.post(`${API_BASE_URL}/api/auth/google-login`, { // Alteração feita aqui
+      const backendResponse = await axios.post(`/api/auth/google-login`, { // Alteração feita aqui
         id_token: response.credential,
       });
 
