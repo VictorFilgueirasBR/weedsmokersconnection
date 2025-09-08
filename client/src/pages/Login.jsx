@@ -97,7 +97,7 @@ const Login = () => {
     setIsSubmitting(true);
 
     try {
-      const backendResponse = await axios.post('https://weedsmokersconnection.com/api/auth/google-login', {
+      const backendResponse = await axios.post('/api/auth/google-login', {
         id_token: response.credential,
       });
 
