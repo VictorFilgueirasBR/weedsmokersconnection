@@ -17,7 +17,7 @@ const quizSteps = [
   {
     step: 1,
     botMessage: `Segundo critérios médicos, insônia é a **dificuldade em iniciar ou manter o sono**, ou acordar muito cedo e não conseguir voltar a dormir. 😴
-
+  
 Você se identifica com essa descrição?`,
     userOptions: [
       { text: "Sim, isso descreve minha situação.", nextStep: 5 },
