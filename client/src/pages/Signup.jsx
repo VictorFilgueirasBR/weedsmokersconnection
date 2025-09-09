@@ -317,13 +317,15 @@ export default function Signup() {
                 .plan-option:hover {
                 background: rgba(255,255,255,0.15);
                 border-color: rgba(255, 255, 255, 0.6);
-                transform: translateY(-2px);
+                transform: translateY(-3.5px);
                 }
 
                 .plan-option.selected {
-                border-color: #57C74C;
-                background: rgba(72, 231, 57, 0.64);
-                box-shadow: 0 0 20px rgba(87, 199, 76, 0.5);
+                border: 2px solid rgba(147, 255, 246, 0.3);
+                border-radius: 14px;
+                border-color: #4cc3c7ff;
+                background: rgba(57, 225, 231, 0.48);
+                box-shadow: 0 0 20px rgba(76, 199, 199, 0.5);
                 transform: scale(1.03);
                 }
 
@@ -360,7 +362,7 @@ export default function Signup() {
                     font-weight: 700;
                 }
                 .plan-option .old-price {
-                    font-size: 0.75rem;
+                    font-size: 0.55rem;
                     text-decoration: line-through;
                     opacity: 0.6;
                     margin-left: 0.5rem;
