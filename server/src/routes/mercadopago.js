@@ -1,15 +1,17 @@
+// src/routes/mercadopago.js
+
 const express = require('express');
 const router = express.Router();
-const { MercadoPagoConfig, PreApproval } = require('mercadopago');
+const { MercadoPagoConfig, PreApproval } = require('mercadopago'); // Importa PreApproval
 const User = require('../models/User');
 
-// Configura o cliente do Mercado Pago
+// Configura o cliente do Mercado Pago com o token de acesso
 const client = new MercadoPagoConfig({ accessToken: process.env.MERCADO_PAGO_ACCESS_TOKEN });
 
 // Define os IDs de planos de produção
 const planIds = {
     semestral: '37a30fd45a6240e285c300b4c29b318d', // ID do Plano Semestral
-    anual: 'ID_DO_SEU_PLANO_ANUAL' // SUBSTITUA PELO ID DO PLANO ANUAL DE PRODUÇÃO
+    anual: '7660f07184104a0fa4e1a1c33fb274a6' // SUBSTITUA PELO ID DO PLANO ANUAL DE PRODUÇÃO
 };
 
 // @route   POST /api/mercadopago/create-subscription
@@ -44,27 +46,22 @@ router.post('/create-subscription', async (req, res) => {
 router.post('/webhook', async (req, res) => {
     const { topic, id } = req.query;
 
-    if (topic === 'payment') {
+    if (topic === 'preapproval') {
         try {
-            const paymentService = new mercadopago.payment();
-            const payment = await paymentService.get({ id });
-            const { status, external_reference } = payment.body;
+            const preapprovalService = new PreApproval(client);
+            const preapproval = await preapprovalService.get({ preapprovalId: id });
+            const { status, external_reference } = preapproval.body;
             const userId = external_reference;
+            const user = await User.findById(userId);
 
-            if (status === 'approved' && userId) {
-                const user = await User.findById(userId);
-                if (user) {
-                    user.isPaid = true;
-                    await user.save();
-                    console.log(`Pagamento aprovado. Usuário ${userId} atualizado para isPaid=true.`);
-                }
+            if (user && status === 'authorized') {
+                user.isPaid = true;
+                await user.save();
+                console.log(`Assinatura autorizada. Usuário ${userId} atualizado para isPaid=true.`);
             }
         } catch (error) {
-            console.error('Erro no webhook do Mercado Pago:', error);
+            console.error('Erro no webhook de pré-aprovação:', error);
         }
-    } else if (topic === 'preapproval') {
-        // Lógica para lidar com as notificações de assinatura (opcional, mas recomendado)
-        console.log(`Notificação de pré-aprovação recebida. ID: ${id}`);
     }
 
     res.status(200).send('OK');
