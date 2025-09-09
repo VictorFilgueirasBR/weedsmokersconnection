@@ -89,6 +89,10 @@ $glass-border-color-subtle: rgba(255, 255, 255, 0.08); // Borda quase invisível
       bottom: 30%;
       left: 2%;
     }
+    @media (max-width: 412px) {
+      bottom: 40%;
+
+    }
 
     @media (max-width: 390px) {
       font-size: clamp(3rem, 8vw, 2.5rem);
@@ -147,6 +151,12 @@ $glass-border-color-subtle: rgba(255, 255, 255, 0.08); // Borda quase invisível
       font-size: 01.1rem;
       display: flex;
       align-items: center;
+
+    }
+
+    @media (max-width: 412px) {
+      bottom: calc(37% - 3.3rem);
+
     }
     @media (max-width: 390px) {
       bottom: calc(27% - 1rem); /* Ajuste de posição para mobile menor */
@@ -200,6 +210,10 @@ $glass-border-color-subtle: rgba(255, 255, 255, 0.08); // Borda quase invisível
       padding: 0.6rem 0.9rem;
       max-width: 87%;
       gap: 0.4rem;
+    }
+    @media (max-width: 412px) {
+      bottom: 6%;
+
     }
     @media (max-width: 380px) {
       bottom: 3%; /* << AJUSTADO: Posicionamento bem baixo para mobile >> */
