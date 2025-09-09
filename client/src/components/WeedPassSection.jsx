@@ -31,7 +31,10 @@ export default function WeedPassSection() {
         </p>
 
         {/* CTA Button */}
-        <button style={styles.ctaButton}>
+        <button
+          style={styles.ctaButton}
+          onClick={() => window.location.href = "https://weedsmokersconnection.com/signup"}
+        >
           Quero meu Pass
           <svg
             width="18"
@@ -50,6 +53,7 @@ export default function WeedPassSection() {
             />
           </svg>
         </button>
+
       </div>
     </div>
   );
