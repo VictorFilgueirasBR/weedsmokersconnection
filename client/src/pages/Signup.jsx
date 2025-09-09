@@ -228,7 +228,7 @@ export default function Signup() {
                     border-radius: 20px;
                     padding: 1.5rem;
                     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-                    color: #fff;
+                    color: #3d3d3dff;
                     font-family: 'Inter', sans-serif;
                     text-align: left;
                     display: flex;
