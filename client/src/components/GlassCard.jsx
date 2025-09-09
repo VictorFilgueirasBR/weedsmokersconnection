@@ -104,7 +104,7 @@ export default function GlassCardPage() {
       <div style={styles.header}>
         <h1 style={styles.title}>Nossos Planos</h1>
         <p style={styles.subtitleText}>
-          Assine e tenha acesso aos melhores Médicos e Fornecedores Nacionais e Importados LEGALIZADOS e autorizados pela ANVISA.
+          Assine e tenha acesso aos melhores Médicos Prescritores e Fornecedores Nacionais e Importados LEGALIZADOS e autorizados pela ANVISA.
         </p> 
       </div>
 
@@ -233,12 +233,12 @@ const styles = {
     fontFamily: "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
   },
   title: {
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     fontWeight: "800",
     margin: 0,
   },
   subtitleText: {
-    fontSize: "1.1rem",
+    fontSize: "1rem",
     opacity: 0.85,
     marginTop: "0.5rem",
     textAlign: "justify", // 👈 agora os parágrafos ficam justificados
@@ -267,11 +267,11 @@ const styles = {
     fontFamily: "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji",
   },
   rowTop: { display: "flex", alignItems: "center", justifyContent: "space-between" },
-  name: { fontSize: window.innerWidth <= 767 ? "2rem" : 40, lineHeight: 1, fontWeight: 800, letterSpacing: 0.3 },
+  name: { fontSize: window.innerWidth <= 767 ? "1.7rem" : 40, lineHeight: 1, fontWeight: 800, letterSpacing: 0.3 },
   valueRow: { display: "flex", alignItems: "center", gap: 14, marginTop: 10 },
   value: { fontSize: 20, fontWeight: 600, opacity: 0.92 },
   delta: { display: "inline-flex", alignItems: "center", fontWeight: 600, opacity: 0.9 },
-  subtitle: { marginTop: 1, fontSize: 16, opacity: 0.9 },
+  subtitle: { marginTop: 1, fontSize: 14, opacity: 0.9 },
   bottomRow: { display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 5 },
   inlineText: { display: "flex", alignItems: "center", gap: 14, opacity: 0.92 },
   dot: { width: 6, height: 6, borderRadius: 999, background: "rgba(255,255,255,0.6)" },
