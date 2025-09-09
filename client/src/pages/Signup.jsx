@@ -578,7 +578,7 @@ export default function Signup() {
                                 onMouseMove={handleMouseMove}
                                 style={{ marginTop: '1rem', width: '100%' }}
                             >
-                                {isSubmitting ? 'Criando Conta...' : isProcessingPayment ? 'Processando Pagamento...' : `Pagar R$ ${planOptions[selectedPlan].price}`}
+                                {isSubmitting ? 'Criando Conta...' : isProcessingPayment ? 'Processando Pagamento...' : `Finalizar pagamento R$ ${planOptions[selectedPlan].price}`}
                             </button>
                         </div>
                     </div>
