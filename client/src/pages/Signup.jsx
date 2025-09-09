@@ -141,13 +141,13 @@ export default function Signup() {
             price: '57,90',
             duration: '6 meses',
             description: 'Plano Semestral',
-            oldPrice: '119,90'
+            
         },
         anual: {
             price: '87,90',
             duration: '1 ano',
             description: 'Plano Anual',
-            oldPrice: '209,90'
+            
         },
     };
 
@@ -315,8 +315,12 @@ export default function Signup() {
                 }
 
                 .plan-option:hover {
-                background: rgba(255,255,255,0.15);
-                border-color: rgba(255, 255, 255, 0.6);
+                border: 2px solid rgba(147, 255, 246, 0.3);
+                border-radius: 14px;
+                border-color: #4cc3c79d;
+                background: rgba(57, 225, 231, 0.4);
+                box-shadow: 0 0 20px rgba(76, 199, 199, 0.36);
+                transform: scale(1.03);
                 transform: translateY(-3.5px);
                 }
 
@@ -333,7 +337,7 @@ export default function Signup() {
                 .plan-option p,
                 .plan-option .currency,
                 .plan-option .main-price,
-                .plan-option .old-price,
+                
                 .plan-option .duration {
                 color: #fff !important; /* força branco em todos os textos */
 }
@@ -361,12 +365,7 @@ export default function Signup() {
                     font-size: 1.5rem;
                     font-weight: 700;
                 }
-                .plan-option .old-price {
-                    font-size: 0.55rem;
-                    text-decoration: line-through;
-                    opacity: 0.6;
-                    margin-left: 0.5rem;
-                }
+                
                 .plan-option .duration {
                     font-size: 0.75rem;
                     opacity: 0.7;
@@ -566,9 +565,7 @@ export default function Signup() {
                                             <span className="duration">
                                                 {plan === 'anual' ? '/ano' : '/semestre'}
                                             </span>
-                                            {planOptions[plan].oldPrice && (
-                                                <span className="old-price">R$ {planOptions[plan].oldPrice}</span>
-                                            )}
+                                      
                                         </div>
                                     </div>
                                 ))}
