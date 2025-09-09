@@ -1,9 +1,7 @@
 // src/pages/WSCClub.jsx
-import React from 'react';
+import React, { useState } from "react";
 
 // Importa os componentes da página Home.jsx
-
-
 import HeroHashLegal from "../components/HeroHashLegal";
 import FirstClub from "../components/FirstClub";
 import HowItWorksSection from "../components/HowItWorksSection";
@@ -12,13 +10,20 @@ import CannabisSlides from "../components/CannabisSlides";
 import GlassCardNacional from "../components/GlassCardNacional";
 import GlassCardImport from "../components/GlassCardImport";
 import GlassTry from "../components/GlassTry";
-import MemberTreatmentFlow from '../components/MemberTreatmentFlow';
-
-
-
-
+import MemberTreatmentFlow from "../components/MemberTreatmentFlow";
+import ContactsModal from "../components/ContactsModal";
 
 export default function WSCClub() {
+  const [isContactsOpen, setIsContactsOpen] = useState(false);
+
+  const handleOpenContacts = () => {
+    setIsContactsOpen(true);
+  };
+
+  const handleCloseContacts = () => {
+    setIsContactsOpen(false);
+  };
+
   return (
     <div className="wsc-club-page">
       {/* O Header e Footer não estão aqui, pois são gerenciados pelo MainLayout */}
@@ -26,25 +31,30 @@ export default function WSCClub() {
       <FirstClub />
 
       <MemberTreatmentFlow />
-      
-      <GlassTry />
 
-      <GlassCardNacional />
-      
-      <GlassCardImport />
+      {/* Ao clicar nesses cards → abre o modal */}
+      <div onClick={handleOpenContacts}>
+        <GlassTry />
+      </div>
+
+      <div onClick={handleOpenContacts}>
+        <GlassCardNacional />
+      </div>
+
+      <div onClick={handleOpenContacts}>
+        <GlassCardImport />
+      </div>
 
       <HowItWorksSection />
-      
+
       <VideoPlayer />
 
       <CannabisSlides />
 
       <HeroHashLegal />
 
-      
-
-      
-
+      {/* Modal de contatos */}
+      {isContactsOpen && <ContactsModal onClose={handleCloseContacts} />}
     </div>
   );
 }
