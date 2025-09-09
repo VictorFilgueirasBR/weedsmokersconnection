@@ -240,6 +240,7 @@ export default function Signup() {
                     font-weight: 700;
                     margin-bottom: 1rem;
                     text-align: center;
+                    color: #fff;
                 }
                 .form-group {
                     margin-bottom: 1rem;
@@ -269,7 +270,7 @@ export default function Signup() {
                     display: block;
                 }
                 .password-requirements {
-                    font-size: 0.75rem;
+                    font-size: 0.7rem;
                     color: rgba(255, 255, 255, 0.6);
                     margin-top: 0.4rem;
                     line-height: 1.4;
@@ -321,9 +322,9 @@ export default function Signup() {
 
                 .plan-option.selected {
                 border-color: #57C74C;
-                background: rgba(87, 199, 76, 0.2);
+                background: rgba(72, 231, 57, 0.64);
                 box-shadow: 0 0 20px rgba(87, 199, 76, 0.5);
-                transform: scale(1.02);
+                transform: scale(1.03);
                 }
 
                 .plan-option h4,
