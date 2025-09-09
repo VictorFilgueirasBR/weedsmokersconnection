@@ -34,7 +34,7 @@ const Footer = () => {
         {/* Ícones do lado esquerdo com bordas circulares */}
         <div className={styles.socialIcons}>
           <a
-            href="https://wa.me/"
+            href="https://wa.me/message/WQS3YHS6QHS2I1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -43,7 +43,7 @@ const Footer = () => {
             <FaWhatsapp size={24} color="#fff" />
           </a>
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/weedsmokersconnectionbrasil/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
