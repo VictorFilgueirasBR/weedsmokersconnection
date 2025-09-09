@@ -240,7 +240,7 @@ export default function Signup() {
                     font-weight: 700;
                     margin-bottom: 1rem;
                     text-align: center;
-                    color: #fff;
+                    color: #3d3d3dff;
                 }
                 .form-group {
                     margin-bottom: 1rem;
