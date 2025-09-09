@@ -65,7 +65,7 @@ export default function Signup() {
         const { name, value } = e.target;
         setFormData((s) => ({ ...s, [name]: value }));
     };
-
+    
     const handleMouseMove = (e) => {
         const button = e.currentTarget;
         const rect = button.getBoundingClientRect();
