@@ -427,7 +427,7 @@ export default function Signup() {
             </style>
             <div className="signup-container-wrapper">
                 <div className="signup-content">
-                    <h1>Assine e Desbloqueie o Futuro da Sua Cura 🍃</h1>
+                    <h1>Assine e Desbloqueie o Futuro da Sua Cura</h1>
                     <div className="signup-highlight-box">
                         <p>
                             Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a médicos prescritores, fornecedores premium e às melhores espécies e extrações — THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e muito mais. Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. E tem mais: como assinante, você entra para um círculo seleto que recebe novidades e um catálogo atualizado de fornecedores toda semana — garantindo sempre acesso ao que há de melhor e mais inovador. ✨ Essa é sua chance de fazer parte de algo único. Assine agora e desbloqueie o Pass para a sua transformação.
