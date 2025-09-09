@@ -33,15 +33,16 @@ body {
   justify-content: center;
   align-items: center;
 
-  // Trocar fundo branco pela imagem
   background: url('/images/signup-bg.png') no-repeat center center;
-  background-size: cover; // Faz a imagem ocupar toda a tela 
+  background-size: cover;
 }
 
 .signup-container-wrapper {
   display: flex;
   width: 100%;
   min-height: 100vh;
+  max-width: 1200px; // reduz largura máxima em telas grandes
+  margin: 0 auto;
 }
 
 /* ================================
@@ -55,8 +56,8 @@ body {
   align-items: flex-start;
 
   padding-left: 10%;
-  color: $text-light; // Alterado para texto escuro
-  text-shadow: none; // Removido a sombra do texto
+  color: $text-light;
+  text-shadow: none;
 
   h1 {
     font-size: clamp(2.1rem, 4.3vw, 3rem);
@@ -87,8 +88,10 @@ body {
   justify-content: center;
   align-items: center;
 
-  padding: 2rem;
-  min-height: 100vh;
+  padding: 1.5rem;
+  min-height: 80vh; // reduz altura
+  max-width: 600px; // restringe largura
+  margin: auto;
 }
 
 /* ================================
@@ -104,14 +107,13 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 
   width: 100%;
-  max-width: 90%;
-  max-height: 80vh;
+  max-width: 480px; // reduz largura máxima do card
+  max-height: 75vh; // reduz altura máxima
 
-  padding: 3rem;
+  padding: 2rem;
   color: $text-light;
   overflow-y: auto;
 
-  /* scrollbar estilizada */
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -123,10 +125,9 @@ body {
   h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #161616ff !important; /* força branco em todos os textos */
+    color: #161616ff !important;
   }
 
-  /* mensagens de erro/sucesso */
   .message {
     padding: 10px;
     margin-bottom: 1rem;
@@ -143,7 +144,6 @@ body {
     }
   }
 
-  /* campos do form */
   .form-group {
     margin-bottom: 1.5rem;
 
@@ -180,18 +180,15 @@ body {
     display: block;
   }
 
-  /* botão submit */
   .submit-gradient-btn {
     width: 100%;
     padding: 12px 32px;
-
     border: none;
     border-radius: 100px;
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
-
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -248,7 +245,6 @@ body {
     }
   }
 
-  /* Novo estilo para a escolha do plano */
   .plan-selection {
     display: flex;
     flex-direction: column;
@@ -274,7 +270,7 @@ body {
         border-color: $primary-color;
         box-shadow: 0 0 15px rgba($primary-color, 0.5);
       }
-      
+
       h3 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
@@ -285,7 +281,7 @@ body {
         font-size: 1rem;
         color: #fff;
       }
-      
+
       .price {
         font-size: 2rem;
         font-weight: bold;
@@ -383,11 +379,29 @@ body {
     width: 100%;
     margin: 2rem auto;
     padding: 2rem;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .signup-form-glass {
-    padding: 1rem; // reduz padding em telas pequenas
+    padding: 1rem;
+  }
+}
+
+/* ================================
+   🖥️ Ajustes para telas muito grandes
+================================ */
+@media (min-width: 1400px) {
+  .signup-container-wrapper {
+    max-width: 1000px; // mantém mais compacto
+  }
+
+  .signup-form-container {
+    max-width: 550px;
+  }
+
+  .signup-form-glass {
+    max-width: 420px;
   }
 }
