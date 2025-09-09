@@ -481,7 +481,7 @@ export default function Signup() {
                     </div>
                 </div>
                 {submitMessage.text && (
-                    <div className={`message ${submitMessage.type}`} style={{width: '100%', maxWidth: '350px', margin: '0 auto 2rem'}}>
+                    <div className={`message ${submitMessage.type}`}>
                         {submitMessage.text}
                     </div>
                 )}
