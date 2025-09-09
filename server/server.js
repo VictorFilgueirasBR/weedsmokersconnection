@@ -29,9 +29,22 @@ const app = express();
 app.use(express.json());
 
 // Configuração do CORS para permitir requisições do frontend com credenciais
+const allowedOrigins = [
+  'https://weedsmokersconnection.netlify.app',
+  'https://weedsmokersconnection.com'
+];
+
 app.use(cors({
-  origin: 'https://weedsmokersconnection.netlify.app',
-  credentials: true
+  origin: function (origin, callback) {
+    // Permite requisições sem 'origin' (como de aplicativos móveis ou curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
 }));
 
 // Conexão com o MongoDB
