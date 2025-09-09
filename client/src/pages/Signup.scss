@@ -59,7 +59,7 @@ body {
   text-shadow: none; // Removido a sombra do texto
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2.1rem, 4.3vw, 3rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 0.5rem;
@@ -108,7 +108,7 @@ body {
   max-height: 80vh;
 
   padding: 3rem;
-  color: $text-dark;
+  color: $text-light;
   overflow-y: auto;
 
   /* scrollbar estilizada */
@@ -367,7 +367,7 @@ body {
     align-items: center;
     display: block;
     h1 {
-      color: $text-dark;
+      color: $text-light;
     }
   }
 
