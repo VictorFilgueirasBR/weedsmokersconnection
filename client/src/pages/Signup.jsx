@@ -133,7 +133,7 @@ export default function Signup() {
                     flex-direction: column;
                     align-items: center;
                     padding: 4rem 1rem;
-                    background-image: url('/images/bg-try-plans-wscb.png');
+                    background-image: url('/images/signup-bg.png');
                     background-position: center;
                     background-size: cover;
                     filter: saturate(120%) contrast(100%) brightness(0.85);
