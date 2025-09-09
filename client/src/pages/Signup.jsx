@@ -186,6 +186,7 @@ export default function Signup() {
                     font-weight: 900;
                     margin-bottom: 0.5rem;
                     line-height: 1.1;
+                    color: #fff;
                 }
                 .signup-content p {
                     font-size: 0.9rem;
@@ -302,22 +303,37 @@ export default function Signup() {
                     margin-bottom: 1rem;
                 }
                 .plan-option {
-                    padding: 0.8rem 1rem;
-                    border: 2px solid transparent;
-                    border-radius: 14px;
-                    background: rgba(255,255,255,0.08);
-                    cursor: pointer;
-                    transition: all 0.2s ease;
-                    text-align: left;
-                }
-                .plan-option:hover {
-                    background: rgba(255,255,255,0.15);
-                }
-                .plan-option.selected {
-                    border-color: #57C74C;
-                    background: rgba(87, 199, 76, 0.2);
-                    box-shadow: 0 0 15px rgba(87, 199, 76, 0.3);
-                }
+                padding: 1rem 1.2rem;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                border-radius: 14px;
+                background: rgba(255,255,255,0.08);
+                cursor: pointer;
+                transition: all 0.25s ease;
+                text-align: left;
+                color: #fff; /* garante que todos os textos fiquem brancos */
+                }
+
+                .plan-option:hover {
+                background: rgba(255,255,255,0.15);
+                border-color: rgba(255, 255, 255, 0.6);
+                transform: translateY(-2px);
+                }
+
+                .plan-option.selected {
+                border-color: #57C74C;
+                background: rgba(87, 199, 76, 0.2);
+                box-shadow: 0 0 20px rgba(87, 199, 76, 0.5);
+                transform: scale(1.02);
+                }
+
+                .plan-option h4,
+                .plan-option p,
+                .plan-option .currency,
+                .plan-option .main-price,
+                .plan-option .old-price,
+                .plan-option .duration {
+                color: #fff !important; /* força branco em todos os textos */
+}
                 .plan-option h4 {
                     margin: 0;
                     font-size: 1.05rem;
