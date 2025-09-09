@@ -57,8 +57,6 @@ const styles = `
 .contacts-modal {
   width: 92%;
   max-width: 680px;
-  height: 95%;
-  max-height: 90%;
   background: var(--modal-bg);
   border-radius: 22px;
   padding: 28px;
