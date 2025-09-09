@@ -33,8 +33,9 @@ body {
   justify-content: center;
   align-items: center;
 
-  // Alterado para fundo branco
-  background: #f0f2f5; 
+  // Trocar fundo branco pela imagem
+  background: url('/images/signup-bg.png') no-repeat center center;
+  background-size: cover; // Faz a imagem ocupar toda a tela 
 }
 
 .signup-container-wrapper {
@@ -54,7 +55,7 @@ body {
   align-items: flex-start;
 
   padding-left: 10%;
-  color: $text-dark; // Alterado para texto escuro
+  color: $text-light; // Alterado para texto escuro
   text-shadow: none; // Removido a sombra do texto
 
   h1 {
