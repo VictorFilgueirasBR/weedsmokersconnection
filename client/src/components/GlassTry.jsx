@@ -112,6 +112,7 @@ const css = `
       inset 0 0 0 1px rgba(255,255,255,0.08),
       0 30px 80px rgba(0,0,0,0.45);
     animation: card-wobble 12s ease-in-out infinite;
+    cursor: pointer;
   }
 
   /* Reflexo/distorção que segue o mouse */
