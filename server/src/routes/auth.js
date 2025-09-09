@@ -15,9 +15,9 @@ const generateToken = (id) => {
     });
 };
 
-// @route   POST /api/auth/signup
+// @route   POST /api/auth/register
 // @desc    Registra um novo usuário, mas não o marca como pago
-router.post('/signup', async (req, res) => {
+router.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
 
     try {
