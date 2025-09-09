@@ -315,11 +315,11 @@ export default function Signup() {
                 }
 
                 .plan-option:hover {
-                border: 2px solid rgba(147, 255, 246, 0.3);
+                border: 2px solid rgba(147, 255, 246, 0.14);
                 border-radius: 14px;
-                border-color: #4cc3c79d;
-                background: rgba(57, 225, 231, 0.4);
-                box-shadow: 0 0 20px rgba(76, 199, 199, 0.36);
+                border-color: #4cc3c74d;
+                background: rgba(57, 225, 231, 0.19);
+                box-shadow: 0 0 20px rgba(76, 199, 199, 0.19);
                 transform: scale(1.03);
                 transform: translateY(-3.5px);
                 }
