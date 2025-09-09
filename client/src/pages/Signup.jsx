@@ -228,7 +228,7 @@ export default function Signup() {
                     border-radius: 20px;
                     padding: 1.5rem;
                     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-                    color: #3d3d3dff;
+                    color: #161616ff;
                     font-family: 'Inter', sans-serif;
                     text-align: left;
                     display: flex;
@@ -240,7 +240,7 @@ export default function Signup() {
                     font-weight: 700;
                     margin-bottom: 1rem;
                     text-align: center;
-                    color: #3d3d3dff;
+                    color: #161616ff;
                 }
                 .form-group {
                     margin-bottom: 1rem;
