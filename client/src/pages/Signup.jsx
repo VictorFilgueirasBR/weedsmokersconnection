@@ -5,7 +5,7 @@ import { AuthContext } from '../App';
 import './Signup.scss';
 
 export default function Signup() {
-    const [formData, setFormData] = useState({ name: '', email: '', password: '', confirmPassword: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', password: '', confirmPassword: '', cpf: '' });
     const [formErrors, setFormErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
@@ -36,13 +36,16 @@ export default function Signup() {
 
     const validate = () => {
         const errors = {};
-        const { name, email, password, confirmPassword } = formData;
+        const { name, email, password, confirmPassword, cpf } = formData;
         if (!name) errors.name = 'Nome é obrigatório.';
         if (!email) {
             errors.email = 'Email é obrigatório.';
         } else if (!/\S+@\S+\.\S+/.test(email)) {
             errors.email = 'Email inválido.';
         }
+        if (!cpf) {
+            errors.cpf = 'CPF é obrigatório.';
+        }
         if (!password) {
             errors.password = 'Senha é obrigatória.';
         } else if (password.length < 12) {
@@ -121,7 +124,9 @@ export default function Signup() {
                 {
                     plan: selectedPlan,
                     userEmail: formData.email,
-                    userId: userId // Passando o ID real aqui
+                    userId: userId,
+                    userName: formData.name, // Adicionado
+                    userCpf: formData.cpf, // Adicionado
                 },
                 { withCredentials: true }
             );
@@ -186,7 +191,7 @@ export default function Signup() {
                     font-weight: 900;
                     margin-bottom: 0.5rem;
                     line-height: 1.1;
-                    color: #fff;
+                    color: #fff;
                 }
                 .signup-content p {
                     font-size: 0.9rem;
@@ -240,7 +245,7 @@ export default function Signup() {
                     font-weight: 700;
                     margin-bottom: 1rem;
                     text-align: center;
-                    color: #161616ff;
+                    color: #161616ff;
                 }
                 .form-group {
                     margin-bottom: 1rem;
@@ -304,42 +309,42 @@ export default function Signup() {
                     margin-bottom: 1rem;
                 }
                 .plan-option {
-                padding: 1rem 1.2rem;
-                border: 2px solid rgba(255, 255, 255, 0.3);
-                border-radius: 14px;
-                background: rgba(255,255,255,0.08);
-                cursor: pointer;
-                transition: all 0.25s ease;
-                text-align: left;
-                color: #fff; /* garante que todos os textos fiquem brancos */
-                }
+                padding: 1rem 1.2rem;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                border-radius: 14px;
+                background: rgba(255,255,255,0.08);
+                cursor: pointer;
+                transition: all 0.25s ease;
+                text-align: left;
+                color: #fff; /* garante que todos os textos fiquem brancos */
+                }
 
-                .plan-option:hover {
-                border: 2px solid rgba(147, 255, 246, 0.14);
-                border-radius: 14px;
-                border-color: #4cc3c74d;
-                background: rgba(57, 225, 231, 0.19);
-                box-shadow: 0 0 20px rgba(76, 199, 199, 0.19);
-                transform: scale(1.03);
-                transform: translateY(-3.5px);
-                }
+                .plan-option:hover {
+                border: 2px solid rgba(147, 255, 246, 0.14);
+                border-radius: 14px;
+                border-color: #4cc3c74d;
+                background: rgba(57, 225, 231, 0.19);
+                box-shadow: 0 0 20px rgba(76, 199, 199, 0.19);
+                transform: scale(1.03);
+                transform: translateY(-3.5px);
+                }
 
-                .plan-option.selected {
-                border: 2px solid rgba(147, 255, 246, 0.3);
-                border-radius: 14px;
-                border-color: #4cc3c7ff;
-                background: rgba(57, 225, 231, 0.48);
-                box-shadow: 0 0 20px rgba(76, 199, 199, 0.5);
-                transform: scale(1.03);
-                }
+                .plan-option.selected {
+                border: 2px solid rgba(147, 255, 246, 0.3);
+                border-radius: 14px;
+                border-color: #4cc3c7ff;
+                background: rgba(57, 225, 231, 0.48);
+                box-shadow: 0 0 20px rgba(76, 199, 199, 0.5);
+                transform: scale(1.03);
+                }
 
-                .plan-option h4,
-                .plan-option p,
-                .plan-option .currency,
-                .plan-option .main-price,
-                
-                .plan-option .duration {
-                color: #fff !important; /* força branco em todos os textos */
+                .plan-option h4,
+                .plan-option p,
+                .plan-option .currency,
+                .plan-option .main-price,
+                
+                .plan-option .duration {
+                color: #fff !important; /* força branco em todos os textos */
 }
                 .plan-option h4 {
                     margin: 0;
@@ -512,6 +517,17 @@ export default function Signup() {
                                     />
                                     {formErrors.email && <span className="error">{formErrors.email}</span>}
                                 </div>
+                                <div className="form-group">
+                                    <input
+                                        type="text"
+                                        name="cpf"
+                                        placeholder="CPF"
+                                        value={formData.cpf}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                    {formErrors.cpf && <span className="error">{formErrors.cpf}</span>}
+                                </div>
                                 <div className="form-group">
                                     <input
                                         type="password"
@@ -566,7 +582,7 @@ export default function Signup() {
                                                 {plan === 'anual' ? '/ano' : '/semestre'}
                                             </span>
                                       
-                                        </div>
+                                      </div>
                                     </div>
                                 ))}
                             </div>
