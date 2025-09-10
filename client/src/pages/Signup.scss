@@ -1,407 +1,172 @@
-/* src/pages/Signup.scss */
+/* Variáveis para cores */
+$color-dark: #000;
+$color-light: #fff;
+$color-accent: #6c5ce7;
+$color-success: #28a745;
+$color-error: #dc3545;
 
-/* ================================
-   🎨 Variáveis de estilo
-================================ */
-$primary-color: #007bff;
-$text-light: #fff;
-$text-dark: #333;
-$glass-bg: rgba(255, 255, 255, 0.2);
-$glass-border: rgba(255, 255, 255, 0.3);
-
-/* ================================
-   🔄 Reset global
-================================ */
-* {
-  box-sizing: border-box;
-}
-
+/* Estilos da página de Signup */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
-  overflow-x: hidden; // evita scroll horizontal
-}
-
-/* ================================
-   📌 Estrutura principal
-================================ */
-.signup-page {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: url('/images/signup-bg.png') no-repeat center center;
-  background-size: cover;
+    background-color: $color-light;
+    color: $color-dark;
 }
 
 .signup-container-wrapper {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  max-width: 1200px; // reduz largura máxima em telas grandes
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
 }
 
-/* ================================
-   📝 Texto da introdução
-================================ */
 .signup-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  padding-left: 10%;
-  color: $text-light;
-  text-shadow: none;
-
-  h1 {
-    font-size: clamp(2.1rem, 4.3vw, 3rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-    word-wrap: break-word;
-  }
-
-  p {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    max-width: 500px;
-  }
-
-  .small-text {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-    margin-top: 1rem;
-    max-width: 450px;
-  }
-}
-
-/* ================================
-   📋 Container do formulário
-================================ */
-.signup-form-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 1.5rem;
-  min-height: 80vh; // reduz altura
-  max-width: 600px; // restringe largura
-  margin: auto;
-}
-
-/* ================================
-   🧊 Card de vidro (form)
-================================ */
-.signup-form-glass {
-  background: $glass-bg;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border: 1px solid $glass-border;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-
-  width: 100%;
-  max-width: 480px; // reduz largura máxima do card
-  max-height: 75vh; // reduz altura máxima
-
-  padding: 2rem;
-  color: $text-light;
-  overflow-y: auto;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-  }
-
-  h2 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #161616ff !important;
-  }
+    max-width: 800px;
+    margin-bottom: 40px;
 
-  .message {
-    padding: 10px;
-    margin-bottom: 1rem;
-    border-radius: 4px;
+    h1 {
+        font-size: 2.5rem;
+        color: $color-dark;
+        margin-bottom: 20px;
+    }
+}
+
+.signup-highlight-box {
+    background: rgba(0, 0, 0, 0.2); /* Fundo glassmorphism escuro */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $color-light; // Texto branco para contrastar com o fundo escuro
+    }
+}
+
+.message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
     text-align: center;
 
     &.success {
-      background: #dff0d8;
-      color: #3c763d;
+        background-color: lighten($color-success, 40%);
+        color: $color-success;
     }
+
     &.error {
-      background: #f2dede;
-      color: #a94442;
+        background-color: lighten($color-error, 40%);
+        color: $color-error;
     }
-  }
+}
 
-  .form-group {
-    margin-bottom: 1.5rem;
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-
-      background: rgba(255, 255, 255, 0.1);
-      color: $text-light;
-      transition: border-color 0.3s ease, background 0.3s ease;
-
-      &::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      &:focus {
-        outline: none;
-        border-color: $primary-color;
-      }
-
-      &:-webkit-autofill {
-        box-shadow: 0 0 0px 1000px white inset !important;
-        -webkit-text-fill-color: $text-dark !important;
-      }
-    }
-  }
-
-  .error {
-    color: #d9534f;
-    font-size: 0.8rem;
-    margin-top: 5px;
-    display: block;
-  }
-
-  .submit-gradient-btn {
-    width: 100%;
-    padding: 12px 32px;
-    border: none;
-    border-radius: 100px;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
+.signup-gamification-container {
+    display: flex;
     justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
 
-    background: linear-gradient(
-      129.981deg,
-      rgba(160, 236, 250, 0.85) 0%,
-      rgba(30, 77, 94, 0.89) 100%
-    );
-
-    box-shadow:
-      rgba(255, 255, 255, 0.1) 0 4px 16px inset,
-      rgba(59, 142, 223, 0.3) 0 4px 40px;
-
-    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: var(--y, 50%);
-      left: var(--x, 50%);
-      transform: translate(-50%, -50%);
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.55) 0%,
-        rgba(255, 255, 255, 0.35) 35%,
-        rgba(255, 255, 255, 0) 70%
-      );
-      opacity: 0;
-      transition: width 0.28s ease, height 0.28s ease, opacity 0.2s ease;
-    }
-
-    &:hover {
-      transform: translateY(-2px);
-      opacity: 0.98;
-    }
-
-    &:hover::before {
-      width: 340px;
-      height: 340px;
-      opacity: 1;
-    }
-
-    &:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-  }
-
-  .plan-selection {
+.signup-form-container {
+    flex: 1;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-
-    .plan-card {
-      padding: 1.5rem;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-align: center;
-      position: relative;
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      &.selected {
-        border-color: $primary-color;
-        box-shadow: 0 0 15px rgba($primary-color, 0.5);
-      }
-
-      h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: $text-dark;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #fff;
-      }
-
-      .price {
-        font-size: 2rem;
-        font-weight: bold;
-        color: $text-dark;
-        margin-top: 1rem;
-      }
-    }
-  }
-}
-
-/* ================================
-   🔗 Links / Social login
-================================ */
-.login-link {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #555;
-
-  a {
-    color: $primary-color;
-    font-weight: bold;
-    text-decoration: none;
-
-    &:hover {
-      color: darken($primary-color, 10%);
-    }
-  }
-}
-
-.social-login {
-  text-align: center;
-  margin-top: 1.5rem;
-
-  .or-divider {
-    position: relative;
-    margin-bottom: 1.5rem;
-    color: #888;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 40%;
-      height: 1px;
-      background: #ccc;
-    }
-
-    &::before {
-      left: 0;
-    }
-    &::after {
-      right: 0;
-    }
-  }
-
-  .google-sign-in-button-wrapper {
-    width: 100%;
-  }
-}
-
-/* ================================
-   📱 Responsividade
-================================ */
-@media (max-width: 768px) {
-  .signup-page {
-    min-height: auto;
-  }
-
-  .signup-container-wrapper {
-    flex-direction: column;
-    padding: 2rem 0;
-    min-height: auto;
-  }
-
-  .signup-content {
-    padding: 5%;
-    text-align: center;
     align-items: center;
-    display: block;
-    h1 {
-      color: $text-light;
+}
+
+.signup-form-glass {
+    background: rgba(255, 255, 255, 0.2); // Fundo claro para o glassmorphism
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    h2 {
+        font-size: 1.8rem;
+        color: $color-dark;
+        margin-bottom: 25px;
     }
-  }
 
-  .signup-form-container {
-    width: 100%;
-    padding: 0 1rem;
-    min-height: auto;
-    display: block;
-  }
+    .form-group {
+        margin-bottom: 20px;
 
-  .signup-form-glass {
-    width: 100%;
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 100%;
-  }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid $color-dark;
+            border-radius: 8px;
+            background-color: transparent;
+            color: $color-dark;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+                outline: none;
+                border-color: $color-accent;
+            }
+
+            &::placeholder {
+                color: rgba($color-dark, 0.7);
+            }
+        }
+
+        .error {
+            color: $color-error;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .password-requirements {
+            font-size: 0.8rem;
+            color: rgba($color-dark, 0.6);
+            margin-top: 5px;
+        }
+    }
+
+    .signup-submit-button {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: $color-accent;
+        color: $color-light;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($color-accent, 10%);
+        }
+    }
 }
 
-@media (max-width: 480px) {
-  .signup-form-glass {
-    padding: 1rem;
-  }
+/* O GlassSignup.jsx deve ter seus próprios estilos. Adicionei um contêiner para ele aqui. */
+.signup-plans-container {
+    flex: 1;
+    max-width: 500px;
 }
 
-/* ================================
-   🖥️ Ajustes para telas muito grandes
-================================ */
-@media (min-width: 1400px) {
-  .signup-container-wrapper {
-    max-width: 1000px; // mantém mais compacto
-  }
+/* Responsividade */
+@media (max-width: 768px) {
+    .signup-gamification-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .signup-form-container {
-    max-width: 550px;
-  }
-
-  .signup-form-glass {
-    max-width: 420px;
-  }
+    .signup-form-container, .signup-plans-container {
+        max-width: 100%;
+    }
 }
