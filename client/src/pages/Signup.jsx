@@ -106,7 +106,7 @@ export default function Signup() {
 
             // 2. Redireciona o usuário para a página de checkout transparente.
             // Passamos o userId e o email como parâmetros de URL.
-            navigate(`/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}`);
+            navigate(`/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}&amount=${planOptions[selectedPlan].amount}`);
             
             // Note: Não há uma requisição 'await' aqui, pois a navegação é imediata.
             // O estado de carregamento de pagamento será gerenciado na nova página.
