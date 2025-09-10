@@ -63,7 +63,7 @@ function GlassSignup({
           <button
             className="glass-btn"
             style={styles.editBtn}
-            onClick={() => navigate("/payment")}
+            onClick={() => navigate("/")}
           >
             {cta}
             <svg
