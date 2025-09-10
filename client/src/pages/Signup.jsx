@@ -18,22 +18,24 @@ export default function Signup() {
     const { setUser, setToken } = useContext(AuthContext);
     const [searchParams] = useSearchParams();
 
+    // A lógica de verificação de status do pagamento é mantida
+    // para exibir mensagens de feedback ao usuário após o redirecionamento.
     useEffect(() => {
-        const checkPaymentStatus = () => {
-            const paymentStatus = searchParams.get('status');
-            const paymentId = searchParams.get('payment_id');
+        const paymentStatus = searchParams.get('status');
+        const paymentId = searchParams.get('payment_id');
 
-            if (paymentStatus === 'approved') {
-                setSubmitMessage({ type: 'success', text: 'Seu pagamento foi aprovado! Em instantes sua conta será ativada e você será redirecionado para o seu perfil.' });
-            } else if (paymentStatus === 'pending' || paymentStatus === 'in_process') {
-                setSubmitMessage({ type: 'info', text: 'Seu pagamento está em análise. Você será notificado por e-mail assim que for aprovado.' });
-            } else if (paymentStatus === 'rejected') {
-                setSubmitMessage({ type: 'error', text: 'Seu pagamento foi rejeitado. Tente novamente ou use outra forma de pagamento.' });
-            }
-        };
-
-        checkPaymentStatus();
-    }, [searchParams]);
+        if (paymentStatus === 'approved') {
+            setSubmitMessage({ type: 'success', text: 'Seu pagamento foi aprovado! Em instantes sua conta será ativada e você será redirecionado para o seu perfil.' });
+            // Redireciona o usuário para o perfil após a confirmação do pagamento
+            setTimeout(() => {
+                navigate('/profile'); 
+            }, 3000); 
+        } else if (paymentStatus === 'pending' || paymentStatus === 'in_process') {
+            setSubmitMessage({ type: 'info', text: 'Seu pagamento está em análise. Você será notificado por e-mail assim que for aprovado.' });
+        } else if (paymentStatus === 'rejected') {
+            setSubmitMessage({ type: 'error', text: 'Seu pagamento foi rejeitado. Tente novamente ou use outra forma de pagamento.' });
+        }
+    }, [searchParams, navigate]);
 
     const validate = () => {
         const errors = {};
@@ -76,7 +78,7 @@ export default function Signup() {
         button.style.setProperty('--y', `${y}px`);
     };
 
-    // Função principal para registrar o usuário e depois iniciar o checkout
+    // A requisição de registro e o redirecionamento foram unidos aqui.
     const handleSubmit = async () => {
         setSubmitMessage({ type: '', text: '' });
         if (!validate()) {
@@ -99,17 +101,17 @@ export default function Signup() {
                 { withCredentials: true }
             );
 
-            // CORREÇÃO AQUI: Altera a desestruturação para 'userId' e 'userEmail'
             const { userId, userEmail } = registerResponse.data;
-            setSubmitMessage({ type: 'info', text: 'Conta criada! Gerando checkout de pagamento...' });
-            
-            // 2. Chama a função de checkout com o userId real
-            await handleCheckout(userId);
+            setSubmitMessage({ type: 'info', text: 'Conta criada! Redirecionando para o pagamento...' });
 
+            // 2. Redireciona o usuário para a página de checkout transparente.
+            // Passamos o userId e o email como parâmetros de URL.
+            navigate(`/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}`);
+            
+            // Note: Não há uma requisição 'await' aqui, pois a navegação é imediata.
+            // O estado de carregamento de pagamento será gerenciado na nova página.
         } catch (error) {
             setIsSubmitting(false);
-            
-            // CORREÇÃO AQUI: Usa 'msg' para a mensagem de erro do backend
             const serverMessage = error.response?.data?.msg;
             
             if (serverMessage === 'Usuário já existe. Por favor, faça login.') {
@@ -122,8 +124,9 @@ export default function Signup() {
                     type: 'info',
                     text: 'Seu cadastro foi encontrado, mas o pagamento não foi concluído. Redirecionando para o pagamento...'
                 });
-                // Você pode adicionar a lógica para redirecionar para o checkout aqui se desejar
-                // handleCheckout(error.response?.data?.userId); // Se o backend retornar o userId aqui também
+                // Redireciona para o checkout transparente com o userId retornado pelo backend
+                const { userId } = error.response.data;
+                navigate(`/payment_checkout.html?userId=${userId}&userEmail=${formData.email}&plan=${selectedPlan}`);
             } else {
                 const errorMessage = serverMessage || 'Erro ao criar a conta. Tente novamente.';
                 setSubmitMessage({ type: 'error', text: errorMessage });
@@ -133,42 +136,18 @@ export default function Signup() {
         }
     };
 
-    // Refatorada para aceitar userId como parâmetro
-    const handleCheckout = async (userId) => {
-        setIsProcessingPayment(true);
-        try {
-            const response = await axios.post(
-                `${import.meta.env.VITE_API_URL}/api/mercadopago/create-subscription`,
-                {
-                    plan: selectedPlan,
-                    userEmail: formData.email,
-                    userId: userId // Passando o ID real aqui
-                },
-                { withCredentials: true }
-            );
-            const initPoint = response.data.init_point;
-            
-            window.location.href = initPoint;
-            
-        } catch (error) {
-            setIsProcessingPayment(false);
-            setSubmitMessage({ type: 'error', text: 'Erro ao gerar o pagamento. Tente novamente.' });
-            console.error('Erro ao gerar pagamento:', error.response?.data || error.message);
-        }
-    };
-
     const planOptions = {
         semestral: {
             price: '57,90',
+            amount: 57.90, // Adicionado o valor numérico para a API de pagamento
             duration: '6 meses',
             description: 'Plano Semestral',
-            
         },
         anual: {
             price: '87,90',
+            amount: 87.90, // Adicionado o valor numérico para a API de pagamento
             duration: '1 ano',
             description: 'Plano Anual',
-            
         },
     };
 
@@ -176,6 +155,7 @@ export default function Signup() {
         <div className="signup-page">
             <style>
                 {`
+                /* ... (CSS and HTML are the same as before, no changes needed here) ... */
                 .signup-page {
                     min-height: 100vh;
                     display: flex;
@@ -332,9 +312,8 @@ export default function Signup() {
                 cursor: pointer;
                 transition: all 0.25s ease;
                 text-align: left;
-                color: #fff; /* garante que todos os textos fiquem brancos */
+                color: #fff;
                 }
-
                 .plan-option:hover {
                 border: 2px solid rgba(147, 255, 246, 0.14);
                 border-radius: 14px;
@@ -344,7 +323,6 @@ export default function Signup() {
                 transform: scale(1.03);
                 transform: translateY(-3.5px);
                 }
-
                 .plan-option.selected {
                 border: 2px solid rgba(147, 255, 246, 0.3);
                 border-radius: 14px;
@@ -353,15 +331,13 @@ export default function Signup() {
                 box-shadow: 0 0 20px rgba(76, 199, 199, 0.5);
                 transform: scale(1.03);
                 }
-
                 .plan-option h4,
                 .plan-option p,
                 .plan-option .currency,
                 .plan-option .main-price,
-                
                 .plan-option .duration {
-                color: #fff !important; /* força branco em todos os textos */
-}
+                color: #fff !important;
+                }
                 .plan-option h4 {
                     margin: 0;
                     font-size: 1.05rem;
@@ -386,7 +362,6 @@ export default function Signup() {
                     font-size: 1.5rem;
                     font-weight: 700;
                 }
-                
                 .plan-option .duration {
                     font-size: 0.75rem;
                     opacity: 0.7;
@@ -475,15 +450,15 @@ export default function Signup() {
                     text-decoration: underline;
                 }
                 .signup-highlight-box {
-                    background: rgba(255, 255, 255, 0.05); /* Usando um valor mais direto para o glass-bg-color-subtle */
+                    background: rgba(255, 255, 255, 0.05);
                     backdrop-filter: blur(6px);
                     border-radius: 15px;
-                    border: 1.5px solid rgba(255, 255, 255, 0.1); /* Usando um valor mais direto para o glass-border-color-subtle */
+                    border: 1.5px solid rgba(255, 255, 255, 0.1);
                     padding: 1.2rem 1.8rem;
                     max-width: 100%;
-                    text-align: justify; /* Adicionado para justificar o texto */
+                    text-align: justify;
                     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-                    color: #fff; /* Usando um valor mais direto para o text-color-light */
+                    color: #fff;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -586,20 +561,19 @@ export default function Signup() {
                                             <span className="duration">
                                                 {plan === 'anual' ? '/ano' : '/semestre'}
                                             </span>
-                                        
                                         </div>
                                     </div>
                                 ))}
                             </div>
                             <button
                                 type="button"
-                                disabled={isSubmitting || isProcessingPayment}
+                                disabled={isSubmitting}
                                 onClick={handleSubmit}
                                 className="submit-gradient-btn"
                                 onMouseMove={handleMouseMove}
                                 style={{ marginTop: '1rem', width: '100%' }}
                             >
-                                {isSubmitting ? 'Criando Conta...' : isProcessingPayment ? 'Processando Pagamento...' : `Finalizar pagamento R$ ${planOptions[selectedPlan].price}`}
+                                {isSubmitting ? 'Criando Conta...' : `Finalizar pagamento R$ ${planOptions[selectedPlan].price}`}
                             </button>
                         </div>
                     </div>
