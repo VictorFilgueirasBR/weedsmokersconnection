@@ -140,7 +140,6 @@
             const pixFormSection = document.getElementById('pix-form-section');
             const pixDisplaySection = document.getElementById('pix-display');
 
-            // Modificação aqui: Acessa a URL da janela principal (pai)
             const urlParams = new URLSearchParams(window.parent.location.search);
             const userId = urlParams.get('userId');
             const userEmail = urlParams.get('userEmail');
@@ -292,6 +291,9 @@
                 submitButton.disabled = true;
                 submitButton.textContent = 'Gerando Pix...';
 
+                // CORREÇÃO: Limpando o campo de identificação antes de enviar
+                const identificationNumberCleaned = document.getElementById('pix-identificationNumber').value.replace(/\D/g, '');
+
                 const pixData = {
                     userId: userId,
                     amount: parseFloat(amount),
@@ -299,11 +301,11 @@
                     firstName: document.getElementById('form-checkout__payerFirstName').value,
                     lastName: document.getElementById('form-checkout__payerLastName').value,
                     identificationType: document.getElementById('pix-identificationType').value,
-                    identificationNumber: document.getElementById('pix-identificationNumber').value,
+                    identificationNumber: identificationNumberCleaned, // Usando o valor limpo aqui
                 };
                 
                 try {
-                    const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', { // Altere para a sua rota de Pix
+                    const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(pixData),
@@ -320,6 +322,7 @@
                         }
                     } else {
                         statusMessage.className = "mt-6 text-center text-red-500";
+                        // CORREÇÃO: Exibindo a mensagem de erro retornada pelo backend
                         statusMessage.textContent = result.message || 'Erro ao processar o pagamento Pix. Verifique os dados e tente novamente.';
                     }
                 } catch (error) {
