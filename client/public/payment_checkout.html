@@ -65,7 +65,7 @@
 
     <div id="payment-card" class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md transform transition-all duration-300">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Finalizar Compra</h1>
-        <p class="text-lg font-semibold text-center text-green-600 mb-6">WeedsmokersPass - R$57,90</p>
+        <p id="amount-display" class="text-lg font-semibold text-center text-green-600 mb-6">Carregando...</p>
         
         <form id="form-checkout">
             <div id="form-checkout__cardNumber" class="container"></div>
@@ -99,20 +99,23 @@
             const progressBar = document.querySelector(".progress-bar");
             const userEmailInput = document.getElementById('form-checkout__cardholderEmail');
             const form = document.getElementById('form-checkout');
+            const amountDisplay = document.getElementById('amount-display');
 
             const urlParams = new URLSearchParams(window.location.search);
             const userId = urlParams.get('userId');
             const userEmail = urlParams.get('userEmail');
+            const amount = urlParams.get('amount'); // <-- LENDO O NOVO PARÂMETRO DA URL
 
-            if (!userId || !userEmail) {
+            if (!userId || !userEmail || !amount) {
                 statusMessage.className = "mt-6 text-center text-red-500";
-                statusMessage.textContent = 'Erro: Faltam informações do usuário. Por favor, volte e tente novamente.';
+                statusMessage.textContent = 'Erro: Faltam informações do usuário ou valor do pagamento. Por favor, volte e tente novamente.';
                 submitButton.disabled = true;
                 return;
             }
 
             userEmailInput.value = userEmail;
-            
+            amountDisplay.textContent = `WeedsmokersPass - R$${parseFloat(amount).toFixed(2).replace('.', ',')}`;
+
             // Substitua 'YOUR_PUBLIC_KEY' pela sua Chave Pública
             const PUBLIC_KEY = 'TEST-ecd8f16d-1187-460c-9f06-ecb3f03ca725'; 
 
@@ -120,7 +123,7 @@
                 const mp = new MercadoPago(PUBLIC_KEY, { locale: 'pt-BR' });
 
                 const cardForm = mp.cardForm({
-                    amount: "57.90",
+                    amount: amount, // <-- PASSANDO O VALOR LIDO DA URL
                     iframe: true,
                     form: {
                         id: "form-checkout",
@@ -150,7 +153,7 @@
                                 token: cardData.token,
                                 userId: userId,
                                 email: cardData.cardholderEmail,
-                                amount: parseFloat(cardForm.amount),
+                                amount: parseFloat(amount), // <-- USANDO O VALOR LIDO DA URL
                                 description: "WeedsmokersPass",
                                 installments: Number(cardData.installments),
                                 paymentMethodId: cardData.paymentMethodId,
