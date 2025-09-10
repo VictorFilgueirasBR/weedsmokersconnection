@@ -160,7 +160,8 @@
                             };
                             
                             try {
-                                const response = await fetch('/api/mercadopago/process-payment', {
+                                // CORREÇÃO: Usar a URL completa do seu backend
+                                const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-payment', {
                                     method: "POST",
                                     headers: { "Content-Type": "application/json" },
                                     body: JSON.stringify(paymentData),
@@ -171,7 +172,7 @@
                                 if (response.ok) {
                                     statusMessage.className = "mt-6 text-center text-green-500";
                                     statusMessage.textContent = 'Pagamento aprovado! Redirecionando...';
-                                    window.location.href = `${window.location.origin}/login.html`; // Substitua pelo seu destino de login/sucesso
+                                    window.location.href = `${window.location.origin}/login.html`;
                                 } else {
                                     statusMessage.className = "mt-6 text-center text-red-500";
                                     statusMessage.textContent = result.message || 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
