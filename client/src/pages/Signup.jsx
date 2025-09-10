@@ -163,13 +163,7 @@ export default function Signup() {
             duration: '6 meses',
             description: 'Plano Semestral',
             
-        },
-        anual: {
-            price: '87,90',
-            duration: '1 ano',
-            description: 'Plano Anual',
-            
-        },
+        }
     };
 
     return (
@@ -570,7 +564,7 @@ export default function Signup() {
                                 Mais Saúde e um estilo de vida consciente.
                             </p>
                             <div className="plans-wrapper">
-                                {['semestral', 'anual'].map((plan) => (
+                                
                                     <div
                                         key={plan}
                                         onClick={() => setSelectedPlan(plan)}
@@ -589,7 +583,6 @@ export default function Signup() {
                                         
                                         </div>
                                     </div>
-                                ))}
                             </div>
                             <button
                                 type="button"
