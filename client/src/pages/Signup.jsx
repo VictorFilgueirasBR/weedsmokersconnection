@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FirstClub from '../components/FirstClub'; // Importa o novo componente
 import GlassSignup from '../components/GlassSignup';
-import '../styles/Signup.scss';
+import './Signup.scss';
 
 const Signup = () => {
     const [formData, setFormData] = useState({
