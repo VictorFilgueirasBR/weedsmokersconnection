@@ -175,7 +175,7 @@
                                 if (response.ok) {
                                     statusMessage.className = "mt-6 text-center text-green-500";
                                     statusMessage.textContent = 'Pagamento aprovado! Redirecionando...';
-                                    window.location.href = `${window.location.origin}/login.html`;
+                                    window.location.href = `${window.location.origin}/login`;
                                 } else {
                                     statusMessage.className = "mt-6 text-center text-red-500";
                                     statusMessage.textContent = result.message || 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
