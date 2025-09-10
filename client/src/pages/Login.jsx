@@ -55,7 +55,7 @@ const Login = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await axios.post(`${API_BASE_URL}/api/auth/login`, { // Alteração feita aqui
+      const response = await axios.post(`https://api.weedsmokersconnection.com/api/auth/login`, { // Alteração feita aqui
         email: formData.email,
         password: formData.password,
       });
