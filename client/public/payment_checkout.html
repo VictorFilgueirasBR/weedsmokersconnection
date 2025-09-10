@@ -113,13 +113,13 @@
             <label for="pix-copy-paste" class="block text-sm font-medium text-gray-700 text-left">Copiar Código Pix:</label>
             <div class="mt-1 flex rounded-md shadow-sm">
                 <input type="text" id="pix-copy-paste" class="flex-1 block w-full rounded-l-lg sm:text-sm border-gray-300 p-2 text-gray-700 font-mono" readonly/>
-                <button id="copy-button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                <button id="pix-copy-button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
                     Copiar
                 </button>
             </div>
             <div id="copy-message" class="mt-2 text-sm text-center text-green-600 opacity-0 transition-opacity duration-300">Copiado!</div>
 
-            <p class="text-xs text-gray-500 mt-4">Este QR Code expira em alguns minutos. Realize o pagamento em seu Internet Banking ou app Pix.</p>
+            <p class="text-xs text-gray-500 mt-4">Este QR Code expira em 15 minutos. Realize o pagamento em seu Internet Banking ou app Pix.</p>
         </div>
 
         <div id="status-message" class="mt-6 text-center text-sm font-medium"></div>
@@ -139,6 +139,7 @@
             const cardFormSection = document.getElementById('card-form-section');
             const pixFormSection = document.getElementById('pix-form-section');
             const pixDisplaySection = document.getElementById('pix-display');
+            const pixCopyButton = document.getElementById('pix-copy-button');
 
             const urlParams = new URLSearchParams(window.location.search);
             const userId = urlParams.get('userId');
@@ -275,7 +276,7 @@
                 const qrImage = document.getElementById('qr-code-image');
                 const qrCopyPaste = document.getElementById('pix-copy-paste');
                 
-                qrImage.src = `data:image/jpeg;base64,${response.point_of_interaction.transaction_data.qr_code_base64}`;
+                qrImage.src = `data:image/png;base64,${response.point_of_interaction.transaction_data.qr_code_base64}`;
                 qrCopyPaste.value = response.point_of_interaction.transaction_data.qr_code;
 
                 cardFormSection.classList.add('hidden');
@@ -302,7 +303,7 @@
                 };
                 
                 try {
-                    const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', { // Altere para a sua rota de Pix
+                    const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(pixData),
@@ -332,7 +333,7 @@
             }
 
             // Lógica para copiar o código Pix
-            document.getElementById('copy-button').addEventListener('click', () => {
+            pixCopyButton.addEventListener('click', () => {
                 const copyInput = document.getElementById('pix-copy-paste');
                 copyInput.select();
                 copyInput.setSelectionRange(0, 99999);
