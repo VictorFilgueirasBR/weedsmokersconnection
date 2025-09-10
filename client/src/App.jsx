@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { createContext, useState, useEffect, useContext } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 import MainLayout from './components/MainLayout';
@@ -19,70 +19,87 @@ import ChatPage from './pages/ChatPage'; // Importa o novo componente da página
 export const AuthContext = createContext();
 
 function PrivateRoute({ children }) {
-  const { token, user } = useContext(AuthContext);
-  return token && user ? children : <Navigate to="/" replace />;
+  const { token, user } = useContext(AuthContext);
+  return token && user ? children : <Navigate to="/" replace />;
 }
 
 export default function App() {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('token') || null);
-  const [showPopup, setShowPopup] = useState(false);
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem('token') || null);
+  const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    if (token) {
-      axios
-        .get(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-        .then((res) => setUser(res.data))
-        .catch(() => {
-          localStorage.removeItem('token');
-          setUser(null);
-          setToken(null);
-        });
-    }
-  }, [token]);
+  useEffect(() => {
+    if (token) {
+      axios
+        .get(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+        .then((res) => setUser(res.data))
+        .catch(() => {
+          localStorage.removeItem('token');
+          setUser(null);
+          setToken(null);
+        });
+    }
+  }, [token]);
 
-  const handleShowPopup = () => {
-    setShowPopup(true);
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 5000);
-  };
+  const handleShowPopup = () => {
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 5000);
+  };
 
-  return (
-    <AuthContext.Provider value={{ user, setUser, token, setToken }}>
-      <BrowserRouter>
-        <ScrollToTop /> {/* Componente para rolar para o topo em cada mudança de rota */}
-        <AgeConfirmModal backgroundImage="/images/bg-try-plans.jpeg" />
+  return (
+    <AuthContext.Provider value={{ user, setUser, token, setToken }}>
+      <BrowserRouter>
+        <ScrollToTop /> {/* Componente para rolar para o topo em cada mudança de rota */}
+        <AgeConfirmModal backgroundImage="/images/bg-try-plans.jpeg" />
 
-        <Routes>
-          <Route path="/" element={<MainLayout onShowPopup={handleShowPopup} />}>
-            <Route index element={<Home />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password/:token" element={<ResetPassword />} />
-            <Route
-              path="/profile"
-              element={
-                <PrivateRoute>
-                  <Profile showPopup={showPopup} setShowPopup={setShowPopup} />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/club"
-              element={
-                <PrivateRoute>
-                  <ProtectedClub />
-                </PrivateRoute>
-              }
-            />
-            <Route path="/chat" element={<ChatPage />} /> {/* Nova rota para o Chatbot */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </AuthContext.Provider>
-  );
+        <Routes>
+          <Route path="/" element={<MainLayout onShowPopup={handleShowPopup} />}>
+            <Route index element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
+            <Route
+              path="/profile"
+              element={
+                <PrivateRoute>
+                  <Profile showPopup={showPopup} setShowPopup={setShowPopup} />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/club"
+              element={
+                <PrivateRoute>
+                  <ProtectedClub />
+                </PrivateRoute>
+              }
+            />
+            <Route path="/chat" element={<ChatPage />} /> {/* Nova rota para o Chatbot */}
+          </Route>
+          
+          {/* Nova rota para lidar com a página de pagamento */}
+          <Route
+            path="/payment_checkout.html"
+            element={
+              <div style={{ width: '100%', height: '100vh', border: 'none' }}>
+                <iframe
+                  src={`/payment_checkout.html${window.location.search}`}
+                  title="Payment Checkout"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  style={{ border: 'none' }}
+                ></iframe>
+              </div>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </AuthContext.Provider>
+  );
 }
