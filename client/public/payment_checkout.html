@@ -140,7 +140,8 @@
             const pixFormSection = document.getElementById('pix-form-section');
             const pixDisplaySection = document.getElementById('pix-display');
 
-            const urlParams = new URLSearchParams(window.location.search);
+            // Modificação aqui: Acessa a URL da janela principal (pai)
+            const urlParams = new URLSearchParams(window.parent.location.search);
             const userId = urlParams.get('userId');
             const userEmail = urlParams.get('userEmail');
             const amount = urlParams.get('amount');
