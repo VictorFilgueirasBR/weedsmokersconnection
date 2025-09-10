@@ -15,7 +15,6 @@ import ResetPassword from './pages/ResetPassword';
 import Profile from './pages/Profile';
 import ProtectedClub from './pages/ProtectedClub';
 import ChatPage from './pages/ChatPage'; // Importa o novo componente da página do Chatbot
-import PaymentCheckout from './pages/PaymentCheckout';
 
 export const AuthContext = createContext();
 
@@ -81,7 +80,6 @@ export default function App() {
               }
             />
             <Route path="/chat" element={<ChatPage />} /> {/* Nova rota para o Chatbot */}
-            <Route path="/checkout" element={<PaymentCheckout />} />
           </Route>
         </Routes>
       </BrowserRouter>
