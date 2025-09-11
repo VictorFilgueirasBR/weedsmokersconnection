@@ -541,7 +541,7 @@ export default function Signup() {
                     <div className="signup-plans-container">
                         <div className="signup-form-glass">
                             <h2>Escolha Seu Plano</h2>
-                            <p style={{ margin: '0.5rem 0 1rem', opacity: 0.8, textAlign: 'left', fontSize: '0.65rem' }}>
+                            <p style={{ margin: '0.5rem 0 1rem', opacity: 0.8, textAlign: 'left', fontSize: '0.65rem', color: '#fff' }}>
                                 Acesso imediato a todas as novidades liberadas nos catálogos de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds), promovendo saúde e consciência.
                             </p>
                             <div className="plans-wrapper">
