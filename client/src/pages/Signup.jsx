@@ -456,7 +456,6 @@ export default function Signup() {
                     border: 1.5px solid rgba(255, 255, 255, 0.1);
                     padding: 1.2rem 1.8rem;
                     max-width: 100%;
-                    width: 1000px;
                     text-align: justify;
                     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
                     color: #fff;
