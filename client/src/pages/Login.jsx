@@ -141,7 +141,7 @@ const Login = () => {
           theme: "outline",
           size: "large",
           text: "signin_with",
-          width: "100%",
+          width: 350, // Corrigido para um valor numérico em pixels
           shape: "pill",
           locale: "pt-BR"
         }
