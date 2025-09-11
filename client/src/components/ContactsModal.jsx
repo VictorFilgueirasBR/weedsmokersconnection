@@ -18,16 +18,16 @@ import { HiUsers } from "react-icons/hi2";
 
 const contactsData = {
   "Médicos": [
-    { name: "Dr. Prescritor", link: "https://wa.me/5511999999999" },
-    { name: "Dra. Prescritora", link: "https://wa.me/5511888888888" },
+    { name: "Drs. Prescritor", link: "https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ" },
+    { name: "Dra. Prescritora", link: "https://api.whatsapp.com/send/?phone=5581998107689&text=Teleconsulta&type=phone_number&app_absent=0&fbclid=PAT01DUAMvMgRleHRuA2FlbQIxMAABpzf5iEX9TDU4nigrTr3JLS0C5qJCRIqHMUR5m_MDM2yrlBisjDBOiyYeLrKp_aem_1F1skIeQeHT09boWWszeeA" },
   ],
   "Fornecedores Nacionais": [
-    { name: "Fornecedor SP", link: "https://wa.me/5511777777777" },
-    { name: "Fornecedor RJ", link: "https://wa.me/5521999999999" },
+    { name: "Fornecedor SP", link: "http://instagram.com/Greenway.cbd" },
+    { name: "Fornecedor RJ", link: "https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ" },
   ],
   "Fornecedores Importados": [
-    { name: "Importados", link: "https://wa.me/1555999999999" },
-    { name: "Importados EU", link: "https://wa.me/351999999999" },
+    { name: "Importados", link: "https://institutozasso.com.br/" },
+    { name: "Importados EU", link: "https://flowermed.com.br/" },
   ],
 };
 
