@@ -162,7 +162,7 @@ export default function Signup() {
                     flex-direction: column;
                     align-items: center;
                     padding: 4rem 1rem;
-                    background-image: url('/images/signup-bg.png');
+                    background-image: url('/images/bg-signup.png');
                     background-position: center;
                     background-size: cover;
                     filter: saturate(120%) contrast(100%) brightness(0.85);
@@ -456,6 +456,7 @@ export default function Signup() {
                     border: 1.5px solid rgba(255, 255, 255, 0.1);
                     padding: 1.2rem 1.8rem;
                     max-width: 100%;
+                    width: 1000px;
                     text-align: justify;
                     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
                     color: #fff;
@@ -542,7 +543,7 @@ export default function Signup() {
                         <div className="signup-form-glass">
                             <h2>Escolha Seu Plano</h2>
                             <p style={{ margin: '0.5rem 0 1rem', opacity: 0.8, textAlign: 'center' }}>
-                                Mais Saúde e um estilo de vida consciente.
+                                Acesso imediato a todas as novidades liberadas nos catálogos de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds), promovendo saúde e consciência.
                             </p>
                             <div className="plans-wrapper">
                                 {['semestral', 'anual'].map((plan) => (
