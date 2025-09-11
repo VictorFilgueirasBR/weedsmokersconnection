@@ -41,8 +41,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center; // Centraliza os itens verticalmente
   padding-left: 10%;
+  text-align: center; // Centraliza o texto
   color: $text-color-light;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 

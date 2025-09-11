@@ -155,8 +155,8 @@ const Login = () => {
         <div className="login-content">
           <div className="login-text">
             <h1>LOGIN</h1>
-            <p>Cadastre-se e tenha acesso aos fornecedores das melhores Espécies e Extrções de THC e CBD LEGALIZADOS pela ANVISA.</p>
-            <p className="small-text">Garantia de Satisfação e Qualidade, ou seu dinheiro de volta.</p>
+            <p>Faça login e descubra novidades exclusivas: catálogos de THC e CBD — ICE, Hash, Rosin, FullSpectrum e Diamonds, para uma vida com saúde e consciência.</p>
+            <p className="small-text">Personalize seu perfil e viva uma experiência exclusiva.</p>
           </div>
         </div>
         <div className="login-form-container">
