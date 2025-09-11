@@ -59,6 +59,17 @@
             background-color: #22c55e;
             border-radius: 9999px;
         }
+        /* ESTILOS ADICIONADOS PARA OS BOTÕES DE PAGAMENTO */
+        .payment-button-selected {
+            border-color: #3b82f6; /* azul-500 */
+            background-color: #eff6ff; /* azul-50 */
+            color: #1d4ed8; /* azul-700 */
+        }
+        .payment-button-unselected {
+            border-color: #d1d5db; /* cinza-300 */
+            background-color: #ffffff;
+            color: #6b7280; /* cinza-500 */
+        }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
@@ -68,12 +79,24 @@
         <p id="amount-display" class="text-lg font-semibold text-center text-green-600 mb-6">Carregando...</p>
         
         <form id="form-checkout">
-            <label for="payment-method" class="block text-sm font-medium text-gray-700 mb-1">Método de Pagamento</label>
-            <select id="payment-method" class="input-text mb-4">
-                <option value="credit_card">Cartão de Crédito</option>
-                <option value="pix">Pix</option>
-            </select>
-
+            <label class="block text-sm font-medium text-gray-700 mb-1">Método de Pagamento</label>
+            <div class="flex gap-4 mb-4">
+                <button id="credit-card-button" type="button" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border rounded-lg shadow-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 payment-button-selected">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M11.25 4.507a.75.75 0 0 0-.868-.534c-1.897.433-3.791.905-5.683 1.393L4.5 6.45M17.25 4.5l-2.458 1.108m2.458-1.108a.75.75 0 0 1 .868-.534c1.897.433 3.791.905 5.683 1.393L19.5 6.45m0 0a.75.75 0 0 1-.892.296l-3.226-1.146m-6.046 1.442-2.88 1.151M13.5 18.75h3.375c.621 0 1.125-.504 1.125-1.125V4.722c0-.534-.582-.848-.921-.46L13.5 7.429m-3.693 7.818v1.365h2.253c.621 0 1.125.504 1.125 1.125v2.278c0 .573-.412 1.059-.974 1.111l-2.28.214a1.125 1.125 0 0 1-1.079-1.14l.114-10.214a.75.75 0 0 1 .494-.736h-1.025a.75.75 0 0 1-.722-.555v-1.86a.75.75 0 0 1 .722-.555h5.183ZM1.5 18.75h3.375c.621 0 1.125-.504 1.125-1.125V4.722c0-.534-.582-.848-.921-.46L1.5 7.429m3.693 7.818v1.365h2.253c.621 0 1.125.504 1.125 1.125v2.278c0 .573-.412 1.059-.974 1.111l-2.28.214a1.125 1.125 0 0 1-1.079-1.14l.114-10.214a.75.75 0 0 1 .494-.736h-1.025a.75.75 0 0 1-.722-.555v-1.86a.75.75 0 0 1 .722-.555h5.183Z" />
+                    </svg>
+                    <span>Cartão de crédito</span>
+                </button>
+                <button id="pix-button" type="button" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border rounded-lg shadow-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 payment-button-unselected">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M7.5 12a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Z" />
+                        <path fill-rule="evenodd" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 0a6 6 0 1 1 12 0 6 6 0 0 1-12 0Z" clip-rule="evenodd" />
+                        <path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Z" />
+                    </svg>
+                    <span>Pix</span>
+                </button>
+            </div>
+            
             <div id="card-form-section">
                 <div id="form-checkout__cardNumber" class="container"></div>
                 <div class="flex gap-4">
@@ -135,10 +158,13 @@
             const pixEmailInput = document.getElementById('form-checkout__pixEmail');
             const form = document.getElementById('form-checkout');
             const amountDisplay = document.getElementById('amount-display');
-            const paymentMethodSelect = document.getElementById('payment-method');
             const cardFormSection = document.getElementById('card-form-section');
             const pixFormSection = document.getElementById('pix-form-section');
             const pixDisplaySection = document.getElementById('pix-display');
+            
+            // Novos elementos
+            const creditCardButton = document.getElementById('credit-card-button');
+            const pixButton = document.getElementById('pix-button');
 
             const urlParams = new URLSearchParams(window.parent.location.search);
             const userId = urlParams.get('userId');
@@ -239,22 +265,48 @@
                 },
             });
 
-            // Lógica para alternar entre métodos de pagamento
-            paymentMethodSelect.addEventListener('change', (event) => {
-                if (event.target.value === 'pix') {
+            // Lógica para alternar entre métodos de pagamento via botões
+            let selectedPaymentMethod = 'credit_card';
+
+            function togglePaymentSections() {
+                if (selectedPaymentMethod === 'pix') {
                     cardFormSection.classList.add('hidden');
                     pixFormSection.classList.remove('hidden');
                     pixDisplaySection.classList.add('hidden');
-                    form.removeEventListener('submit', cardForm.onSubmit);
-                    form.addEventListener('submit', processPixPayment);
                     submitButton.textContent = 'Gerar Pix';
+                    pixButton.classList.remove('payment-button-unselected');
+                    pixButton.classList.add('payment-button-selected');
+                    creditCardButton.classList.remove('payment-button-selected');
+                    creditCardButton.classList.add('payment-button-unselected');
                 } else {
                     cardFormSection.classList.remove('hidden');
                     pixFormSection.classList.add('hidden');
                     pixDisplaySection.classList.add('hidden');
-                    form.removeEventListener('submit', processPixPayment);
-                    form.addEventListener('submit', cardForm.onSubmit);
                     submitButton.textContent = 'Pagar Agora';
+                    creditCardButton.classList.remove('payment-button-unselected');
+                    creditCardButton.classList.add('payment-button-selected');
+                    pixButton.classList.remove('payment-button-selected');
+                    pixButton.classList.add('payment-button-unselected');
+                }
+            }
+            
+            creditCardButton.addEventListener('click', () => {
+                selectedPaymentMethod = 'credit_card';
+                togglePaymentSections();
+            });
+
+            pixButton.addEventListener('click', () => {
+                selectedPaymentMethod = 'pix';
+                togglePaymentSections();
+            });
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                
+                if (selectedPaymentMethod === 'pix') {
+                    await processPixPayment(event);
+                } else {
+                    cardForm.onSubmit(event);
                 }
             });
 
