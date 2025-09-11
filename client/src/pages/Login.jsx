@@ -138,10 +138,10 @@ const Login = () => {
       window.google.accounts.id.renderButton(
         googleSignInButtonRef.current,
         {
-          theme: "outline",
+          theme: "filled_blue", // Alterado para um tema com fundo
           size: "large",
           text: "signin_with",
-          width: 350, // Corrigido para um valor numérico em pixels
+          width: 350,
           shape: "pill",
           locale: "pt-BR"
         }
