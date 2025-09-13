@@ -3,18 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const PAGES = [
   {
-    title: "🌍 Contexto histórico Global",
-    content: `China Antiga (aprox. 2.700 a.C.): registros do imperador Shen Nung descrevem a cannabis como remédio para dores, reumatismo e até malária.
-
-
-Índia: o bhang, preparado com flores em natura, era usado em rituais espirituais e medicinais, associado à purificação do corpo e alívio de sofrimentos.
-
-
-Oriente Médio: médicos árabes medievais prescreviam flores de cannabis para dores crônicas, inflamações e epilepsia.
-
-
-Ocidente: no século XIX, a cannabis entrou nas farmacopeias da Europa e EUA, sendo usada como analgésico e sedativo natural.`,
-  },
+    title: "🌍 THC LEGAL no BRASIL",
+    content: `O passo a passo (é só assinar que está dentro da plataforma) junto com os contatos para ter acesso a vários catálogos atualizados semanalmente de:
+    - Flores em Natura. (THC)
+    - Hashs: ICE, Rosin, FullSpectrum, Diamonds. (THC ou CBD)
+    - Gummies (THC)
+    - Óleos (THC ou CBD)
+    - As melhores espécies e extrações ricas em THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds)
+    
+    🌱 Para mais informações ou suporte, entre em contato conosco através dos canais da plataforma. Tudo está organizado de forma prática para que você aproveite de forma segura e consciente.`
+    },
   {
     title: "🌱 Consumo em forma in natura",
     content: `As flores de cannabis em natura preservam canabinoides (como THC e CBD) e terpenos, potencializando o efeito entourage.
