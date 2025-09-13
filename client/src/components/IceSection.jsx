@@ -36,12 +36,12 @@ const IceInfoCard = () => {
         width: '100%',
         maxWidth: '800px',
         borderRadius: '24px',
-        background: 'rgba(255,255,255,0.2)',
+        background: 'rgba(255,255,255,0.12)',
         backdropFilter: 'blur(20px)',
         border: '1px solid rgba(255,255,255,0.3)',
         boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
         padding: '24px',
-        color: '#000'
+        color: '#fff'
       }}>
         <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#000' }}>Extração de THC Ice Medicinal</h1>
         {sections.map((section, index) => (
@@ -56,7 +56,7 @@ const IceInfoCard = () => {
                 borderRadius: '12px',
                 fontSize: '1.1rem',
                 fontWeight: '600',
-                color: '#000',
+                color: '#fff',
                 cursor: 'pointer',
                 marginBottom: '8px',
                 border: 'none',
@@ -81,7 +81,7 @@ const IceInfoCard = () => {
                     borderRadius: '12px',
                     fontSize: '0.9rem',
                     lineHeight: '1.6',
-                    color: '#000'
+                    color: '#fff'
                   }}
                 >
                   {section.content}
