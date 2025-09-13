@@ -9,6 +9,7 @@ import WeedPassSection from "../components/WeedPassSection";
 import VideoPlayer from "../components/VideoPlayer";
 import CannabisSlides from "../components/CannabisSlides";
 import IceSection from "../components/IceSection";
+import FlowerWsc from "../components/FlowersWcs";
 
 
 
@@ -18,6 +19,8 @@ export default function Home() {
       {/* Header fixo no topo */}
       <Header />
       <HeroSlides />
+
+      <FlowerWsc />
 
 
       <HowItWorksSection />
