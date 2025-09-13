@@ -21,77 +21,58 @@ const IceInfoCard = () => {
   const toggleSection = (index) => setExpandedIndex(expandedIndex === index ? null : index);
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundImage: 'url(/images/hash-legalizado-anvisa.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      padding: '16px',
-      fontFamily: 'Arial, sans-serif'
-    }}>
-      <div style={{
-        width: '100%',
-        maxWidth: '800px',
-        borderRadius: '24px',
-        background: 'rgba(255,255,255,0.12)',
-        backdropFilter: 'blur(20px)',
-        border: '1px solid rgba(255,255,255,0.3)',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-        padding: '24px',
-        color: '#fff'
-      }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#fff' }}>Extração de THC Ice Medicinal</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1 } }}
+      style={{
+        minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center',
+        backgroundImage: 'url(/images/hash-legalizado-anvisa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center',
+        padding: '16px', fontFamily: 'Arial, sans-serif'
+      }}
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1, transition: { duration: 0.8 } }}
+        whileHover={{ scale: 1.02 }}
+        style={{
+          width: '100%', maxWidth: '800px', borderRadius: '24px', background: 'rgba(255,255,255,0.2)',
+          backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.3)', boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
+          padding: '24px', color: '#fff'
+        }}
+      >
+        <motion.h1
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1, transition: { duration: 0.8 } }}
+          style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#fff' }}
+        >Extração de THC Ice Medicinal</motion.h1>
+
         {sections.map((section, index) => (
           <motion.div key={index} layout style={{ marginBottom: '16px' }}>
-            <button
+            <motion.button
               onClick={() => toggleSection(index)}
+              whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.5)' }}
+              whileTap={{ scale: 0.98 }}
               style={{
-                width: '100%',
-                textAlign: 'left',
-                padding: '16px',
-                background: 'rgba(255,255,255,0.3)',
-                borderRadius: '12px',
-                fontSize: '1.1rem',
-                fontWeight: '600',
-                color: '#fff',
-                cursor: 'pointer',
-                marginBottom: '8px',
-                border: 'none',
-                transition: 'background 0.3s'
+                width: '100%', textAlign: 'left', padding: '16px', background: 'rgba(255,255,255,0.3)',
+                borderRadius: '12px', fontSize: '1.1rem', fontWeight: '600', color: '#fff', cursor: 'pointer',
+                marginBottom: '8px', border: 'none', transition: 'background 0.3s'
               }}
-              onMouseOver={e => e.currentTarget.style.background='rgba(255,255,255,0.5)'}
-              onMouseOut={e => e.currentTarget.style.background='rgba(255,255,255,0.3)'}
-            >
-              {section.title}
-            </button>
+            >{section.title}</motion.button>
+
             <AnimatePresence>
               {expandedIndex === index && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  style={{
-                    overflow: 'hidden',
-                    marginTop: '8px',
-                    padding: '16px',
-                    background: 'rgba(255,255,255,0.2)',
-                    borderRadius: '12px',
-                    fontSize: '0.9rem',
-                    lineHeight: '1.6',
-                    color: '#fff'
-                  }}
-                >
-                  {section.content}
-                </motion.div>
+                  animate={{ opacity: 1, height: 'auto', transition: { duration: 0.5 } }}
+                  exit={{ opacity: 0, height: 0, transition: { duration: 0.3 } }}
+                  style={{ overflow: 'hidden', marginTop: '8px', padding: '16px', background: 'rgba(255,255,255,0.2)', borderRadius: '12px', fontSize: '0.9rem', lineHeight: '1.6', color: '#fff' }}
+                >{section.content}</motion.div>
               )}
             </AnimatePresence>
           </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
