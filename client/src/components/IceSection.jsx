@@ -33,42 +33,38 @@ O nome "Ice" refere-se ao uso de gelo no processo de extração, que ajuda a pre
 
 const IceInfoCard = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const toggleSection = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
+  const toggleSection = (index) => setExpandedIndex(expandedIndex === index ? null : index);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-green-100 to-green-200 p-4">
-      <div className="w-full max-w-3xl rounded-2xl bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg p-6">
-        <h1 className="text-3xl font-bold text-white text-center mb-6">
-          Extração de THC Ice Medicinal
-        </h1>
+    <div style={{
+      minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center',
+      background: 'linear-gradient(to bottom, #a8e063, #56ab2f)', padding: '16px', fontFamily: 'Arial, sans-serif'
+    }}>
+      <div style={{
+        width: '100%', maxWidth: '800px', borderRadius: '24px', background: 'rgba(255,255,255,0.2)',
+        backdropFilter: 'blur(15px)', border: '1px solid rgba(255,255,255,0.3)', boxShadow: '0 8px 32px rgba(0,0,0,0.2)', padding: '24px', color: 'white'
+      }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px' }}>Extração de THC Ice Medicinal</h1>
         {sections.map((section, index) => (
-          <motion.div
-            key={index}
-            layout
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            className="mb-4"
-          >
+          <motion.div key={index} layout style={{ marginBottom: '16px' }}>
             <button
               onClick={() => toggleSection(index)}
-              className="w-full text-left p-4 bg-white/10 hover:bg-white/20 rounded-lg font-semibold text-lg text-white transition-colors"
-            >
-              {section.title}
-            </button>
+              style={{
+                width: '100%', textAlign: 'left', padding: '16px', background: 'rgba(255,255,255,0.1)',
+                borderRadius: '12px', fontSize: '1.1rem', fontWeight: '600', color: 'white', cursor: 'pointer',
+                marginBottom: '8px', border: 'none', transition: 'background 0.3s'
+              }}
+              onMouseOver={e => e.currentTarget.style.background='rgba(255,255,255,0.2)'}
+              onMouseOut={e => e.currentTarget.style.background='rgba(255,255,255,0.1)'}
+            >{section.title}</button>
             <AnimatePresence>
               {expandedIndex === index && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
+                  animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="overflow-hidden mt-2 p-4 bg-white/10 rounded-lg text-white text-sm leading-relaxed"
-                >
-                  {section.content}
-                </motion.div>
+                  style={{ overflow: 'hidden', marginTop: '8px', padding: '16px', background: 'rgba(255,255,255,0.1)', borderRadius: '12px', fontSize: '0.9rem', lineHeight: '1.6' }}
+                >{section.content}</motion.div>
               )}
             </AnimatePresence>
           </motion.div>
