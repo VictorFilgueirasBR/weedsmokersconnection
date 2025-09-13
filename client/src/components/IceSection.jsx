@@ -13,7 +13,7 @@ O nome "Ice" refere-se ao uso de gelo no processo de extração, que ajuda a pre
 - Pressed Hash (Temple Ball): Obtido ao pressionar o hash para formar uma bola compacta, tradicionalmente usada para armazenamento e consumo.
 - Full Melt: Hash de alta pureza que derrete completamente quando aquecido, ideal para dabbing.` },
   { title: "Uso medicinal do THC Ice", content: `O THC Ice é valorizado por sua pureza e preservação dos compostos naturais da cannabis, como canabinoides e terpenos. Seu uso medicinal pode ser eficaz no tratamento de condições como dor crônica, náuseas, epilepsia e outras enfermidades, quando utilizado sob orientação médica. É importante destacar que, apesar de ser uma forma concentrada de cannabis, o THC Ice não deve ser confundido com substâncias sintéticas como o "crack", que possuem efeitos e riscos diferentes (SouCannabis).` },
-  { title: "Considerações finais", content: `A extração de THC Ice é uma técnica que permite obter um concentrado de cannabis de alta qualidade e sem o uso de solventes químicos. Seu uso medicinal pode ser benéfico, desde que seja realizado de forma responsável e sob supervisão profissional. É fundamental distinguir entre diferentes formas de cannabis e seus efeitos para garantir um tratamento seguro e eficaz.` },
+  { title: "Considerações finais", content: `Nossos Mádicos prescritores e Fornecedores receitam enviam a extração de THC Ice que é uma técnica que permite obter um concentrado de cannabis de alta qualidade e sem o uso de solventes químicos. Seu uso medicinal pode ser benéfico, desde que seja realizado de forma responsável e sob supervisão profissional. É fundamental distinguir entre diferentes formas de cannabis e seus efeitos para garantir um tratamento seguro e eficaz.` },
 ];
 
 const IceInfoCard = () => {
@@ -43,7 +43,7 @@ const IceInfoCard = () => {
         <motion.h1
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.8 } }}
-          style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#fff' }}
+          style={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#fff' }}
         >Extração de THC Ice Medicinal</motion.h1>
 
         {sections.map((section, index) => (
