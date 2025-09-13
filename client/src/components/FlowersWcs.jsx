@@ -10,7 +10,7 @@ const PAGES = [
     - Gummies (THC)
     - Óleos (THC ou CBD)
     - As melhores espécies e extrações ricas em THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds)
-    
+
     🌱 Para mais informações ou suporte, entre em contato conosco através dos canais da plataforma. Tudo está organizado de forma prática para que você aproveite de forma segura e consciente.`
     },
   {
@@ -26,11 +26,12 @@ Formas de consumo:
   {
     title: "🌱 Benefícios terapêuticos & 🌍 Cultura",
     content: `O THC presente nas flores em natura pode auxiliar em:
-- Dor crônica e neuropática
-- Espasmos musculares (esclerose múltipla)
-- Náuseas e vômitos (quimioterapia)
-- Distúrbios do sono
-- Estímulo do apetite (HIV, câncer)
+- Ansiedade
+- Dores crônicas e neuropática
+- Espasmos musculares
+- Náuseas e vômitos
+- Insônia e Distúrbios do sono
+- TDA, TDAH...
 
 
 A sinergia com outros canabinoides e terpenos amplia os benefícios.`,
