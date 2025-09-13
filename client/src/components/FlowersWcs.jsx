@@ -3,17 +3,47 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const PAGES = [
   {
-    title: "📜 Contexto histórico",
-    content: `O uso medicinal das flores de cannabis não é novidade. Civilizações antigas já utilizavam a planta como ferramenta de cura...`,
+    title: "🌍 Contexto histórico Global",
+    content: `China Antiga (aprox. 2.700 a.C.): registros do imperador Shen Nung descrevem a cannabis como remédio para dores, reumatismo e até malária.
+
+
+Índia: o bhang, preparado com flores em natura, era usado em rituais espirituais e medicinais, associado à purificação do corpo e alívio de sofrimentos.
+
+
+Oriente Médio: médicos árabes medievais prescreviam flores de cannabis para dores crônicas, inflamações e epilepsia.
+
+
+Ocidente: no século XIX, a cannabis entrou nas farmacopeias da Europa e EUA, sendo usada como analgésico e sedativo natural.`,
   },
   {
     title: "🌱 Consumo em forma in natura",
-    content: `As flores preservam canabinoides (THC, CBD) e terpenos. Métodos: vaporização, infusões, uso inalatório controlado...`,
+    content: `As flores de cannabis em natura preservam canabinoides (como THC e CBD) e terpenos, potencializando o efeito entourage.
+
+
+Formas de consumo:
+- Vaporização: método seguro, sem combustão.
+- Infusões ou óleos artesanais: prática cultural tradicional.
+- Uso inalatório medicinal controlado: sob supervisão médica.`,
   },
   {
-    title: "💊 Benefícios terapêuticos & 🌍 Cultura",
-    content: `Alívio de dor crônica, espasmos, náuseas. Conecta práticas ancestrais à ciência moderna...`,
+    title: "🌱 Benefícios terapêuticos & 🌍 Cultura",
+    content: `O THC presente nas flores em natura pode auxiliar em:
+- Dor crônica e neuropática
+- Espasmos musculares (esclerose múltipla)
+- Náuseas e vômitos (quimioterapia)
+- Distúrbios do sono
+- Estímulo do apetite (HIV, câncer)
+
+
+A sinergia com outros canabinoides e terpenos amplia os benefícios.`,
   },
+  {
+title: "🌍 Cultura e terapia lado a lado",
+content: `O uso medicinal das flores conecta práticas ancestrais de cura natural com respaldo científico atual.
+
+
+É a retomada de um caminho histórico, cultural e medicinal que atravessa civilizações, unindo tradição e ciência moderna.`,
+},
 ];
 
 const floatVariants = {
