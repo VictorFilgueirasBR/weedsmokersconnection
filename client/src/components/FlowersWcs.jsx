@@ -5,6 +5,8 @@ const PAGES = [
   {
     title: "🌍 THC LEGAL no BRASIL",
     content: `O passo a passo (é só assinar que está dentro da plataforma) junto com os contatos para ter acesso a vários catálogos atualizados semanalmente de:
+
+
     - Flores em Natura. (THC)
     - Hashs: ICE, Rosin, FullSpectrum, Diamonds. (THC ou CBD)
     - Gummies (THC)
@@ -26,6 +28,8 @@ Formas de consumo:
   {
     title: "🌱 Benefícios terapêuticos & 🌍 Cultura",
     content: `O THC presente nas flores em natura pode auxiliar em:
+
+    
 - Ansiedade
 - Dores crônicas e neuropática
 - Espasmos musculares
