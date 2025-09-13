@@ -58,6 +58,7 @@ export default function FlowersInfo() {
   return (
     <div style={{
       minHeight: "100vh",
+      marginTop: 60,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
