@@ -43,7 +43,7 @@ const IceInfoCard = () => {
         padding: '24px',
         color: '#fff'
       }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#000' }}>Extração de THC Ice Medicinal</h1>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px', color: '#fff' }}>Extração de THC Ice Medicinal</h1>
         {sections.map((section, index) => (
           <motion.div key={index} layout style={{ marginBottom: '16px' }}>
             <button
