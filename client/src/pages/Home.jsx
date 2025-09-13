@@ -19,15 +19,13 @@ export default function Home() {
       <Header />
       <HeroSlides />
 
-      
-      
 
       <HowItWorksSection />
 
       {/* Cartão GlassCard único */}
-        <GlassCard />
+      <GlassCard />
 
-        <IceSection />
+      <IceSection />
 
       
       <WeedPassSection />
@@ -36,9 +34,9 @@ export default function Home() {
 
       <HeroHashLegal />
 
-        <CannabisSlides />
+      <CannabisSlides />
 
-        <VideoPlayer />
+      <VideoPlayer />
 
     </div>
   );

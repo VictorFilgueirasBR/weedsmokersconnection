@@ -76,7 +76,7 @@ const Login = () => {
       console.error('Erro de login:', error.response ? error.response.data : error.message);
       setSubmitMessage({
         type: 'error',
-        text: error.response?.data?.message || 'Ocorreu um erro no servidor. Tente novamente mais tarde.',
+        text: error.response?.data?.message || 'Se já faz parte do Club, Faça Login com Google!',
       });
     } finally {
       setIsSubmitting(false);

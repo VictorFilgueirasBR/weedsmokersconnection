@@ -11,6 +11,7 @@ import GlassCardNacional from "../components/GlassCardNacional";
 import GlassCardImport from "../components/GlassCardImport";
 import GlassTry from "../components/GlassTry";
 import MemberTreatmentFlow from "../components/MemberTreatmentFlow";
+import IceSection from "../components/IceSection";
 import ContactsModal from "../components/ContactsModal";
 
 export default function WSCClub() {
@@ -36,6 +37,8 @@ export default function WSCClub() {
       <div onClick={handleOpenContacts}>
         <GlassTry />
       </div>
+
+      <IceSection />
 
       <div onClick={handleOpenContacts}>
         <GlassCardNacional />
