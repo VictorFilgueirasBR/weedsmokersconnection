@@ -41,7 +41,7 @@ Formas de consumo:
 A sinergia com outros canabinoides e terpenos amplia os benefícios.`,
   },
   {
-title: "🌍 Cultura e terapia lado a lado",
+title: "🌍 Weed Smokers Pass: Cultura e terapia lado a lado",
 content: `O uso medicinal das flores conecta práticas ancestrais de cura natural com respaldo científico atual.
 
 É a retomada de um caminho histórico, cultural e medicinal que atravessa civilizações, unindo tradição e ciência moderna.

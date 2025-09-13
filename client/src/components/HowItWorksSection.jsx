@@ -50,16 +50,16 @@ export default function HowItWorksSection() {
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
           Basta conversar com a nossa IA. Caso o resultado do teste seja superior a 50%, vamos te guiar no passo a passo para
-          obter sua autorização e acesso aos melhores Médicos e Fornecedores de produtos com THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds),
+          obter sua autorização e acesso aos melhores Médicos Prescritores e Fornecedores de produtos com THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds),
           Flores e Extrações de forma 100% legal, leve, rápida e descomplicada! Para isso, é só assinar o Weed Smoker Pass para conquistar mais saúde, liberdade, conexão e um estilo de vida mais leve e consciente.
         </motion.p>
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
-          Dentro da área de membros, você terá acesso ao passo a passo para conseguir sua receita e autorização, além dos documentos necessários e lá dentro você tem acesso ao contato dos melhores Médicos Prescritore e melhores Fornecedores, com Gummyes, Oléos, as melhores Espécies e Extrações ricas em THC , CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e canabinóides, Nacionais e Importados autorizados pela ANVISA.
+          Dentro da área de membros, você terá acesso ao passo a passo para conseguir sua receita e autorização, além dos documentos necessários e lá dentro você tem acesso ao contato dos melhores Médicos Prescritores e melhores Fornecedores, com Gummyes, Oléos, as melhores Espécies e Extrações ricas em THC , CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e canabinóides, Nacionais e Importados autorizados pela ANVISA.
         </motion.p>
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
-          Sim você consegue sua autorização e receita em menos de 2 horas com nosso passo a passo é só entrar em contato com os Médicos e Fornecedores dentro da plataforma (nós não comercializamos), e pode receber seu pedido de Gummyes, Oléos, das Melhores Espécies e Extrações com THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds, Flores) em até 24 horas. Um tratamento feito do seu jeito, pensado especialmente para sua saúde canábica.
+          Sim você consegue sua autorização e receita em menos de 2 horas com nosso passo a passo é só entrar em contato com os Médicos prescritores e Fornecedores dentro da plataforma (nós não comercializamos), e pode receber seu pedido de Gummyes, Oléos, das Melhores Espécies e Extrações com THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds, Flores) em até 24 horas. Um tratamento feito do seu jeito, pensado especialmente para sua saúde canábica.
         </motion.p>
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
