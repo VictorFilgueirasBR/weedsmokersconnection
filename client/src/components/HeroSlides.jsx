@@ -89,7 +89,7 @@ const HeroSlides = () => {
       {/* Conteúdo fixo sobre o slider, com estilo glassmorphism */}
       <div className="hero-content-overlay">
         <p className="hero-subtitle">
-          Assine já e tenha acesso a Médicos prescritores e Fornecedores das Melhores Espécies e Extrações Ricas em THC e CBD, Nacionais e Importadas de forma LEGALIZADA pela ANVISA aqui no BRASIL.
+          Assine já e tenha acesso a Médicos Prescritores e Fornecedores das Melhores Espécies e Extrações Ricas em THC e CBD, Nacionais e Importadas de forma LEGALIZADA pela ANVISA aqui no BRASIL.
         </p>
       </div>
     </section>
