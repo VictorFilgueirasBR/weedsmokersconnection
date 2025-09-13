@@ -8,7 +8,7 @@ import HowItWorksSection from "../components/HowItWorksSection";
 import WeedPassSection from "../components/WeedPassSection";
 import VideoPlayer from "../components/VideoPlayer";
 import CannabisSlides from "../components/CannabisSlides";
-
+import IceSection from "../components/IceSection";
 
 
 
@@ -26,6 +26,9 @@ export default function Home() {
 
       {/* Cartão GlassCard único */}
         <GlassCard />
+
+        <IceSection />
+
       
       <WeedPassSection />
 
