@@ -80,7 +80,7 @@ export default function FlowersInfo() {
           backdropFilter: "blur(12px)",
           border: "1px solid rgba(255,255,255,0.15)",
           boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-          color: "#000",
+          color: "#fff",
           position: "relative",
         }}
       >
