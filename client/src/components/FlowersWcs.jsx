@@ -29,7 +29,7 @@ Formas de consumo:
     title: "🌱 Benefícios terapêuticos & 🌍 Cultura",
     content: `O THC presente nas flores em natura pode auxiliar em:
 
-    
+
 - Ansiedade
 - Dores crônicas e neuropática
 - Espasmos musculares
@@ -44,8 +44,9 @@ A sinergia com outros canabinoides e terpenos amplia os benefícios.`,
 title: "🌍 Cultura e terapia lado a lado",
 content: `O uso medicinal das flores conecta práticas ancestrais de cura natural com respaldo científico atual.
 
+É a retomada de um caminho histórico, cultural e medicinal que atravessa civilizações, unindo tradição e ciência moderna.
 
-É a retomada de um caminho histórico, cultural e medicinal que atravessa civilizações, unindo tradição e ciência moderna.`,
+Assina o Weed Smokers Connection e garante só o que é premium, consciente e legalizado: flores em natura, ICE, Hash, Rosin, FullSpectrum, Gummies, THC, CBD e muito mais.`,
 },
 ];
 
