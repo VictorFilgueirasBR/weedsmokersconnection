@@ -25,7 +25,7 @@ const IceInfoCard = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 1 } }}
       style={{
-        minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center',
+        minHeight: '100vh',marginTop: '60px', display: 'flex', justifyContent: 'center', alignItems: 'center',
         backgroundImage: 'url(/images/hash-legalizado-anvisa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center',
         padding: '16px', fontFamily: 'Arial, sans-serif'
       }}
@@ -35,7 +35,7 @@ const IceInfoCard = () => {
         animate={{ scale: 1, opacity: 1, transition: { duration: 0.8 } }}
         whileHover={{ scale: 1.02 }}
         style={{
-          width: '100%', maxWidth: '800px', marginTop: '70px', borderRadius: '24px', background: 'rgba(255,255,255,0.2)',
+          width: '100%', maxWidth: '800px', borderRadius: '24px', background: 'rgba(255,255,255,0.2)',
           backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.3)', boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
           padding: '24px', color: '#fff'
         }}
