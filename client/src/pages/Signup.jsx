@@ -144,7 +144,7 @@ export default function Signup() {
             description: 'Plano Semestral',
         },
         anual: {
-            price: '87,90',
+            price: '77,90',
             amount: 77.90, // Adicionado o valor numérico para a API de pagamento
             duration: '1 ano',
             description: 'Plano Anual',
