@@ -241,6 +241,7 @@
                                 last_name: lastName,
                             },
                             items: itemData,
+                            deviceId: mp.getDeviceId() // <-- ADICIONA O DEVICE ID AQUI
                         };
                         
                         try {
@@ -382,6 +383,7 @@
                     identificationType: document.getElementById('pix-identificationType').value,
                     identificationNumber: identificationNumberCleaned, // Usando o valor limpo aqui
                     items: itemData,
+                    deviceId: mp.getDeviceId(), // <-- ADICIONA O DEVICE ID AQUI
                 };
                 
                 try {
