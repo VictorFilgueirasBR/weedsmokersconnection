@@ -179,50 +179,59 @@
             
             const mp = new MercadoPago(PUBLIC_KEY, { locale: 'pt-BR' });
 
-            const cardForm = mp.cardForm({
-                amount: amount,
-                iframe: true,
-                form: {
-                    id: "form-checkout",
-                    cardNumber: { id: "form-checkout__cardNumber", placeholder: "Número do cartão" },
-                    expirationDate: { id: "form-checkout__expirationDate", placeholder: "MM/YY" },
-                    securityCode: { id: "form-checkout__securityCode", placeholder: "Cód. de segurança" },
-                    cardholderName: { id: "payer-name", placeholder: "Nome Completo" },
-                    issuer: { id: "form-checkout__issuer", placeholder: "Banco emissor" },
-                    installments: { id: "form-checkout__installments", placeholder: "Parcelas" },
-                    identificationType: { id: "payer-identificationType", placeholder: "Tipo de documento" },
-                    identificationNumber: { id: "payer-identificationNumber", placeholder: "Número do documento" },
-                    cardholderEmail: { id: "payer-email", placeholder: "E-mail" },
-                },
-                callbacks: {
-                    onFormMounted: error => {
-                        if (error) return console.warn("Form Mounted handling error: ", error);
-                        console.log("Form mounted");
+            // A lógica de cardForm só deve ser inicializada se o método de pagamento for 'credit_card'
+            let cardForm;
+
+            function initializeCardForm() {
+                if (cardForm) return; // Evita inicializar o formulário mais de uma vez
+                
+                cardForm = mp.cardForm({
+                    amount: amount,
+                    iframe: true,
+                    form: {
+                        id: "form-checkout",
+                        cardNumber: { id: "form-checkout__cardNumber", placeholder: "Número do cartão" },
+                        expirationDate: { id: "form-checkout__expirationDate", placeholder: "MM/YY" },
+                        securityCode: { id: "form-checkout__securityCode", placeholder: "Cód. de segurança" },
+                        cardholderName: { id: "payer-name", placeholder: "Nome Completo" },
+                        issuer: { id: "form-checkout__issuer", placeholder: "Banco emissor" },
+                        installments: { id: "form-checkout__installments", placeholder: "Parcelas" },
+                        identificationType: { id: "payer-identificationType", placeholder: "Tipo de documento" },
+                        identificationNumber: { id: "payer-identificationNumber", placeholder: "Número do documento" },
+                        cardholderEmail: { id: "payer-email", placeholder: "E-mail" },
                     },
-                    onFetching: (resource) => {
-                        console.log("Fetching resource: ", resource);
-                        progressBar.classList.remove('hidden');
-                        progressBar.removeAttribute("value");
-                        return () => {
-                            progressBar.setAttribute("value", "0");
-                            progressBar.classList.add('hidden');
-                        };
-                    },
-                    onSubmit: (event) => {
-                        event.preventDefault(); // Impede a submissão padrão do formulário
-                        processCardPayment(); // Processa o pagamento com cartão
-                    },
-                    onError: (error) => {
-                        console.log("Form validation error: ", error);
-                        if (Array.isArray(error)) {
-                            const errorMessage = error.map(e => e.message).join(' | ');
-                            cardErrorMessage.textContent = `Erro de validação: ${errorMessage}`;
-                        } else {
-                            cardErrorMessage.textContent = 'Erro de validação nos campos do cartão. Verifique os dados.';
+                    callbacks: {
+                        onFormMounted: error => {
+                            if (error) return console.warn("Form Mounted handling error: ", error);
+                            console.log("Form mounted");
+                        },
+                        onFetching: (resource) => {
+                            console.log("Fetching resource: ", resource);
+                            progressBar.classList.remove('hidden');
+                            progressBar.removeAttribute("value");
+                            return () => {
+                                progressBar.setAttribute("value", "0");
+                                progressBar.classList.add('hidden');
+                            };
+                        },
+                        onSubmit: (event) => {
+                            event.preventDefault(); 
+                            processCardPayment();
+                        },
+                        onError: (error) => {
+                            console.log("Form validation error: ", error);
+                            if (Array.isArray(error)) {
+                                const errorMessage = error.map(e => e.message).join(' | ');
+                                cardErrorMessage.textContent = `Erro de validação: ${errorMessage}`;
+                            } else {
+                                cardErrorMessage.textContent = 'Erro de validação nos campos do cartão. Verifique os dados.';
+                            }
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Pagar Agora';
                         }
-                    }
-                },
-            });
+                    },
+                });
+            }
 
             // Lógica para alternar entre métodos de pagamento
             let selectedPaymentMethod = 'credit_card';
@@ -246,6 +255,8 @@
                     creditCardButton.classList.remove('payment-button-unselected');
                     pixButton.classList.remove('payment-button-selected');
                     pixButton.classList.add('payment-button-unselected');
+                    // Garante que o cardForm está inicializado
+                    initializeCardForm(); 
                 }
             }
             
@@ -259,7 +270,6 @@
                 togglePaymentSections();
             });
 
-            // Centraliza a lógica de submissão do formulário
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 submitButton.disabled = true;
@@ -267,8 +277,10 @@
                 if (selectedPaymentMethod === 'credit_card') {
                     submitButton.textContent = 'Processando...';
                     cardErrorMessage.textContent = '';
-                    // Dispara a submissão do cardForm, que por sua vez chama o onSubmit callback
-                    cardForm.submit(); 
+                    // Dispara a submissão do cardForm para validar e processar o cartão
+                    if (cardForm) {
+                        cardForm.submit();
+                    }
                 } else if (selectedPaymentMethod === 'pix') {
                     submitButton.textContent = 'Gerando Pix...';
                     await processPixPayment();
@@ -278,7 +290,13 @@
             // Lógica para processar o pagamento com cartão
             async function processCardPayment() {
                 try {
-                    const cardData = await cardForm.createCardToken();
+                    // Espera pela criação do token do cartão
+                    const cardData = await new Promise((resolve, reject) => {
+                        cardForm.createCardToken({
+                            success: (token) => resolve({ token: token.id }),
+                            error: (error) => reject(error)
+                        });
+                    });
                     
                     const nameParts = payerName.value.trim().split(' ');
                     const firstName = nameParts.shift() || '';
@@ -350,22 +368,19 @@
                         return;
                     }
 
+                    const nameParts = payerName.value.trim().split(' ');
+                    const firstName = nameParts.shift() || '';
+                    const lastName = nameParts.join(' ') || '';
+
                     const pixData = {
                         userId: userId,
                         amount: parseFloat(amount),
                         email: payerEmail.value,
-                        firstName: payerName.value.split(' ')[0],
-                        lastName: payerName.value.split(' ').slice(1).join(' '),
+                        firstName: firstName,
+                        lastName: lastName,
                         identificationType: payerIdentificationType.value,
                         identificationNumber: identificationNumberCleaned,
-                        items: [{
-                            id: "WEEDSPASS-01",
-                            title: "WeedsmokersPass",
-                            description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
-                            category_id: "services", 
-                            quantity: 1,
-                            unit_price: parseFloat(amount),
-                        }],
+                        // Removido o array 'items' que causava erro no backend
                     };
                     
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
