@@ -94,12 +94,12 @@
             </div>
             
             <div id="card-form-section" class="flex flex-col gap-2">
+                <input type="text" id="form-checkout__cardholderName" class="input-text" placeholder="Nome Completo (igual no cartão)" />
                 <div id="form-checkout__cardNumber" class="container"></div>
                 <div class="flex gap-4">
                     <div id="form-checkout__expirationDate" class="container w-1/2"></div>
                     <div id="form-checkout__securityCode" class="container w-1/2"></div>
                 </div>
-                <input type="text" id="form-checkout__cardholderName" class="input-text" placeholder="Nome Completo (igual no cartão)" />
                 <select id="form-checkout__issuer" class="input-text"></select>
                 <select id="form-checkout__installments" class="input-text"></select>
                 <div class="flex gap-4">
@@ -161,6 +161,7 @@
             // Novos elementos
             const creditCardButton = document.getElementById('credit-card-button');
             const pixButton = document.getElementById('pix-button');
+            const cardHolderName = document.getElementById('form-checkout__cardholderName');
 
             const urlParams = new URLSearchParams(window.parent.location.search);
             const userId = urlParams.get('userId');
@@ -181,7 +182,6 @@
             const PUBLIC_KEY = 'APP_USR-b01cb2b1-0952-45b9-bb3c-b72588a7b205'; 
             
             const mp = new MercadoPago(PUBLIC_KEY, { locale: 'pt-BR' });
-            const deviceId = mp.deviceProfileId; // Captura o Device ID
 
             const cardForm = mp.cardForm({
                 amount: amount,
@@ -210,6 +210,21 @@
 
                         const cardData = cardForm.getCardFormData();
                         
+                        // Separar nome e sobrenome do campo único
+                        const nameParts = cardHolderName.value.trim().split(' ');
+                        const firstName = nameParts.shift() || '';
+                        const lastName = nameParts.join(' ') || '';
+
+                        // Adicionar dados do item
+                        const itemData = [{
+                            id: "WEEDSPASS-01",
+                            title: "WeedsmokersPass",
+                            description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
+                            category_id: "services", 
+                            quantity: 1,
+                            unit_price: parseFloat(amount),
+                        }];
+
                         const paymentData = {
                             token: cardData.token,
                             userId: userId,
@@ -221,7 +236,11 @@
                             issuerId: cardData.issuerId,
                             identificationType: cardData.identificationType,
                             identificationNumber: cardData.identificationNumber,
-                            deviceId: deviceId, // Adiciona o Device ID aqui
+                            payer: {
+                                first_name: firstName,
+                                last_name: lastName,
+                            },
+                            items: itemData,
                         };
                         
                         try {
@@ -344,6 +363,16 @@
                 // CORREÇÃO: Limpando o campo de identificação antes de enviar
                 const identificationNumberCleaned = document.getElementById('pix-identificationNumber').value.replace(/\D/g, '');
 
+                // Adicionar dados do item
+                const itemData = [{
+                    id: "WEEDSPASS-01",
+                    title: "WeedsmokersPass",
+                    description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
+                    category_id: "services", 
+                    quantity: 1,
+                    unit_price: parseFloat(amount),
+                }];
+
                 const pixData = {
                     userId: userId,
                     amount: parseFloat(amount),
@@ -352,6 +381,7 @@
                     lastName: document.getElementById('form-checkout__payerLastName').value,
                     identificationType: document.getElementById('pix-identificationType').value,
                     identificationNumber: identificationNumberCleaned, // Usando o valor limpo aqui
+                    items: itemData,
                 };
                 
                 try {
