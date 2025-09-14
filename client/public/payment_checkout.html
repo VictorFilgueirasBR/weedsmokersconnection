@@ -209,11 +209,16 @@
                         };
                     },
                     onSubmit: (event) => {
-                        // Impedir que o cardForm faça sua validação automática
-                        // se o método de pagamento selecionado for Pix.
-                        if (selectedPaymentMethod === 'pix') {
-                            event.preventDefault();
-                            processPixPayment();
+                        event.preventDefault(); // Impede a submissão padrão do formulário
+                        processCardPayment(); // Processa o pagamento com cartão
+                    },
+                    onError: (error) => {
+                        console.log("Form validation error: ", error);
+                        if (Array.isArray(error)) {
+                            const errorMessage = error.map(e => e.message).join(' | ');
+                            cardErrorMessage.textContent = `Erro de validação: ${errorMessage}`;
+                        } else {
+                            cardErrorMessage.textContent = 'Erro de validação nos campos do cartão. Verifique os dados.';
                         }
                     }
                 },
@@ -254,19 +259,18 @@
                 togglePaymentSections();
             });
 
-            // O Listener de submit padrão agora apenas lida com a lógica de cartão.
-            // A lógica de Pix foi movida para o callback onSubmit do cardForm.
+            // Centraliza a lógica de submissão do formulário
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 submitButton.disabled = true;
-                submitButton.textContent = 'Processando...';
-                cardErrorMessage.textContent = '';
-
+                
                 if (selectedPaymentMethod === 'credit_card') {
-                    await processCardPayment();
-                } else {
-                    // O processamento de Pix já é tratado no callback onSubmit
-                    // para evitar a validação do cardForm.
+                    submitButton.textContent = 'Processando...';
+                    cardErrorMessage.textContent = '';
+                    // Dispara a submissão do cardForm, que por sua vez chama o onSubmit callback
+                    cardForm.submit(); 
+                } else if (selectedPaymentMethod === 'pix') {
+                    submitButton.textContent = 'Gerando Pix...';
                     await processPixPayment();
                 }
             });
@@ -274,14 +278,8 @@
             // Lógica para processar o pagamento com cartão
             async function processCardPayment() {
                 try {
-                    const cardData = await new Promise((resolve, reject) => {
-                        cardForm.createCardToken({
-                            success: (token) => resolve({ token: token.id }),
-                            error: (error) => reject(error)
-                        });
-                    });
-
-                    // Separar nome e sobrenome do campo único
+                    const cardData = await cardForm.createCardToken();
+                    
                     const nameParts = payerName.value.trim().split(' ');
                     const firstName = nameParts.shift() || '';
                     const lastName = nameParts.join(' ') || '';
@@ -308,7 +306,6 @@
                             quantity: 1,
                             unit_price: parseFloat(amount),
                         }],
-                        // Removido `deviceId`, o SDK do MP V2 cuida disso automaticamente
                     };
 
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-payment', {
@@ -342,9 +339,16 @@
 
             // Lógica para processar o pagamento Pix
             async function processPixPayment() {
-                submitButton.textContent = 'Gerando Pix...';
                 try {
                     const identificationNumberCleaned = payerIdentificationNumber.value.replace(/\D/g, '');
+                    
+                    if (!payerName.value || !payerEmail.value || !payerIdentificationType.value || !identificationNumberCleaned) {
+                        statusMessage.className = "mt-6 text-center text-red-500";
+                        statusMessage.textContent = 'Por favor, preencha todos os campos obrigatórios para o Pix.';
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Gerar Pix';
+                        return;
+                    }
 
                     const pixData = {
                         userId: userId,
@@ -362,7 +366,6 @@
                             quantity: 1,
                             unit_price: parseFloat(amount),
                         }],
-                        // Removido `deviceId`, o SDK do MP V2 cuida disso automaticamente
                     };
                     
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
