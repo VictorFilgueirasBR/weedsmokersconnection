@@ -11,11 +11,11 @@ import { useNavigate } from "react-router-dom";
 function GlassSignup({
   name = "Weed Smokers Pass",
   currency = "R$",
-  amount = "57,90",
+  amount = "47,90",
   delta = "| Semestre",
   subtitle = "Tenha acesso as melhores Espécies e Extrações de THC & CBD.",
   last4 = "THC & CBD",
-  cta = "R$57,90"
+  cta = "R$47,90"
 }) {
   const cardRef = useRef(null);
   const navigate = useNavigate();
