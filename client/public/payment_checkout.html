@@ -115,6 +115,7 @@
             </div>
             
             <div id="card-error-message" class="text-red-500 text-sm font-medium mt-2"></div>
+            <div id="pix-error-message" class="text-red-500 text-sm font-medium mt-2 hidden"></div>
 
             <div id="pix-display" class="hidden text-center">
                 <h2 class="text-xl font-bold text-gray-800 mb-4">Pagamento Pix</h2>
@@ -159,6 +160,7 @@
             const payerIdentificationNumber = document.getElementById('payer-identificationNumber');
             const payerEmail = document.getElementById('payer-email');
             const cardErrorMessage = document.getElementById('card-error-message');
+            const pixErrorMessage = document.getElementById('pix-error-message');
 
             const urlParams = new URLSearchParams(window.parent.location.search);
             const userId = urlParams.get('userId');
@@ -214,10 +216,6 @@
                                 progressBar.classList.add('hidden');
                             };
                         },
-                        onSubmit: (event) => {
-                            event.preventDefault(); 
-                            processCardPayment();
-                        },
                         onError: (error) => {
                             console.log("Form validation error: ", error);
                             if (Array.isArray(error)) {
@@ -239,7 +237,8 @@
             function togglePaymentSections() {
                 pixDisplaySection.classList.add('hidden');
                 submitButton.classList.remove('hidden');
-                cardErrorMessage.textContent = ''; // Limpa a mensagem de erro
+                cardErrorMessage.textContent = ''; // Limpa a mensagem de erro do cartão
+                pixErrorMessage.textContent = ''; // Limpa a mensagem de erro do pix
 
                 if (selectedPaymentMethod === 'pix') {
                     cardFormSection.classList.add('hidden');
@@ -277,9 +276,21 @@
                 if (selectedPaymentMethod === 'credit_card') {
                     submitButton.textContent = 'Processando...';
                     cardErrorMessage.textContent = '';
-                    // Dispara a submissão do cardForm para validar e processar o cartão
                     if (cardForm) {
-                        cardForm.submit();
+                        // Não chame .submit(). Chame a função que gera o token manualmente.
+                        try {
+                            const cardToken = await cardForm.createCardToken();
+                            if (cardToken && cardToken.id) {
+                                await processCardPayment(cardToken.id);
+                            } else {
+                                throw new Error('Falha ao criar o token do cartão.');
+                            }
+                        } catch (error) {
+                            console.error("Erro ao processar cartão: ", error);
+                            cardErrorMessage.textContent = 'Erro ao processar o pagamento. Verifique os dados do cartão.';
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Pagar Agora';
+                        }
                     }
                 } else if (selectedPaymentMethod === 'pix') {
                     submitButton.textContent = 'Gerando Pix...';
@@ -288,22 +299,14 @@
             });
 
             // Lógica para processar o pagamento com cartão
-            async function processCardPayment() {
+            async function processCardPayment(token) {
                 try {
-                    // Espera pela criação do token do cartão
-                    const cardData = await new Promise((resolve, reject) => {
-                        cardForm.createCardToken({
-                            success: (token) => resolve({ token: token.id }),
-                            error: (error) => reject(error)
-                        });
-                    });
-                    
                     const nameParts = payerName.value.trim().split(' ');
                     const firstName = nameParts.shift() || '';
                     const lastName = nameParts.join(' ') || '';
                     
                     const paymentData = {
-                        token: cardData.token,
+                        token: token,
                         userId: userId,
                         email: payerEmail.value,
                         amount: parseFloat(amount),
@@ -361,8 +364,8 @@
                     const identificationNumberCleaned = payerIdentificationNumber.value.replace(/\D/g, '');
                     
                     if (!payerName.value || !payerEmail.value || !payerIdentificationType.value || !identificationNumberCleaned) {
-                        statusMessage.className = "mt-6 text-center text-red-500";
-                        statusMessage.textContent = 'Por favor, preencha todos os campos obrigatórios para o Pix.';
+                        pixErrorMessage.classList.remove('hidden');
+                        pixErrorMessage.textContent = 'Por favor, preencha todos os campos obrigatórios para o Pix.';
                         submitButton.disabled = false;
                         submitButton.textContent = 'Gerar Pix';
                         return;
@@ -380,7 +383,6 @@
                         lastName: lastName,
                         identificationType: payerIdentificationType.value,
                         identificationNumber: identificationNumberCleaned,
-                        // Removido o array 'items' que causava erro no backend
                     };
                     
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
@@ -395,17 +397,17 @@
                         if (result.status === "pending" && result.status_detail === "pending_waiting_transfer") {
                             renderPix(result);
                         } else {
-                            statusMessage.className = "mt-6 text-center text-red-500";
-                            statusMessage.textContent = 'Erro ao gerar o Pix. Tente novamente.';
+                            pixErrorMessage.classList.remove('hidden');
+                            pixErrorMessage.textContent = 'Erro ao gerar o Pix. Tente novamente.';
                         }
                     } else {
-                        statusMessage.className = "mt-6 text-center text-red-500";
-                        statusMessage.textContent = result.message || 'Erro ao processar o pagamento Pix. Verifique os dados e tente novamente.';
+                        pixErrorMessage.classList.remove('hidden');
+                        pixErrorMessage.textContent = result.message || 'Erro ao processar o pagamento Pix. Verifique os dados e tente novamente.';
                     }
                 } catch (error) {
                     console.error("Erro na requisição:", error);
-                    statusMessage.className = "mt-6 text-center text-red-500";
-                    statusMessage.textContent = 'Erro de rede. Verifique sua conexão e tente novamente.';
+                    pixErrorMessage.classList.remove('hidden');
+                    pixErrorMessage.textContent = 'Erro de rede. Verifique sua conexão e tente novamente.';
                 } finally {
                     submitButton.disabled = false;
                     submitButton.textContent = 'Gerar Pix';
