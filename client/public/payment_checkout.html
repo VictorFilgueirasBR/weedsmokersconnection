@@ -59,7 +59,6 @@
             background-color: #22c55e;
             border-radius: 9999px;
         }
-        /* ESTILOS ADICIONADOS PARA OS BOTÕES DE PAGAMENTO */
         .payment-button-selected {
             border-color: #3b82f6; /* azul-500 */
             background-color: #eff6ff; /* azul-50 */
@@ -69,6 +68,9 @@
             border-color: #d1d5db; /* cinza-300 */
             background-color: #ffffff;
             color: #6b7280; /* cinza-500 */
+        }
+        .hidden {
+            display: none !important;
         }
     </style>
 </head>
@@ -93,8 +95,16 @@
                 </button>
             </div>
             
+            <div class="flex flex-col gap-2">
+                <input type="text" id="payer-name" class="input-text" placeholder="Nome Completo" />
+                <div class="flex gap-4">
+                    <select id="payer-identificationType" class="input-text w-1/3"></select>
+                    <input type="text" id="payer-identificationNumber" class="input-text w-2/3" placeholder="Número do documento" />
+                </div>
+                <input type="email" id="payer-email" class="input-text" placeholder="Seu e-mail" />
+            </div>
+
             <div id="card-form-section" class="flex flex-col gap-2">
-                <input type="text" id="form-checkout__cardholderName" class="input-text" placeholder="Nome Completo (igual no cartão)" />
                 <div id="form-checkout__cardNumber" class="container"></div>
                 <div class="flex gap-4">
                     <div id="form-checkout__expirationDate" class="container w-1/2"></div>
@@ -102,21 +112,24 @@
                 </div>
                 <select id="form-checkout__issuer" class="input-text"></select>
                 <select id="form-checkout__installments" class="input-text"></select>
-                <div class="flex gap-4">
-                    <select id="form-checkout__identificationType" class="input-text w-1/3"></select>
-                    <input type="text" id="form-checkout__identificationNumber" class="input-text w-2/3" placeholder="Número do documento" />
-                </div>
-                <input type="email" id="form-checkout__cardholderEmail" class="input-text" placeholder="Seu e-mail" />
             </div>
+            
+            <div id="card-error-message" class="text-red-500 text-sm font-medium mt-2"></div>
 
-            <div id="pix-form-section" class="flex flex-col gap-2">
-                <input type="text" id="form-checkout__payerFirstName" class="input-text" placeholder="Nome" />
-                <input type="text" id="form-checkout__payerLastName" class="input-text" placeholder="Sobrenome" />
-                <div class="flex gap-4">
-                    <select id="pix-identificationType" class="input-text w-1/3"></select>
-                    <input type="text" id="pix-identificationNumber" class="input-text w-2/3" placeholder="Número do documento" />
+            <div id="pix-display" class="hidden text-center">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Pagamento Pix</h2>
+                <img id="qr-code-image" class="mx-auto rounded-lg mb-4 shadow-md w-full max-w-xs" />
+                
+                <label for="pix-copy-paste" class="block text-sm font-medium text-gray-700 text-left">Copiar Código Pix:</label>
+                <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="text" id="pix-copy-paste" class="flex-1 block w-full rounded-l-lg sm:text-sm border-gray-300 p-2 text-gray-700 font-mono" readonly/>
+                    <button id="copy-button" type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                        Copiar
+                    </button>
                 </div>
-                <input type="email" id="form-checkout__pixEmail" class="input-text" placeholder="Seu e-mail" />
+                <div id="copy-message" class="mt-2 text-sm text-center text-green-600 opacity-0 transition-opacity duration-300">Copiado!</div>
+
+                <p class="text-xs text-gray-500 mt-4">Este QR Code expira em 15 minutos. Realize o pagamento em seu Internet Banking ou app Pix.</p>
             </div>
 
             <button type="submit" id="form-checkout__submit" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 mt-4">
@@ -125,22 +138,6 @@
             <progress value="0" class="progress-bar hidden mt-4"></progress>
         </form>
         
-        <div id="pix-display" class="hidden text-center mt-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">Pagamento Pix</h2>
-            <img id="qr-code-image" class="mx-auto rounded-lg mb-4 shadow-md w-full max-w-xs" />
-            
-            <label for="pix-copy-paste" class="block text-sm font-medium text-gray-700 text-left">Copiar Código Pix:</label>
-            <div class="mt-1 flex rounded-md shadow-sm">
-                <input type="text" id="pix-copy-paste" class="flex-1 block w-full rounded-l-lg sm:text-sm border-gray-300 p-2 text-gray-700 font-mono" readonly/>
-                <button id="copy-button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                    Copiar
-                </button>
-            </div>
-            <div id="copy-message" class="mt-2 text-sm text-center text-green-600 opacity-0 transition-opacity duration-300">Copiado!</div>
-
-            <p class="text-xs text-gray-500 mt-4">Este QR Code expira em 15 minutos. Realize o pagamento em seu Internet Banking ou app Pix.</p>
-        </div>
-
         <div id="status-message" class="mt-6 text-center text-sm font-medium"></div>
     </div>
 
@@ -150,18 +147,18 @@
             const statusMessage = document.getElementById('status-message');
             const submitButton = document.getElementById('form-checkout__submit');
             const progressBar = document.querySelector(".progress-bar");
-            const userEmailInput = document.getElementById('form-checkout__cardholderEmail');
-            const pixEmailInput = document.getElementById('form-checkout__pixEmail');
             const form = document.getElementById('form-checkout');
             const amountDisplay = document.getElementById('amount-display');
             const cardFormSection = document.getElementById('card-form-section');
-            const pixFormSection = document.getElementById('pix-form-section');
             const pixDisplaySection = document.getElementById('pix-display');
             
-            // Novos elementos
             const creditCardButton = document.getElementById('credit-card-button');
             const pixButton = document.getElementById('pix-button');
-            const cardHolderName = document.getElementById('form-checkout__cardholderName');
+            const payerName = document.getElementById('payer-name');
+            const payerIdentificationType = document.getElementById('payer-identificationType');
+            const payerIdentificationNumber = document.getElementById('payer-identificationNumber');
+            const payerEmail = document.getElementById('payer-email');
+            const cardErrorMessage = document.getElementById('card-error-message');
 
             const urlParams = new URLSearchParams(window.parent.location.search);
             const userId = urlParams.get('userId');
@@ -175,8 +172,7 @@
                 return;
             }
 
-            userEmailInput.value = userEmail;
-            pixEmailInput.value = userEmail;
+            payerEmail.value = userEmail;
             amountDisplay.textContent = `WeedsmokersPass - R$${parseFloat(amount).toFixed(2).replace('.', ',')}`;
 
             const PUBLIC_KEY = 'APP_USR-b01cb2b1-0952-45b9-bb3c-b72588a7b205'; 
@@ -191,85 +187,17 @@
                     cardNumber: { id: "form-checkout__cardNumber", placeholder: "Número do cartão" },
                     expirationDate: { id: "form-checkout__expirationDate", placeholder: "MM/YY" },
                     securityCode: { id: "form-checkout__securityCode", placeholder: "Cód. de segurança" },
-                    cardholderName: { id: "form-checkout__cardholderName", placeholder: "Nome completo" },
+                    cardholderName: { id: "payer-name", placeholder: "Nome Completo" },
                     issuer: { id: "form-checkout__issuer", placeholder: "Banco emissor" },
                     installments: { id: "form-checkout__installments", placeholder: "Parcelas" },
-                    identificationType: { id: "form-checkout__identificationType", placeholder: "Tipo de documento" },
-                    identificationNumber: { id: "form-checkout__identificationNumber", placeholder: "Número do documento" },
-                    cardholderEmail: { id: "form-checkout__cardholderEmail", placeholder: "E-mail" },
+                    identificationType: { id: "payer-identificationType", placeholder: "Tipo de documento" },
+                    identificationNumber: { id: "payer-identificationNumber", placeholder: "Número do documento" },
+                    cardholderEmail: { id: "payer-email", placeholder: "E-mail" },
                 },
                 callbacks: {
                     onFormMounted: error => {
                         if (error) return console.warn("Form Mounted handling error: ", error);
                         console.log("Form mounted");
-                    },
-                    onSubmit: async event => {
-                        event.preventDefault();
-                        submitButton.disabled = true;
-                        submitButton.textContent = 'Processando...';
-
-                        const cardData = cardForm.getCardFormData();
-                        
-                        // Separar nome e sobrenome do campo único
-                        const nameParts = cardHolderName.value.trim().split(' ');
-                        const firstName = nameParts.shift() || '';
-                        const lastName = nameParts.join(' ') || '';
-
-                        // Adicionar dados do item
-                        const itemData = [{
-                            id: "WEEDSPASS-01",
-                            title: "WeedsmokersPass",
-                            description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
-                            category_id: "services", 
-                            quantity: 1,
-                            unit_price: parseFloat(amount),
-                        }];
-
-                        const paymentData = {
-                            token: cardData.token,
-                            userId: userId,
-                            email: cardData.cardholderEmail,
-                            amount: parseFloat(amount),
-                            description: "WeedsmokersPass",
-                            installments: Number(cardData.installments),
-                            paymentMethodId: cardData.paymentMethodId,
-                            issuerId: cardData.issuerId,
-                            identificationType: cardData.identificationType,
-                            identificationNumber: cardData.identificationNumber,
-                            payer: {
-                                first_name: firstName,
-                                last_name: lastName,
-                            },
-                            items: itemData,
-                            deviceId: mp.getDeviceId() // <-- ADICIONA O DEVICE ID AQUI
-                        };
-                        
-                        try {
-                            const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-payment', {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify(paymentData),
-                            });
-
-                            const result = await response.json();
-
-                            if (response.ok) {
-                                statusMessage.className = "mt-6 text-center text-green-500";
-                                statusMessage.textContent = 'Pagamento aprovado! Redirecionando...';
-                                window.location.href = `${window.location.origin}/login`;
-                            } else {
-                                statusMessage.className = "mt-6 text-center text-red-500";
-                                statusMessage.textContent = result.message || 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
-                                submitButton.disabled = false;
-                                submitButton.textContent = 'Pagar Agora';
-                            }
-                        } catch (error) {
-                            console.error("Erro na requisição:", error);
-                            statusMessage.className = "mt-6 text-center text-red-500";
-                            statusMessage.textContent = 'Erro de rede. Verifique sua conexão e tente novamente.';
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Pagar Agora';
-                        }
                     },
                     onFetching: (resource) => {
                         console.log("Fetching resource: ", resource);
@@ -283,26 +211,26 @@
                 },
             });
 
-            // Lógica para alternar entre métodos de pagamento via botões
+            // Lógica para alternar entre métodos de pagamento
             let selectedPaymentMethod = 'credit_card';
 
             function togglePaymentSections() {
+                pixDisplaySection.classList.add('hidden');
+                submitButton.classList.remove('hidden');
+                cardErrorMessage.textContent = ''; // Limpa a mensagem de erro
+
                 if (selectedPaymentMethod === 'pix') {
                     cardFormSection.classList.add('hidden');
-                    pixFormSection.classList.remove('hidden');
-                    pixDisplaySection.classList.add('hidden');
                     submitButton.textContent = 'Gerar Pix';
-                    pixButton.classList.remove('payment-button-unselected');
                     pixButton.classList.add('payment-button-selected');
+                    pixButton.classList.remove('payment-button-unselected');
                     creditCardButton.classList.remove('payment-button-selected');
                     creditCardButton.classList.add('payment-button-unselected');
                 } else {
                     cardFormSection.classList.remove('hidden');
-                    pixFormSection.classList.add('hidden');
-                    pixDisplaySection.classList.add('hidden');
                     submitButton.textContent = 'Pagar Agora';
-                    creditCardButton.classList.remove('payment-button-unselected');
                     creditCardButton.classList.add('payment-button-selected');
+                    creditCardButton.classList.remove('payment-button-unselected');
                     pixButton.classList.remove('payment-button-selected');
                     pixButton.classList.add('payment-button-unselected');
                 }
@@ -320,73 +248,115 @@
 
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
-                
-                if (selectedPaymentMethod === 'pix') {
-                    await processPixPayment(event);
-                } else {
-                    cardForm.onSubmit(event);
+                submitButton.disabled = true;
+                submitButton.textContent = 'Processando...';
+                cardErrorMessage.textContent = ''; // Limpa a mensagem de erro
+
+                try {
+                    if (selectedPaymentMethod === 'pix') {
+                        await processPixPayment();
+                    } else {
+                        await processCardPayment();
+                    }
+                } finally {
+                    // O botão é reativado dentro de cada função de processamento
                 }
             });
 
-            // Lógica para preencher os tipos de documento do Pix
-            async function getIdentificationTypes() {
+            // Lógica para processar o pagamento com cartão
+            async function processCardPayment() {
                 try {
-                    const identificationTypes = await mp.getIdentificationTypes();
-                    const pixIdentificationTypeElement = document.getElementById('pix-identificationType');
+                    const cardData = await new Promise((resolve, reject) => {
+                        cardForm.createCardToken({
+                            success: (token) => resolve({ token: token.id }),
+                            error: (error) => reject(error)
+                        });
+                    });
+
+                    // Separar nome e sobrenome do campo único
+                    const nameParts = payerName.value.trim().split(' ');
+                    const firstName = nameParts.shift() || '';
+                    const lastName = nameParts.join(' ') || '';
                     
-                    createSelectOptions(pixIdentificationTypeElement, identificationTypes);
-                } catch (e) {
-                    console.error('Error getting identificationTypes for Pix: ', e);
+                    const paymentData = {
+                        token: cardData.token,
+                        userId: userId,
+                        email: payerEmail.value,
+                        amount: parseFloat(amount),
+                        description: "WeedsmokersPass",
+                        installments: Number(document.getElementById('form-checkout__installments').value),
+                        paymentMethodId: document.getElementById('form-checkout__issuer').value,
+                        identificationType: payerIdentificationType.value,
+                        identificationNumber: payerIdentificationNumber.value,
+                        payer: {
+                            first_name: firstName,
+                            last_name: lastName,
+                        },
+                        items: [{
+                            id: "WEEDSPASS-01",
+                            title: "WeedsmokersPass",
+                            description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
+                            category_id: "services", 
+                            quantity: 1,
+                            unit_price: parseFloat(amount),
+                        }],
+                        deviceId: mp.getDeviceId(),
+                    };
+
+                    const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-payment', {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(paymentData),
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        statusMessage.className = "mt-6 text-center text-green-500";
+                        statusMessage.textContent = 'Pagamento aprovado! Redirecionando...';
+                        window.location.href = `${window.location.origin}/login`;
+                    } else {
+                        statusMessage.className = "mt-6 text-center text-red-500";
+                        statusMessage.textContent = result.message || 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
+                    }
+                } catch (error) {
+                    console.error("Erro na requisição ou validação:", error);
+                    let errorMessage = 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
+                    if (Array.isArray(error)) {
+                        errorMessage = error.map(e => e.message).join(' | ');
+                    }
+                    cardErrorMessage.textContent = `Erro: ${errorMessage}`;
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Pagar Agora';
                 }
             }
 
-            // Lógica para exibir QR Code e código Pix
-            function renderPix(response) {
-                const qrImage = document.getElementById('qr-code-image');
-                const qrCopyPaste = document.getElementById('pix-copy-paste');
-                
-                qrImage.src = `data:image/jpeg;base64,${response.point_of_interaction.transaction_data.qr_code_base64}`;
-                qrCopyPaste.value = response.point_of_interaction.transaction_data.qr_code;
-
-                cardFormSection.classList.add('hidden');
-                pixFormSection.classList.add('hidden');
-                pixDisplaySection.classList.remove('hidden');
-                submitButton.classList.add('hidden');
-                statusMessage.textContent = 'Escaneie o QR Code para pagar.';
-            }
-
             // Lógica para processar o pagamento Pix
-            async function processPixPayment(event) {
-                event.preventDefault();
-                submitButton.disabled = true;
+            async function processPixPayment() {
                 submitButton.textContent = 'Gerando Pix...';
-
-                // CORREÇÃO: Limpando o campo de identificação antes de enviar
-                const identificationNumberCleaned = document.getElementById('pix-identificationNumber').value.replace(/\D/g, '');
-
-                // Adicionar dados do item
-                const itemData = [{
-                    id: "WEEDSPASS-01",
-                    title: "WeedsmokersPass",
-                    description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
-                    category_id: "services", 
-                    quantity: 1,
-                    unit_price: parseFloat(amount),
-                }];
-
-                const pixData = {
-                    userId: userId,
-                    amount: parseFloat(amount),
-                    email: document.getElementById('form-checkout__pixEmail').value,
-                    firstName: document.getElementById('form-checkout__payerFirstName').value,
-                    lastName: document.getElementById('form-checkout__payerLastName').value,
-                    identificationType: document.getElementById('pix-identificationType').value,
-                    identificationNumber: identificationNumberCleaned, // Usando o valor limpo aqui
-                    items: itemData,
-                    deviceId: mp.getDeviceId(), // <-- ADICIONA O DEVICE ID AQUI
-                };
-                
                 try {
+                    const identificationNumberCleaned = payerIdentificationNumber.value.replace(/\D/g, '');
+
+                    const pixData = {
+                        userId: userId,
+                        amount: parseFloat(amount),
+                        email: payerEmail.value,
+                        firstName: payerName.value.split(' ')[0],
+                        lastName: payerName.value.split(' ').slice(1).join(' '),
+                        identificationType: payerIdentificationType.value,
+                        identificationNumber: identificationNumberCleaned,
+                        items: [{
+                            id: "WEEDSPASS-01",
+                            title: "WeedsmokersPass",
+                            description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
+                            category_id: "services", 
+                            quantity: 1,
+                            unit_price: parseFloat(amount),
+                        }],
+                        deviceId: mp.getDeviceId(),
+                    };
+                    
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -404,7 +374,6 @@
                         }
                     } else {
                         statusMessage.className = "mt-6 text-center text-red-500";
-                        // CORREÇÃO: Exibindo a mensagem de erro retornada pelo backend
                         statusMessage.textContent = result.message || 'Erro ao processar o pagamento Pix. Verifique os dados e tente novamente.';
                     }
                 } catch (error) {
@@ -415,6 +384,20 @@
                     submitButton.disabled = false;
                     submitButton.textContent = 'Gerar Pix';
                 }
+            }
+
+            // Lógica para exibir QR Code e código Pix
+            function renderPix(response) {
+                const qrImage = document.getElementById('qr-code-image');
+                const qrCopyPaste = document.getElementById('pix-copy-paste');
+                
+                qrImage.src = `data:image/jpeg;base64,${response.point_of_interaction.transaction_data.qr_code_base64}`;
+                qrCopyPaste.value = response.point_of_interaction.transaction_data.qr_code;
+
+                cardFormSection.classList.add('hidden');
+                pixDisplaySection.classList.remove('hidden');
+                submitButton.classList.add('hidden');
+                statusMessage.textContent = 'Escaneie o QR Code para pagar.';
             }
 
             // Lógica para copiar o código Pix
@@ -434,6 +417,15 @@
             });
 
             // Lógica para preencher os tipos de documento nos selects
+            async function getIdentificationTypes() {
+                try {
+                    const identificationTypes = await mp.getIdentificationTypes();
+                    createSelectOptions(payerIdentificationType, identificationTypes);
+                } catch (e) {
+                    console.error('Error getting identificationTypes: ', e);
+                }
+            }
+
             function createSelectOptions(elem, options, labelsAndKeys = { label: "name", value: "id" }) {
                 const { label, value } = labelsAndKeys;
                 elem.options.length = 0;
@@ -449,7 +441,7 @@
                 elem.appendChild(tempOptions);
             }
 
-            // Iniciar a busca pelos tipos de documento assim que a página carregar
+            togglePaymentSections();
             getIdentificationTypes();
         });
     </script>
