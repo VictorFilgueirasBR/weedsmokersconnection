@@ -138,14 +138,14 @@ export default function Signup() {
 
     const planOptions = {
         semestral: {
-            price: '57,90',
-            amount: 57.90, // Adicionado o valor numérico para a API de pagamento
+            price: '47,90',
+            amount: 47.90, // Adicionado o valor numérico para a API de pagamento
             duration: '6 meses',
             description: 'Plano Semestral',
         },
         anual: {
             price: '87,90',
-            amount: 87.90, // Adicionado o valor numérico para a API de pagamento
+            amount: 77.90, // Adicionado o valor numérico para a API de pagamento
             duration: '1 ano',
             description: 'Plano Anual',
         },
