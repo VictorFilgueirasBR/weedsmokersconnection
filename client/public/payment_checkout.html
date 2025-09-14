@@ -83,14 +83,8 @@
         <form id="form-checkout">
             <label class="block text-sm font-medium text-gray-700 mb-1">Método de Pagamento</label>
             <div class="flex gap-4 mb-4">
-                <button id="credit-card-button" type="button" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border rounded-lg shadow-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 payment-button-selected">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-                    </svg>
-                    <span>Cartão de crédito</span>
-                </button>
-                <button id="pix-button" type="button" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border rounded-lg shadow-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 payment-button-unselected">
-                    <svg class="" width="23px" height="22px" viewBox="0 0 22 23" fill="var(--gray-500)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-v-5f3500ff=""><path d="M5.19223 5.24323C6.06969 5.24323 6.89487 5.58498 7.51525 6.20516L10.8818 9.57225C11.1243 9.8147 11.5202 9.81575 11.7633 9.57193L15.1175 6.21736C15.738 5.59718 16.5632 5.25554 17.4407 5.25554H17.8447L13.5842 0.995107C12.2574 -0.331702 10.1063 -0.331702 8.77948 0.995107L4.53135 5.24323H5.19223ZM17.4406 17.108C16.5632 17.108 15.738 16.7664 15.1176 16.1462L11.7632 12.792C11.5278 12.5558 11.1173 12.5565 10.8819 12.792L7.51531 16.1585C6.89482 16.7786 6.06964 17.1202 5.19219 17.1202H4.5312L8.77943 21.3686C10.1062 22.6953 12.2574 22.6953 13.5842 21.3686L17.8447 17.108H17.4406ZM18.794 6.20484L21.3686 8.77947C22.6954 10.1062 22.6954 12.2573 21.3686 13.5842L18.7941 16.1587C18.7373 16.1359 18.6761 16.1218 18.6112 16.1218H17.4407C16.8354 16.1218 16.243 15.8764 15.8154 15.4484L12.4611 12.0945C11.8532 11.4859 10.7925 11.4862 10.184 12.0942L6.81744 15.4607C6.38976 15.8886 5.79746 16.134 5.19222 16.134H3.75286C3.69154 16.134 3.634 16.1486 3.57983 16.169L0.995108 13.5842C-0.331703 12.2573 -0.331703 10.1062 0.995108 8.77947L3.57994 6.19464C3.63411 6.21504 3.69154 6.22956 3.75286 6.22956H5.19222C5.79746 6.22956 6.38976 6.47496 6.81744 6.90285L10.1843 10.2697C10.4982 10.5833 10.9103 10.7404 11.3227 10.7404C11.7349 10.7404 12.1473 10.5833 12.4611 10.2694L15.8154 6.91505C16.243 6.48716 16.8354 6.24176 17.4407 6.24176H18.6112C18.676 6.24176 18.7373 6.22756 18.794 6.20484Z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                <button id="pix-button" type="button" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 border rounded-lg shadow-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 payment-button-selected">
+                    <svg class="" width="23px" height="22px" viewBox="0 0 22 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-v-5f3500ff=""><path d="M5.19223 5.24323C6.06969 5.24323 6.89487 5.58498 7.51525 6.20516L10.8818 9.57225C11.1243 9.8147 11.5202 9.81575 11.7633 9.57193L15.1175 6.21736C15.738 5.59718 16.5632 5.25554 17.4407 5.25554H17.8447L13.5842 0.995107C12.2574 -0.331702 10.1063 -0.331702 8.77948 0.995107L4.53135 5.24323H5.19223ZM17.4406 17.108C16.5632 17.108 15.738 16.7664 15.1176 16.1462L11.7632 12.792C11.5278 12.5558 11.1173 12.5565 10.8819 12.792L7.51531 16.1585C6.89482 16.7786 6.06964 17.1202 5.19219 17.1202H4.5312L8.77943 21.3686C10.1062 22.6953 12.2574 22.6953 13.5842 21.3686L17.8447 17.108H17.4406ZM18.794 6.20484L21.3686 8.77947C22.6954 10.1062 22.6954 12.2573 21.3686 13.5842L18.7941 16.1587C18.7373 16.1359 18.6761 16.1218 18.6112 16.1218H17.4407C16.8354 16.1218 16.243 15.8764 15.8154 15.4484L12.4611 12.0945C11.8532 11.4859 10.7925 11.4862 10.184 12.0942L6.81744 15.4607C6.38976 15.8886 5.79746 16.134 5.19222 16.134H3.75286C3.69154 16.134 3.634 16.1486 3.57983 16.169L0.995108 13.5842C-0.331703 12.2573 -0.331703 10.1062 0.995108 8.77947L3.57994 6.19464C3.63411 6.21504 3.69154 6.22956 3.75286 6.22956H5.19222C5.79746 6.22956 6.38976 6.47496 6.81744 6.90285L10.1843 10.2697C10.4982 10.5833 10.9103 10.7404 11.3227 10.7404C11.7349 10.7404 12.1473 10.5833 12.4611 10.2694L15.8154 6.91505C16.243 6.48716 16.8354 6.24176 17.4407 6.24176H18.6112C18.676 6.24176 18.7373 6.22756 18.794 6.20484Z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                     <span>Pix</span>
                 </button>
             </div>
@@ -104,17 +98,6 @@
                 <input type="email" id="payer-email" class="input-text" placeholder="Seu e-mail" />
             </div>
 
-            <div id="card-form-section" class="flex flex-col gap-2">
-                <div id="form-checkout__cardNumber" class="container"></div>
-                <div class="flex gap-4">
-                    <div id="form-checkout__expirationDate" class="container w-1/2"></div>
-                    <div id="form-checkout__securityCode" class="container w-1/2"></div>
-                </div>
-                <select id="form-checkout__issuer" class="input-text"></select>
-                <select id="form-checkout__installments" class="input-text"></select>
-            </div>
-            
-            <div id="card-error-message" class="text-red-500 text-sm font-medium mt-2"></div>
             <div id="pix-error-message" class="text-red-500 text-sm font-medium mt-2 hidden"></div>
 
             <div id="pix-display" class="hidden text-center">
@@ -134,7 +117,7 @@
             </div>
 
             <button type="submit" id="form-checkout__submit" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 mt-4">
-                Pagar Agora
+                Gerar Pix
             </button>
             <progress value="0" class="progress-bar hidden mt-4"></progress>
         </form>
@@ -150,16 +133,13 @@
             const progressBar = document.querySelector(".progress-bar");
             const form = document.getElementById('form-checkout');
             const amountDisplay = document.getElementById('amount-display');
-            const cardFormSection = document.getElementById('card-form-section');
             const pixDisplaySection = document.getElementById('pix-display');
             
-            const creditCardButton = document.getElementById('credit-card-button');
             const pixButton = document.getElementById('pix-button');
             const payerName = document.getElementById('payer-name');
             const payerIdentificationType = document.getElementById('payer-identificationType');
             const payerIdentificationNumber = document.getElementById('payer-identificationNumber');
             const payerEmail = document.getElementById('payer-email');
-            const cardErrorMessage = document.getElementById('card-error-message');
             const pixErrorMessage = document.getElementById('pix-error-message');
 
             const urlParams = new URLSearchParams(window.parent.location.search);
@@ -181,182 +161,12 @@
             
             const mp = new MercadoPago(PUBLIC_KEY, { locale: 'pt-BR' });
 
-            // A lógica de cardForm só deve ser inicializada se o método de pagamento for 'credit_card'
-            let cardForm;
-
-            function initializeCardForm() {
-                if (cardForm) return; // Evita inicializar o formulário mais de uma vez
-                
-                cardForm = mp.cardForm({
-                    amount: amount,
-                    iframe: true,
-                    form: {
-                        id: "form-checkout",
-                        cardNumber: { id: "form-checkout__cardNumber", placeholder: "Número do cartão" },
-                        expirationDate: { id: "form-checkout__expirationDate", placeholder: "MM/YY" },
-                        securityCode: { id: "form-checkout__securityCode", placeholder: "Cód. de segurança" },
-                        cardholderName: { id: "payer-name", placeholder: "Nome Completo" },
-                        issuer: { id: "form-checkout__issuer", placeholder: "Banco emissor" },
-                        installments: { id: "form-checkout__installments", placeholder: "Parcelas" },
-                        identificationType: { id: "payer-identificationType", placeholder: "Tipo de documento" },
-                        identificationNumber: { id: "payer-identificationNumber", placeholder: "Número do documento" },
-                        cardholderEmail: { id: "payer-email", placeholder: "E-mail" },
-                    },
-                    callbacks: {
-                        onFormMounted: error => {
-                            if (error) return console.warn("Form Mounted handling error: ", error);
-                            console.log("Form mounted");
-                        },
-                        onFetching: (resource) => {
-                            console.log("Fetching resource: ", resource);
-                            progressBar.classList.remove('hidden');
-                            progressBar.removeAttribute("value");
-                            return () => {
-                                progressBar.setAttribute("value", "0");
-                                progressBar.classList.add('hidden');
-                            };
-                        },
-                        onError: (error) => {
-                            console.log("Form validation error: ", error);
-                            if (Array.isArray(error)) {
-                                const errorMessage = error.map(e => e.message).join(' | ');
-                                cardErrorMessage.textContent = `Erro de validação: ${errorMessage}`;
-                            } else {
-                                cardErrorMessage.textContent = 'Erro de validação nos campos do cartão. Verifique os dados.';
-                            }
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Pagar Agora';
-                        }
-                    },
-                });
-            }
-
-            // Lógica para alternar entre métodos de pagamento
-            let selectedPaymentMethod = 'credit_card';
-
-            function togglePaymentSections() {
-                pixDisplaySection.classList.add('hidden');
-                submitButton.classList.remove('hidden');
-                cardErrorMessage.textContent = ''; // Limpa a mensagem de erro do cartão
-                pixErrorMessage.textContent = ''; // Limpa a mensagem de erro do pix
-
-                if (selectedPaymentMethod === 'pix') {
-                    cardFormSection.classList.add('hidden');
-                    submitButton.textContent = 'Gerar Pix';
-                    pixButton.classList.add('payment-button-selected');
-                    pixButton.classList.remove('payment-button-unselected');
-                    creditCardButton.classList.remove('payment-button-selected');
-                    creditCardButton.classList.add('payment-button-unselected');
-                } else {
-                    cardFormSection.classList.remove('hidden');
-                    submitButton.textContent = 'Pagar Agora';
-                    creditCardButton.classList.add('payment-button-selected');
-                    creditCardButton.classList.remove('payment-button-unselected');
-                    pixButton.classList.remove('payment-button-selected');
-                    pixButton.classList.add('payment-button-unselected');
-                    // Garante que o cardForm está inicializado
-                    initializeCardForm(); 
-                }
-            }
-            
-            creditCardButton.addEventListener('click', () => {
-                selectedPaymentMethod = 'credit_card';
-                togglePaymentSections();
-            });
-
-            pixButton.addEventListener('click', () => {
-                selectedPaymentMethod = 'pix';
-                togglePaymentSections();
-            });
-
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 submitButton.disabled = true;
-                
-                if (selectedPaymentMethod === 'credit_card') {
-                    submitButton.textContent = 'Processando...';
-                    cardErrorMessage.textContent = '';
-                    if (cardForm) {
-                        // Não chame .submit(). Chame a função que gera o token manualmente.
-                        try {
-                            const cardToken = await cardForm.createCardToken();
-                            if (cardToken && cardToken.id) {
-                                await processCardPayment(cardToken.id);
-                            } else {
-                                throw new Error('Falha ao criar o token do cartão.');
-                            }
-                        } catch (error) {
-                            console.error("Erro ao processar cartão: ", error);
-                            cardErrorMessage.textContent = 'Erro ao processar o pagamento. Verifique os dados do cartão.';
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Pagar Agora';
-                        }
-                    }
-                } else if (selectedPaymentMethod === 'pix') {
-                    submitButton.textContent = 'Gerando Pix...';
-                    await processPixPayment();
-                }
+                submitButton.textContent = 'Gerando Pix...';
+                await processPixPayment();
             });
-
-            // Lógica para processar o pagamento com cartão
-            async function processCardPayment(token) {
-                try {
-                    const nameParts = payerName.value.trim().split(' ');
-                    const firstName = nameParts.shift() || '';
-                    const lastName = nameParts.join(' ') || '';
-                    
-                    const paymentData = {
-                        token: token,
-                        userId: userId,
-                        email: payerEmail.value,
-                        amount: parseFloat(amount),
-                        description: "WeedsmokersPass",
-                        installments: Number(document.getElementById('form-checkout__installments').value),
-                        paymentMethodId: document.getElementById('form-checkout__issuer').value,
-                        identificationType: payerIdentificationType.value,
-                        identificationNumber: payerIdentificationNumber.value,
-                        payer: {
-                            first_name: firstName,
-                            last_name: lastName,
-                        },
-                        items: [{
-                            id: "WEEDSPASS-01",
-                            title: "WeedsmokersPass",
-                            description: "Assinatura digital para acesso exclusivo ao conteúdo e comunidade Weedsmokers Connection.",
-                            category_id: "services", 
-                            quantity: 1,
-                            unit_price: parseFloat(amount),
-                        }],
-                    };
-
-                    const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-payment', {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(paymentData),
-                    });
-
-                    const result = await response.json();
-
-                    if (response.ok) {
-                        statusMessage.className = "mt-6 text-center text-green-500";
-                        statusMessage.textContent = 'Pagamento aprovado! Redirecionando...';
-                        window.location.href = `${window.location.origin}/login`;
-                    } else {
-                        statusMessage.className = "mt-6 text-center text-red-500";
-                        statusMessage.textContent = result.message || 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
-                    }
-                } catch (error) {
-                    console.error("Erro na requisição ou validação:", error);
-                    let errorMessage = 'Erro ao processar o pagamento. Verifique os dados e tente novamente.';
-                    if (Array.isArray(error)) {
-                        errorMessage = error.map(e => e.message).join(' | ');
-                    }
-                    cardErrorMessage.textContent = `Erro: ${errorMessage}`;
-                } finally {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Pagar Agora';
-                }
-            }
 
             // Lógica para processar o pagamento Pix
             async function processPixPayment() {
@@ -422,7 +232,6 @@
                 qrImage.src = `data:image/jpeg;base64,${response.point_of_interaction.transaction_data.qr_code_base64}`;
                 qrCopyPaste.value = response.point_of_interaction.transaction_data.qr_code;
 
-                cardFormSection.classList.add('hidden');
                 pixDisplaySection.classList.remove('hidden');
                 submitButton.classList.add('hidden');
                 statusMessage.textContent = 'Escaneie o QR Code para pagar.';
@@ -469,7 +278,6 @@
                 elem.appendChild(tempOptions);
             }
 
-            togglePaymentSections();
             getIdentificationTypes();
         });
     </script>
