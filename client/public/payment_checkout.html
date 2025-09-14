@@ -207,6 +207,14 @@
                             progressBar.setAttribute("value", "0");
                             progressBar.classList.add('hidden');
                         };
+                    },
+                    onSubmit: (event) => {
+                        // Impedir que o cardForm faça sua validação automática
+                        // se o método de pagamento selecionado for Pix.
+                        if (selectedPaymentMethod === 'pix') {
+                            event.preventDefault();
+                            processPixPayment();
+                        }
                     }
                 },
             });
@@ -246,16 +254,20 @@
                 togglePaymentSections();
             });
 
+            // O Listener de submit padrão agora apenas lida com a lógica de cartão.
+            // A lógica de Pix foi movida para o callback onSubmit do cardForm.
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 submitButton.disabled = true;
                 submitButton.textContent = 'Processando...';
-                cardErrorMessage.textContent = ''; // Limpa a mensagem de erro
+                cardErrorMessage.textContent = '';
 
-                if (selectedPaymentMethod === 'pix') {
-                    await processPixPayment();
-                } else {
+                if (selectedPaymentMethod === 'credit_card') {
                     await processCardPayment();
+                } else {
+                    // O processamento de Pix já é tratado no callback onSubmit
+                    // para evitar a validação do cardForm.
+                    await processPixPayment();
                 }
             });
 
@@ -296,8 +308,7 @@
                             quantity: 1,
                             unit_price: parseFloat(amount),
                         }],
-                        // Correção: `getDeviceId` é uma função global, não um método de `mp`
-                        deviceId: MercadoPago.getDeviceId(),
+                        // Removido `deviceId`, o SDK do MP V2 cuida disso automaticamente
                     };
 
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-payment', {
@@ -351,8 +362,7 @@
                             quantity: 1,
                             unit_price: parseFloat(amount),
                         }],
-                        // Correção: `getDeviceId` é uma função global, não um método de `mp`
-                        deviceId: MercadoPago.getDeviceId(),
+                        // Removido `deviceId`, o SDK do MP V2 cuida disso automaticamente
                     };
                     
                     const response = await fetch('https://api.weedsmokersconnection.com/api/mercadopago/process-pix-payment', {
