@@ -20,8 +20,7 @@ export default function Home() {
       <Header />
       <HeroSlides />
 
-      <FlowerWsc />
-
+      <HeroHashLegal />
 
       <HowItWorksSection />
 
@@ -30,12 +29,9 @@ export default function Home() {
 
       <IceSection />
 
-      
       <WeedPassSection />
 
-      
-
-      <HeroHashLegal />
+      <FlowerWsc />      
 
       <CannabisSlides />
 
