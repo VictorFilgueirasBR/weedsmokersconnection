@@ -520,7 +520,7 @@ export default function Signup() {
                             </li>
                             <li className="highlight-item">
                                 <FaCannabis />
-                                <span>As melhores espécies e extrações do mercado: THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e muito mais.</span>
+                                <span>As melhores Espécies de Flores em Natura e Extrações do mercado: THC (ICE, Hash, Rosin, FullSpectrum, Diamonds), Gummies de THC, CBD e muito mais.</span>
                             </li>
                             <li className="highlight-item">
                                 <FaCheckCircle />
