@@ -53,6 +53,7 @@ const styles = `
   animation: contacts-fadeIn 0.28s ease-out;
 }
 
+
 /* Modal */
 .contacts-modal {
   width: 92%;
@@ -67,6 +68,8 @@ const styles = `
   -webkit-backdrop-filter: blur(10px) saturate(180%);
   position: relative;
   animation: contacts-scaleIn 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  max-height: 85vh; /* Adicione esta linha */
+  overflow-y: auto; /* Adicione esta linha */
 }
 
 /* Close button */
