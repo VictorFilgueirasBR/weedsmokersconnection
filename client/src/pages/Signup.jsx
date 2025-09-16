@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { AuthContext } from '../App';
 import './Signup.scss';
+import { FaUserCircle, FaEnvelope, FaLock, FaCheckCircle, FaCoins, FaHandshake, FaCannabis } from 'react-icons/fa';
 
 export default function Signup() {
     const [formData, setFormData] = useState({ name: '', email: '', password: '', confirmPassword: '' });
@@ -11,7 +12,7 @@ export default function Signup() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
-    const [selectedPlan, setSelectedPlan] = useState('semestral');
+    const [selectedPlan, setSelectedPlan] = useState('mensal');
     const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
     const navigate = useNavigate();
@@ -28,8 +29,8 @@ export default function Signup() {
             setSubmitMessage({ type: 'success', text: 'Seu pagamento foi aprovado! Em instantes sua conta será ativada e você será redirecionado para o seu perfil.' });
             // Redireciona o usuário para o perfil após a confirmação do pagamento
             setTimeout(() => {
-                navigate('/profile'); 
-            }, 3000); 
+                navigate('/profile');
+            }, 3000);
         } else if (paymentStatus === 'pending' || paymentStatus === 'in_process') {
             setSubmitMessage({ type: 'info', text: 'Seu pagamento está em análise. Você será notificado por e-mail assim que for aprovado.' });
         } else if (paymentStatus === 'rejected') {
@@ -68,7 +69,7 @@ export default function Signup() {
         const { name, value } = e.target;
         setFormData((s) => ({ ...s, [name]: value }));
     };
-    
+
     const handleMouseMove = (e) => {
         const button = e.currentTarget;
         const rect = button.getBoundingClientRect();
@@ -107,13 +108,13 @@ export default function Signup() {
             // 2. Redireciona o usuário para a página de checkout transparente.
             // Passamos o userId e o email como parâmetros de URL.
             navigate(`/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}&amount=${planOptions[selectedPlan].amount}`);
-            
+
             // Note: Não há uma requisição 'await' aqui, pois a navegação é imediata.
             // O estado de carregamento de pagamento será gerenciado na nova página.
         } catch (error) {
             setIsSubmitting(false);
             const serverMessage = error.response?.data?.msg;
-            
+
             if (serverMessage === 'Usuário já existe. Por favor, faça login.') {
                 setSubmitMessage({
                     type: 'error',
@@ -131,21 +132,27 @@ export default function Signup() {
                 const errorMessage = serverMessage || 'Erro ao criar a conta. Tente novamente.';
                 setSubmitMessage({ type: 'error', text: errorMessage });
             }
-            
+
             console.error('Erro no registro:', error.response?.data || error.message);
         }
     };
 
     const planOptions = {
+        mensal: {
+            price: '27,90',
+            amount: 27.90,
+            duration: '1 mês',
+            description: 'Plano Mensal',
+        },
         semestral: {
             price: '47,90',
-            amount: 47.90, // Adicionado o valor numérico para a API de pagamento
+            amount: 47.90,
             duration: '6 meses',
             description: 'Plano Semestral',
         },
         anual: {
             price: '77,90',
-            amount: 77.90, // Adicionado o valor numérico para a API de pagamento
+            amount: 77.90,
             duration: '1 ano',
             description: 'Plano Anual',
         },
@@ -229,7 +236,7 @@ export default function Signup() {
                     border-radius: 20px;
                     padding: 1.5rem;
                     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-                    color: #161616ff;
+                    color: #fff;
                     font-family: 'Inter', sans-serif;
                     text-align: left;
                     display: flex;
@@ -241,7 +248,7 @@ export default function Signup() {
                     font-weight: 700;
                     margin-bottom: 1rem;
                     text-align: center;
-                    color: #161616ff;
+                    color: #fff;
                 }
                 .form-group {
                     margin-bottom: 1rem;
@@ -465,6 +472,38 @@ export default function Signup() {
                     gap: 0.7rem;
                     transition: all 0.5s ease;
                 }
+                
+                .highlight-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0.5rem 0 1rem;
+                }
+
+                .highlight-item {
+                    display: flex;
+                    align-items: flex-start;
+                    margin-bottom: 0.8rem;
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                    color: #fff;
+                }
+
+                .highlight-item svg {
+                    flex-shrink: 0;
+                    margin-right: 12px;
+                    color: #4CC3C7;
+                    font-size: 1.2rem;
+                    margin-top: 2px;
+                }
+
+                .form-section-divider {
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    margin: 1.5rem 0;
+                }
+
+                .form-section-divider h2 {
+                    margin-top: 0;
+                }
                 `}
             </style>
             <div className="signup-container-wrapper">
@@ -472,7 +511,24 @@ export default function Signup() {
                     <h1>Assine e Desbloqueie o Futuro da Sua Cura</h1>
                     <div className="signup-highlight-box">
                         <p>
-                            Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a médicos prescritores, fornecedores premium e às melhores espécies e extrações — THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e muito mais. Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. E tem mais: como assinante, você entra para um círculo seleto que recebe novidades e um catálogo atualizado de fornecedores toda semana — garantindo sempre acesso ao que há de melhor e mais inovador. ✨ Essa é sua chance de fazer parte de algo único. Assine agora e desbloqueie o Pass para a sua transformação.
+                            Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a:
+                        </p>
+                        <ul className="highlight-list">
+                            <li className="highlight-item">
+                                <FaHandshake />
+                                <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span>
+                            </li>
+                            <li className="highlight-item">
+                                <FaCannabis />
+                                <span>As melhores espécies e extrações do mercado: THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e muito mais.</span>
+                            </li>
+                            <li className="highlight-item">
+                                <FaCheckCircle />
+                                <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores toda semana.</span>
+                            </li>
+                        </ul>
+                        <p>
+                            Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. Essa é sua chance de fazer parte de algo único.
                         </p>
                     </div>
                 </div>
@@ -481,101 +537,94 @@ export default function Signup() {
                         {submitMessage.text}
                     </div>
                 )}
-                <div className="signup-gamification-container">
-                    <div className="signup-form-container">
-                        <div className="signup-form-glass">
-                            <h2>Suas Informações</h2>
-                            <form onSubmit={(e) => e.preventDefault()}>
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Nome completo"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    {formErrors.name && <span className="error">{formErrors.name}</span>}
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="seuemail@exemplo.com"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    {formErrors.email && <span className="error">{formErrors.email}</span>}
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        placeholder="••••••••••••"
-                                        value={formData.password}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    <p className="password-requirements">
-                                        Pelo menos 12 caracteres, 1 letra maiúscula, 1 número e 1 caractere especial.
-                                    </p>
-                                    {formErrors.password && <span className="error">{formErrors.password}</span>}
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="password"
-                                        name="confirmPassword"
-                                        placeholder="Confirme sua senha"
-                                        value={formData.confirmPassword}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    {formErrors.confirmPassword && (
-                                        <span className="error">{formErrors.confirmPassword}</span>
-                                    )}
-                                </div>
-                            </form>
+                <div className="signup-form-glass">
+                    <h2>Criar sua Conta</h2>
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Nome completo"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                            {formErrors.name && <span className="error">{formErrors.name}</span>}
                         </div>
-                    </div>
-                    <div className="signup-plans-container">
-                        <div className="signup-form-glass">
-                            <h2>Escolha Seu Plano</h2>
-                            <p style={{ margin: '0.5rem 0 1rem', opacity: 0.8, textAlign: 'left', fontSize: '0.65rem', color: '#fff' }}>
-                                Acesso imediato a todas as novidades liberadas nos catálogos de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds), promovendo saúde e consciência.
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="seuemail@exemplo.com"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                            {formErrors.email && <span className="error">{formErrors.email}</span>}
+                        </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="••••••••••••"
+                                value={formData.password}
+                                onChange={handleChange}
+                                required
+                            />
+                            <p className="password-requirements">
+                                Pelo menos 12 caracteres, 1 letra maiúscula, 1 número e 1 caractere especial.
                             </p>
-                            <div className="plans-wrapper">
-                                {['semestral', 'anual'].map((plan) => (
-                                    <div
-                                        key={plan}
-                                        onClick={() => setSelectedPlan(plan)}
-                                        className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
-                                    >
-                                        <h4 style={{ margin: 0 }}>{planOptions[plan].description}</h4>
-                                        <p style={{ margin: '0.15rem 0 0.4rem', fontSize: '0.8rem', opacity: 0.8 }}>
-                                            {planOptions[plan].duration} de acesso
-                                        </p>
-                                        <div className="price-row">
-                                            <span className="currency">R$</span>
-                                            <span className="main-price">{planOptions[plan].price}</span>
-                                            <span className="duration">
-                                                {plan === 'anual' ? '/ano' : '/semestre'}
-                                            </span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <button
-                                type="button"
-                                disabled={isSubmitting}
-                                onClick={handleSubmit}
-                                className="submit-gradient-btn"
-                                onMouseMove={handleMouseMove}
-                                style={{ marginTop: '1rem', width: '100%' }}
-                            >
-                                {isSubmitting ? 'Criando Conta...' : `Finalizar pagamento R$ ${planOptions[selectedPlan].price}`}
-                            </button>
+                            {formErrors.password && <span className="error">{formErrors.password}</span>}
                         </div>
+                        <div className="form-group">
+                            <input
+                                type="password"
+                                name="confirmPassword"
+                                placeholder="Confirme sua senha"
+                                value={formData.confirmPassword}
+                                onChange={handleChange}
+                                required
+                            />
+                            {formErrors.confirmPassword && (
+                                <span className="error">{formErrors.confirmPassword}</span>
+                            )}
+                        </div>
+                        <div className="form-section-divider"></div>
+                        <h2>Escolha Seu Plano</h2>
+                        <div className="plans-wrapper">
+                            {['mensal', 'semestral', 'anual'].map((plan) => (
+                                <div
+                                    key={plan}
+                                    onClick={() => setSelectedPlan(plan)}
+                                    className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
+                                >
+                                    <h4 style={{ margin: 0 }}>{planOptions[plan].description}</h4>
+                                    <p style={{ margin: '0.15rem 0 0.4rem', fontSize: '0.8rem', opacity: 0.8 }}>
+                                        {planOptions[plan].duration} de acesso
+                                    </p>
+                                    <div className="price-row">
+                                        <span className="currency">R$</span>
+                                        <span className="main-price">{planOptions[plan].price}</span>
+                                        <span className="duration">
+                                            {plan === 'anual' ? '/ano' : (plan === 'mensal' ? '/mês' : '/semestre')}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <button
+                            type="button"
+                            disabled={isSubmitting}
+                            onClick={handleSubmit}
+                            className="submit-gradient-btn"
+                            onMouseMove={handleMouseMove}
+                            style={{ width: '100%' }}
+                        >
+                            {isSubmitting ? 'Criando Conta...' : `Finalizar pagamento R$ ${planOptions[selectedPlan].price}`}
+                        </button>
+                    </form>
+                    <div className="login-link">
+                        Já tem uma conta? <a href="/login">Faça Login</a>
                     </div>
                 </div>
             </div>
