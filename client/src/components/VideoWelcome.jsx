@@ -4,13 +4,33 @@ import { motion } from "framer-motion";
 export default function WelcomeVideo() {
   const [play, setPlay] = useState(false);
 
-  // Animação de entrada (slide da esquerda para o centro)
+  // Animação do container principal
   const containerVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
-  // Thumbnail com ícone de play
+  // Popup animado com efeito glassmorphism
+  const popup = (
+    <motion.div
+      className="absolute -top-12 left-1/2 -translate-x-1/2 px-4 py-2 rounded-2xl border border-white/30 backdrop-blur-md bg-white/10 shadow-lg flex items-center gap-2 text-white text-sm"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: [0, -6, 0] }}
+      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5 text-white"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M8 5v14l11-7z" />
+      </svg>
+      <span>Como funciona?</span>
+    </motion.div>
+  );
+
+  // Thumbnail (imagem + ícone de play)
   const thumb = (
     <motion.div
       className="absolute inset-0 flex items-center justify-center cursor-pointer overflow-hidden rounded-2xl"
@@ -23,7 +43,6 @@ export default function WelcomeVideo() {
         alt="Capa do vídeo - Weed Smokers Connection"
         className="w-full h-full object-cover rounded-2xl shadow-lg"
       />
-      {/* Camada escura com ícone de play */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-2xl backdrop-blur-sm">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -67,6 +86,7 @@ export default function WelcomeVideo() {
       animate="visible"
     >
       <div className="relative w-full max-w-[650px] aspect-[16/9]">
+        {!play && popup}
         {play ? videoPlayer : thumb}
       </div>
     </motion.div>
