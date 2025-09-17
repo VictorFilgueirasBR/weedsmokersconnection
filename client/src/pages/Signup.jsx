@@ -529,6 +529,7 @@ export default function Signup() {
                         </ul>
                         <p>
                             Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. Essa é sua chance de fazer parte de algo único.
+                             Acesso imediato a todas as novidades liberadas nos catálogos de THC e CBD (Flores em Natura, ICE, Hash, Rosin, FullSpectrum, Diamonds), promovendo saúde e consciência.
                         </p>
                     </div>
                 </div>
