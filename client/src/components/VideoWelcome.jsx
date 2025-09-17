@@ -49,10 +49,10 @@ export default function WelcomeVideo() {
       isolation: isolate;
       backdrop-filter: blur(6px) contrast(1.1) saturate(160%);
       -webkit-backdrop-filter: blur(6px) contrast(1.1) saturate(160%);
-      background: rgba(255,255,255,0.15);
-      border: 2px solid rgba(236, 236, 236, 0.16);
+      background: rgba(117, 117, 117, 0.15);
+      border: 2px solid rgba(94, 94, 94, 0.16);
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 15px 40px rgba(0,0,0,0.35);
-      color: #fff;
+      color: #09ff00ff;
       font-weight: 900;
       max-width: 260px;
       text-align: center;
