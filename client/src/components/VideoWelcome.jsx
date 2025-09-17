@@ -53,7 +53,7 @@ export default function WelcomeVideo() {
       border: 2px solid rgba(236, 236, 236, 0.16);
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 15px 40px rgba(0,0,0,0.35);
       color: #fff;
-      font-weight: 600;
+      font-weight: 900;
       max-width: 260px;
       text-align: center;
       font-size: 0.9rem;
@@ -103,7 +103,7 @@ export default function WelcomeVideo() {
         >
           <path d="M8 5v14l11-7z" />
         </svg>
-        <span>Como funciona?</span>
+        <span>PLAY</span>
       </div>
     </motion.div>
   );
