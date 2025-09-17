@@ -10,10 +10,10 @@ export default function WelcomeVideo() {
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
-  // Popup animado com efeito glassmorphism
+  // Popup animado com efeito glassmorphism (sobre a imagem)
   const popup = (
     <motion.div
-      className="absolute -top-12 left-1/2 -translate-x-1/2 px-4 py-2 rounded-2xl border border-white/30 backdrop-blur-md bg-white/10 shadow-lg flex items-center gap-2 text-white text-sm"
+      className="absolute top-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-2xl border border-white/30 backdrop-blur-md bg-white/10 shadow-lg flex items-center gap-2 text-white text-sm"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: [0, -6, 0] }}
       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -30,7 +30,7 @@ export default function WelcomeVideo() {
     </motion.div>
   );
 
-  // Thumbnail (imagem + ícone de play)
+  // Thumbnail (imagem + ícone de play + popup)
   const thumb = (
     <motion.div
       className="absolute inset-0 flex items-center justify-center cursor-pointer overflow-hidden rounded-2xl"
@@ -43,6 +43,11 @@ export default function WelcomeVideo() {
         alt="Capa do vídeo - Weed Smokers Connection"
         className="w-full h-full object-cover rounded-2xl shadow-lg"
       />
+
+      {/* Popup dentro da imagem */}
+      {popup}
+
+      {/* Camada escura com ícone de play */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-2xl backdrop-blur-sm">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -86,7 +91,6 @@ export default function WelcomeVideo() {
       animate="visible"
     >
       <div className="relative w-full max-w-[650px] aspect-[16/9]">
-        {!play && popup}
         {play ? videoPlayer : thumb}
       </div>
     </motion.div>
