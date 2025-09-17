@@ -6,7 +6,7 @@ export default function VideoWelcome() {
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-
+    
   return (
     <div className="flex flex-col items-center justify-center bg-white py-16 md:py-24">
       <div className="w-full max-w-[470px] aspect-[9/16] overflow-hidden rounded-xl shadow-lg relative bg-white flex items-center justify-center">
