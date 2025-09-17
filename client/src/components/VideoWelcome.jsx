@@ -5,8 +5,14 @@ import { motion } from "framer-motion";
 export default function WelcomeVideo() {
   const [play, setPlay] = useState(false);
 
+  // Variantes de animação do popup
   const popupVariants = {
-    hidden: { opacity: 0, y: 10, scale: 0.9, filter: "blur(5px)" },
+    hidden: {
+      opacity: 0,
+      y: 10,
+      scale: 0.9,
+      filter: "blur(5px)",
+    },
     visible: {
       opacity: 1,
       y: [0, -6, 0],
@@ -15,13 +21,27 @@ export default function WelcomeVideo() {
       transition: {
         duration: 0.6,
         ease: "easeOut",
-        y: { repeat: Infinity, repeatType: "reverse", duration: 3, ease: "easeInOut" },
+        y: {
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 3,
+          ease: "easeInOut",
+        },
       },
     },
-    exit: { opacity: 0, y: 10, scale: 0.9, filter: "blur(5px)", transition: { duration: 0.4, ease: "easeIn" } },
+    exit: {
+      opacity: 0,
+      y: 10,
+      scale: 0.9,
+      filter: "blur(5px)",
+      transition: {
+        duration: 0.4,
+        ease: "easeIn",
+      },
+    },
   };
 
-  // CSS glassmorphism + shine text
+  // CSS custom para glassmorphism + shine effect
   const glassCss = `
     .popup-glass {
       position: relative;
@@ -55,8 +75,15 @@ export default function WelcomeVideo() {
       filter: blur(0.2px);
     }
 
+    /* Shine effect no texto */
     .shine-text {
-      background: linear-gradient(90deg, #f9f9f9 0%, #ccc 20%, #f9f9f9 40%, #f9f9f9 100%);
+      background: linear-gradient(
+        90deg,
+        #f9f9f9 0%,
+        #ccc 20%,
+        #f9f9f9 40%,
+        #f9f9f9 100%
+      );
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -65,9 +92,14 @@ export default function WelcomeVideo() {
       text-shadow: 0 2px 6px rgba(0,0,0,0.35);
     }
 
-    @keyframes shine { to { background-position: 200% center; } }
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
   `;
 
+  // Popup "Como funciona?"
   const popup = (
     <motion.div
       className="absolute top-6 left-1/2 -translate-x-1/2"
@@ -77,20 +109,7 @@ export default function WelcomeVideo() {
       exit="exit"
     >
       <style>{glassCss}</style>
-
-      {/* Brilho nas bordas */}
-      <motion.div
-        className="absolute -inset-1 rounded-2xl"
-        style={{
-          background: "linear-gradient(270deg, #fff, #0ff, #f0f, #fff)",
-          backgroundSize: "600% 600%",
-          zIndex: 0,
-        }}
-        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-      />
-
-      <div className="popup-glass relative flex items-center justify-center gap-2 z-10">
+      <div className="popup-glass">
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5 text-white flex-shrink-0"
@@ -106,6 +125,7 @@ export default function WelcomeVideo() {
     </motion.div>
   );
 
+  // Thumbnail (imagem + ícone de play + popup)
   const thumb = (
     <motion.div
       className="absolute inset-0 flex items-center justify-center cursor-pointer overflow-hidden rounded-2xl"
@@ -119,8 +139,10 @@ export default function WelcomeVideo() {
         className="w-full h-full object-cover rounded-2xl shadow-lg"
       />
 
+      {/* Popup dentro da imagem */}
       {popup}
 
+      {/* Camada escura com ícone de play */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-2xl backdrop-blur-sm">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -141,6 +163,7 @@ export default function WelcomeVideo() {
     </motion.div>
   );
 
+  // Player do YouTube
   const videoPlayer = (
     <motion.iframe
       key="video"
@@ -152,7 +175,7 @@ export default function WelcomeVideo() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-    />
+    ></motion.iframe>
   );
 
   return (
