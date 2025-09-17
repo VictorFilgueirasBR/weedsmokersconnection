@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import GlassCard from "../components/GlassCard"; // 👈 importa o GlassCard
 import HeroSlides from "../components/HeroSlides";
+import VideoWelcome from "../components/VideoWelcome";
 import HeroHashLegal from "../components/HeroHashLegal";
 import HowItWorksSection from "../components/HowItWorksSection";
 import WeedPassSection from "../components/WeedPassSection";
@@ -19,6 +20,8 @@ export default function Home() {
       {/* Header fixo no topo */}
       <Header />
       <HeroSlides />
+
+      <VideoWelcome />
 
       <HeroHashLegal />
 
