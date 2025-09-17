@@ -11,7 +11,7 @@ import VideoPlayer from "../components/VideoPlayer";
 import CannabisSlides from "../components/CannabisSlides";
 import IceSection from "../components/IceSection";
 import FlowerWsc from "../components/FlowersWcs";
-
+   
 
 
 export default function Home() {
