@@ -1,62 +1,74 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function WelcomeVideo() {
-  // Estado para controlar se o vídeo deve ser exibido ou a capa
   const [play, setPlay] = useState(false);
 
-  // O ícone de play como um SVG otimizado e estilizado
-  const PlayIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="w-10 h-10 md:w-12 md:h-12 text-white"
-    >
-      <path
-        fillRule="evenodd"
-        d="M4.5 5.653c0-1.087.999-1.516 1.745-.981l11.54 6.348a1.125 1.125 0 010 1.962l-11.54 6.347a1.5 1.5 0 01-1.745-.981V5.653z"
-        clipRule="evenodd"
-      />
-    </svg>
-  );
+  // Animação de entrada (slide da esquerda para o centro)
+  const containerVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
 
-  // O componente da capa do vídeo, mostrado antes de dar play
-  const thumbnailComponent = (
-    <div
-      className="absolute inset-0 flex items-center justify-center cursor-pointer rounded-2xl overflow-hidden"
+  // Thumbnail com ícone de play
+  const thumb = (
+    <motion.div
+      className="absolute inset-0 flex items-center justify-center cursor-pointer overflow-hidden rounded-2xl"
       onClick={() => setPlay(true)}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
       <img
         src="/images/wsc-thumb-home.png"
         alt="Capa do vídeo - Weed Smokers Connection"
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        className="w-full h-full object-cover rounded-2xl shadow-lg"
       />
-      {/* Botão de play com gradiente e sombra para destaque */}
-      <div className="relative z-10 p-4 bg-gradient-to-br from-green-500/80 to-lime-600/80 rounded-full transition-transform duration-300 transform hover:scale-110 shadow-xl">
-        <PlayIcon />
+      {/* Camada escura com ícone de play */}
+      <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-2xl backdrop-blur-sm">
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-20 w-20 text-white drop-shadow-xl"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 
-  // O componente do player de vídeo, mostrado depois de dar play
-  const videoPlayerComponent = (
-    <div className="absolute inset-0 w-full h-full rounded-2xl shadow-lg">
-      <iframe
-        className="w-full h-full rounded-2xl"
-        src="https://www.youtube.com/embed/9uN2MOdTgV8?autoplay=1&controls=1&modestbranding=1"
-        title="Weed Smokers Connection - Boas Vindas"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
+  // Player do YouTube
+  const videoPlayer = (
+    <motion.iframe
+      key="video"
+      className="absolute inset-0 w-full h-full rounded-2xl shadow-lg"
+      src="https://www.youtube.com/embed/9uN2MOdTgV8?autoplay=1&controls=1&modestbranding=1&rel=0"
+      title="Weed Smokers Connection - Boas Vindas"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }}
+    ></motion.iframe>
   );
 
   return (
-    <div className="flex justify-center bg-white py-16 px-4">
-      <div className="relative w-full max-w-[550px] aspect-[16/9] rounded-2xl shadow-2xl">
-        {/* Renderiza a capa se play for falso, caso contrário, renderiza o vídeo */}
-        {play ? videoPlayerComponent : thumbnailComponent}
+    <motion.div
+      className="flex justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 py-16 px-4"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="relative w-full max-w-[650px] aspect-[16/9]">
+        {play ? videoPlayer : thumb}
       </div>
-    </div>
+    </motion.div>
   );
 }
