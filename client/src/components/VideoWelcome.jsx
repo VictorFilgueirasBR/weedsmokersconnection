@@ -53,13 +53,16 @@ export default function WelcomeVideo() {
       background: rgba(245, 245, 245, 0.25);
       border: 2px solid rgba(255, 255, 255, 0.2);
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 12px 32px rgba(0,0,0,0.25);
-      color: #111;
+      color: #f9f9f9;
       font-weight: 800;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       text-align: center;
       white-space: nowrap;
       max-width: 300px;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
     .popup-glass::after {
@@ -76,16 +79,17 @@ export default function WelcomeVideo() {
     .shine-text {
       background: linear-gradient(
         90deg,
-        #c9c9c98e 0%,
-        #fff 20%,
-        #b6b6b6de 40%,
-        #ffffff91 100%
+        #f9f9f9 0%,
+        #ccc 20%,
+        #f9f9f9 40%,
+        #f9f9f9 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: shine 3s linear infinite;
-      font-weight: 700;
+      font-weight: 800;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.35);
     }
 
     @keyframes shine {
@@ -105,15 +109,17 @@ export default function WelcomeVideo() {
       exit="exit"
     >
       <style>{glassCss}</style>
-      <div className="popup-glass flex items-center justify-center gap-2">
-        <svg
+      <div className="popup-glass">
+        <motion.svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 text-black"
+          className="h-5 w-5 text-white flex-shrink-0"
           viewBox="0 0 24 24"
           fill="currentColor"
+          animate={{ y: [0, -4, 0] }}
+          transition={{ repeat: Infinity, repeatType: "reverse", duration: 3 }}
         >
           <path d="M8 5v14l11-7z" />
-        </svg>
+        </motion.svg>
         <span className="shine-text">Como funciona?</span>
       </div>
     </motion.div>
