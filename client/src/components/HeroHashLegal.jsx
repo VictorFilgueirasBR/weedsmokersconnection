@@ -53,7 +53,7 @@ const HeroSlides = () => {
   };
 
   return (
-    <section className="hero-slides">
+    <section className="hero-hashs">
       {/* Wrapper para as imagens de fundo que deslizam */}
       <div
         className="slides-background-wrapper"
