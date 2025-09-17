@@ -1,3 +1,4 @@
+// src/components/WelcomeVideo.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -14,7 +15,7 @@ export default function WelcomeVideo() {
     },
     visible: {
       opacity: 1,
-      y: [0, -5, 0],
+      y: [0, -6, 0],
       scale: 1,
       filter: "blur(0px)",
       transition: {
@@ -45,42 +46,29 @@ export default function WelcomeVideo() {
     .popup-glass {
       position: relative;
       border-radius: 18px;
-      padding: 0.8rem 1.2rem;
+      padding: 1rem 1.6rem;
       isolation: isolate;
-      backdrop-filter: blur(6px) contrast(1.1) saturate(160%);
-      -webkit-backdrop-filter: blur(6px) contrast(1.1) saturate(160%);
-      background: rgba(117, 117, 117, 0.15);
-      border: 2px solid rgba(94, 94, 94, 0.16);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 15px 40px rgba(0,0,0,0.35);
-      color: #09ff00ff;
-      font-weight: 900;
-      max-width: 260px;
+      backdrop-filter: blur(6px) contrast(1.05) saturate(140%);
+      -webkit-backdrop-filter: blur(6px) contrast(1.05) saturate(140%);
+      background: rgba(245, 245, 245, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 12px 32px rgba(0,0,0,0.25);
+      color: #111;
+      font-weight: 600;
+      font-size: 1.05rem;
       text-align: center;
-      font-size: 0.9rem;
+      white-space: nowrap; /* impede quebra de linha */
+      max-width: 300px;
     }
 
     .popup-glass::after {
       content: "";
       position: absolute;
-      bottom: -8px; left: 20px;
+      bottom: -8px; left: 30px;
       border-width: 8px 10px 0 10px;
       border-style: solid;
-      border-color: rgba(255,255,255,0.15) transparent transparent transparent;
+      border-color: rgba(245,245,245,0.25) transparent transparent transparent;
       filter: blur(0.2px);
-    }
-
-    .popup-mini {
-      position: absolute;
-      bottom: -5px; right: -20px;
-      border-radius: 14px;
-      padding: 0.4rem 0.7rem;
-      font-size: 1rem;
-      font-weight: 600;
-      background: rgba(255,255,255,0.12);
-      border: 2px solid rgba(236,236,236,0.18);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 10px 25px rgba(0,0,0,0.25);
-      backdrop-filter: blur(3px) contrast(1.1);
-      -webkit-backdrop-filter: blur(3px) contrast(1.1);
     }
   `;
 
@@ -97,13 +85,13 @@ export default function WelcomeVideo() {
       <div className="popup-glass flex items-center justify-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 text-white"
+          className="h-5 w-5 text-black"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
           <path d="M8 5v14l11-7z" />
         </svg>
-        <span>PLAY</span>
+        <span>Como funciona?</span>
       </div>
     </motion.div>
   );
