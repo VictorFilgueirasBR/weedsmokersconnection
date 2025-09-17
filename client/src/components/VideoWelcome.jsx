@@ -41,7 +41,7 @@ export default function WelcomeVideo() {
     },
   };
 
-  // CSS custom para glassmorphism do popup
+  // CSS custom para glassmorphism + shine effect
   const glassCss = `
     .popup-glass {
       position: relative;
@@ -57,8 +57,9 @@ export default function WelcomeVideo() {
       font-weight: 600;
       font-size: 1.05rem;
       text-align: center;
-      white-space: nowrap; /* impede quebra de linha */
+      white-space: nowrap;
       max-width: 300px;
+      overflow: hidden;
     }
 
     .popup-glass::after {
@@ -69,6 +70,28 @@ export default function WelcomeVideo() {
       border-style: solid;
       border-color: rgba(245,245,245,0.25) transparent transparent transparent;
       filter: blur(0.2px);
+    }
+
+    /* Shine effect no texto */
+    .shine-text {
+      background: linear-gradient(
+        90deg,
+        #111 0%,
+        #666 20%,
+        #111 40%,
+        #111 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+      font-weight: 700;
+    }
+
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
     }
   `;
 
@@ -91,7 +114,7 @@ export default function WelcomeVideo() {
         >
           <path d="M8 5v14l11-7z" />
         </svg>
-        <span>Como funciona?</span>
+        <span className="shine-text">Como funciona?</span>
       </div>
     </motion.div>
   );
