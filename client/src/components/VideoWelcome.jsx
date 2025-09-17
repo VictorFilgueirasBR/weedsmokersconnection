@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function WelcomeVideo() {
+  // Estado para controlar se o vídeo deve ser exibido ou a capa
   const [play, setPlay] = useState(false);
 
   // O ícone de play como um SVG otimizado e estilizado
@@ -19,11 +20,10 @@ export default function WelcomeVideo() {
     </svg>
   );
 
-  // A imagem de capa é mostrada até o usuário clicar em "play"
-  const thumb = (
+  // O componente da capa do vídeo, mostrado antes de dar play
+  const thumbnailComponent = (
     <div
-      className="absolute inset-0 flex items-center justify-center cursor-pointer rounded-2xl overflow-hidden transition-opacity duration-500"
-      style={{ opacity: play ? 0 : 1 }}
+      className="absolute inset-0 flex items-center justify-center cursor-pointer rounded-2xl overflow-hidden"
       onClick={() => setPlay(true)}
     >
       <img
@@ -38,15 +38,12 @@ export default function WelcomeVideo() {
     </div>
   );
 
-  // O iframe do YouTube é renderizado após o clique
-  const videoPlayer = (
-    <div
-      className="absolute inset-0 w-full h-full rounded-2xl shadow-lg"
-      style={{ opacity: play ? 1 : 0 }}
-    >
+  // O componente do player de vídeo, mostrado depois de dar play
+  const videoPlayerComponent = (
+    <div className="absolute inset-0 w-full h-full rounded-2xl shadow-lg">
       <iframe
         className="w-full h-full rounded-2xl"
-        src={`https://www.youtube.com/embed/9uN2MOdTgV8?autoplay=1&${play ? '' : 'mute=1'}&loop=1&playlist=9uN2MOdTgV8&controls=1&modestbranding=1`}
+        src="https://www.youtube.com/embed/9uN2MOdTgV8?autoplay=1&controls=1&modestbranding=1"
         title="Weed Smokers Connection - Boas Vindas"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -57,8 +54,8 @@ export default function WelcomeVideo() {
   return (
     <div className="flex justify-center bg-white py-16 px-4">
       <div className="relative w-full max-w-[550px] aspect-[16/9] rounded-2xl shadow-2xl">
-        {thumb}
-        {videoPlayer}
+        {/* Renderiza a capa se play for falso, caso contrário, renderiza o vídeo */}
+        {play ? videoPlayerComponent : thumbnailComponent}
       </div>
     </div>
   );
