@@ -13,7 +13,7 @@ export default function WelcomeVideo() {
   // Popup animado com efeito glassmorphism (sobre a imagem)
   const popup = (
     <motion.div
-      className="absolute top-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-2xl border border-white/30 backdrop-blur-md bg-white/10 shadow-lg flex items-center gap-2 text-white text-sm"
+      className="absolute top-6 left-1/2 -translate-x-1/2 px-5 py-3 w-[240px] rounded-[18px] border border-white/40 backdrop-blur-md bg-white/20 shadow-lg flex items-center justify-center gap-2 text-white font-medium text-sm"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: [0, -6, 0] }}
       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
