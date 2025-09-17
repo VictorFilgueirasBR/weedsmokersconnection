@@ -4,29 +4,107 @@ import { motion } from "framer-motion";
 export default function WelcomeVideo() {
   const [play, setPlay] = useState(false);
 
-  // Animação do container principal
-  const containerVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  // Variantes de animação do popup
+  const popupVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+      scale: 0.9,
+      filter: "blur(5px)",
+    },
+    visible: {
+      opacity: 1,
+      y: [0, -5, 0],
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        y: {
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 3,
+          ease: "easeInOut",
+        },
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+      scale: 0.9,
+      filter: "blur(5px)",
+      transition: {
+        duration: 0.4,
+        ease: "easeIn",
+      },
+    },
   };
 
-  // Popup animado com efeito glassmorphism (sobre a imagem)
+  // CSS custom para glassmorphism do popup
+  const glassCss = `
+    .popup-glass {
+      position: relative;
+      border-radius: 18px;
+      padding: 0.8rem 1.2rem;
+      isolation: isolate;
+      backdrop-filter: blur(6px) contrast(1.1) saturate(160%);
+      -webkit-backdrop-filter: blur(6px) contrast(1.1) saturate(160%);
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(236, 236, 236, 0.16);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 15px 40px rgba(0,0,0,0.35);
+      color: #fff;
+      font-weight: 600;
+      max-width: 260px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .popup-glass::after {
+      content: "";
+      position: absolute;
+      bottom: -8px; left: 20px;
+      border-width: 8px 10px 0 10px;
+      border-style: solid;
+      border-color: rgba(255,255,255,0.15) transparent transparent transparent;
+      filter: blur(0.2px);
+    }
+
+    .popup-mini {
+      position: absolute;
+      bottom: -5px; right: -20px;
+      border-radius: 14px;
+      padding: 0.4rem 0.7rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: rgba(255,255,255,0.12);
+      border: 2px solid rgba(236,236,236,0.18);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 10px 25px rgba(0,0,0,0.25);
+      backdrop-filter: blur(3px) contrast(1.1);
+      -webkit-backdrop-filter: blur(3px) contrast(1.1);
+    }
+  `;
+
+  // Popup "Como funciona?"
   const popup = (
     <motion.div
-      className="absolute top-6 left-1/2 -translate-x-1/2 px-5 py-3 w-[240px] rounded-[18px] border border-white/40 backdrop-blur-md bg-white/20 shadow-lg flex items-center justify-center gap-2 text-white font-medium text-sm"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: [0, -6, 0] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      className="absolute top-6 left-1/2 -translate-x-1/2"
+      variants={popupVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 text-white"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M8 5v14l11-7z" />
-      </svg>
-      <span>Como funciona?</span>
+      <style>{glassCss}</style>
+      <div className="popup-glass flex items-center justify-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 text-white"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        <span>Como funciona?</span>
+      </div>
     </motion.div>
   );
 
@@ -86,7 +164,6 @@ export default function WelcomeVideo() {
   return (
     <motion.div
       className="flex justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 py-16 px-4"
-      variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
