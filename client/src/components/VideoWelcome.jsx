@@ -37,7 +37,7 @@ export default function VideoPlayer() {
     <div className="video-player-container">
       <style>{css}</style>
       <video className="responsive-video" autoPlay muted loop playsInline>
-        <source src="/reels/welcomehomewsc.mp4" type="video/mp4" />
+        <source src="/reels/welcome-home-wsc.mp4" type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
       </video>
     </div>
