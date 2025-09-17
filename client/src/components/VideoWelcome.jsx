@@ -54,7 +54,7 @@ export default function WelcomeVideo() {
       border: 2px solid rgba(255, 255, 255, 0.2);
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 12px 32px rgba(0,0,0,0.25);
       color: #111;
-      font-weight: 600;
+      font-weight: 800;
       font-size: 1.05rem;
       text-align: center;
       white-space: nowrap;
@@ -76,10 +76,10 @@ export default function WelcomeVideo() {
     .shine-text {
       background: linear-gradient(
         90deg,
-        #111 0%,
-        #666 20%,
-        #111 40%,
-        #111 100%
+        #c9c9c98e 0%,
+        #fff 20%,
+        #b6b6b6de 40%,
+        #ffffff91 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
