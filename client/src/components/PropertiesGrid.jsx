@@ -33,8 +33,8 @@ const propertiesData = [
   },
   { 
     id: 4, 
-    image: '/images/enhanced_4.png', 
-    title: 'Hash ICE - Bubble (THC)', 
+    image: '/images/hash-legalizado-anvisa-capa.jpg', 
+    title: 'Hash ICE - 24K (THC)', 
     location: '10g', 
     price: 'R$ 600,00', 
     description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.', 
@@ -42,7 +42,7 @@ const propertiesData = [
   },
   { 
     id: 5, 
-    image: '/images/wsc-vapes-thc.webp', 
+    image: '/images/wsc-vape-thc.webp', 
     title: 'Refil THC puro', 
     location: 'Unidade.', 
     price: 'R$ 220,00', 
@@ -52,7 +52,7 @@ const propertiesData = [
   { 
     id: 6, 
     image: '/images/hash-ice-import.png', 
-    title: 'Penthouse Exclusiva', 
+    title: 'ICE Bubble Hash (THC)', 
     location: '10g', 
     price: 'R$ 650,00', 
     description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.', 
