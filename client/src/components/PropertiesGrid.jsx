@@ -66,7 +66,7 @@ const propertiesData = [
   },
 ];
 
-const PropertiesGrid = ({ title = 'Fornecedores Legalmente Autorizados pela ANVISA', id = 'properties-grid' }) => {
+const PropertiesGrid = ({ title = 'Catálogo Atualizado', id = 'properties-grid' }) => {
   return (
     <section className="properties-grid-section" id={id}>
       <h2 className="section-title">{title}</h2>
