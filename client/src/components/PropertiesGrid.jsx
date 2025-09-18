@@ -7,8 +7,8 @@ const propertiesData = [
   { 
     id: 1, 
     image: '/images/hash-legalizado-anvisa.jpg', 
-    title: 'Hash ICE', 
-    location: 'Apartir de 5g', 
+    title: 'Hash ICE (THC)', 
+    location: '5g', 
     price: 'R$ 350,00', 
     description: 'Fornecedor Nacional de Hash e EXtrações tipo ICE legalizado pela ANVISA.', 
     cta: 'Contato' 
@@ -16,8 +16,8 @@ const propertiesData = [
   { 
     id: 2, 
     image: '/images/beautiful-buds.jpg', 
-    title: 'Flores HK 47', 
-    location: 'A partir de 5g', 
+    title: 'Flores HK (THC)', 
+    location: '5g', 
     price: 'R$ 195,00', 
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA.', 
     cta: 'Ver Detalhes' 
@@ -25,8 +25,8 @@ const propertiesData = [
   { 
     id: 3, 
     image: '/images/club-flores.jpeg', 
-    title: 'Flores Z-Kittlez Pie', 
-    location: 'a partir de 5g', 
+    title: 'Flores Z-Kittlez Pie (THC)', 
+    location: '5g', 
     price: 'R$ 220,00', 
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA.', 
     cta: 'Contato' 
@@ -34,34 +34,34 @@ const propertiesData = [
   { 
     id: 4, 
     image: '/images/enhanced_4.png', 
-    title: 'Loft Urbano Minimalista', 
-    location: 'Área Central, Bairro Moderno', 
-    price: 'R$ 950.000', 
-    description: 'Espaço compacto e inteligente, ideal para a vida moderna.', 
-    cta: 'Ver Detalhes' 
+    title: 'Hash ICE - Bubble (THC)', 
+    location: '10g', 
+    price: 'R$ 600,00', 
+    description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.', 
+    cta: 'Contato' 
   },
   { 
     id: 5, 
-    image: '/images/enhanced_5.png', 
-    title: 'Vila Costeira Charmosa', 
-    location: 'Praia do Sol, Litoral', 
-    price: 'R$ 4.500.000', 
-    description: 'Propriedade à beira-mar com acesso exclusivo e arquitetura rústica chic.', 
-    cta: 'Ver Detalhes' 
+    image: '/images/wsc-vapes-thc.webp', 
+    title: 'Refil THC puro', 
+    location: 'Unidade.', 
+    price: 'R$ 220,00', 
+    description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA.', 
+    cta: 'Contato' 
   },
   { 
     id: 6, 
-    image: '/images/enhanced_6.png', 
+    image: '/images/hash-ice-import.png', 
     title: 'Penthouse Exclusiva', 
-    location: 'Área Nobre, Grande Cidade', 
-    price: 'R$ 6.800.000', 
-    description: 'Design de interiores premiado, vistas espetaculares e total privacidade.', 
-    cta: 'Ver Detalhes' 
+    location: '10g', 
+    price: 'R$ 650,00', 
+    description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.', 
+    cta: 'Contato' 
   },
   
 ];
 
-const PropertiesGrid = ({ title = 'Performance Digital Premium Otimizada por IA', id = 'properties-grid' }) => {
+const PropertiesGrid = ({ title = 'Fornecedores Legalmente Autorizados pela ANVISA', id = 'properties-grid' }) => {
   return (
     <section className="properties-grid-section" id={id}>
       <h2 className="section-title">{title}</h2>
