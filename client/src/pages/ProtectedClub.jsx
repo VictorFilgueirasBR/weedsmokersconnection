@@ -14,6 +14,7 @@ import MemberTreatmentFlow from "../components/MemberTreatmentFlow";
 import IceSection from "../components/IceSection";
 import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
+import PropertiesGrid from "../components/PropertiesGrid";
 
 export default function WSCClub() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
@@ -46,6 +47,8 @@ export default function WSCClub() {
       <div onClick={handleOpenContacts}>
         <GlassCardImport />
       </div>
+
+      <PropertiesGrid />
 
       <IceSection />
 
