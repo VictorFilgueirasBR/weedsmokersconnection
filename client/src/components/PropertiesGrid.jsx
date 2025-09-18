@@ -8,28 +8,28 @@ const propertiesData = [
     id: 1, 
     image: '/images/hash-legalizado-anvisa.jpg', 
     title: 'Hash ICE', 
-    location: '10g apartir de', 
-    price: 'R$ 450,00', 
-    description: 'Fornecedor Nacional de Hash e EXtrações tipo ICE legalizado pela ANVISA', 
+    location: 'Apartir de 5g', 
+    price: 'R$ 350,00', 
+    description: 'Fornecedor Nacional de Hash e EXtrações tipo ICE legalizado pela ANVISA.', 
     cta: 'Contato' 
   },
   { 
     id: 2, 
     image: '/images/beautiful-buds.jpg', 
-    title: 'Apartamento Luxuoso', 
-    location: 'Centro, Metrópole', 
-    price: 'R$ 1.500.000', 
-    description: 'Cobertura com vista panorâmica e área de lazer completa.', 
+    title: 'Flores HK 47', 
+    location: 'A partir de 5g', 
+    price: 'R$ 195,00', 
+    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA.', 
     cta: 'Ver Detalhes' 
   },
   { 
     id: 3, 
-    image: '/images/enhanced_3.png', 
-    title: 'Casa de Campo Serene', 
-    location: 'Zona Rural, Interior', 
-    price: 'R$ 3.200.000', 
-    description: 'Ampla propriedade com jardim exuberante e piscina privativa.', 
-    cta: 'Ver Detalhes' 
+    image: '/images/club-flores.jpeg', 
+    title: 'Flores Z-Kittlez Pie', 
+    location: 'a partir de 5g', 
+    price: 'R$ 220,00', 
+    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA.', 
+    cta: 'Contato' 
   },
   { 
     id: 4, 
