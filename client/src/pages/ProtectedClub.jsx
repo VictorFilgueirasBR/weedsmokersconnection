@@ -6,6 +6,7 @@ import HeroHashLegal from "../components/HeroHashLegal";
 import FirstClub from "../components/FirstClub";
 import HowItWorksSection from "../components/HowItWorksSection";
 import VideoPlayer from "../components/VideoPlayer";
+import VideoWelcome from "../components/VideoWelcome";
 import CannabisSlides from "../components/CannabisSlides";
 import GlassCardNacional from "../components/GlassCardNacional";
 import GlassCardImport from "../components/GlassCardImport";
@@ -32,6 +33,8 @@ export default function WSCClub() {
       {/* O Header e Footer não estão aqui, pois são gerenciados pelo MainLayout */}
 
       <FirstClub />
+
+      <VideoWelcome />
 
       <MemberTreatmentFlow />
 
