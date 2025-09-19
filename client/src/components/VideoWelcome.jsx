@@ -168,7 +168,7 @@ export default function WelcomeVideo() {
     <motion.iframe
       key="video"
       className="absolute inset-0 w-full h-full rounded-2xl shadow-lg"
-      src="https://www.youtube.com/embed/9uN2MOdTgV8?autoplay=1&controls=1&modestbranding=1&rel=0"
+      src="https://www.youtube.com/embed/wcm-e52Vtq8?autoplay=1&controls=1&modestbranding=1&rel=0"
       title="Weed Smokers Connection - Boas Vindas"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
