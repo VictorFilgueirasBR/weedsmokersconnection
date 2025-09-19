@@ -16,7 +16,6 @@ import IceSection from "../components/IceSection";
 import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
-import Rules from "../components/Rules";
 
 export default function WSCClub() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
@@ -38,8 +37,6 @@ export default function WSCClub() {
       <VideoWelcome />
 
       <MemberTreatmentFlow />
-
-      <Rules />
 
       {/* Ao clicar nesses cards → abre o modal */}
       <div onClick={handleOpenContacts}>
