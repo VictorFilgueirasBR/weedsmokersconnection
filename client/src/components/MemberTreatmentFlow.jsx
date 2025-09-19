@@ -77,7 +77,7 @@ export default function MemberTreatmentFlow() {
         <motion.p style={styles.subtitle} variants={itemVariants}>
           Nosso objetivo é garantir que você tenha acesso a <strong>tratamentos
           personalizados, com máxima qualidade</strong>, utilizando THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e Flores Indicas, Sativas e Híbridas — tudo de forma
-          legal, simples, tranquila, descomplicada, SAULDÁVEL e com QUALIDADE.
+          legal, simples, tranquila, descomplicada, SAUDÁVEL e com QUALIDADE.
         </motion.p>
       </motion.div>
 
