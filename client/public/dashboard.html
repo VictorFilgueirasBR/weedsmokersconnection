@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Influenciadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            flex-direction: column;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .input-glass {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #e6edf3;
+            transition: all 0.3s ease;
+        }
+        .input-glass:focus {
+            outline: none;
+            border-color: rgba(139, 92, 246, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .btn-glass {
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            transition: all 0.3s ease;
+            color: #e6edf3;
+        }
+        .btn-glass:hover {
+            background: rgba(139, 92, 246, 0.4);
+        }
+        .btn-copy {
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #c9d1d9;
+            transition: all 0.3s ease;
+        }
+        .btn-copy:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .table-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            word-break: break-word;
+        }
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: 600;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .text-xs {
+            font-size: 0.75rem;
+        }
+        .space-x-2 > *:not([hidden]) ~ *:not([hidden]) {
+            margin-left: 0.5rem;
+        }
+        .truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="glass-card mb-8">
+        <h1 class="text-2xl font-bold mb-6 text-center text-purple-400">Gerador de Links de Influenciadores</h1>
+        <div class="space-y-4">
+            <div>
+                <label for="instagram-input" class="block text-sm font-medium mb-1">Instagram do Influencer:</label>
+                <input type="text" id="instagram-input" placeholder="ex: weedsmokersclub.br" class="w-full p-3 rounded-lg input-glass">
+            </div>
+            <div>
+                <label for="pix-input" class="block text-sm font-medium mb-1">Chave PIX:</label>
+                <input type="text" id="pix-input" placeholder="chave-pix@email.com ou 01234567890" class="w-full p-3 rounded-lg input-glass">
+            </div>
+            <div>
+                <label for="email-celular-input" class="block text-sm font-medium mb-1">E-mail ou Celular:</label>
+                <input type="text" id="email-celular-input" placeholder="ex: seu-email@dominio.com" class="w-full p-3 rounded-lg input-glass">
+            </div>
+            <div>
+                <label for="password-input" class="block text-sm font-medium mb-1">Crie uma Senha:</label>
+                <input type="password" id="password-input" placeholder="••••••••" class="w-full p-3 rounded-lg input-glass">
+            </div>
+            <button id="generate-btn" class="w-full p-3 rounded-lg font-semibold btn-glass mt-4">Gerar Link</button>
+        </div>
+    </div>
+
+    <div id="list-card" class="glass-card hidden">
+        <h2 class="text-xl font-bold mb-4 text-center text-purple-400">Influenciadores Cadastrados</h2>
+        <div class="table-glass overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="text-xs sm:text-sm">Instagram</th>
+                        <th class="text-xs sm:text-sm">E-mail/Celular</th>
+                        <th class="text-xs sm:text-sm">Chave PIX</th>
+                        <th class="text-xs sm:text-sm">Link de Rastreamento</th>
+                    </tr>
+                </thead>
+                <tbody id="influencers-table-body">
+                    <!-- Registros serão inseridos aqui pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const generateBtn = document.getElementById('generate-btn');
+        const instagramInput = document.getElementById('instagram-input');
+        const pixInput = document.getElementById('pix-input');
+        const emailCelularInput = document.getElementById('email-celular-input');
+        const passwordInput = document.getElementById('password-input');
+        const influencersTableBody = document.getElementById('influencers-table-body');
+        const listCard = document.getElementById('list-card');
+        const baseDomain = "https://weedsmokersclub.com"; // Substitua pelo seu domínio real
+
+        // Função para carregar a lista do localStorage ao iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            loadInfluencers();
+        });
+
+        // Função para gerar o link e adicionar o registro
+        generateBtn.addEventListener('click', () => {
+            const instagram = instagramInput.value.trim();
+            const pix = pixInput.value.trim();
+            const emailCelular = emailCelularInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (instagram === '' || pix === '' || emailCelular === '' || password === '') {
+                // substitui o alert() por uma div de mensagem que aparece na tela
+                const messageContainer = document.createElement('div');
+                messageContainer.textContent = 'Por favor, preencha todos os campos.';
+                messageContainer.style.cssText = `
+                    position: fixed;
+                    bottom: 2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #ef4444;
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 0.5rem;
+                    z-index: 1000;
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                `;
+                document.body.appendChild(messageContainer);
+
+                setTimeout(() => {
+                    messageContainer.style.opacity = '1';
+                }, 100);
+
+                setTimeout(() => {
+                    messageContainer.style.opacity = '0';
+                    setTimeout(() => messageContainer.remove(), 500);
+                }, 3000);
+                return;
+            }
+
+            const refId = encodeURIComponent(instagram.replace(/[^a-zA-Z0-9]/g, ''));
+            const generatedLink = `${baseDomain}/?ref=${refId}`;
+
+            const newInfluencer = {
+                instagram: instagram,
+                pix: pix,
+                emailCelular: emailCelular,
+                password: password,
+                link: generatedLink
+            };
+
+            addInfluencer(newInfluencer);
+
+            // Limpa os inputs
+            instagramInput.value = '';
+            pixInput.value = '';
+            emailCelularInput.value = '';
+            passwordInput.value = '';
+        });
+
+        // Função para adicionar um novo influenciador ao localStorage e à tabela
+        function addInfluencer(influencer) {
+            let influencers = JSON.parse(localStorage.getItem('influencers')) || [];
+            influencers.push(influencer);
+            localStorage.setItem('influencers', JSON.stringify(influencers));
+            renderInfluencers(influencers);
+        }
+
+        // Função para renderizar a lista de influenciadores na tabela
+        function renderInfluencers(influencers) {
+            if (influencers.length > 0) {
+                listCard.classList.remove('hidden');
+            } else {
+                listCard.classList.add('hidden');
+            }
+
+            influencersTableBody.innerHTML = '';
+            influencers.forEach(influencer => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="text-xs sm:text-sm">${influencer.instagram}</td>
+                    <td class="text-xs sm:text-sm">${influencer.emailCelular}</td>
+                    <td class="text-xs sm:text-sm">
+                        <div class="flex items-center space-x-2">
+                            <span class="truncate max-w-[120px] sm:max-w-none">${influencer.pix}</span>
+                            <button onclick="copyToClipboard('${influencer.pix}')" class="p-1 rounded-full btn-copy flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="text-xs sm:text-sm">
+                        <div class="flex items-center space-x-2">
+                            <span class="truncate max-w-[120px] sm:max-w-none">${influencer.link}</span>
+                            <button onclick="copyToClipboard('${influencer.link}')" class="p-1 rounded-full btn-copy flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                influencersTableBody.appendChild(row);
+            });
+        }
+
+        // Função para copiar texto para a área de transferência
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            const messageContainer = document.createElement('div');
+            messageContainer.textContent = 'Copiado para a área de transferência!';
+            messageContainer.style.cssText = `
+                position: fixed;
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #22c55e;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 0.5rem;
+                z-index: 1000;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            `;
+            document.body.appendChild(messageContainer);
+
+            setTimeout(() => {
+                messageContainer.style.opacity = '1';
+            }, 100);
+
+            setTimeout(() => {
+                messageContainer.style.opacity = '0';
+                setTimeout(() => messageContainer.remove(), 500);
+            }, 3000);
+        }
+
+        function loadInfluencers() {
+            const influencers = JSON.parse(localStorage.getItem('influencers')) || [];
+            renderInfluencers(influencers);
+        }
+    </script>
+</body>
+</html>
