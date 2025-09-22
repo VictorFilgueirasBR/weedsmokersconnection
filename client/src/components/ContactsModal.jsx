@@ -18,8 +18,7 @@ import { HiUsers } from "react-icons/hi2";
 
 const contactsData = {
   "Médicos": [
-    { name: "Drs. Prescritor", link: "https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ" },
-    { name: "Dra. Prescritora", link: "https://api.whatsapp.com/send/?phone=5581998107689&text=Teleconsulta&type=phone_number&app_absent=0&fbclid=PAT01DUAMvMgRleHRuA2FlbQIxMAABpzf5iEX9TDU4nigrTr3JLS0C5qJCRIqHMUR5m_MDM2yrlBisjDBOiyYeLrKp_aem_1F1skIeQeHT09boWWszeeA" },
+    { name: "Dra. Natália", link: "https://api.whatsapp.com/send/?phone=5581998107689&text=Teleconsulta&type=phone_number&app_absent=0&fbclid=PAT01DUAMvMgRleHRuA2FlbQIxMAABpzf5iEX9TDU4nigrTr3JLS0C5qJCRIqHMUR5m_MDM2yrlBisjDBOiyYeLrKp_aem_1F1skIeQeHT09boWWszeeA" },
   ],
   "Fornecedores Nacionais": [
     { name: "Fornecedor Recife", link: "http://instagram.com/Greenway.cbd" },
