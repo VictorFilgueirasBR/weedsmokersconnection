@@ -1,6 +1,6 @@
 // src/components/WelcomeVideo.jsx
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function WelcomeVideo() {
   const [play, setPlay] = useState(false);
@@ -128,7 +128,7 @@ export default function WelcomeVideo() {
   // Thumbnail (imagem + ícone de play + popup)
   const thumb = (
     <motion.div
-      className="absolute inset-0 flex items-center justify-center cursor-pointer overflow-hidden rounded-2xl"
+      className="absolute inset-0 flex items-center justify-center cursor-pointer overflow-hidden rounded-[18px]"
       onClick={() => setPlay(true)}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
@@ -136,14 +136,14 @@ export default function WelcomeVideo() {
       <img
         src="/images/wsc-thumb-home.png"
         alt="Capa do vídeo - Weed Smokers Connection"
-        className="w-full h-full object-cover rounded-2xl shadow-lg"
+        className="w-full h-full object-cover rounded-[18px] shadow-lg"
       />
 
       {/* Popup dentro da imagem */}
       {popup}
 
       {/* Camada escura com ícone de play */}
-      <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-2xl backdrop-blur-sm">
+      <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-[18px] backdrop-blur-sm">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -167,7 +167,7 @@ export default function WelcomeVideo() {
   const videoPlayer = (
     <motion.iframe
       key="video"
-      className="absolute inset-0 w-full h-full rounded-2xl shadow-lg"
+      className="absolute inset-0 w-full h-full rounded-[18px] shadow-lg"
       src="https://www.youtube.com/embed/wcm-e52Vtq8?autoplay=1&controls=1&modestbranding=1&rel=0"
       title="Weed Smokers Connection - Boas Vindas"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -184,8 +184,10 @@ export default function WelcomeVideo() {
       initial="hidden"
       animate="visible"
     >
-      <div className="relative w-full max-w-[650px] aspect-[16/9]">
-        {play ? videoPlayer : thumb}
+      <div className="relative w-full max-w-[650px] aspect-[16/9] overflow-hidden rounded-[18px]">
+        <AnimatePresence mode="wait">
+          {play ? videoPlayer : thumb}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
