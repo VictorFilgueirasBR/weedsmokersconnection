@@ -736,43 +736,6 @@ export default function Signup() {
                             </li>
                         </ol>
 
-                        <section style={{ marginTop: 12 }}>
-                            <h3>📌 Isenção de imposto para materiais didáticos</h3>
-                            <p>
-                                A imunidade tributária (prevista no art. 150, VI, da Constituição Federal) isenta de impostos (ICMS, IPI, ISS, etc.) livros, jornais, periódicos e o papel destinado a sua impressão.
-                                Isso significa que a produção e venda desses materiais (quando enquadrados como livro ou periódico) não sofre tributação de impostos sobre circulação, mas a renda da empresa que comercializa pode sim ser tributada.
-                            </p>
-
-                            <h4>📌 Imposto de Renda (IRPJ/CSLL)</h4>
-                            <p>
-                                Empresas no Brasil, mesmo atuando com material didático, continuam obrigadas a pagar IRPJ e CSLL sobre o lucro, salvo se estiverem em regime de imunidade ou isenção específica (como entidades sem fins lucrativos de educação devidamente registradas).
-                                Exemplo: uma ONG ou associação educacional sem fins lucrativos pode pleitear isenção. Mas uma empresa com fins lucrativos não.
-                            </p>
-
-                            <h4>📌 Estratégias de Planejamento Fiscal</h4>
-                            <p>
-                                Para algo como a Weed Smokers Connection, algumas saídas legais podem ser:
-                            </p>
-                            <ul>
-                                <li>Atuar como editora de conteúdo educacional (livros, apostilas, e-books sobre cannabis, história, terapias, etc.), que se enquadra na imunidade de impostos sobre circulação.</li>
-                                <li>Estruturar uma associação cultural/educacional sem fins lucrativos para a parte de ensino/divulgação científica → podendo buscar isenção de IRPJ/CSLL e até imunidade de impostos.</li>
-                                <li>Separar a operação: uma parte educacional (associação ou editora) com imunidade/isenção; outra parte comercial (produtos, marketplace, etc.) tributada normalmente.</li>
-                            </ul>
-
-                            <p>
-                                <strong>Resumo:</strong> materiais didáticos têm imunidade de alguns impostos (ICMS/IPI/ISS), mas não isenção automática de imposto de renda. Para IR, só via associação sem fins lucrativos ou estrutura educacional reconhecida.
-                            </p>
-
-                            <p style={{ marginTop: 8 }}>
-                                Quer que eu monte um mapa comparativo mostrando como ficaria a tributação se vocês abrissem:
-                                <ul>
-                                    <li>Uma empresa comum (LTDA/Simples).</li>
-                                    <li>Uma editora de material didático.</li>
-                                    <li>Uma associação sem fins lucrativos educacional.</li>
-                                </ul>
-                            </p>
-                        </section>
-
                         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                             <button onClick={() => setShowTermsModal(false)}>Fechar</button>
                         </div>
