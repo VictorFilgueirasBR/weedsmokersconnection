@@ -6,7 +6,7 @@ const steps = [
   {
     title: 'Assista Ao Tutorial de 3 minutos',
     description: 'Aprenda rapidamente os principais pontos antes de seguir.',
-    status: 'completed', // completed | current | upcoming
+    status: 'completed',
   },
   {
     title: 'Qual receita você precisa (Médico recomendado)?',
@@ -19,108 +19,164 @@ const steps = [
       'Flores em Natura, Extrações tipo Hash, ICE, Diamonds, Crumble, Gummyes e opções com CBD.',
     status: 'upcoming',
   },
+  {
+    title: 'Finalize seu pedido e aguarde',
+    description: 'Aguarde a entrega da sua medicação em casa.',
+    status: 'disabled',
+  },
 ];
 
 const styles = {
+  backgroundContainer: {
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'linear-gradient(135deg, #1abc9c, #2c3e50)',
+    backgroundSize: 'cover',
+    fontFamily: "'Inter', sans-serif",
+    padding: '20px',
+    boxSizing: 'border-box',
+  },
   stepContainer: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'rgba(255, 255, 255, 0.8)',
-    borderRadius: '20px',
-    padding: '20px',
-    maxWidth: '400px',
-    margin: 'auto',
+    background: 'rgba(255, 255, 255, 0.95)',
+    borderRadius: '15px',
+    padding: '30px',
+    maxWidth: '450px',
+    width: '100%',
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
   },
   stepItem: {
     display: 'flex',
     alignItems: 'flex-start',
     position: 'relative',
-    paddingLeft: '50px',
-    marginBottom: '30px',
+    marginBottom: '25px',
+  },
+  stepItemLast: {
+    marginBottom: '0',
+  },
+  stepMarkerWrapper: {
+    marginRight: '15px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   stepIcon: {
-    position: 'absolute',
-    left: '0',
-    top: '0',
-    width: '30px',
-    height: '30px',
+    width: '24px',
+    height: '24px',
     borderRadius: '50%',
-    color: '#fff',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 'bold',
-    fontSize: '16px',
-  },
-  stepIconCompleted: {
-    backgroundColor: '#00b894',
-  },
-  stepIconCurrent: {
-    backgroundColor: '#0984e3',
-  },
-  stepIconUpcoming: {
-    backgroundColor: '#dfe6e9',
-    color: '#2d3436',
-  },
-  stepText: {
-    h3: {
-      margin: '0',
-      fontSize: '16px',
-      fontWeight: '600',
-      color: '#2d3436',
-    },
-    p: {
-      margin: '5px 0 0',
-      fontSize: '14px',
-      color: '#636e72',
-    },
+    fontSize: '14px',
+    border: '2px solid',
+    color: '#fff',
+    transition: 'background-color 0.3s, border-color 0.3s, box-shadow 0.3s',
   },
   stepLine: {
-    position: 'absolute',
-    left: '14px',
-    top: '35px',
+    flexGrow: '1',
     width: '2px',
-    height: 'calc(100% - 35px)',
-    backgroundColor: '#b2bec3',
+    backgroundColor: '#c0c0c0',
+  },
+  stepContent: {
+    flex: '1',
+  },
+  h3: {
+    margin: '0',
+    fontSize: '16px',
+    fontWeight: '600',
+    color: '#34495e',
+    transition: 'color 0.3s',
+  },
+  p: {
+    margin: '5px 0 0',
+    fontSize: '14px',
+    color: '#7f8c8d',
+    transition: 'color 0.3s',
   },
 };
 
-const getStatusStyle = (status) => {
-  switch (status) {
-    case 'completed':
-      return styles.stepIconCompleted;
-    case 'current':
-      return styles.stepIconCurrent;
-    case 'upcoming':
-      return styles.stepIconUpcoming;
-    default:
-      return {};
+const getStatusStyles = (status) => {
+  const completedColor = '#2ecc71';
+  const currentUpcColor = '#c0c0c0';
+
+  if (status === 'completed') {
+    return {
+      icon: {
+        backgroundColor: completedColor,
+        borderColor: completedColor,
+      },
+      line: {
+        backgroundColor: completedColor,
+      },
+    };
   }
+  
+  if (status === 'current') {
+    return {
+      icon: {
+        backgroundColor: completedColor,
+        borderColor: completedColor,
+        boxShadow: `0 0 0 4px rgba(${parseInt(completedColor.slice(1,3), 16)}, ${parseInt(completedColor.slice(3,5), 16)}, ${parseInt(completedColor.slice(5,7), 16)}, 0.3)`,
+      },
+    };
+  }
+
+  if (status === 'upcoming' || status === 'disabled') {
+    return {
+      icon: {
+        backgroundColor: currentUpcColor,
+        borderColor: currentUpcColor,
+        color: '#fff',
+      },
+      content: {
+        h3: { color: currentUpcColor },
+        p: { color: currentUpcColor },
+      },
+    };
+  }
+  return {};
 };
 
 export default function StepByStepInline() {
   return (
-    <div style={styles.stepContainer}>
-      {steps.map((step, index) => (
-        <motion.div
-          key={index}
-          style={styles.stepItem}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.2 }}
-        >
-          <div
-            style={{ ...styles.stepIcon, ...getStatusStyle(step.status) }}
-          >
-            {step.status === 'completed' ? '✔' : index + 1}
-          </div>
-          <div style={styles.stepText}>
-            <h3 style={styles.stepText.h3}>{step.title}</h3>
-            <p style={styles.stepText.p}>{step.description}</p>
-          </div>
-          {index < steps.length - 1 && <div style={styles.stepLine}></div>}
-        </motion.div>
-      ))}
+    <div style={styles.backgroundContainer}>
+      <div style={styles.stepContainer}>
+        {steps.map((step, index) => {
+          const statusStyles = getStatusStyles(step.status);
+          const isLastItem = index === steps.length - 1;
+
+          return (
+            <motion.div
+              key={index}
+              style={{ ...styles.stepItem, ...(isLastItem && styles.stepItemLast) }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div style={styles.stepMarkerWrapper}>
+                <div
+                  style={{ ...styles.stepIcon, ...statusStyles.icon }}
+                >
+                  {step.status === 'completed' && '✔'}
+                </div>
+                {!isLastItem && (
+                  <div
+                    style={{ ...styles.stepLine, ...(statusStyles.line && statusStyles.line) }}
+                  ></div>
+                )}
+              </div>
+              <div style={styles.stepContent}>
+                <h3 style={{ ...styles.h3, ...(statusStyles.content && statusStyles.content.h3) }}>{step.title}</h3>
+                <p style={{ ...styles.p, ...(statusStyles.content && statusStyles.content.p) }}>{step.description}</p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }
