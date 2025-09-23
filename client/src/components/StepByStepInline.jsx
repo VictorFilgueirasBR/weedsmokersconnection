@@ -14,7 +14,7 @@ const steps = [
     status: 'completed',
   },
   {
-    title: 'Escolha sua medicação com THC e CBD',
+    title: 'Escolha sua medicação com THC ou CBD',
     description:
       'Flores em Natura, Extrações tipo Hash, ICE, Diamonds, Crumble, Gummyes e opções com CBD.',
     status: 'current',
@@ -36,6 +36,7 @@ const styles = {
     backgroundSize: 'cover',
     fontFamily: "'Inter', sans-serif",
     padding: '20px',
+    marginTop: '60px',
     boxSizing: 'border-box',
   },
   stepContainer: {
