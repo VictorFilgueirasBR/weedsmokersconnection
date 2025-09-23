@@ -4,24 +4,24 @@ import { motion } from 'framer-motion';
 
 const steps = [
   {
-    title: 'Assista Ao Tutorial de 3 minutos',
+    title: 'Assine e assista ao Tutorial de 3 minutos',
     description: 'Aprenda rapidamente os principais pontos antes de seguir.',
     status: 'completed',
   },
   {
-    title: 'Como conseguir autorização e receita que precisa?',
-    description: 'Defina o tipo de receita que se aplica ao seu caso.',
+    title: 'Como conseguir autorização e receita?',
+    description: 'Faça sua consulta com a profissional autorizada e receba por whatsapp.',
     status: 'completed',
   },
   {
-    title: 'Escolha sua medicação com THC ou CBD',
+    title: 'Escolha suas Flores e Extrações com THC ou CBD',
     description:
-      'Flores em Natura, Extrações tipo Hash, ICE, Diamonds, Crumble, Gummyes e opções com CBD.',
+      'Flores em Natura, Extrações THC (Hash, ICE, Diamonds, Crumble, Gummyes) e também opções com CBD.',
     status: 'current',
   },
   {
     title: 'Finalize seu pedido e aguarde',
-    description: 'Aguarde a entrega da sua medicação em casa.',
+    description: 'Aguarde a entrega da sua medicação em casa. Chega em até 24 horas.',
     status: 'upcoming',
   },
 ];
