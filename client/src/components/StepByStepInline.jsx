@@ -1,4 +1,4 @@
-// src/components/StepByStepInline.jsx
+// src/components/StepByStepInlineRefactored.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -32,7 +32,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'linear-gradient(135deg, #1abc9c, #2c3e50)',
+    background: 'linear-gradient(135deg, #2ecc71, #2c3e50)', // Ajuste de gradiente para combinar mais com a referência
     backgroundSize: 'cover',
     fontFamily: "'Inter', sans-serif",
     padding: '20px',
@@ -41,27 +41,30 @@ const styles = {
   stepContainer: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'rgba(255, 255, 255, 0.95)',
+    background: 'rgba(255, 255, 255, 0.98)', // Menos transparente para o fundo do card
     borderRadius: '15px',
-    padding: '30px',
+    padding: '30px 40px', // Mais padding horizontal
     maxWidth: '450px',
     width: '100%',
     boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
   },
   stepItem: {
-    display: 'flex',
-    alignItems: 'flex-start',
+    display: 'grid', // Usaremos CSS Grid para o layout
+    gridTemplateColumns: 'auto 1fr', // Uma coluna para o ícone, outra para o conteúdo
+    alignItems: 'start', // Alinha o grid ao topo
+    marginBottom: '20px', // Espaçamento entre os itens
     position: 'relative',
-    marginBottom: '25px',
   },
   stepItemLast: {
     marginBottom: '0',
   },
-  stepMarkerWrapper: {
-    marginRight: '15px',
+  stepIconWrapper: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    marginRight: '20px', // Espaçamento entre o ícone e o texto
+    position: 'relative',
+    zIndex: 1, // Para o ícone ficar acima da linha
   },
   stepIcon: {
     width: '24px',
@@ -72,17 +75,22 @@ const styles = {
     justifyContent: 'center',
     fontWeight: 'bold',
     fontSize: '14px',
-    border: '2px solid',
     color: '#fff',
     transition: 'background-color 0.3s, border-color 0.3s, box-shadow 0.3s',
   },
   stepLine: {
-    flexGrow: '1',
+    position: 'absolute',
+    left: '50%',
+    transform: 'translateX(-50%)',
     width: '2px',
-    backgroundColor: '#c0c0c0',
+    backgroundColor: '#e0e0e0', // Cor da linha clara
+    top: '24px', // Começa abaixo do ícone
+    bottom: '-10px', // Estende um pouco para baixo
+    zIndex: 0, // Atrás do ícone
   },
   stepContent: {
-    flex: '1',
+    // Alinhado com o grid
+    paddingTop: '0px', // Ajuste para alinhar o texto com o ícone
   },
   h3: {
     margin: '0',
@@ -95,32 +103,52 @@ const styles = {
     margin: '5px 0 0',
     fontSize: '14px',
     color: '#7f8c8d',
+    lineHeight: '1.4',
     transition: 'color 0.3s',
   },
+  // Estilos específicos para a linha de baixo do título (como na referência)
+  titleUnderline: {
+    width: '40px', // Largura da linha
+    height: '2px',
+    backgroundColor: '#aeead3', // Cor verde clara
+    margin: '8px 0 10px 0', // Espaçamento
+    borderRadius: '1px',
+  }
 };
 
 const getStatusStyles = (status) => {
-  const completedColor = '#2ecc71';
-  const currentUpcColor = '#c0c0c0';
+  const primaryGreen = '#2ecc71';
+  const lightGray = '#c0c0c0';
+  const darkText = '#34495e';
+  const lightText = '#7f8c8d';
 
   if (status === 'completed') {
     return {
       icon: {
-        backgroundColor: completedColor,
-        borderColor: completedColor,
+        backgroundColor: primaryGreen,
+        borderColor: primaryGreen,
+        // Remover o checkmark direto do ícone e usar um span interno se necessário,
+        // ou confiar que o char '✔' vai funcionar bem aqui
+      },
+      content: {
+        h3: { color: darkText },
+        p: { color: lightText },
       },
       line: {
-        backgroundColor: completedColor,
-      },
+        backgroundColor: primaryGreen,
+      }
     };
   }
-  
+
   if (status === 'current') {
     return {
       icon: {
-        backgroundColor: completedColor,
-        borderColor: completedColor,
-        boxShadow: `0 0 0 4px rgba(${parseInt(completedColor.slice(1,3), 16)}, ${parseInt(completedColor.slice(3,5), 16)}, ${parseInt(completedColor.slice(5,7), 16)}, 0.3)`,
+        backgroundColor: primaryGreen, // Preenchido como o 'completed' na referência
+        boxShadow: `0 0 0 3px rgba(46, 204, 113, 0.4)`, // Brilho verde
+      },
+      content: {
+        h3: { color: darkText, fontWeight: '700' }, // Título em negrito
+        p: { color: lightText },
       },
     };
   }
@@ -128,20 +156,19 @@ const getStatusStyles = (status) => {
   if (status === 'upcoming' || status === 'disabled') {
     return {
       icon: {
-        backgroundColor: currentUpcColor,
-        borderColor: currentUpcColor,
-        color: '#fff',
+        backgroundColor: lightGray, // Cor cinza do ícone
+        borderColor: lightGray,
       },
       content: {
-        h3: { color: currentUpcColor },
-        p: { color: currentUpcColor },
+        h3: { color: lightGray },
+        p: { color: lightGray },
       },
     };
   }
   return {};
 };
 
-export default function StepByStepInline() {
+export default function StepByStepInlineRefactored() {
   return (
     <div style={styles.backgroundContainer}>
       <div style={styles.stepContainer}>
@@ -157,21 +184,24 @@ export default function StepByStepInline() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <div style={styles.stepMarkerWrapper}>
+              <div style={styles.stepIconWrapper}>
                 <div
                   style={{ ...styles.stepIcon, ...statusStyles.icon }}
                 >
                   {step.status === 'completed' && '✔'}
+                  {/* Para 'current', a imagem de referência não mostra um número ou check, apenas um círculo verde preenchido */}
                 </div>
                 {!isLastItem && (
                   <div
-                    style={{ ...styles.stepLine, ...(statusStyles.line && statusStyles.line) }}
+                    style={{ ...styles.stepLine, ...(statusStyles.line && statusStyles.line), height: '100%', top: '24px' }} // Ajusta a altura da linha
                   ></div>
                 )}
               </div>
               <div style={styles.stepContent}>
-                <h3 style={{ ...styles.h3, ...(statusStyles.content && statusStyles.content.h3) }}>{step.title}</h3>
-                <p style={{ ...styles.p, ...(statusStyles.content && statusStyles.content.p) }}>{step.description}</p>
+                <h3 style={{ ...styles.h3, ...statusStyles.content?.h3 }}>{step.title}</h3>
+                {/* Adiciona a linha de baixo do título se não for disabled */}
+                {step.status !== 'disabled' && <div style={styles.titleUnderline}></div>}
+                <p style={{ ...styles.p, ...statusStyles.content?.p }}>{step.description}</p>
               </div>
             </motion.div>
           );
