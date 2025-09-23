@@ -16,6 +16,7 @@ import IceSection from "../components/IceSection";
 import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
+import StepByStepInline from "../components/StepByStepInline";
 
 export default function WSCClub() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
@@ -35,6 +36,8 @@ export default function WSCClub() {
       <FirstClub />
 
       <VideoWelcome />
+
+      <StepByStepInline />
 
       <MemberTreatmentFlow />
 
