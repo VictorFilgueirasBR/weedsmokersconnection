@@ -121,20 +121,6 @@ export default function TermsModal({
               <li><strong>Responsabilidade</strong><br/>O clube não vende medicamentos. Produtos listados são referências. O acesso legal segue RDC 327/2019 e RDC 660/2022 da Anvisa.</li>
               <li><strong>Aceite</strong><br/>Ao concordar, você declara que: entende o caráter informativo, que não substitui médico, e respeitará as regras do clube.</li>
             </ol>
-
-            <section className="terms-legal">
-              <h3>📌 Sobre tributação e imunidade</h3>
-              <p>
-                Nos enquadramos estritamente como conteúdo educativo/didático. A Constituição Federal (art. 150, VI) concede <strong>imunidade tributária</strong> para livros, jornais e periódicos, isentando ICMS, IPI e ISS.
-              </p>
-              <p>
-                Isso significa que: a circulação de materiais didáticos (apostilas, e-books, cursos em formato de livro) não sofre tributação nesses impostos. 
-                Contudo, <strong>a renda da empresa ainda pode ser tributada por IRPJ/CSLL</strong>, salvo em caso de associação educacional sem fins lucrativos.
-              </p>
-              <p>
-                Estratégias legais incluem atuar como editora de material educacional ou estruturar associação cultural/educacional sem fins lucrativos. 
-              </p>
-            </section>
           </div>
 
           <footer className="terms-footer">
@@ -228,22 +214,6 @@ const modalCss = `
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-  }
-
-  .terms-legal {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: 1.5rem;
-  }
-
-  .terms-legal h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #00c08a;
   }
 
   .terms-footer {
