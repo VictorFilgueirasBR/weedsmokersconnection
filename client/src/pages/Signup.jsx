@@ -15,12 +15,14 @@ export default function Signup() {
     const [selectedPlan, setSelectedPlan] = useState('mensal');
     const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
+    // Termos
+    const [acceptedTerms, setAcceptedTerms] = useState(false);
+    const [showTermsModal, setShowTermsModal] = useState(false);
+
     const navigate = useNavigate();
     const { setUser, setToken } = useContext(AuthContext);
     const [searchParams] = useSearchParams();
 
-    // A lógica de verificação de status do pagamento é mantida
-    // para exibir mensagens de feedback ao usuário após o redirecionamento.
     useEffect(() => {
         const paymentStatus = searchParams.get('status');
         const paymentId = searchParams.get('payment_id');
@@ -79,12 +81,15 @@ export default function Signup() {
         button.style.setProperty('--y', `${y}px`);
     };
 
-    // A requisição de registro e o redirecionamento foram unidos aqui.
     const handleSubmit = async () => {
         setSubmitMessage({ type: '', text: '' });
         if (!validate()) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             setSubmitMessage({ type: 'error', text: 'Por favor, corrija os erros no formulário.' });
+            return;
+        }
+        if (!acceptedTerms) {
+            setSubmitMessage({ type: 'error', text: 'Você deve aceitar os Termos de segurança para continuar.' });
             return;
         }
         setIsSubmitting(true);
@@ -162,7 +167,7 @@ export default function Signup() {
         <div className="signup-page">
             <style>
                 {`
-                /* ... (CSS and HTML are the same as before, no changes needed here) ... */
+                /* ... (CSS and HTML are the same as before, não modifiquei a maior parte) ... */
                 .signup-page {
                     min-height: 100vh;
                     display: flex;
@@ -472,7 +477,7 @@ export default function Signup() {
                     gap: 0.7rem;
                     transition: all 0.5s ease;
                 }
-                
+
                 .highlight-list {
                     list-style: none;
                     padding: 0;
@@ -504,8 +509,56 @@ export default function Signup() {
                 .form-section-divider h2 {
                     margin-top: 0;
                 }
+
+                /* Termos checkbox e modal simples (estilos locais para integração rápida) */
+                .terms-checkbox {
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.85rem;
+                    color: rgba(255,255,255,0.85);
+                    margin-top: 0.8rem;
+                    gap: 0.5rem;
+                }
+                .terms-checkbox a {
+                    color: #57C74C;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+                .terms-modal-overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(0,0,0,0.7);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 9999;
+                }
+                .terms-modal {
+                    background: rgba(30,30,30,0.95);
+                    color: #fff;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    max-width: 700px;
+                    max-height: 80vh;
+                    overflow-y: auto;
+                    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+                }
+                .terms-modal h2 {
+                    margin-top: 0;
+                }
+                .terms-modal button {
+                    margin-top: 1rem;
+                    background: #57C74C;
+                    border: none;
+                    padding: 0.6rem 1.2rem;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: #fff;
+                }
                 `}
             </style>
+
             <div className="signup-container-wrapper">
                 <div className="signup-content">
                     <h1>Assine e Desbloqueie o Futuro da Sua Cura</h1>
@@ -590,6 +643,22 @@ export default function Signup() {
                                 <span className="error">{formErrors.confirmPassword}</span>
                             )}
                         </div>
+
+                        {/* Checkbox de termos - logo abaixo do confirmPassword */}
+                        <div className="terms-checkbox">
+                            <input
+                                id="termsCheckbox"
+                                type="checkbox"
+                                checked={acceptedTerms}
+                                onChange={(e) => setAcceptedTerms(e.target.checked)}
+                                aria-labelledby="termsLabel"
+                            />
+                            <label id="termsLabel" htmlFor="termsCheckbox">
+                                Ao se cadastrar você concorda com os{' '}
+                                <a onClick={() => setShowTermsModal(true)}>Termos</a> de segurança
+                            </label>
+                        </div>
+
                         <div className="form-section-divider"></div>
                         <h2>Escolha Seu Plano</h2>
                         <div className="plans-wrapper">
@@ -615,7 +684,7 @@ export default function Signup() {
                         </div>
                         <button
                             type="button"
-                            disabled={isSubmitting}
+                            disabled={isSubmitting || !acceptedTerms}
                             onClick={handleSubmit}
                             className="submit-gradient-btn"
                             onMouseMove={handleMouseMove}
@@ -629,6 +698,87 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
+
+            {/* Modal de Termos (usado apenas nesta página de signup) */}
+            {showTermsModal && (
+                <div className="terms-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+                    <div className="terms-modal">
+                        <h2 id="termsModalTitle">Termos de Uso do Clube</h2>
+                        <p>Bem-vindo ao nosso Clube! 🚀</p>
+                        <p>Antes de entrar na área restrita, precisamos alinhar algumas coisinhas rápidas:</p>
+
+                        <ol>
+                            <li>
+                                <strong>Conteúdo educativo</strong>
+                                <p>O que você vai ver aqui é informação sobre produtos de cannabis medicinal. Não é propaganda, não é venda aberta. É um espaço para pacientes trocarem conhecimento.</p>
+                            </li>
+                            <li>
+                                <strong>Prescrição é lei</strong>
+                                <p>Só um médico pode indicar e prescrever tratamento com cannabis. Nada do que está aqui substitui consulta médica. Sempre converse com seu doutor(a) 👩‍⚕️👨‍⚕️.</p>
+                            </li>
+                            <li>
+                                <strong>Acesso restrito</strong>
+                                <p>Essa área é só para membros assinantes. As informações não são públicas e você se compromete a não repassar prints ou dados fora daqui.</p>
+                            </li>
+                            <li>
+                                <strong>Responsabilidade</strong>
+                                <p>O clube não vende diretamente medicamentos. Os produtos listados aparecem apenas como referência informativa. O acesso legal a cannabis medicinal no Brasil depende da RDC 327/2019 e RDC 660/2022 da Anvisa.</p>
+                            </li>
+                            <li>
+                                <strong>Aceite</strong>
+                                <p>Ao clicar em “Concordo”, você está dizendo:
+                                <ul>
+                                    <li>que entende que é um conteúdo informativo,</li>
+                                    <li>que não substitui médico,</li>
+                                    <li>e que respeita as regras do clube.</li>
+                                </ul>
+                                </p>
+                            </li>
+                        </ol>
+
+                        <section style={{ marginTop: 12 }}>
+                            <h3>📌 Isenção de imposto para materiais didáticos</h3>
+                            <p>
+                                A imunidade tributária (prevista no art. 150, VI, da Constituição Federal) isenta de impostos (ICMS, IPI, ISS, etc.) livros, jornais, periódicos e o papel destinado a sua impressão.
+                                Isso significa que a produção e venda desses materiais (quando enquadrados como livro ou periódico) não sofre tributação de impostos sobre circulação, mas a renda da empresa que comercializa pode sim ser tributada.
+                            </p>
+
+                            <h4>📌 Imposto de Renda (IRPJ/CSLL)</h4>
+                            <p>
+                                Empresas no Brasil, mesmo atuando com material didático, continuam obrigadas a pagar IRPJ e CSLL sobre o lucro, salvo se estiverem em regime de imunidade ou isenção específica (como entidades sem fins lucrativos de educação devidamente registradas).
+                                Exemplo: uma ONG ou associação educacional sem fins lucrativos pode pleitear isenção. Mas uma empresa com fins lucrativos não.
+                            </p>
+
+                            <h4>📌 Estratégias de Planejamento Fiscal</h4>
+                            <p>
+                                Para algo como a Weed Smokers Connection, algumas saídas legais podem ser:
+                            </p>
+                            <ul>
+                                <li>Atuar como editora de conteúdo educacional (livros, apostilas, e-books sobre cannabis, história, terapias, etc.), que se enquadra na imunidade de impostos sobre circulação.</li>
+                                <li>Estruturar uma associação cultural/educacional sem fins lucrativos para a parte de ensino/divulgação científica → podendo buscar isenção de IRPJ/CSLL e até imunidade de impostos.</li>
+                                <li>Separar a operação: uma parte educacional (associação ou editora) com imunidade/isenção; outra parte comercial (produtos, marketplace, etc.) tributada normalmente.</li>
+                            </ul>
+
+                            <p>
+                                <strong>Resumo:</strong> materiais didáticos têm imunidade de alguns impostos (ICMS/IPI/ISS), mas não isenção automática de imposto de renda. Para IR, só via associação sem fins lucrativos ou estrutura educacional reconhecida.
+                            </p>
+
+                            <p style={{ marginTop: 8 }}>
+                                Quer que eu monte um mapa comparativo mostrando como ficaria a tributação se vocês abrissem:
+                                <ul>
+                                    <li>Uma empresa comum (LTDA/Simples).</li>
+                                    <li>Uma editora de material didático.</li>
+                                    <li>Uma associação sem fins lucrativos educacional.</li>
+                                </ul>
+                            </p>
+                        </section>
+
+                        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <button onClick={() => setShowTermsModal(false)}>Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
