@@ -1,4 +1,4 @@
-// src/components/StepByStepInlineFinal.jsx
+// src/components/StepByStepInlineRefactored.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -11,10 +11,10 @@ const steps = [
   {
     title: 'Qual receita você precisa (Médico recomendado)?',
     description: 'Defina o tipo de receita que se aplica ao seu caso.',
-    status: 'completed', // Alterado para 'completed' para combinar com a nova referência
+    status: 'completed',
   },
   {
-    title: 'Escolha sua medicação com THC ou CBD',
+    title: 'Escolha sua medicação com THC e CBD',
     description:
       'Flores em Natura, Extrações tipo Hash, ICE, Diamonds, Crumble, Gummyes e opções com CBD.',
     status: 'current',
@@ -64,13 +64,14 @@ const styles = {
     top: '0',
     width: '24px',
     height: '24px',
-    borderRadius: '50%',
+    borderRadius: '8px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 'bold',
     fontSize: '14px',
     color: '#fff',
+    backgroundColor: '#1d9d92', // Cor única para todos os ícones
     transition: 'background-color 0.3s, border-color 0.3s, box-shadow 0.3s',
   },
   stepLine: {
@@ -79,7 +80,7 @@ const styles = {
     top: '24px',
     width: '2px',
     height: 'calc(100% - 24px)',
-    backgroundColor: '#1d9d92', // Cor da linha principal
+    backgroundColor: '#1d9d92',
     transition: 'background-color 0.3s',
   },
   stepContent: {
@@ -102,23 +103,27 @@ const styles = {
 };
 
 const getStatusStyles = (status) => {
-  const primaryGreen = '#2ecc71';
   const currentGreen = '#1d9d92';
   const lightGray = '#d9d9d9';
   const darkText = '#34495e';
   const lightText = '#7f8c8d';
 
+  // O ícone agora sempre tem a mesma cor de fundo e formato
+  const iconBaseStyle = {
+    backgroundColor: currentGreen,
+    borderRadius: '8px',
+    color: '#fff',
+  };
+
   if (status === 'completed') {
     return {
-      icon: {
-        backgroundColor: primaryGreen,
-      },
+      icon: { ...iconBaseStyle },
       content: {
         h3: { color: darkText },
         p: { color: lightText },
       },
       line: {
-        backgroundColor: primaryGreen,
+        backgroundColor: currentGreen,
       }
     };
   }
@@ -126,9 +131,8 @@ const getStatusStyles = (status) => {
   if (status === 'current') {
     return {
       icon: {
-        backgroundColor: currentGreen,
-        borderRadius: '8px', // Quadrado arredondado como na imagem
-        boxShadow: `0 0 0 4px rgba(29, 157, 146, 0.4)`, // Brilho verde/azul
+        ...iconBaseStyle,
+        boxShadow: `0 0 0 4px rgba(29, 157, 146, 0.4)`,
       },
       content: {
         h3: { color: darkText, fontWeight: '700' },
@@ -140,6 +144,7 @@ const getStatusStyles = (status) => {
   if (status === 'upcoming') {
     return {
       icon: {
+        ...iconBaseStyle,
         backgroundColor: lightGray,
       },
       content: {
@@ -154,7 +159,7 @@ const getStatusStyles = (status) => {
   return {};
 };
 
-export default function StepByStepInlineFinal() {
+export default function StepByStepInlineRefactored() {
   return (
     <div style={styles.backgroundContainer}>
       <div style={styles.stepContainer}>
