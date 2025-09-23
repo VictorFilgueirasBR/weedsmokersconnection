@@ -9,7 +9,7 @@ const steps = [
     status: 'completed',
   },
   {
-    title: 'Qual receita você precisa (Médico recomendado)?',
+    title: 'Como conseguir autorização e receita que precisa?',
     description: 'Defina o tipo de receita que se aplica ao seu caso.',
     status: 'completed',
   },
