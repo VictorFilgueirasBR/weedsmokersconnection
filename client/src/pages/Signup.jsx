@@ -654,8 +654,8 @@ export default function Signup() {
                                 aria-labelledby="termsLabel"
                             />
                             <label id="termsLabel" htmlFor="termsCheckbox">
-                                Ao se cadastrar você concorda com os{' '}
-                                <a onClick={() => setShowTermsModal(true)}>Termos</a> de segurança
+                                Ao entrar, você aceita os{' '}
+                                <a onClick={() => setShowTermsModal(true)}>Termos de Uso</a>.
                             </label>
                         </div>
 
