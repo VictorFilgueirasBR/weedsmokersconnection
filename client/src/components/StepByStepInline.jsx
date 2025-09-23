@@ -14,14 +14,14 @@ const steps = [
     status: 'completed',
   },
   {
-    title: 'Escolha suas Flores e Extrações com THC ou CBD',
+    title: 'Escolha suas Flores e Extrações com THC',
     description:
       'Flores em Natura, Extrações THC (Hash, ICE, Diamonds, Crumble, Gummyes) e também opções com CBD.',
     status: 'current',
   },
   {
-    title: 'Finalize seu pedido e aguarde',
-    description: 'Aguarde a entrega da sua medicação em casa. Chega em até 24 horas.',
+    title: 'Finalize seu pedido com segurança',
+    description: 'Receba a entrega da sua medicação em casa. Entrega para todo o BRASIL, chega em até 24 horas.',
     status: 'upcoming',
   },
 ];
