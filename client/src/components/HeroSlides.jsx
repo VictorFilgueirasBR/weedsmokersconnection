@@ -83,13 +83,13 @@ const HeroSlides = () => {
         onMouseMove={handleMouseMove}
         onClick={() => navigate('/signup')}
       >
-        ASSINAR AGORA →
+        ASSINAR CLUB →
       </button>
 
       {/* Conteúdo fixo sobre o slider, com estilo glassmorphism */}
       <div className="hero-content-overlay">
         <p className="hero-subtitle">
-          Entre para o club, siga o passo a passo para ter autorização e escolha seus Fornecedores das Melhores Espécies e Extrações Ricas em THC e CBD, Nacionais e Importadas de forma LEGALIZADA pela ANVISA aqui no BRASIL.
+          Entre para o CLUB, siga o passo a passo para ter autorização e escolha seus Fornecedores das Melhores Espécies e Extrações Ricas em THC e CBD, Nacionais e Importadas de forma LEGALIZADA pela ANVISA aqui no BRASIL.
         </p>
       </div>
     </section>
