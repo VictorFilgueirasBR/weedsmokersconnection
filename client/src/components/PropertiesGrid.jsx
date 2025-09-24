@@ -11,7 +11,7 @@ const propertiesData = [
     location: '5g',
     price: 'R$ 350,00',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA.',
-    cta: 'Contato',
+    cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
   },
   {
@@ -21,7 +21,7 @@ const propertiesData = [
     location: '5g',
     price: 'R$ 195,00',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA.',
-    cta: 'Contato',
+    cta: 'Ver mais',
     link: 'https://institutozasso.com.br/'
   },
   {
@@ -31,7 +31,7 @@ const propertiesData = [
     location: '5g',
     price: 'R$ 220,00',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA.',
-    cta: 'Contato',
+    cta: 'Ver mais',
     link: 'https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ'
   },
   {
@@ -41,7 +41,7 @@ const propertiesData = [
     location: '10g',
     price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA.',
-    cta: 'Contato',
+    cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
   },
   {
@@ -51,7 +51,7 @@ const propertiesData = [
     location: 'Unidade.',
     price: 'R$ 220,00',
     description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA.',
-    cta: 'Contato',
+    cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
   {
@@ -61,7 +61,7 @@ const propertiesData = [
     location: '10g',
     price: 'R$ 650,00',
     description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.',
-    cta: 'Contato',
+    cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
 ];
