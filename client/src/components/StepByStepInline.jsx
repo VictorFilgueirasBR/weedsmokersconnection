@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const steps = [
   {
-    title: 'Assine e assista ao Tutorial de 3 minutos',
+    title: 'Assine e veja o Tutorial Rápido',
     description: 'Aprenda rapidamente os principais pontos antes de seguir.',
     status: 'completed',
   },
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     title: 'Finalize seu pedido com segurança',
-    description: 'Receba a entrega da sua medicação em casa. Entrega para todo o BRASIL, chega em até 24 horas.',
+    description: 'Receba a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 24 horas.',
     status: 'upcoming',
   },
 ];
