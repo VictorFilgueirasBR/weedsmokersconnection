@@ -4,9 +4,8 @@ import React, { useState } from "react";
 // Importa os componentes da página Home.jsx
 import HeroHashLegal from "../components/HeroHashLegal";
 import FirstClub from "../components/FirstClub";
-import HowItWorksSection from "../components/HowItWorksSection";
+import WelcomeClubVideo from "../components/WelcomeClubVideo";
 import VideoPlayer from "../components/VideoPlayer";
-import VideoWelcome from "../components/VideoWelcome";
 import CannabisSlides from "../components/CannabisSlides";
 import GlassCardNacional from "../components/GlassCardNacional";
 import GlassCardImport from "../components/GlassCardImport";
@@ -17,7 +16,7 @@ import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
 import StepByStepInline from "../components/StepByStepInline";
-import WelcomeClubVideo from "../components/WelcomeClubVideo";
+
 
 export default function WSCClub() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
@@ -38,7 +37,7 @@ export default function WSCClub() {
 
       <WelcomeClubVideo />
 
-      <VideoWelcome />
+      
 
       <StepByStepInline />
 
