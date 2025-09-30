@@ -160,6 +160,7 @@ export default function WelcomeClubVideo() {
   );
 
   // Thumbnail (imagem + ícone de play + popup)
+  // Thumbnail (imagem + ícone de play + popup)
   const thumb = (
     <motion.div
       key="thumbnail"
