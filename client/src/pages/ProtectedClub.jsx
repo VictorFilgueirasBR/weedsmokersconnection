@@ -17,6 +17,7 @@ import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
 import StepByStepInline from "../components/StepByStepInline";
+import WelcomeClubVideo from "../components/WelcomeClubVideo";
 
 export default function WSCClub() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
@@ -34,6 +35,8 @@ export default function WSCClub() {
       {/* O Header e Footer não estão aqui, pois são gerenciados pelo MainLayout */}
 
       <FirstClub />
+
+      <WelcomeClubVideo />
 
       <VideoWelcome />
 
