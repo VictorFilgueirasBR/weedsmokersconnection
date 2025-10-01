@@ -726,7 +726,9 @@ export default function Signup() {
                             </li>
                             <li>
                                 <strong>Política de Cancelamento</strong>
-                                <p>Os valores pagos para adesão ou manutenção da assinatura do Clube possuem caráter não reembolsável, em razão da natureza do serviço prestado (conteúdo digital e informativo disponibilizado de forma imediata após a contratação). O usuário declara ciência de que a adesão é realizada em caráter irrevogável e irretratável, não assistindo direito a devolução ou estorno, ainda que haja cancelamento posterior.</p>
+                                <p>Os valores pagos para adesão ou manutenção da assinatura do Clube possuem caráter não reembolsável, em razão da natureza do serviço prestado (conteúdo digital e informativo disponibilizado de forma imediata após a contratação). O usuário declara ciência de que a adesão é realizada em caráter irrevogável e irretratável, não assistindo direito a devolução ou estorno, ainda que haja cancelamento posterior. Em conformidade com o art. 49 do Código de Defesa do Consumidor, o usuário possui o direito de arrependimento no prazo de 7 (sete) dias corridos, contados da adesão.
+Todavia, ao clicar em “Concordo” e acessar imediatamente os conteúdos digitais disponibilizados pelo Clube, o usuário manifesta seu consentimento expresso para a execução imediata do serviço e reconhece que o início do acesso caracteriza plena fruição do produto, hipótese em que não subsistirá o direito de arrependimento previsto no referido artigo.
+Após o prazo legal de 7 (sete) dias, toda adesão será considerada irrevogável e irretratável, não gerando direito a reembolso ou estorno, ainda que haja cancelamento da assinatura.</p>
                             </li>
                             <li>
                                 <strong>Aceite</strong>
