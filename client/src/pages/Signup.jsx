@@ -725,6 +725,10 @@ export default function Signup() {
                                 <p>O clube não vende diretamente medicamentos. Os produtos listados aparecem apenas como referência informativa. O acesso legal a cannabis medicinal no Brasil depende da RDC 327/2019 e RDC 660/2022 da Anvisa.</p>
                             </li>
                             <li>
+                                <strong>Política de Cancelamento</strong>
+                                <p>Os valores pagos para adesão ou manutenção da assinatura do Clube possuem caráter não reembolsável, em razão da natureza do serviço prestado (conteúdo digital e informativo disponibilizado de forma imediata após a contratação). O usuário declara ciência de que a adesão é realizada em caráter irrevogável e irretratável, não assistindo direito a devolução ou estorno, ainda que haja cancelamento posterior.</p>
+                            </li>
+                            <li>
                                 <strong>Aceite</strong>
                                 <p>Ao clicar em “Concordo”, você está dizendo:
                                 <ul>
