@@ -1,12 +1,14 @@
 // src/components/InstructionGlass.jsx
 import React, { useRef, useEffect } from "react";
+// Importando os ícones do React Icons (Font Awesome)
+import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 export default function Instruction({
   title = "Seja bem-vindo ao CLUB",
   subtitle = "Entre em contato para instruções ou parcelamento em até 12x.",
-  whatsappUrl = "https://wa.me/5511999999999",
-  telegramUrl = "https://t.me/seuCanal",
-  backgroundImage = "/images/hemp222.jpeg", // <--- Sua nova imagem de fundo
+  whatsappUrl = "https://wa.me/5561995276936",
+  telegramUrl = "https://t.me/+GvhYlf4XjFJiMzNh",
+  backgroundImage = "/images/hemp222.jpeg", 
   contactTitle = "Fale Conosco",
   contactSubtitle = "Suporte | Dúvidas | Pagamentos",
 }) {
@@ -64,7 +66,8 @@ export default function Instruction({
               className="glass-btn whatsapp-btn" 
               style={styles.actionBtn}
             >
-              <img src="/icons/whatsapp.svg" alt="WhatsApp" width="22" height="22" style={{filter: 'brightness(0) invert(1)'}}/>
+              {/* Ícone do WhatsApp (React Icon) */}
+              <FaWhatsapp size={22} />
               WhatsApp
             </a>
             <a 
@@ -74,7 +77,8 @@ export default function Instruction({
               className="glass-btn telegram-btn" 
               style={styles.actionBtn}
             >
-              <img src="/icons/telegram.svg" alt="Telegram" width="22" height="22" style={{filter: 'brightness(0) invert(1)'}}/>
+              {/* Ícone do Telegram (React Icon) */}
+              <FaTelegramPlane size={22} />
               Telegram
             </a>
           </div>
@@ -108,7 +112,7 @@ const css = `
       inset 0 0 0 1px rgba(255,255,255,0.08),
       0 30px 80px rgba(0,0,0,0.45);
     animation: card-wobble 12s ease-in-out infinite;
-    cursor: default; /* Alterado para default, pois é um cartão de instruções */
+    cursor: default;
     transition: transform 0.3s ease-out;
   }
   .glass-card:hover {
@@ -165,9 +169,9 @@ const css = `
     text-decoration: none;
     cursor: pointer;
     transition: transform .15s ease, opacity .2s ease;
-    width: 100%; /* Para alinhar com o design anterior */
+    width: 100%;
     
-    background: rgba(255,255,255,0.08); /* Fundo sutil */
+    background: rgba(255,255,255,0.08); 
     color: #fff;
     border: 1px solid rgba(255,255,255,0.25);
     box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.25);
@@ -183,7 +187,7 @@ const css = `
     background-color: var(--whatsapp-color); 
     border-color: var(--whatsapp-color);
     box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
-    background-blend-mode: overlay; /* Mistura o fundo sólido com o glass */
+    background-blend-mode: overlay; 
   }
   .whatsapp-btn:hover {
     background-color: #27e06e;
@@ -195,7 +199,7 @@ const css = `
     background-color: var(--telegram-color);
     border-color: var(--telegram-color);
     box-shadow: 0 4px 14px rgba(0, 136, 204, 0.4);
-    background-blend-mode: overlay; /* Mistura o fundo sólido com o glass */
+    background-blend-mode: overlay; 
   }
   .telegram-btn:hover {
     background-color: #0099e5;
@@ -222,20 +226,19 @@ const css = `
 // ----------------------------------------------------------------------
 const styles = {
   page: {
-    minHeight: "100vh", // Ajustado para centralizar bem
+    minHeight: "100vh",
     display: "grid",
     placeItems: "center",
     backgroundPosition: "center",
     backgroundSize: "cover",
-    // Aplica um filtro na imagem para melhor contraste com o card de vidro
     filter: "saturate(180%) contrast(135%) brightness(0.95)",
     padding: "20px",
   },
   card: {
-    width: "min(500px, 92vw)", // Tamanho mais adequado para um card de contato
-    height: "auto", // Altura flexível
+    width: "min(500px, 92vw)",
+    height: "auto",
     zIndex: 1,
-    padding: "30px", // Preenchimento interno
+    padding: "30px",
     textAlign: "center",
   },
   contentWrap: {
