@@ -18,7 +18,7 @@ import { HiUsers } from "react-icons/hi2";
 
 const contactsData = {
   "Médicos": [
-    { name: "Dra. Natália", link: "https://api.whatsapp.com/send/?phone=5581998107689&text=Teleconsulta&type=phone_number&app_absent=0&fbclid=PAT01DUAMvMgRleHRuA2FlbQIxMAABpzf5iEX9TDU4nigrTr3JLS0C5qJCRIqHMUR5m_MDM2yrlBisjDBOiyYeLrKp_aem_1F1skIeQeHT09boWWszeeA" },
+    { name: "Dra. Natália", link: "https://wa.me/5561995276936" },
   ],
   "Fornecedores Nacionais": [
     { name: "Fornecedor Recife", link: "http://instagram.com/Greenway.cbd" },
