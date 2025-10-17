@@ -152,13 +152,13 @@ export default function Signup() {
         semestral: {
             price: '77,90',
             amount: 77.90,
-            duration: '70% off por 6 meses',
+            duration: '70% OFF por 6 meses',
             description: 'Plano Semestral',
         },
         anual: {
             price: '107,90',
             amount: 107.90,
-            duration: '76% off por 1 ano',
+            duration: '76% OFF por 1 ano',
             description: 'Plano Anual',
         },
     };
