@@ -10,7 +10,7 @@ const steps = [
   },
   {
     title: 'Como conseguir autorização e receita?',
-    description: 'Faça sua consulta com a profissional autorizada e receba por whatsapp.',
+    description: 'Faça sua consulta com a profissional CERTA e autorizada que vai te receitar nossos produtos e receba por whatsapp.',
     status: 'completed',
   },
   {
