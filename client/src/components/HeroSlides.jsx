@@ -75,7 +75,7 @@ const HeroSlides = () => {
       </div>
 
       {/* hero-title fora do overlay */}
-      <h1 className="hero-title">Weed Smokers Connection</h1>
+      <h1 className="hero-title" translate="no" lang="en">Weed Smokers Connection</h1>
 
       {/* Botão CADASTRE-SE fora do overlay */}
       <button
