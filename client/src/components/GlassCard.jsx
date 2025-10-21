@@ -43,7 +43,7 @@ function GlassCard({
 
       <div style={styles.contentWrap}>
         <div style={styles.rowTop}>
-          <div style={styles.name}>{name}</div>
+          <div style={styles.name} translate="no" lang="en">{name}</div>
         </div>
 
         <div style={styles.valueRow}>
