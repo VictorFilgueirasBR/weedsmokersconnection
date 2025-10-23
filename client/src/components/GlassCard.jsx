@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 function GlassCard({
   name = "Weed Smokers Pass",
   currency = "R$",
-  amount = "27,90",
+  amount = "37,90",
   delta = "| Mês",
   subtitle = "Acesso ao catálogo sempre atualizado com as melhores Espécies e Extrações de THC & CBD.",
   last4 = "THC & CBD",
