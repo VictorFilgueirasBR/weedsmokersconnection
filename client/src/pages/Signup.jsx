@@ -690,7 +690,7 @@ export default function Signup() {
                             onMouseMove={handleMouseMove}
                             style={{ width: '100%' }}
                         >
-                            {isSubmitting ? 'Criando Conta...' : `Finalizar pagamento R$ ${planOptions[selectedPlan].price}`}
+                            {isSubmitting ? 'Criando Conta...' : `Finalizar pagamento R$${planOptions[selectedPlan].price}`}
                         </button>
                     </form>
                     <div className="login-link">
