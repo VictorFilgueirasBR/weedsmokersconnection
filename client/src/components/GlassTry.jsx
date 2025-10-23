@@ -11,10 +11,10 @@ export default function CreditGlassCard({
   backgroundImage = "/images/medicine-guide-club.jpeg", // fundo simples (troque se quiser)
   name = "MEDICOS",
   currency = "Agende ",
-  amount = "aqui",
+  amount = "AQUI",
   delta = "sua consulta",
   subtitle = "Consulta | Terapia | Receita | Tratamentos",
-  last4 = "Ver lista",
+  last4 = "ver",
 }) {
   const cardRef = useRef(null);
 
@@ -70,7 +70,7 @@ export default function CreditGlassCard({
             </div>
 
             <button className="glass-btn" style={styles.editBtn}>
-              Contatos
+              Agendar
               <svg
                 width="16"
                 height="16"
