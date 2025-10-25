@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import GlassCard from "../components/GlassCard"; // 👈 importa o GlassCard
 import HeroSlides from "../components/HeroSlides";
-import VideoWelcome from "../components/VideoWelcome";
+
 import StepByStepInline from "../components/StepByStepInline";
 import HeroHashLegal from "../components/HeroHashLegal";
 import HowItWorksSection from "../components/HowItWorksSection";
@@ -22,7 +22,7 @@ export default function Home() {
       <Header />
       <HeroSlides />
 
-      <VideoWelcome />
+      
 
       <StepByStepInline />
 
