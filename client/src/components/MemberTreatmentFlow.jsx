@@ -55,9 +55,9 @@ export default function MemberTreatmentFlow() {
             <User size={36} style={styles.icon} />
             <h3 style={styles.optionTitle}>Opção 1: Com Médico</h3>
             <p style={styles.optionText}>
-              Escolha um <strong>médico de confiança</strong> na nossa lista e faça sua consulta. Ele
+              Agende a sua consulta com a <strong>Médica de confiança do CLUB, DRA. NATÁLIA </strong>  logo abaixo. Ela
               indicará os fornecedores dos produtos que receita, garantindo
-              qualidade e acesso seguro às medicações aprovadas pela ANVISA.
+              qualidade e acesso seguro às medicações aprovadas pela ANVISA. <strong>RECOMENDAMOS QUE NA SUA PRIMEIRA CONSULTA SEJA FEITA COM ESSA OPÇÃO. </strong>
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function MemberTreatmentFlow() {
             <Package size={36} style={styles.icon} />
             <h3 style={styles.optionTitle}>Opção 2: Com Fornecedor</h3>
             <p style={styles.optionText}>
-              Escolha um <strong>fornecedor direto</strong> na plataforma e tenha
+              Apartir do seu segundo pedido damos a liberdade para que escolha um <strong>fornecedor direto</strong> na plataforma e tenha
               acesso a um catálogo premium de gummyes, espécies, óleos e extrações de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds). O
               fornecedor conectará você a um médico prescritor dos seus medicamentos para continuar
               o processo com segurança.
