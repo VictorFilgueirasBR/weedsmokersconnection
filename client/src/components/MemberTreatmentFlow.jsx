@@ -66,8 +66,8 @@ export default function MemberTreatmentFlow() {
             <Package size={36} style={styles.icon} />
             <h3 style={styles.optionTitle}>Opção 2: Com Fornecedor</h3>
             <p style={styles.optionText}>
-              Apartir do seu segundo pedido damos a liberdade para que escolha um <strong>fornecedor direto</strong> na plataforma e tenha
-              acesso a um catálogo premium de gummyes, espécies, óleos e extrações de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds). O
+              Apartir do seu segundo pedido damos a liberdade para que escolha um <strong>FORNECEDOR LEGALIZADO</strong> na plataforma e tenha
+              acesso a um catálogo premium de <strong> gummyes, FLORES DE DIVERSS ESPÉCIES, óleos e extrações de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds)</strong>. O
               fornecedor conectará você a um médico prescritor dos seus medicamentos para continuar
               o processo com segurança.
             </p>
