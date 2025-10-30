@@ -9,10 +9,10 @@ import React, { useRef, useEffect } from "react";
  */
 export default function CreditGlassCard({
   backgroundImage = "/images/medicine-guide-club.jpeg", // fundo simples (troque se quiser)
-  name = "MEDICOS",
-  currency = "Agende ",
-  amount = "AQUI",
-  delta = "sua consulta",
+  name = "Dra. Natália Lyra",
+  currency = "Consulta",
+  amount = "por apenas",
+  delta = "R$250,00",
   subtitle = "Consulta | Terapia | Receita | Tratamentos",
   last4 = "ver",
 }) {
@@ -66,7 +66,7 @@ export default function CreditGlassCard({
             <div style={styles.inlineText}>
               <span>{last4}</span>
               <span style={styles.dot} />
-              <a href="#" style={styles.viewLink}>View</a>
+              <a href="#" style={styles.viewLink}> </a>
             </div>
 
             <button className="glass-btn" style={styles.editBtn}>
