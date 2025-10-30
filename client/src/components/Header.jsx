@@ -59,18 +59,18 @@ const Header = ({ onEditProfile, onShowPopup }) => {
       </div>
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={handleLinkClick}>Home</Link>
+        <Link to="/" onClick={handleLinkClick} translate="no" lang="en">Home</Link>
         {/* LÓGICA CORRIGIDA: MOSTRA "SOBRE" SOMENTE SE NÃO ESTIVER LOGADO */}
         {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>Teste IA</Link>}
 
         {!isLoggedIn ? (
           <>
-            <Link to="/signup" onClick={handleLinkClick}>Assinar</Link>
-            <Link to="/login" onClick={handleLinkClick}>Login</Link>
+            <Link to="/signup" onClick={handleLinkClick} translate="no" lang="en">Assinar</Link>
+            <Link to="/login" onClick={handleLinkClick} translate="no" lang="en">Login</Link>
           </>
         ) : (
           <>
-            <Link to="/club" onClick={handleLinkClick}>Club</Link>
+            <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
             {/* O onClick aqui agora usa handleEditProfile para ativar o popup */}
             <button onClick={handleEditProfile} className="edit-profile-btn">
               Edit
