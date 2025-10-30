@@ -9,9 +9,9 @@ import React, { useRef, useEffect } from "react";
  */
 export default function CreditGlassCard({
   backgroundImage = "/images/medicine-guide-club.jpeg", // fundo simples (troque se quiser)
-  name = "Dra. Natália Lyra",
+  name = "Dra. Natália",
   currency = "Consulta",
-  amount = "por apenas",
+  amount = " ",
   delta = "R$250,00",
   subtitle = "Consulta | Terapia | Receita | Tratamentos",
   last4 = "ver",
