@@ -2,7 +2,7 @@
 import React from 'react';
 import './PropertiesGrid.scss';
 
-// Dados dos imóveis com as imagens fornecidas e informações fictícias
+// Dados dos imóveis com as imagens fornecidas
 const propertiesData = [
   {
     id: 1,
@@ -10,7 +10,7 @@ const propertiesData = [
     title: 'Hash ICE (THC)',
     location: '5g',
     price: 'R$ 500,00',
-    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
   },
@@ -20,7 +20,7 @@ const propertiesData = [
     title: 'Flores HK (THC)',
     location: '10g',
     price: 'R$ 600,00',
-    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'https://institutozasso.com.br/'
   },
@@ -30,7 +30,7 @@ const propertiesData = [
     title: 'Flores Z-Kittlez Pie (THC)',
     location: '5g',
     price: 'R$ 275,00',
-    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'https://abecmed.com.br'
   },
@@ -40,7 +40,7 @@ const propertiesData = [
     title: 'Hash ICE - 24K (THC)',
     location: '5g',
     price: 'R$ 600,00',
-    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
   },
@@ -50,7 +50,7 @@ const propertiesData = [
     title: 'Refil THC puro',
     location: '1ml',
     price: 'R$ 320,00',
-    description: 'Fornecedor Importado (EUA) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Importado (EUA) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
@@ -60,7 +60,7 @@ const propertiesData = [
     title: 'ICE Bubble Hash (THC)',
     location: '5g',
     price: 'R$ 650,00',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
@@ -90,27 +90,28 @@ const propertiesData = [
     title: 'Rosin Hash (THC)',
     location: '5g',
     price: 'R$ 750,00',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
+    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
 ];
 
-// Função utilitária para detectar GIF
+// Detecta GIF
 const isGif = (src) => /\.gif$/i.test(src);
 
 const PropertiesGrid = ({ title = 'Reviews Atualizados', id = 'properties-grid' }) => {
   return (
     <section className="properties-grid-section" id={id}>
       <h2 className="section-title">{title}</h2>
+
       <div className="properties-grid-container">
         {propertiesData.map(property => (
           <div className="property-card" key={property.id}>
             <div className="property-image-wrapper">
 
-              {/* Renderização condicional para GIF: usa <video> */}
+              {/* Renderização condicional GIF <= vídeo */}
               {isGif(property.image) ? (
-                <video 
+                <video
                   src={property.image}
                   autoPlay
                   loop
@@ -119,10 +120,12 @@ const PropertiesGrid = ({ title = 'Reviews Atualizados', id = 'properties-grid' 
                   className="property-image"
                 />
               ) : (
-                <img 
-                  src={property.image} 
-                  alt={property.title} 
-                  className="property-image" 
+                <img
+                  src={property.image}
+                  alt={property.title}
+                  loading="lazy"
+                  className="property-image"
+                  onError={(e) => { e.target.src = '/images/placeholder.png'; }}
                 />
               )}
 
@@ -133,10 +136,11 @@ const PropertiesGrid = ({ title = 'Reviews Atualizados', id = 'properties-grid' 
               <h3 className="property-title">{property.title}</h3>
               <p className="property-location">{property.location}</p>
               <p className="property-description">{property.description}</p>
-              <a 
-                href={property.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+
+              <a
+                href={property.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="property-cta submit-gradient-btn"
               >
                 {property.cta}
