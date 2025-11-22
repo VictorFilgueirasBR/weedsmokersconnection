@@ -2,7 +2,7 @@
 import React from 'react';
 import './PropertiesGrid.scss';
 
-// Dados dos imóveis com as imagens fornecidas
+// Dados dos imóveis com as imagens fornecidas e informações fictícias
 const propertiesData = [
   {
     id: 1,
@@ -10,7 +10,7 @@ const propertiesData = [
     title: 'Hash ICE (THC)',
     location: '5g',
     price: 'R$ 500,00',
-    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
   },
@@ -18,9 +18,9 @@ const propertiesData = [
     id: 2,
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK (THC)',
-    location: '10g',
-    price: 'R$ 600,00',
-    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    location: '5g',
+    price: 'R$ 255,00',
+    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://institutozasso.com.br/'
   },
@@ -29,10 +29,10 @@ const propertiesData = [
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie (THC)',
     location: '5g',
-    price: 'R$ 275,00',
-    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    price: 'R$ 220,00',
+    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
-    link: 'https://abecmed.com.br'
+    link: 'https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ'
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const propertiesData = [
     title: 'Hash ICE - 24K (THC)',
     location: '5g',
     price: 'R$ 600,00',
-    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
   },
@@ -50,7 +50,7 @@ const propertiesData = [
     title: 'Refil THC puro',
     location: '1ml',
     price: 'R$ 320,00',
-    description: 'Fornecedor Importado (EUA) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
@@ -60,9 +60,19 @@ const propertiesData = [
     title: 'ICE Bubble Hash (THC)',
     location: '5g',
     price: 'R$ 650,00',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Espécies).',
+    description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
+  },
+  {
+    id: 6,
+    image: '/images/pipocas-40-aespec.webp',
+    title: 'Buds pp Strain BAHIA (THC)',
+    location: '10g',
+    price: 'R$ 400,00',
+    description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Esse fornecedor cobra taxa associativa de R$100,00).',
+    cta: 'Ver mais',
+    link: 'https://abecmed.com.br/cadastro'
   },
   {
     id: 7,
@@ -96,57 +106,23 @@ const propertiesData = [
   },
 ];
 
-// Detecta GIF
-const isGif = (src) => /\.gif$/i.test(src);
-
-const PropertiesGrid = ({ title = 'Reviews Atualizados', id = 'properties-grid' }) => {
+const PropertiesGrid = ({ title = 'Catálogo Atualizado', id = 'properties-grid' }) => {
   return (
     <section className="properties-grid-section" id={id}>
       <h2 className="section-title">{title}</h2>
-
       <div className="properties-grid-container">
         {propertiesData.map(property => (
           <div className="property-card" key={property.id}>
             <div className="property-image-wrapper">
-
-              {/* Renderização condicional GIF <= vídeo */}
-              {isGif(property.image) ? (
-                <video
-                  src={property.image}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="property-image"
-                />
-              ) : (
-                <img
-                  src={property.image}
-                  alt={property.title}
-                  loading="lazy"
-                  className="property-image"
-                  onError={(e) => { e.target.src = '/images/placeholder.png'; }}
-                />
-              )}
-
+              <img src={property.image} alt={property.title} className="property-image" />
               <span className="property-price">{property.price}</span>
             </div>
-
             <div className="property-info">
               <h3 className="property-title">{property.title}</h3>
               <p className="property-location">{property.location}</p>
               <p className="property-description">{property.description}</p>
-
-              <a
-                href={property.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="property-cta submit-gradient-btn"
-              >
-                {property.cta}
-              </a>
+              <a href={property.link} target="_blank" rel="noopener noreferrer" className="property-cta submit-gradient-btn">{property.cta}</a>
             </div>
-
           </div>
         ))}
       </div>
