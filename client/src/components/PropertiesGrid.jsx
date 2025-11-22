@@ -9,7 +9,7 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash ICE (THC)',
     location: '5g',
-    price: 'R$ 500,00',
+    price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'http://instagram.com/Greenway.cbd'
@@ -19,7 +19,7 @@ const propertiesData = [
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK (THC)',
     location: '5g',
-    price: 'R$ 255,00',
+    price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://institutozasso.com.br/'
@@ -29,10 +29,10 @@ const propertiesData = [
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie (THC)',
     location: '5g',
-    price: 'R$ 220,00',
+    price: 'R$ 275,00',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
-    link: 'https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ'
+    link: 'https://abecmed.com.br/'
   },
   {
     id: 4,
@@ -68,8 +68,8 @@ const propertiesData = [
     id: 7,
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP (THC)',
-    location: '10g',
-    price: 'R$ 500,00',
+    location: '5g',
+    price: 'R$ 250,00',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
     cta: 'Ver mais',
     link: 'https://www.aliancamedicinal.org/'
