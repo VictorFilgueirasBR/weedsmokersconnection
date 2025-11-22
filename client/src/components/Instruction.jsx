@@ -5,7 +5,7 @@ import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 export default function Instruction({
   title = "Seja bem-vindo ao CLUB",
-  subtitle = "Entre em contato para instruções ou parcelamento em até 12x.",
+  subtitle = "Entre em contato para instruções ou parcelamentos.",
   whatsappUrl = "https://wa.me/5561995276936",
   telegramUrl = "https://t.me/+GvhYlf4XjFJiMzNh",
   backgroundImage = "/images/hemp222.jpeg", 
