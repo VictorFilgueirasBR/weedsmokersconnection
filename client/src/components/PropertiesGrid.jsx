@@ -66,17 +66,17 @@ const propertiesData = [
   },
   {
     id: 7,
-    image: '/images/pipocas-40-aespec.webp',
+    image: '/images/buds-pp-alianca.png',
     title: 'Buds PP (THC)',
     location: '10g',
-    price: 'R$ 400,00',
-    description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Esse fornecedor cobra taxa associativa de R$100,00).',
+    price: 'R$ 500,00',
+    description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
     cta: 'Ver mais',
     link: 'https://www.aliancamedicinal.org/'
   },
   {
     id: 8,
-    image: '/images/purple-cherrypie.gif',
+    image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple (THC)',
     location: '10g',
     price: 'R$ 750,00',
@@ -86,10 +86,10 @@ const propertiesData = [
   },
   {
     id: 9,
-    image: '/images/rosin-flower.gif',
-    title: 'ICE Bubble Hash (THC)',
+    image: '/images/rosin-flower.png',
+    title: 'Rosin Hash (THC)',
     location: '5g',
-    price: 'R$ 650,00',
+    price: 'R$ 750,00',
     description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
