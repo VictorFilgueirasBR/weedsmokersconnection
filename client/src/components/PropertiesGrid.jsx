@@ -86,7 +86,7 @@ const propertiesData = [
   },
   {
     id: 9,
-    image: '/images/rosin-flower.GIF',
+    image: '/images/rosin-flower.gif',
     title: 'ICE Bubble Hash (THC)',
     location: '5g',
     price: 'R$ 650,00',
