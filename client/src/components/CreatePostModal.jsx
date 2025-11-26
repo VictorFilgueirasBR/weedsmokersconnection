@@ -334,7 +334,7 @@ function CreatePostModal({ isOpen, onClose, user, onCreatePost }) {
             <label htmlFor="media-upload" className="file-input-wrapper">
               <FiUpload />
               <div className="upload-info">
-                {mediaFile ? mediaFile.name : "Clique para selecionar na sua galeria"}
+                {mediaFile ? mediaFile.name : "Selecione na sua galeria"}
               </div>
               <input
                 id="media-upload"
