@@ -323,7 +323,7 @@ function CreatePostModal({ isOpen, onClose, user, onCreatePost }) {
               id="post-title"
               type="text"
               className="input-field"
-              placeholder="Guarde momentos e documentos importantes no seu perfil"
+              placeholder="Guarde momentos ou receitas"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
