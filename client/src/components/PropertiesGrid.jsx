@@ -18,7 +18,7 @@ const propertiesData = [
     id: 2,
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK (THC)',
-    location: '5g',
+    location: '10g',
     price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
