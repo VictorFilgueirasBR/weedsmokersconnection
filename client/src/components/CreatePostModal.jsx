@@ -323,7 +323,7 @@ function CreatePostModal({ isOpen, onClose, user, onCreatePost }) {
               id="post-title"
               type="text"
               className="input-field"
-              placeholder="Ex: Minha primeira foto de carro..."
+              placeholder="Guarde momentos e documentos importantes no seu perfil"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
@@ -334,7 +334,7 @@ function CreatePostModal({ isOpen, onClose, user, onCreatePost }) {
             <label htmlFor="media-upload" className="file-input-wrapper">
               <FiUpload />
               <div className="upload-info">
-                {mediaFile ? mediaFile.name : "Clique para selecionar um arquivo"}
+                {mediaFile ? mediaFile.name : "Clique para selecionar na sua galeria"}
               </div>
               <input
                 id="media-upload"
