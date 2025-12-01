@@ -12,7 +12,7 @@ export default function CreditGlassCard({
   name = "Dra. Natália",
   currency = "Consulta",
   amount = " ",
-  delta = "R$250,00",
+  delta = "R$300,00",
   subtitle = "Consulta | Terapia | Receita | Tratamentos",
   last4 = "ver",
 }) {
