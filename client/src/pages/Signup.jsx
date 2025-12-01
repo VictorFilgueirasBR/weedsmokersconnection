@@ -144,21 +144,21 @@ export default function Signup() {
 
     const planOptions = {
         mensal: {
-            price: '37,90',
-            amount: 37.90,
+            price: '77,90',
+            amount: 77.90,
             duration: '1 mês',
             description: 'Plano Mensal',
         },
         semestral: {
-            price: '77,90',
-            amount: 77.90,
-            duration: '70% OFF | 6 meses',
+            price: '280,90',
+            amount: 280.90,
+            duration: '40% OFF | 6 meses',
             description: 'Plano Semestral',
         },
         anual: {
-            price: '107,90',
-            amount: 107.90,
-            duration: '76% OFF | 1 ano',
+            price: '467,90',
+            amount: 467.90,
+            duration: '50% OFF | 1 ano',
             description: 'Plano Anual',
         },
     };
