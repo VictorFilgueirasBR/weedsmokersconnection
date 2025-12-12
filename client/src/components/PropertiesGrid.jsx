@@ -49,18 +49,18 @@ const propertiesData = [
     image: '/images/wsc-vape-thc.webp',
     title: 'Refil THC puro',
     location: '1ml',
-    price: 'R$ 320,00',
+    price: 'R$ 400,00',
     description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
-    link: 'https://flowermed.com.br/'
+    link: 'https://wa.me/556195276936'
   },
   {
     id: 6,
     image: '/images/hash-ice-import.png',
     title: 'ICE Bubble Hash (THC)',
     location: '5g',
-    price: 'R$ 650,00',
-    description: 'Fornecedor Importado (EU) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
+    price: 'Esgotado',
+    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://flowermed.com.br/'
   },
@@ -69,7 +69,7 @@ const propertiesData = [
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP (THC)',
     location: '5g',
-    price: 'R$ 250,00',
+    price: 'R$ 275,00',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
     cta: 'Ver mais',
     link: 'https://www.aliancamedicinal.org/'
@@ -89,10 +89,10 @@ const propertiesData = [
     image: '/images/rosin-flower.png',
     title: 'Rosin Hash (THC)',
     location: '5g',
-    price: 'R$ 750,00',
+    price: 'R$ 880,00',
     description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Espécies).',
     cta: 'Ver mais',
-    link: 'https://flowermed.com.br/'
+    link: 'https://wa.me/556195276936'
   },
 ];
 
