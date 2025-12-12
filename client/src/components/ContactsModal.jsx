@@ -25,8 +25,8 @@ const contactsData = {
     { name: "Fornecedor São Paulo", link: "https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ" },
   ],
   "Fornecedores Importados": [
-    { name: "Importados", link: "https://institutozasso.com.br/" },
-    { name: "Importados EU", link: "https://flowermed.com.br/" },
+    { name: "Importados", link: "https://wa.me/556195276936" },
+    { name: "Importados EUA", link: "https://wa.me/556195276936" },
   ],
 };
 
