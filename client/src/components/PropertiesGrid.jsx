@@ -22,7 +22,7 @@ const propertiesData = [
     price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
-    link: 'https://institutozasso.com.br/'
+    link: 'https://abecmed.com.br/'
   },
   {
     id: 3,
