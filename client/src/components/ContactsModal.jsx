@@ -21,7 +21,7 @@ const contactsData = {
     { name: "Dra. Natália", link: "https://wa.me/5561995276936" },
   ],
   "Fornecedores Nacionais": [
-    { name: "Fornecedor Recife", link: "http://instagram.com/Greenway.cbd" },
+    { name: "Fornecedor Nacional", link: "https://wa.me/556195276936" },
     { name: "Fornecedor São Paulo", link: "https://abecmed.com.br/?fbclid=PAT01DUAMvMpBleHRuA2FlbQIxMAABp3Nsla7Cr-Nm9W3qCd0iiTHb1TyuLtjx3ved4ZcTiDqfSIZ0wlzeR7DVTQ9g_aem_rbZtUFtYN_y2wZun7tsCGQ" },
   ],
   "Fornecedores Importados": [

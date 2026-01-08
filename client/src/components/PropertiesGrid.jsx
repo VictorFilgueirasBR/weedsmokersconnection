@@ -4,8 +4,38 @@ import './PropertiesGrid.scss';
 
 // Dados dos imóveis com as imagens fornecidas e informações fictícias
 const propertiesData = [
-  {
+    {
     id: 1,
+    image: '/images/cannac.jpg',
+    title: 'Hash ICE (THC)',
+    location: '10g',
+    price: 'R$ 1200,00',
+    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
+    cta: 'WSC-E120',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-e120/'
+  },
+    {
+        id: 2,
+        image: '/images/rosin-flower.png',
+        title: 'Rosin Hash (THC)',
+        location: '5g',
+        price: 'R$ 1180,00',
+        description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(Frete incluso).',
+        cta: 'WSC-E118',
+        link: 'https://ws-connectioncommerce.com/produto/wsc-e118/'
+      },
+    {
+    id: 3,
+    image: '/images/hash-ice-import.png',
+    title: 'Bubble Hash (D-8)',
+    location: '5g',
+    price: 'R$ 680,00',
+    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
+    cta: 'WSC-E680',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-e680/'
+  },
+    {
+    id: 4,
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash ICE (THC)',
     location: '5g',
@@ -15,7 +45,7 @@ const propertiesData = [
     link: 'http://instagram.com/Greenway.cbd'
   },
   {
-    id: 2,
+    id: 5,
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK (THC)',
     location: '10g',
@@ -25,7 +55,7 @@ const propertiesData = [
     link: 'https://abecmed.com.br/'
   },
   {
-    id: 3,
+    id: 6,
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie (THC)',
     location: '5g',
@@ -35,7 +65,7 @@ const propertiesData = [
     link: 'https://abecmed.com.br/'
   },
   {
-    id: 4,
+    id: 7,
     image: '/images/hash-legalizado-anvisa-capa.jpg',
     title: 'Hash ICE - 24K (THC)',
     location: '5g',
@@ -45,27 +75,17 @@ const propertiesData = [
     link: 'http://instagram.com/Greenway.cbd'
   },
   {
-    id: 5,
+    id: 8,
     image: '/images/wsc-vape-thc.webp',
     title: 'Refil THC puro',
     location: '1ml',
-    price: 'R$ 400,00',
+    price: 'R$ 500,00',
     description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
     link: 'https://wa.me/556195276936'
   },
   {
-    id: 6,
-    image: '/images/hash-ice-import.png',
-    title: 'ICE Bubble Hash (THC)',
-    location: '5g',
-    price: 'Esgotado',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Epécies).',
-    cta: 'Ver mais',
-    link: 'https://flowermed.com.br/'
-  },
-  {
-    id: 7,
+    id: 9,
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP (THC)',
     location: '5g',
@@ -75,24 +95,14 @@ const propertiesData = [
     link: 'https://www.aliancamedicinal.org/'
   },
   {
-    id: 8,
+    id: 10,
     image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple (THC)',
     location: '10g',
     price: 'R$ 750,00',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'Ver mais',
-    link: 'http://instagram.com/Greenway.cbd'
-  },
-  {
-    id: 9,
-    image: '/images/rosin-flower.png',
-    title: 'Rosin Hash (THC)',
-    location: '5g',
-    price: 'R$ 880,00',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(O valor pode variar de acordo com as Espécies).',
-    cta: 'Ver mais',
-    link: 'https://wa.me/556195276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
   },
 ];
 
