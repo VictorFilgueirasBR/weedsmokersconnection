@@ -5,37 +5,62 @@ const authMiddleware = require('../middleware/auth');
 const bcrypt = require('bcryptjs');
 const { OAuth2Client } = require('google-auth-library');
 const User = require('../models/User');
+const Coupon = require('../models/Coupon'); // ✅ CUPOM
 const nodemailer = require('nodemailer');
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
-        expiresIn: '1d', // Aumentei o tempo para ser mais prático em produção
+        expiresIn: '1d',
     });
 };
 
 // @route   POST /api/auth/register
-// @desc    Registra um novo usuário, mas não o marca como pago
+// @desc    Registra um novo usuário (pré-pago) e persiste cupom se existir
 router.post('/register', async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, couponCode } = req.body;
 
     try {
         let user = await User.findOne({ email });
+
         if (user) {
-            // Se o usuário já existe, mas não pagou, avisa para ele finalizar o pagamento
             if (!user.isPaid) {
-                return res.status(400).json({ msg: 'Este email já está cadastrado, mas o pagamento ainda não foi confirmado. Prossiga para o pagamento.' });
+                return res.status(400).json({
+                    msg: 'Este email já está cadastrado, mas o pagamento ainda não foi confirmado. Prossiga para o pagamento.',
+                    userId: user._id
+                });
             }
-            // Se o usuário já existe e já pagou, avisa para ele fazer login
             return res.status(400).json({ msg: 'Usuário já existe. Por favor, faça login.' });
+        }
+
+        let appliedCoupon = null;
+
+        // ✅ Validação de cupom (se enviado)
+        if (couponCode) {
+            const coupon = await Coupon.findOne({
+                code: couponCode,
+                isActive: true
+            });
+
+            if (!coupon) {
+                return res.status(400).json({ msg: 'Cupom inválido ou inativo.' });
+            }
+
+            appliedCoupon = {
+                code: coupon.code,
+                affiliateId: coupon.affiliateId,
+                commissionPercent: coupon.commissionPercent
+            };
         }
 
         user = new User({
             name,
             email,
             password,
-            isPaid: false
+            isPaid: false,
+            coupon: appliedCoupon || null, // ✅ Persistência
+            affiliateId: appliedCoupon?.affiliateId || null
         });
 
         await user.save();
@@ -45,6 +70,7 @@ router.post('/register', async (req, res) => {
             userId: user._id,
             userEmail: user.email
         });
+
     } catch (err) {
         console.error(err.message);
         res.status(500).json({ msg: 'Erro no servidor' });
@@ -52,25 +78,20 @@ router.post('/register', async (req, res) => {
 });
 
 // @route   POST /api/auth/login
-// @desc    Autentica o usuário e retorna o token se isPaid for true
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
         const user = await User.findOne({ email });
-        if (!user) {
-            return res.status(401).json({ msg: 'Credenciais inválidas' });
-        }
-        
+        if (!user) return res.status(401).json({ msg: 'Credenciais inválidas' });
+
         if (user.googleId) {
             return res.status(401).json({ msg: 'Este email foi cadastrado com o Google. Use o botão do Google para entrar.' });
         }
 
         const isMatch = await user.matchPassword(password);
-        if (!isMatch) {
-            return res.status(401).json({ msg: 'Credenciais inválidas' });
-        }
-        
+        if (!isMatch) return res.status(401).json({ msg: 'Credenciais inválidas' });
+
         if (!user.isPaid) {
             return res.status(403).json({ msg: 'Você ainda não é assinante, assine agora e desbloqueie seu acesso!' });
         }
@@ -79,7 +100,13 @@ router.post('/login', async (req, res) => {
         res.json({
             msg: 'Login bem-sucedido',
             token,
-            user: { id: user._id, name: user.name, email: user.email, isPaid: user.isPaid },
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                isPaid: user.isPaid,
+                coupon: user.coupon || null
+            }
         });
     } catch (err) {
         console.error(err.message);
@@ -88,22 +115,21 @@ router.post('/login', async (req, res) => {
 });
 
 // @route   POST /api/auth/google-login
-// @desc    Lida com o login/cadastro via Google
 router.post('/google-login', async (req, res) => {
     const { id_token } = req.body;
-    
+
     try {
         const ticket = await client.verifyIdToken({
             idToken: id_token,
             audience: process.env.GOOGLE_CLIENT_ID,
         });
+
         const payload = ticket.getPayload();
         const { sub, email, name } = payload;
-        
+
         let user = await User.findOne({ $or: [{ email }, { googleId: sub }] });
-        
+
         if (!user) {
-            // Se o usuário não existe, cria um novo, mas não o marca como pago
             user = new User({
                 name,
                 email,
@@ -111,14 +137,14 @@ router.post('/google-login', async (req, res) => {
                 isPaid: false
             });
             await user.save();
+
             return res.status(201).json({
                 msg: 'Usuário pré-registrado com sucesso. Prossiga para o pagamento.',
                 userId: user._id,
                 userEmail: user.email
             });
         }
-        
-        // Se o usuário existe, mas ainda não pagou
+
         if (!user.isPaid) {
             return res.status(403).json({ msg: 'Acesso negado. Por favor, conclua o pagamento do seu plano.' });
         }
@@ -127,14 +153,25 @@ router.post('/google-login', async (req, res) => {
         res.json({
             msg: 'Login com Google bem-sucedido',
             token,
-            user: { id: user._id, name: user.name, email: user.email, isPaid: user.isPaid },
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                isPaid: user.isPaid,
+                coupon: user.coupon || null
+            }
         });
-        
+
     } catch (err) {
         console.error('Erro na verificação do token do Google:', err.message);
         res.status(400).json({ msg: 'Token do Google inválido' });
     }
 });
+
+// ======= DEMAIS ROTAS PERMANECEM INALTERADAS =======
+// forgot-password, reset-password, /me, profile-banner, profile-image
+
+
 
 // Rota para solicitar a redefinição de senha
 router.post('/forgot-password', async (req, res) => {
