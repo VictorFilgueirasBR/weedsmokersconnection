@@ -15,6 +15,11 @@ export default function Signup() {
     const [selectedPlan, setSelectedPlan] = useState('mensal');
     const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
+    // 🔹 CUPOM (persistente no DB)
+    const [couponCode, setCouponCode] = useState('');
+    const [discountPercent, setDiscountPercent] = useState(0);
+    const [couponValidated, setCouponValidated] = useState(false);
+
     // Termos
     const [acceptedTerms, setAcceptedTerms] = useState(false);
     const [showTermsModal, setShowTermsModal] = useState(false);
@@ -81,6 +86,36 @@ export default function Signup() {
         button.style.setProperty('--y', `${y}px`);
     };
 
+    // 🔹 Validação de cupom via BACKEND
+    const handleValidateCoupon = async () => {
+        try {
+            const res = await axios.post(
+                `${import.meta.env.VITE_API_URL}/api/coupons/validate`,
+                {
+                    code: couponCode.trim(),
+                    plan: selectedPlan
+                },
+                { withCredentials: true }
+            );
+
+            if (res.data.valid) {
+                setDiscountPercent(res.data.discountPercent);
+                setCouponValidated(true);
+                setSubmitMessage({
+                    type: 'success',
+                    text: `Cupom aplicado: ${res.data.discountPercent}% OFF 🎉`
+                });
+            }
+        } catch (err) {
+            setCouponValidated(false);
+            setDiscountPercent(0);
+            setSubmitMessage({
+                type: 'error',
+                text: err.response?.data?.msg || 'Cupom inválido ou expirado.'
+            });
+        }
+    };
+
     const handleSubmit = async () => {
         setSubmitMessage({ type: '', text: '' });
         if (!validate()) {
@@ -142,26 +177,15 @@ export default function Signup() {
         }
     };
 
-    const planOptions = {
-        mensal: {
-            price: '77,90',
-            amount: 77.90,
-            duration: '1 mês',
-            description: 'Plano Mensal',
-        },
-        semestral: {
-            price: '280,90',
-            amount: 280.90,
-            duration: '40% OFF | 6 meses',
-            description: 'Plano Semestral',
-        },
-        anual: {
-            price: '467,90',
-            amount: 467.90,
-            duration: '50% OFF | 1 ano',
-            description: 'Plano Anual',
-        },
+     const planOptions = {
+        mensal: { price: '77,90', amount: 77.90, duration: '1 mês', description: 'Plano Mensal' },
+        semestral: { price: '280,90', amount: 280.90, duration: '40% OFF | 6 meses', description: 'Plano Semestral' },
+        anual: { price: '467,90', amount: 467.90, duration: '50% OFF | 1 ano', description: 'Plano Anual' },
     };
+
+    const finalAmount = discountPercent
+        ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
+        : planOptions[selectedPlan].amount;
 
     return (
         <div className="signup-page">
@@ -657,6 +681,24 @@ export default function Signup() {
                                 Ao entrar, você aceita os{' '}
                                 <a onClick={() => setShowTermsModal(true)}>Termos de Uso</a>.
                             </label>
+                        </div>
+
+                        
+                        <div className="form-group">
+                            <input
+                                type="text"
+                                placeholder="Cupom de desconto"
+                                value={couponCode}
+                                onChange={(e) => setCouponCode(e.target.value)}
+                            />
+                            <button
+                                type="button"
+                                onClick={handleValidateCoupon}
+                                className="submit-gradient-btn"
+                                style={{ marginTop: '0.5rem' }}
+                            >
+                                Validar Cupom
+                            </button>
                         </div>
 
                         <div className="form-section-divider"></div>
