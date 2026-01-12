@@ -1,81 +1,98 @@
 // server.js
 
-// Importações principais do Express e outros módulos
+// Importações principais
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const cloudinary = require('cloudinary').v2;
 
-// Importação das rotas e do middleware
+// Rotas
 const authRoutes = require('./src/routes/auth');
 const mercadopagoRoutes = require('./src/routes/mercadopago');
 const profileRoutes = require('./src/routes/profile');
 const postRoutes = require('./src/routes/post');
+const couponRoutes = require('./src/routes/coupons'); // ✅ CUPONS
 const authMiddleware = require('./src/middleware/auth');
 
+// Configuração do Cloudinary
 cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key: process.env.API_KEY,
-    api_secret: process.env.API_SECRET,
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
-// Configurar dotenv para carregar variáveis de ambiente
+// Carregar variáveis de ambiente
 dotenv.config();
 
 const app = express();
 
-// Middleware para analisar o corpo das requisições JSON
+// =========================
+// MIDDLEWARES GLOBAIS
+// =========================
+
+// Parser JSON
 app.use(express.json());
 
-// Configuração do CORS para permitir requisições do frontend com credenciais
+// CORS
 const allowedOrigins = [
   'https://weedsmokersconnection.netlify.app',
   'https://weedsmokersconnection.com'
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    // Permite requisições sem 'origin' (como de aplicativos móveis ou curl)
+  origin: function (origin, callback) {
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
+    if (!allowedOrigins.includes(origin)) {
+      return callback(
+        new Error('The CORS policy for this site does not allow access from the specified Origin.'),
+        false
+      );
     }
     return callback(null, true);
   },
-  credentials: true
+  credentials: true
 }));
 
-// Conexão com o MongoDB
+// =========================
+// CONEXÃO COM O MONGODB
+// =========================
 const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log('MongoDB conectado com sucesso!');
-    } catch (err) {
-        console.error(`Erro ao conectar ao MongoDB: ${err.message}`);
-        process.exit(1);
-    }
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('MongoDB conectado com sucesso!');
+  } catch (err) {
+    console.error(`Erro ao conectar ao MongoDB: ${err.message}`);
+    process.exit(1);
+  }
 };
 
-// Conectar ao banco de dados
 connectDB();
 
-// Registro das rotas da API
+// =========================
+// ROTAS DA API
+// =========================
 app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/posts', postRoutes);
-
-// Rota de exemplo protegida por autenticação
-app.get('/api/protected', authMiddleware, (req, res) => {
-    res.json({ message: 'Conteúdo restrito: só para membros', user: req.user });
-});
-
-// Rota do Mercado Pago 
+app.use('/api/coupons', couponRoutes); // ✅ CUPONS
 app.use('/api/mercadopago', mercadopagoRoutes);
 
-// Porta do servidor
+// =========================
+// ROTA PROTEGIDA (TESTE)
+// =========================
+app.get('/api/protected', authMiddleware, (req, res) => {
+  res.json({
+    message: 'Conteúdo restrito: só para membros',
+    user: req.user
+  });
+});
+
+// =========================
+// INICIALIZAÇÃO DO SERVIDOR
+// =========================
 const PORT = process.env.PORT || 5000;
 
-// Iniciar o servidor
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});

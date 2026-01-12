@@ -1,67 +1,37 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const couponSchema = new mongoose.Schema({
-  // Código do cupom (ex: TESTEWS10)
+const CouponSchema = new mongoose.Schema({
   code: {
     type: String,
     required: true,
     unique: true,
     uppercase: true,
-    trim: true,
-    index: true
+    trim: true
   },
-
-  // Identificador do afiliado (usado no dashboard)
-  affiliateId: {
+  discountType: {
     type: String,
-    required: true,
-    index: true
+    enum: ['percentage', 'fixed'],
+    required: true
   },
-
-  // Percentual de comissão (ex: 10 = 10%)
-  commissionPercent: {
+  discountValue: {
     type: Number,
-    required: true,
-    min: 0,
-    max: 100
+    required: true
   },
-
-  // Ativo ou inativo
-  isActive: {
-    type: Boolean,
-    default: true
-  },
-
-  // Data de expiração opcional
   expiresAt: {
-    type: Date,
+    type: Date
+  },
+  maxUses: {
+    type: Number,
     default: null
   },
-
-  // Controle interno
-  createdAt: {
-    type: Date,
-    default: Date.now
+  usedCount: {
+    type: Number,
+    default: 0
   },
-  updatedAt: {
-    type: Date,
-    default: Date.now
+  active: {
+    type: Boolean,
+    default: true
   }
-});
+}, { timestamps: true })
 
-// Atualiza updatedAt automaticamente
-couponSchema.pre('save', function (next) {
-  this.updatedAt = Date.now();
-  next();
-});
-
-// Método helper para validar expiração
-couponSchema.methods.isValid = function () {
-  if (!this.isActive) return false;
-  if (this.expiresAt && this.expiresAt < new Date()) return false;
-  return true;
-};
-
-const Coupon = mongoose.model('Coupon', couponSchema);
-
-module.exports = Coupon;
+module.exports = mongoose.model('Coupon', CouponSchema)
