@@ -6,58 +6,104 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   email: {
     type: String,
     required: true,
     unique: true,
   },
+
   password: {
     type: String,
   },
+
   googleId: {
     type: String,
     unique: true,
-    sparse: true, // Permite null/undefined sem quebrar o unique
+    sparse: true,
   },
+
+  // ==========================
+  // PAGAMENTO
+  // ==========================
   isPaid: {
     type: Boolean,
     default: false,
   },
-  // Foto de perfil
+
+  // ==========================
+  // CUPOM / AFILIADO (FIX REAL)
+  // ==========================
+  coupon: {
+    type: {
+      code: { type: String },
+      affiliateId: { type: String, default: null },
+      commissionPercent: { type: Number, default: 0 },
+    },
+    default: null,
+  },
+
+  affiliateId: {
+    type: String,
+    default: null,
+  },
+
+  // 🔹 Campo usado pelo frontend
+  discountPercent: {
+    type: Number,
+    default: 0,
+  },
+
+  // ==========================
+  // PERFIL
+  // ==========================
   profileImage: {
     type: String,
-    default: '/images/profile-image.jpg', // Fallback local (mesmo usado no frontend)
+    default: '/images/profile-image.jpg',
   },
+
   profileImageId: {
-    type: String, // public_id da imagem no Cloudinary
+    type: String,
     default: null,
   },
-  // Banner do perfil
+
   profileBanner: {
     type: String,
-    default: '/images/bg-try-plans-wsc.jpeg', // Fallback local (mesmo usado no frontend)
+    default: '/images/bg-try-plans-wsc.jpeg',
   },
+
   profileBannerId: {
-    type: String, // public_id do banner no Cloudinary
+    type: String,
     default: null,
   },
+
   createdAt: {
     type: Date,
     default: Date.now,
   },
+
   updatedAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-// Atualiza `updatedAt` automaticamente
+// =======================================
+// 🔄 SINCRONIZA DESCONTO AUTOMATICAMENTE
+// =======================================
 userSchema.pre('save', function (next) {
   this.updatedAt = Date.now();
+
+  if (this.coupon?.commissionPercent) {
+    this.discountPercent = this.coupon.commissionPercent;
+  }
+
   next();
 });
 
-// Pré-save hook para criptografar a senha
+// =======================================
+// 🔐 HASH DE SENHA
+// =======================================
 userSchema.pre('save', async function (next) {
   if (this.isModified('password') && this.password) {
     const salt = await bcrypt.genSalt(10);
@@ -66,11 +112,12 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-// Método para comparar a senha
+// =======================================
+// 🔑 COMPARAÇÃO DE SENHA
+// =======================================
 userSchema.methods.matchPassword = async function (enteredPassword) {
-  if (!this.password) return false; // Trata usuários sem senha
+  if (!this.password) return false;
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);

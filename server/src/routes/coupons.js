@@ -10,7 +10,11 @@ router.post('/validate', async (req, res) => {
       return res.status(400).json({ error: 'Código do cupom é obrigatório' })
     }
 
-    const coupon = await Coupon.findOne({ code: code.toUpperCase(), active: true })
+    // 🔹 Aceita isActive OU active (compatibilidade total)
+    const coupon = await Coupon.findOne({
+      code: code.toUpperCase(),
+      $or: [{ isActive: true }, { active: true }]
+    })
 
     if (!coupon) {
       return res.status(404).json({ error: 'Cupom inválido ou expirado' })
@@ -24,14 +28,18 @@ router.post('/validate', async (req, res) => {
       return res.status(400).json({ error: 'Cupom esgotado' })
     }
 
+    // 🔹 Fonte real do desconto
+    const discountPercent =
+      coupon.commissionPercent ??
+      (coupon.discountType === 'percentage' ? coupon.discountValue : 0)
+
     return res.json({
       valid: true,
       code: coupon.code,
-      discountType: coupon.discountType,
-      discountValue: coupon.discountValue
+      discountPercent
     })
   } catch (err) {
-    console.error(err)
+    console.error('Erro ao validar cupom:', err)
     return res.status(500).json({ error: 'Erro interno' })
   }
 })
