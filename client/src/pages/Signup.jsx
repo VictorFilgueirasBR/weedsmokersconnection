@@ -707,9 +707,11 @@ export default function Signup() {
                         <button
                             type="button"
                             className="submit-gradient-btn"
-                            onclick="window.open('https://wa.me/5561995276936','_blank')">
-                        Falar com atendimento
+                            onClick={() => window.location.href = 'https://wa.me/5561995276936'}
+                            >
+                            Falar com atendimento
                         </button>
+
                     </form>
                     <div className="login-link">
                         Já tem uma conta? <a href="/login">Faça Login</a>
