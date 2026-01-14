@@ -112,7 +112,7 @@ export default function Signup() {
     const rawAmount = couponValidated
         ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
         : planOptions[selectedPlan].amount;
-
+        
 
     const finalAmount = Math.max(
         0,
@@ -704,10 +704,12 @@ export default function Signup() {
                                 </div>
                             ))}
                         </div>
-
-                        <button onclick="window.open('https://wa.me/5561995276936','_blank')">
-                            Finalizar Pagamento
-                            </button>
+                        <button
+                            type="button"
+                            className="submit-gradient-btn"
+                            onclick="window.open('https://wa.me/5561995276936','_blank')">
+                        Falar com atendimento
+                        </button>
                     </form>
                     <div className="login-link">
                         Já tem uma conta? <a href="/login">Faça Login</a>
