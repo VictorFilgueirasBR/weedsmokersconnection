@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export default function TermsModal({
-  storageKey = "wsc_termsAccepted_v1",
+  storageKey = "wsc_termsAccepted_v2",
   storageDays = 365,
   declineRedirect = "https://www.google.com",
   onAccept = null,
@@ -11,8 +11,12 @@ export default function TermsModal({
   const modalRef = useRef(null);
   const acceptBtnRef = useRef(null);
 
-  const titleId = useRef(`terms-title-${Math.random().toString(36).slice(2, 9)}`).current;
-  const descId = useRef(`terms-desc-${Math.random().toString(36).slice(2, 9)}`).current;
+  const titleId = useRef(
+    `terms-title-${Math.random().toString(36).slice(2, 9)}`
+  ).current;
+  const descId = useRef(
+    `terms-desc-${Math.random().toString(36).slice(2, 9)}`
+  ).current;
 
   function isAccepted() {
     try {
@@ -21,7 +25,7 @@ export default function TermsModal({
       const obj = JSON.parse(raw);
       if (!obj || !obj.expiry) return false;
       return Date.now() < obj.expiry;
-    } catch (e) {
+    } catch {
       return false;
     }
   }
@@ -80,9 +84,13 @@ export default function TermsModal({
 
   function handleAccept() {
     try {
-      const expiry = Date.now() + storageDays * 24 * 60 * 60 * 1000;
-      localStorage.setItem(storageKey, JSON.stringify({ expiry }));
-    } catch (err) {}
+      const expiry =
+        Date.now() + storageDays * 24 * 60 * 60 * 1000;
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify({ expiry })
+      );
+    } catch {}
     setOpen(false);
     if (typeof onAccept === "function") onAccept();
   }
@@ -96,6 +104,7 @@ export default function TermsModal({
   return (
     <div className="terms-overlay" aria-hidden={open ? "false" : "true"}>
       <style>{modalCss}</style>
+
       <div
         className="terms-modal"
         role="dialog"
@@ -106,20 +115,105 @@ export default function TermsModal({
       >
         <div className="terms-content">
           <header className="terms-header">
-            <h2 id={titleId} className="terms-title">📄 Termos de Uso do Clube</h2>
-            <p className="terms-sub">Leia com atenção antes de continuar</p>
+            <h2 id={titleId} className="terms-title">
+              📄 Termos de Uso do Clube
+            </h2>
+            <p className="terms-sub">
+              Leia com atenção antes de continuar
+            </p>
           </header>
 
           <div className="terms-body" id={descId}>
-            <p>Bem-vindo ao Weed Smokers Pass 🚀</p>
-            <p>Antes de acessar a área restrita, precisamos alinhar algumas regras:</p>
+            <p><strong>Bem-vindo(a) ao Clube.</strong></p>
+            <p>
+              O acesso à área restrita está condicionado à aceitação
+              integral dos termos abaixo, que possuem validade jurídica.
+            </p>
 
             <ol className="terms-points">
-              <li><strong>Conteúdo educativo</strong><br/>O que você verá aqui é sobre cannabis medicinal, em caráter informativo. Não é propaganda nem venda aberta.</li>
-              <li><strong>Prescrição é lei</strong><br/>Apenas médicos podem indicar tratamento com cannabis. Nada substitui consulta médica.</li>
-              <li><strong>Acesso restrito</strong><br/>Área exclusiva para assinantes. Não compartilhe prints ou informações externas ao clube.</li>
-              <li><strong>Responsabilidade</strong><br/>O clube não vende medicamentos. Produtos listados são referências. O acesso legal segue RDC 327/2019 e RDC 660/2022 da Anvisa.</li>
-              <li><strong>Aceite</strong><br/>Ao concordar, você declara que: entende o caráter informativo, que não substitui médico, e respeitará as regras do clube.</li>
+              <li>
+                <strong>Natureza do conteúdo</strong>
+                <br />
+                O Clube é uma plataforma privada de caráter
+                <strong> educativo, informativo e operacional</strong>.
+                Não constitui propaganda, oferta pública ou venda de
+                medicamentos ou produtos controlados.
+              </li>
+
+              <li>
+                <strong>Ausência de ato médico</strong>
+                <br />
+                O Clube não presta serviços médicos, não realiza
+                diagnósticos e não prescreve tratamentos.
+                Somente médicos legalmente habilitados podem indicar
+                o uso de cannabis medicinal.
+              </li>
+
+              <li>
+                <strong>Modelo de negócio e mandato</strong>
+                <br />
+                A empresa atua como
+                <strong>
+                  {" "}
+                  prestadora de serviços técnicos, administrativos,
+                  operacionais e de suporte
+                </strong>
+                .
+                <br />
+                Ao aceitar estes termos, o usuário declara e reconhece
+                que a empresa poderá atuar, quando aplicável, como
+                <strong> MANDATÁRIA</strong>, nos termos dos artigos 653
+                e seguintes do Código Civil, exclusivamente para fins de
+                execução, intermediação, suporte, viabilização e
+                acompanhamento dos serviços oferecidos.
+              </li>
+
+              <li>
+                <strong>Limitação de responsabilidade</strong>
+                <br />
+                A empresa não garante resultados, aprovações,
+                deferimentos ou êxito terapêutico, econômico ou
+                regulatório, não se responsabilizando por decisões
+                tomadas pelo usuário ou por atos de terceiros.
+              </li>
+
+              <li>
+                <strong>Acesso restrito e confidencialidade</strong>
+                <br />
+                O acesso é exclusivo para membros assinantes.
+                É vedado compartilhar logins, conteúdos, prints ou
+                informações fora da plataforma.
+              </li>
+
+              <li>
+                <strong>Legalidade e responsabilidade do usuário</strong>
+                <br />
+                O acesso legal à cannabis medicinal no Brasil depende do
+                cumprimento das normas vigentes, especialmente a
+                <strong> RDC nº 327/2019</strong> e
+                <strong> RDC nº 660/2022</strong> da Anvisa, cuja
+                observância é de responsabilidade exclusiva do usuário.
+              </li>
+
+              <li>
+                <strong>Cancelamento e reembolso</strong>
+                <br />
+                Os valores pagos possuem natureza de remuneração por
+                serviço digital de acesso imediato, sendo
+                <strong> não reembolsáveis</strong>.
+                Ao clicar em “Concordo” e acessar o conteúdo, o usuário
+                autoriza expressamente a execução imediata do serviço,
+                nos termos do art. 49 do CDC.
+              </li>
+
+              <li>
+                <strong>Aceite</strong>
+                <br />
+                Ao clicar em “Concordo”, o usuário declara que leu,
+                compreendeu e aceita integralmente estes termos,
+                reconhecendo o modelo de negócio da empresa e sua
+                atuação como mandatária.
+              </li>
             </ol>
           </div>
 
@@ -134,6 +228,7 @@ export default function TermsModal({
               >
                 Concordo
               </button>
+
               <button
                 type="button"
                 className="glass-btn ghost"
@@ -143,8 +238,12 @@ export default function TermsModal({
                 Não concordo
               </button>
             </div>
+
             <div className="terms-note">
-              <small>Ao clicar em "Concordo", você aceita os termos descritos acima.</small>
+              <small>
+                Ao clicar em “Concordo”, você manifesta consentimento
+                jurídico expresso aos Termos de Uso.
+              </small>
             </div>
           </footer>
         </div>
@@ -153,7 +252,7 @@ export default function TermsModal({
   );
 }
 
-/* CSS semelhante ao AgeConfirmModal */
+/* CSS */
 const modalCss = `
   .terms-overlay {
     position: fixed;
@@ -174,7 +273,11 @@ const modalCss = `
     border-radius: 24px;
     overflow: hidden auto;
     backdrop-filter: blur(10px) saturate(180%);
-    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.02)
+    );
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 24px 60px rgba(3,6,18,0.7);
     padding: 2.5rem 2rem;
@@ -258,8 +361,14 @@ const modalCss = `
   }
 
   @keyframes modal-pop {
-    from { opacity: 0; transform: scale(0.95) translateY(10px); }
-    to { opacity: 1; transform: scale(1) translateY(0); }
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
   }
 
   @media (max-width: 520px) {

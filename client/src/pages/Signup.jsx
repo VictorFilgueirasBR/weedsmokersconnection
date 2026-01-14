@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { AuthContext } from '../App';
 import './Signup.scss';
-import { FaUserCircle, FaEnvelope, FaLock, FaCheckCircle, FaCoins, FaHandshake, FaCannabis } from 'react-icons/fa';
+import { FaCheckCircle, FaHandshake, FaCannabis } from 'react-icons/fa';
 
 export default function Signup() {
     const [formData, setFormData] = useState({ name: '', email: '', password: '', confirmPassword: '' });
@@ -13,9 +13,8 @@ export default function Signup() {
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
     const [selectedPlan, setSelectedPlan] = useState('mensal');
-    const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
-    // 🔹 CUPOM (persistente no DB)
+    // 🔹 CUPOM
     const [couponCode, setCouponCode] = useState('');
     const [discountPercent, setDiscountPercent] = useState(0);
     const [couponValidated, setCouponValidated] = useState(false);
@@ -28,84 +27,71 @@ export default function Signup() {
     const { setUser, setToken } = useContext(AuthContext);
     const [searchParams] = useSearchParams();
 
+    /** ✅ FUNÇÃO AUSENTE (CRÍTICO) */
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    /** ✅ FUNÇÃO AUSENTE (VISUAL) */
+    const handleMouseMove = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+        e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+    };
+
     useEffect(() => {
         const paymentStatus = searchParams.get('status');
-        const paymentId = searchParams.get('payment_id');
 
         if (paymentStatus === 'approved') {
-            setSubmitMessage({ type: 'success', text: 'Seu pagamento foi aprovado! Em instantes sua conta será ativada e você será redirecionado para o seu perfil.' });
-            // Redireciona o usuário para o perfil após a confirmação do pagamento
-            setTimeout(() => {
-                navigate('/profile');
-            }, 3000);
+            setSubmitMessage({ type: 'success', text: 'Seu pagamento foi aprovado! Redirecionando...' });
+            setTimeout(() => navigate('/profile'), 3000);
         } else if (paymentStatus === 'pending' || paymentStatus === 'in_process') {
-            setSubmitMessage({ type: 'info', text: 'Seu pagamento está em análise. Você será notificado por e-mail assim que for aprovado.' });
+            setSubmitMessage({ type: 'info', text: 'Pagamento em análise. Você será notificado por e-mail.' });
         } else if (paymentStatus === 'rejected') {
-            setSubmitMessage({ type: 'error', text: 'Seu pagamento foi rejeitado. Tente novamente ou use outra forma de pagamento.' });
+            setSubmitMessage({ type: 'error', text: 'Pagamento rejeitado. Tente novamente.' });
         }
     }, [searchParams, navigate]);
 
     const validate = () => {
         const errors = {};
         const { name, email, password, confirmPassword } = formData;
+
         if (!name) errors.name = 'Nome é obrigatório.';
-        if (!email) {
-            errors.email = 'Email é obrigatório.';
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            errors.email = 'Email inválido.';
-        }
-        if (!password) {
-            errors.password = 'Senha é obrigatória.';
-        } else if (password.length < 12) {
-            errors.password = 'A senha deve ter pelo menos 12 caracteres.';
-        } else if (!/[A-Z]/.test(password)) {
-            errors.password = 'A senha deve conter pelo menos uma letra maiúscula.';
-        } else if (!/\d/.test(password)) {
-            errors.password = 'A senha deve conter pelo menos um número.';
-        } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-            errors.password = 'A senha deve conter pelo menos um caractere especial.';
-        }
-        if (password !== confirmPassword) {
-            errors.confirmPassword = 'As senhas não coincidem.';
-        }
+        if (!email) errors.email = 'Email é obrigatório.';
+        else if (!/\S+@\S+\.\S+/.test(email)) errors.email = 'Email inválido.';
+
+        if (!password) errors.password = 'Senha é obrigatória.';
+        else if (password.length < 12) errors.password = 'Mínimo de 12 caracteres.';
+        else if (!/[A-Z]/.test(password)) errors.password = 'Inclua letra maiúscula.';
+        else if (!/\d/.test(password)) errors.password = 'Inclua um número.';
+        else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) errors.password = 'Inclua caractere especial.';
+
+        if (password !== confirmPassword) errors.confirmPassword = 'As senhas não coincidem.';
+
         setFormErrors(errors);
         return Object.keys(errors).length === 0;
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((s) => ({ ...s, [name]: value }));
-    };
-
-    const handleMouseMove = (e) => {
-        const button = e.currentTarget;
-        const rect = button.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        button.style.setProperty('--x', `${x}px`);
-        button.style.setProperty('--y', `${y}px`);
-    };
-
-    // 🔹 Validação de cupom via BACKEND
     const handleValidateCoupon = async () => {
+        if (!couponCode.trim()) {
+            setSubmitMessage({ type: 'error', text: 'Informe um cupom para validar.' });
+            return;
+        }
+
         try {
             const res = await axios.post(
                 `${import.meta.env.VITE_API_URL}/api/coupons/validate`,
-                {
-                    code: couponCode.trim(),
-                    plan: selectedPlan
-                },
+                { code: couponCode.trim(), plan: selectedPlan },
                 { withCredentials: true }
             );
 
-            if (res.data.valid) {
-                setDiscountPercent(res.data.discountPercent);
-                setCouponValidated(true);
-                setSubmitMessage({
-                    type: 'success',
-                    text: `Cupom aplicado: ${res.data.discountPercent}% OFF 🎉`
-                });
-            }
+            setDiscountPercent(res.data.discountPercent);
+            setCouponValidated(true);
+            setSubmitMessage({
+                type: 'success',
+                text: `Cupom aplicado: ${res.data.discountPercent}% OFF 🎉`
+            });
         } catch (err) {
             setCouponValidated(false);
             setDiscountPercent(0);
@@ -116,23 +102,40 @@ export default function Signup() {
         }
     };
 
+    const planOptions = {
+        mensal: { price: '77,90', amount: 77.9, description: 'Plano Mensal' },
+        semestral: { price: '280,90', amount: 280.9, description: 'Plano Semestral' },
+        anual: { price: '467,90', amount: 467.9, description: 'Plano Anual' }
+    };
+
+    /** ✅ NORMALIZAÇÃO CRÍTICA */
+    const rawAmount = couponValidated
+        ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
+        : planOptions[selectedPlan].amount;
+        
+
+    const finalAmount = Math.max(
+        0,
+        couponValidated
+            ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
+            : planOptions[selectedPlan].amount
+    );
+
+
     const handleSubmit = async () => {
-        setSubmitMessage({ type: '', text: '' });
         if (!validate()) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setSubmitMessage({ type: 'error', text: 'Por favor, corrija os erros no formulário.' });
+            setSubmitMessage({ type: 'error', text: 'Corrija os erros do formulário.' });
             return;
         }
         if (!acceptedTerms) {
-            setSubmitMessage({ type: 'error', text: 'Você deve aceitar os Termos de segurança para continuar.' });
+            setSubmitMessage({ type: 'error', text: 'Aceite os Termos para continuar.' });
             return;
         }
+
         setIsSubmitting(true);
-        setSubmitMessage({ type: 'info', text: 'Criando sua conta...' });
 
         try {
-            // 1. Tenta registrar o usuário
-            const registerResponse = await axios.post(
+            const res = await axios.post(
                 `${import.meta.env.VITE_API_URL}/api/auth/register`,
                 {
                     name: formData.name,
@@ -142,50 +145,22 @@ export default function Signup() {
                 { withCredentials: true }
             );
 
-            const { userId, userEmail } = registerResponse.data;
-            setSubmitMessage({ type: 'info', text: 'Conta criada! Redirecionando para o pagamento...' });
+            const { userId, userEmail } = res.data;
 
-            // 2. Redireciona o usuário para a página de checkout transparente.
-            // Passamos o userId e o email como parâmetros de URL.
-            navigate(`/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}&amount=${planOptions[selectedPlan].amount}`);
-
-            // Note: Não há uma requisição 'await' aqui, pois a navegação é imediata.
-            // O estado de carregamento de pagamento será gerenciado na nova página.
-        } catch (error) {
+            navigate(
+                `/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}&amount=${finalAmount}&coupon=${couponCode}&discount=${discountPercent}`
+            );
+        } catch (err) {
             setIsSubmitting(false);
-            const serverMessage = error.response?.data?.msg;
-
-            if (serverMessage === 'Usuário já existe. Por favor, faça login.') {
-                setSubmitMessage({
-                    type: 'error',
-                    text: 'Este e-mail já está cadastrado. Por favor, faça login para continuar.'
-                });
-            } else if (serverMessage === 'Este email já está cadastrado, mas o pagamento ainda não foi confirmado. Prossiga para o pagamento.') {
-                setSubmitMessage({
-                    type: 'info',
-                    text: 'Seu cadastro foi encontrado, mas o pagamento não foi concluído. Redirecionando para o pagamento...'
-                });
-                // Redireciona para o checkout transparente com o userId retornado pelo backend
-                const { userId } = error.response.data;
-                navigate(`/payment_checkout.html?userId=${userId}&userEmail=${formData.email}&plan=${selectedPlan}`);
-            } else {
-                const errorMessage = serverMessage || 'Erro ao criar a conta. Tente novamente.';
-                setSubmitMessage({ type: 'error', text: errorMessage });
-            }
-
-            console.error('Erro no registro:', error.response?.data || error.message);
+            setSubmitMessage({
+                type: 'error',
+                text: err.response?.data?.msg || 'Erro ao criar conta.'
+            });
         }
     };
 
-     const planOptions = {
-        mensal: { price: '77,90', amount: 77.90, duration: '1 mês', description: 'Plano Mensal' },
-        semestral: { price: '280,90', amount: 280.90, duration: '40% OFF | 6 meses', description: 'Plano Semestral' },
-        anual: { price: '467,90', amount: 467.90, duration: '50% OFF | 1 ano', description: 'Plano Anual' },
-    };
 
-    const finalAmount = discountPercent
-        ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
-        : planOptions[selectedPlan].amount;
+
 
     return (
         <div className="signup-page">
@@ -707,7 +682,12 @@ export default function Signup() {
                             {['mensal', 'semestral', 'anual'].map((plan) => (
                                 <div
                                     key={plan}
-                                    onClick={() => setSelectedPlan(plan)}
+                                    onClick={() => {
+                                    setSelectedPlan(plan);
+                                    setCouponValidated(false);
+                                    setDiscountPercent(0);
+                                    }}
+
                                     className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
                                 >
                                     <h4 style={{ margin: 0 }}>{planOptions[plan].description}</h4>
@@ -732,7 +712,9 @@ export default function Signup() {
                             onMouseMove={handleMouseMove}
                             style={{ width: '100%' }}
                         >
-                            {isSubmitting ? 'Criando Conta...' : `Finalizar pagamento R$${planOptions[selectedPlan].price}`}
+                            {isSubmitting
+                            ? 'Criando Conta...'
+                            : `Finalizar pagamento R$${finalAmount.toFixed(2).replace('.', ',')}`}
                         </button>
                     </form>
                     <div className="login-link">
