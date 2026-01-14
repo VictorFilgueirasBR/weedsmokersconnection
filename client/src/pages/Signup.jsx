@@ -112,7 +112,7 @@ export default function Signup() {
     const rawAmount = couponValidated
         ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
         : planOptions[selectedPlan].amount;
-        
+
 
     const finalAmount = Math.max(
         0,
@@ -704,18 +704,6 @@ export default function Signup() {
                                 </div>
                             ))}
                         </div>
-                        <button
-                            type="button"
-                            disabled={isSubmitting || !acceptedTerms}
-                            onClick={handleSubmit}
-                            className="submit-gradient-btn"
-                            onMouseMove={handleMouseMove}
-                            style={{ width: '100%' }}
-                        >
-                            {isSubmitting
-                            ? 'Criando Conta...'
-                            : `Finalizar pagamento R$${finalAmount.toFixed(2).replace('.', ',')}`}
-                        </button>
                     </form>
                     <div className="login-link">
                         Já tem uma conta? <a href="/login">Faça Login</a>
