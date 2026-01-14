@@ -1,7 +1,7 @@
 // src/routes/mercadopago.js
 const express = require('express');
 const router = express.Router();
-const { MercadoPagoConfig, PreApproval } = require('mercadopago');
+const { MercadoPagoConfig, PreApproval, Payment } = require('mercadopago');
 const User = require('../models/User');
 
 const client = new MercadoPagoConfig({
@@ -29,15 +29,11 @@ router.post('/create-subscription', async (req, res) => {
     reason: `Assinatura ${plan}`,
     external_reference: userId,
     payer_email: userEmail,
-
     redirect_urls: {
       success: `${process.env.FRONTEND_URL}/signup?status=approved`,
       pending: `${process.env.FRONTEND_URL}/signup?status=pending`,
       failure: `${process.env.FRONTEND_URL}/signup?status=rejected`
-    },
-
-    // ✅ ESSENCIAL PARA PRODUÇÃO
-    notification_url: `${process.env.API_URL}/api/mercadopago/webhook`
+    }
   };
 
   try {
@@ -51,6 +47,76 @@ router.post('/create-subscription', async (req, res) => {
   } catch (error) {
     console.error('Erro ao criar assinatura:', JSON.stringify(error, null, 2));
     res.status(500).json({ msg: 'Erro ao gerar assinatura' });
+  }
+});
+
+// ==============================
+// PROCESSAR PAGAMENTO PIX
+// (BACKWARD COMPATIBLE)
+// ==============================
+router.post('/process-pix-payment', async (req, res) => {
+  try {
+    /**
+     * Aceita:
+     * - FORMATO ANTIGO (frontend atual)
+     *   amount, email, firstName, lastName
+     *
+     * - FORMATO NOVO (se existir)
+     *   transactionAmount, payerEmail, payerFirstName, payerLastName
+     */
+    const {
+      amount,
+      email,
+      firstName,
+      lastName,
+      transactionAmount,
+      payerEmail,
+      payerFirstName,
+      payerLastName
+    } = req.body;
+
+    const finalAmount = Number(transactionAmount || amount);
+    const finalEmail = payerEmail || email;
+    const finalFirstName = payerFirstName || firstName || 'Cliente';
+    const finalLastName = payerLastName || lastName || 'WSC';
+
+    if (!finalAmount || !finalEmail) {
+      return res.status(400).json({
+        message: 'Amount e email são obrigatórios'
+      });
+    }
+
+    const payment = new Payment(client);
+
+    const paymentData = {
+      transaction_amount: finalAmount,
+      description: 'Pagamento WeedsmokersPass via Pix',
+      payment_method_id: 'pix',
+      payer: {
+        email: finalEmail,
+        first_name: finalFirstName,
+        last_name: finalLastName
+      }
+    };
+
+    const result = await payment.create({ body: paymentData });
+
+    return res.status(200).json({
+      id: result.id,
+      status: result.status,
+      status_detail: result.status_detail,
+      point_of_interaction: result.point_of_interaction
+    });
+
+  } catch (error) {
+    console.error(
+      'Erro ao processar pagamento Pix:',
+      JSON.stringify(error, null, 2)
+    );
+
+    return res.status(500).json({
+      message: 'Erro ao processar pagamento Pix'
+    });
   }
 });
 
@@ -71,21 +137,20 @@ router.post('/webhook', async (req, res) => {
 
       const { status, external_reference } = preapproval.body;
       const userId = external_reference;
-
       const user = await User.findById(userId);
+
       if (user) {
         user.isPaid = status === 'authorized';
         await user.save();
-
         console.log(
-          `Webhook MercadoPago: usuário ${userId} atualizado -> isPaid=${user.isPaid}`
+          `Webhook: Usuário ${userId} atualizado -> isPaid=${user.isPaid}`
         );
       }
     }
 
     res.sendStatus(200);
   } catch (error) {
-    console.error('Erro no webhook Mercado Pago:', error);
+    console.error('Erro no webhook:', error);
     res.sendStatus(500);
   }
 });
