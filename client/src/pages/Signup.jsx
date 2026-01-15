@@ -704,7 +704,7 @@ export default function Signup() {
                                 </div>
                             ))}
                         </div>
-                        "<button
+                        <button
                             type="button"
                             disabled={isSubmitting || !acceptedTerms}
                             onClick={handleSubmit}
@@ -715,7 +715,7 @@ export default function Signup() {
                             {isSubmitting
                             ? 'Criando Conta...'
                             : `Finalizar pagamento R$${finalAmount.toFixed(2).replace('.', ',')}`}
-                        </button>"
+                        </button>
                         <button
                             type="button"
                             className="submit-gradient-btn"
