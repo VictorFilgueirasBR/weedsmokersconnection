@@ -716,6 +716,13 @@ export default function Signup() {
                             ? 'Criando Conta...'
                             : `Finalizar pagamento R$${finalAmount.toFixed(2).replace('.', ',')}`}
                         </button>"
+                        <button
+                            type="button"
+                            className="submit-gradient-btn"
+                            onClick={() => window.location.href = 'https://wa.me/5561995276936'}
+                            >
+                            Falar com atendimento
+                        </button>
 
                     </form>
                     <div className="login-link">
