@@ -704,13 +704,18 @@ export default function Signup() {
                                 </div>
                             ))}
                         </div>
-                        <button
+                        "<button
                             type="button"
+                            disabled={isSubmitting || !acceptedTerms}
+                            onClick={handleSubmit}
                             className="submit-gradient-btn"
-                            onClick={() => window.location.href = 'https://wa.me/5561995276936'}
-                            >
-                            Falar com atendimento
-                        </button>
+                            onMouseMove={handleMouseMove}
+                            style={{ width: '100%' }}
+                        >
+                            {isSubmitting
+                            ? 'Criando Conta...'
+                            : `Finalizar pagamento R$${finalAmount.toFixed(2).replace('.', ',')}`}
+                        </button>"
 
                     </form>
                     <div className="login-link">
