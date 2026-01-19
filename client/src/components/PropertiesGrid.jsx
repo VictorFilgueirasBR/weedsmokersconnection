@@ -7,7 +7,7 @@ const propertiesData = [
     {
     id: 1,
     image: '/images/cannac.jpg',
-    title: 'Hash ICE (THC)',
+    title: 'KETAMA ICE (THC)',
     location: '10g',
     price: 'R$ 1200,00',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
@@ -42,7 +42,7 @@ const propertiesData = [
     price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
-    link: 'http://instagram.com/Greenway.cbd'
+    link: 'https://abecmed.com.br/'
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const propertiesData = [
     price: 'R$ 600,00',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Ver mais',
-    link: 'http://instagram.com/Greenway.cbd'
+    link: 'https://abecmed.com.br/'
   },
   {
     id: 8,
