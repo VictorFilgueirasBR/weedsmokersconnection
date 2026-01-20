@@ -591,144 +591,126 @@ export default function Signup() {
                     </div>
                 )}
                 <div className="signup-form-glass">
-                    <h2>Criar sua Conta</h2>
-                    <form onSubmit={(e) => e.preventDefault()}>
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Nome completo"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                            />
-                            {formErrors.name && <span className="error">{formErrors.name}</span>}
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="seuemail@exemplo.com"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
-                            {formErrors.email && <span className="error">{formErrors.email}</span>}
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="password"
-                                name="password"
-                                placeholder="••••••••••••"
-                                value={formData.password}
-                                onChange={handleChange}
-                                required
-                            />
-                            <p className="password-requirements">
-                                Pelo menos 12 caracteres, 1 letra maiúscula, 1 número e 1 caractere especial.
-                            </p>
-                            {formErrors.password && <span className="error">{formErrors.password}</span>}
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="password"
-                                name="confirmPassword"
-                                placeholder="Confirme sua senha"
-                                value={formData.confirmPassword}
-                                onChange={handleChange}
-                                required
-                            />
-                            {formErrors.confirmPassword && (
-                                <span className="error">{formErrors.confirmPassword}</span>
-                            )}
-                        </div>
 
-                        {/* Checkbox de termos - logo abaixo do confirmPassword */}
-                        <div className="terms-checkbox">
-                            <input
-                                id="termsCheckbox"
-                                type="checkbox"
-                                checked={acceptedTerms}
-                                onChange={(e) => setAcceptedTerms(e.target.checked)}
-                                aria-labelledby="termsLabel"
-                            />
-                            <label id="termsLabel" htmlFor="termsCheckbox">
-                                Ao entrar, você aceita os{' '}
-                                <a onClick={() => setShowTermsModal(true)}>Termos de Uso</a>.
-                            </label>
-                        </div>
+    {/*
+    ============================
+    FORMULÁRIO DE SIGNUP DESATIVADO
+    Pagamento via WhatsApp externo
+    ============================
 
-                        
-                        <div className="form-group">
-                            <input
-                                type="text"
-                                placeholder="Cupom de desconto"
-                                value={couponCode}
-                                onChange={(e) => setCouponCode(e.target.value)}
-                            />
-                            <button
-                                type="button"
-                                onClick={handleValidateCoupon}
-                                className="submit-gradient-btn"
-                                style={{ marginTop: '0.5rem' }}
-                            >
-                                Validar Cupom
-                            </button>
-                        </div>
+    <h2>Criar sua Conta</h2>
 
-                        <div className="form-section-divider"></div>
-                        <h2>Escolha Seu Plano</h2>
-                        <div className="plans-wrapper">
-                            {['mensal', 'semestral', 'anual'].map((plan) => (
-                                <div
-                                    key={plan}
-                                    onClick={() => {
-                                    setSelectedPlan(plan);
-                                    setCouponValidated(false);
-                                    setDiscountPercent(0);
-                                    }}
+    <form onSubmit={(e) => e.preventDefault()}>
 
-                                    className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
-                                >
-                                    <h4 style={{ margin: 0 }}>{planOptions[plan].description}</h4>
-                                    <p style={{ margin: '0.15rem 0 0.4rem', fontSize: '0.8rem', opacity: 0.8 }}>
-                                        {planOptions[plan].duration} de acesso
-                                    </p>
-                                    <div className="price-row">
-                                        <span className="currency">R$</span>
-                                        <span className="main-price">{planOptions[plan].price}</span>
-                                        <span className="duration">
-                                            {plan === 'anual' ? '/ano' : (plan === 'mensal' ? '/mês' : '/semestre')}
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <button
-                            type="button"
-                            disabled={isSubmitting || !acceptedTerms}
-                            onClick={handleSubmit}
-                            className="submit-gradient-btn"
-                            onMouseMove={handleMouseMove}
-                            style={{ width: '100%' }}
-                        >
-                            {isSubmitting
-                            ? 'Criando Conta...'
-                            : `Finalizar pagamento R$${finalAmount.toFixed(2).replace('.', ',')}`}
-                        </button>
-                        <button
-                            type="button"
-                            className="submit-gradient-btn"
-                            onClick={() => window.location.href = 'https://wa.me/5561995276936'}
-                            >
-                            Falar com atendimento
-                        </button>
+        <div className="form-group">
+            <input
+                type="text"
+                name="name"
+                placeholder="Nome completo"
+                value={formData.name}
+                onChange={handleChange}
+                required
+            />
+        </div>
 
-                    </form>
-                    <div className="login-link">
-                        Já tem uma conta? <a href="/login">Faça Login</a>
-                    </div>
+        <div className="form-group">
+            <input
+                type="email"
+                name="email"
+                placeholder="seuemail@exemplo.com"
+                value={formData.email}
+                onChange={handleChange}
+                required
+            />
+        </div>
+
+        <div className="form-group">
+            <input
+                type="password"
+                name="password"
+                placeholder="••••••••••••"
+                value={formData.password}
+                onChange={handleChange}
+                required
+            />
+        </div>
+
+        <div className="form-group">
+            <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirme sua senha"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                required
+            />
+        </div>
+
+        <div className="terms-checkbox">
+            <input type="checkbox" />
+            <label>Aceito os Termos</label>
+        </div>
+
+        <button className="submit-gradient-btn">
+            Finalizar pagamento
+        </button>
+
+    </form>
+
+    <div className="login-link">
+        Já tem uma conta? <a href="/login">Faça Login</a>
+    </div>
+    */}
+
+    {/* ============================
+        PLANOS VISÍVEIS
+    ============================ */}
+    <h2>Escolha Seu Plano</h2>
+
+    <div className="plans-wrapper">
+        {['mensal', 'semestral', 'anual'].map((plan) => (
+            <div
+                key={plan}
+                onClick={() => setSelectedPlan(plan)}
+                className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
+            >
+                <h4>{planOptions[plan].description}</h4>
+
+                <div className="price-row">
+                    <span className="currency">R$</span>
+                    <span className="main-price">{planOptions[plan].price}</span>
+                    <span className="duration">
+                        {plan === 'anual'
+                            ? '/ano'
+                            : plan === 'mensal'
+                            ? '/mês'
+                            : '/semestre'}
+                    </span>
                 </div>
+            </div>
+        ))}
+    </div>
+
+    {/* ============================
+        CTA ÚNICO — WHATSAPP
+    ============================ */}
+    <button
+        type="button"
+        className="submit-gradient-btn"
+        onClick={() =>
+            window.open(
+                `https://wa.me/5561995276936?text=${encodeURIComponent(
+                    `Olá! Quero assinar o plano ${selectedPlan}.`
+                )}`,
+                '_blank'
+            )
+        }
+    >
+        Falar com atendimento
+    </button>
+
+</div>
+
             </div>
 
             {/* Modal de Termos (usado apenas nesta página de signup) */}
