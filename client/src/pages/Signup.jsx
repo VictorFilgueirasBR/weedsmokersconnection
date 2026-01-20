@@ -706,7 +706,7 @@ export default function Signup() {
             )
         }
     >
-        Falar com atendimento
+        Concluir Pagamento
     </button>
 
 </div>
