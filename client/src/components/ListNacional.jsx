@@ -2,24 +2,20 @@ import React from "react";
 
 const fornecedores = [
   {
-    nome: "Ease Labs Brasil",
+    nome: "ABECMED Brasil",
     link: "https://easelabs.com.br"
   },
   {
-    nome: "Prati-Donaduzzi (Cannabis Medicinal)",
+    nome: "ASPAEC Brasil",
     link: "https://www.pratidonaduzzi.com.br"
   },
   {
-    nome: "Entourage Brasil",
+    nome: "Aliança Medicinal Brasil",
     link: "https://entourage.com.br"
   },
   {
-    nome: "VerdeMed Brasil",
+    nome: "Sagrada Cannabis",
     link: "https://verdemed.com.br"
-  },
-  {
-    nome: "NuNature Labs",
-    link: "https://nunature.com.br"
   }
 ];
 
