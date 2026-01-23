@@ -17,6 +17,7 @@ import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
 import StepByStepInline from "../components/StepByStepInline";
+import ListNacional from "../components/ListNacional";
 
 
 export default function WSCClub() {
@@ -60,6 +61,8 @@ export default function WSCClub() {
       <Instruction />
 
       <PropertiesGrid />
+
+      <ListNacional />
 
       <IceSection />
 
