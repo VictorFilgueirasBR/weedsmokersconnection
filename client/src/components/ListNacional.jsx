@@ -3,19 +3,19 @@ import React from "react";
 const fornecedores = [
   {
     nome: "ABECMED Brasil",
-    link: "https://easelabs.com.br"
+    link: "https://abecmed.com.br/"
   },
   {
     nome: "ASPAEC Brasil",
-    link: "https://www.pratidonaduzzi.com.br"
+    link: "https://acesso.aspaec.com/AreaAssociados/MinhaConta/CadastroAssociadoPF"
   },
   {
     nome: "Aliança Medicinal Brasil",
-    link: "https://entourage.com.br"
+    link: "https://www.aliancamedicinal.org/"
   },
   {
     nome: "Sagrada Cannabis",
-    link: "https://verdemed.com.br"
+    link: "https://sagradamedicinal.org/"
   }
 ];
 
