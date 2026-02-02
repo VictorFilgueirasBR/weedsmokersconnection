@@ -103,9 +103,9 @@ export default function Signup() {
     };
 
     const planOptions = {
-        mensal: { price: '77,90', amount: 77.9, description: 'Plano Mensal' },
-        semestral: { price: '280,90', amount: 280.9, description: 'Plano Semestral' },
-        anual: { price: '467,90', amount: 467.9, description: 'Plano Anual' }
+        mensal: { price: '377,90', amount: 77.9, description: 'Plano Mensal' },
+        semestral: { price: '580,90', amount: 280.9, description: 'Plano Semestral' },
+        anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
     };
 
     /** ✅ NORMALIZAÇÃO CRÍTICA */
@@ -577,6 +577,10 @@ export default function Signup() {
                             <li className="highlight-item">
                                 <FaCheckCircle />
                                 <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores toda semana.</span>
+                            </li>
+                            <li className="highlight-item">
+                                <FaCheckCircle />
+                                <span>A sua consulta Médica já está inclusa no valor do plano, oque muda é o tempo de acesso a plataforma.</span>
                             </li>
                         </ul>
                         <p>
