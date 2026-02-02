@@ -10,7 +10,7 @@ const propertiesData = [
     title: 'KETAMA ICE (THC)',
     location: '10g',
     price: 'R$ 1200,00',
-    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
+    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
     cta: 'WSC-E120',
     link: 'https://ws-connectioncommerce.com/produto/wsc-e120/'
   },
