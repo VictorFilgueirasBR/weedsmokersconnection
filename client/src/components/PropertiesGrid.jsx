@@ -9,9 +9,9 @@ const propertiesData = [
     image: '/images/cannac.jpg',
     title: 'KETAMA ICE (THC)',
     location: '10g',
-    price: 'R$ 1200,00',
+    price: 'WSC-E120',
     description: 'Fornecedor Importado (EUA) de Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
-    cta: 'WSC-E120',
+    cta: 'Saiba mais',
     link: 'https://ws-connectioncommerce.com/produto/wsc-e120/'
   },
     {
@@ -19,9 +19,9 @@ const propertiesData = [
         image: '/images/rosin-flower.png',
         title: 'Rosin Hash (THC)',
         location: '5g',
-        price: 'R$ 1180,00',
+        price: 'WSC-E118',
         description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(Frete incluso).',
-        cta: 'WSC-E118',
+        cta: 'Saiba mais',
         link: 'https://ws-connectioncommerce.com/produto/wsc-e118/'
       },
     {
@@ -29,9 +29,9 @@ const propertiesData = [
     image: '/images/hash-ice-import.png',
     title: 'Bubble Hash (D-8)',
     location: '5g',
-    price: 'R$ 680,00',
+    price: 'WSC-E680',
     description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
-    cta: 'WSC-E680',
+    cta: 'Saiba mais',
     link: 'https://ws-connectioncommerce.com/produto/wsc-e680/'
   },
     {
@@ -39,9 +39,9 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash ICE (THC)',
     location: '5g',
-    price: 'R$ 600,00',
+    price: 'WSC-E750',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://abecmed.com.br/'
   },
   {
@@ -49,9 +49,9 @@ const propertiesData = [
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK (THC)',
     location: '10g',
-    price: 'R$ 600,00',
+    price: 'WSC-E222',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://abecmed.com.br/'
   },
   {
@@ -59,9 +59,9 @@ const propertiesData = [
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie (THC)',
     location: '5g',
-    price: 'R$ 275,00',
+    price: 'WSC-E125',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://abecmed.com.br/'
   },
   {
@@ -69,9 +69,9 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa-capa.jpg',
     title: 'Hash ICE - 24K (THC)',
     location: '5g',
-    price: 'R$ 600,00',
+    price: 'WSC-F880',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://abecmed.com.br/'
   },
   {
@@ -79,9 +79,9 @@ const propertiesData = [
     image: '/images/wsc-vape-thc.webp',
     title: 'Refil THC puro',
     location: '1ml',
-    price: 'R$ 500,00',
+    price: 'WSC-W521',
     description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://wa.me/556195276936'
   },
   {
@@ -89,9 +89,9 @@ const propertiesData = [
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP (THC)',
     location: '5g',
-    price: 'R$ 275,00',
+    price: 'WSC-P275',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://www.aliancamedicinal.org/'
   },
   {
@@ -99,9 +99,9 @@ const propertiesData = [
     image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple (THC)',
     location: '10g',
-    price: 'R$ 750,00',
+    price: 'WSC-C750',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
-    cta: 'Ver mais',
+    cta: 'Saiba mais',
     link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
   },
 ];
