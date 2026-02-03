@@ -46,17 +46,17 @@ export default function WSCClub() {
       <MemberTreatmentFlow />
 
       {/* Ao clicar nesses cards → abre o modal */}
-      <div onClick={handleOpenContacts}>
+      
         <GlassTry />
-      </div>
+      
 
-      <div onClick={handleOpenContacts}>
+      
         <GlassCardNacional />
-      </div>
+      
 
-      <div onClick={handleOpenContacts}>
+      
         <GlassCardImport />
-      </div>
+      
 
       <Instruction />
 
