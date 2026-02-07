@@ -576,7 +576,7 @@ export default function Signup() {
                             </li>
                             <li className="highlight-item">
                                 <FaCheckCircle />
-                                <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores toda semana.</span>
+                                <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores mensalmente, assim como SUPORTE para agendamento de consultas, compra e pós venda da aquisição de produtos.</span>
                             </li>
                             <li className="highlight-item">
                                 <FaCheckCircle />
