@@ -30,9 +30,9 @@ export default function Signup() {
        EDITE AQUI
     ========================= */
     const planCheckoutLinks = {
-        mensal: "https://SEU-LINK-MENSAL-AQUI",
-        semestral: "https://SEU-LINK-SEMESTRAL-AQUI",
-        anual: "https://SEU-LINK-ANUAL-AQUI"
+        mensal: "https://ws-connectioncommerce.com/produto/wsc-signature-mensal/",
+        semestral: "https://ws-connectioncommerce.com/produto/wsc-signature-semestral/",
+        anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/"
     };
 
     const handleExternalCheckout = () => {
