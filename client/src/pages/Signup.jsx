@@ -685,10 +685,10 @@ export default function Signup() {
                     <span className="main-price">{planOptions[plan].price}</span>
                     <span className="duration">
                         {plan === 'anual'
-                            ? '/ano'
+                            ? '/ Ano'
                             : plan === 'mensal'
-                            ? '/Inicial'
-                            : '/semestre'}
+                            ? '/ Inicial'
+                            : '/ Semestre'}
                     </span>
                 </div>
             </div>
