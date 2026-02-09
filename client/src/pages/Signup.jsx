@@ -487,33 +487,7 @@ export default function Signup() {
                 <div className="signup-content">
                     <h1>Assine e Desbloqueie o Futuro da Sua Cura</h1>
 
-                    <div className="signup-highlight-box">
-                        <p>
-                            Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a:
-                        </p>
-
-                        <ul className="highlight-list">
-                            <li className="highlight-item">
-                                <FaHandshake />
-                                <span>Médicos prescritores e fornecedores premium.</span>
-                            </li>
-
-                            <li className="highlight-item">
-                                <FaCannabis />
-                                <span>Flores, extrações, gummies THC e CBD.</span>
-                            </li>
-
-                            <li className="highlight-item">
-                                <FaCheckCircle />
-                                <span>Catálogo mensal + suporte completo.</span>
-                            </li>
-
-                            <li className="highlight-item">
-                                <FaCheckCircle />
-                                <span>Consulta médica já inclusa.</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <div className="signup-highlight-box"> <p> Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a: </p> <ul className="highlight-list"> <li className="highlight-item"> <FaHandshake /> <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span> </li> <li className="highlight-item"> <FaCannabis /> <span>As melhores Espécies de Flores em Natura e Extrações do mercado: THC (ICE, Hash, Rosin, FullSpectrum, Diamonds), Gummies de THC, CBD e muito mais.</span> </li> <li className="highlight-item"> <FaCheckCircle /> <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores mensalmente, assim como SUPORTE para agendamento de consultas, compra e pós venda da aquisição de produtos.</span> </li> <li className="highlight-item"> <FaCheckCircle /> <span>A sua consulta Médica já está inclusa no valor do plano, oque muda é o tempo de acesso a área de membros com catálogo atualizado.</span> </li> </ul> <p> Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. Essa é sua chance de fazer parte de algo único. Acesso imediato a todas as novidades liberadas nos catálogos de THC (Flores em Natura, ICE, Hash, Rosin, FullSpectrum, Diamonds) e CBD, promovendo saúde e consciência. </p> </div> 
                 </div>
 
                 {submitMessage.text && (
