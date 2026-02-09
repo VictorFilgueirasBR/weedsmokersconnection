@@ -580,7 +580,7 @@ export default function Signup() {
                             </li>
                             <li className="highlight-item">
                                 <FaCheckCircle />
-                                <span>A sua consulta Médica já está inclusa no valor do plano, oque muda é o tempo de acesso a plataforma.</span>
+                                <span>A sua consulta Médica já está inclusa no valor do plano, oque muda é o tempo de acesso a área de membros com catálogo atualizado.</span>
                             </li>
                         </ul>
                         <p>
