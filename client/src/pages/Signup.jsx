@@ -103,9 +103,9 @@ export default function Signup() {
     };
 
     const planOptions = {
-        mensal: { price: '377,90', amount: 77.9, description: 'Plano Mensal' },
-        semestral: { price: '580,90', amount: 280.9, description: 'Plano Semestral' },
-        anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
+
+        semestral: { price: '549,90', amount: 549.9, description: 'Plano Semestral' },
+        anual: { price: '797,90', amount: 797.9, description: 'Plano Anual' }
     };
 
     /** ✅ NORMALIZAÇÃO CRÍTICA */
