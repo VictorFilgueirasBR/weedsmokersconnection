@@ -14,12 +14,10 @@ export default function Signup() {
 
     const [selectedPlan, setSelectedPlan] = useState('mensal');
 
-    // 🔹 CUPOM
     const [couponCode, setCouponCode] = useState('');
     const [discountPercent, setDiscountPercent] = useState(0);
     const [couponValidated, setCouponValidated] = useState(false);
 
-    // Termos
     const [acceptedTerms, setAcceptedTerms] = useState(false);
     const [showTermsModal, setShowTermsModal] = useState(false);
 
@@ -27,13 +25,35 @@ export default function Signup() {
     const { setUser, setToken } = useContext(AuthContext);
     const [searchParams] = useSearchParams();
 
-    /** ✅ FUNÇÃO AUSENTE (CRÍTICO) */
+    /* =========================
+       🔹 LINKS EXTERNOS POR PLANO
+       EDITE AQUI
+    ========================= */
+    const planCheckoutLinks = {
+        mensal: "https://SEU-LINK-MENSAL-AQUI",
+        semestral: "https://SEU-LINK-SEMESTRAL-AQUI",
+        anual: "https://SEU-LINK-ANUAL-AQUI"
+    };
+
+    const handleExternalCheckout = () => {
+        const link = planCheckoutLinks[selectedPlan];
+
+        if (!link) {
+            setSubmitMessage({
+                type: 'error',
+                text: 'Link de pagamento não configurado para este plano.'
+            });
+            return;
+        }
+
+        window.location.href = link;
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    /** ✅ FUNÇÃO AUSENTE (VISUAL) */
     const handleMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
         e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
@@ -53,66 +73,11 @@ export default function Signup() {
         }
     }, [searchParams, navigate]);
 
-    const validate = () => {
-        const errors = {};
-        const { name, email, password, confirmPassword } = formData;
-
-        if (!name) errors.name = 'Nome é obrigatório.';
-        if (!email) errors.email = 'Email é obrigatório.';
-        else if (!/\S+@\S+\.\S+/.test(email)) errors.email = 'Email inválido.';
-
-        if (!password) errors.password = 'Senha é obrigatória.';
-        else if (password.length < 12) errors.password = 'Mínimo de 12 caracteres.';
-        else if (!/[A-Z]/.test(password)) errors.password = 'Inclua letra maiúscula.';
-        else if (!/\d/.test(password)) errors.password = 'Inclua um número.';
-        else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) errors.password = 'Inclua caractere especial.';
-
-        if (password !== confirmPassword) errors.confirmPassword = 'As senhas não coincidem.';
-
-        setFormErrors(errors);
-        return Object.keys(errors).length === 0;
-    };
-
-    const handleValidateCoupon = async () => {
-        if (!couponCode.trim()) {
-            setSubmitMessage({ type: 'error', text: 'Informe um cupom para validar.' });
-            return;
-        }
-
-        try {
-            const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/api/coupons/validate`,
-                { code: couponCode.trim(), plan: selectedPlan },
-                { withCredentials: true }
-            );
-
-            setDiscountPercent(res.data.discountPercent);
-            setCouponValidated(true);
-            setSubmitMessage({
-                type: 'success',
-                text: `Cupom aplicado: ${res.data.discountPercent}% OFF 🎉`
-            });
-        } catch (err) {
-            setCouponValidated(false);
-            setDiscountPercent(0);
-            setSubmitMessage({
-                type: 'error',
-                text: err.response?.data?.msg || 'Cupom inválido ou expirado.'
-            });
-        }
-    };
-
     const planOptions = {
         mensal: { price: '377,90', amount: 77.9, description: 'Plano Mensal' },
         semestral: { price: '580,90', amount: 280.9, description: 'Plano Semestral' },
         anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
     };
-
-    /** ✅ NORMALIZAÇÃO CRÍTICA */
-    const rawAmount = couponValidated
-        ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
-        : planOptions[selectedPlan].amount;
-        
 
     const finalAmount = Math.max(
         0,
@@ -120,47 +85,6 @@ export default function Signup() {
             ? planOptions[selectedPlan].amount * (1 - discountPercent / 100)
             : planOptions[selectedPlan].amount
     );
-
-
-    const handleSubmit = async () => {
-        if (!validate()) {
-            setSubmitMessage({ type: 'error', text: 'Corrija os erros do formulário.' });
-            return;
-        }
-        if (!acceptedTerms) {
-            setSubmitMessage({ type: 'error', text: 'Aceite os Termos para continuar.' });
-            return;
-        }
-
-        setIsSubmitting(true);
-
-        try {
-            const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/api/auth/register`,
-                {
-                    name: formData.name,
-                    email: formData.email,
-                    password: formData.password
-                },
-                { withCredentials: true }
-            );
-
-            const { userId, userEmail } = res.data;
-
-            navigate(
-                `/payment_checkout.html?userId=${userId}&userEmail=${userEmail}&plan=${selectedPlan}&amount=${finalAmount}&coupon=${couponCode}&discount=${discountPercent}`
-            );
-        } catch (err) {
-            setIsSubmitting(false);
-            setSubmitMessage({
-                type: 'error',
-                text: err.response?.data?.msg || 'Erro ao criar conta.'
-            });
-        }
-    };
-
-
-
 
     return (
         <div className="signup-page">
@@ -559,213 +483,85 @@ export default function Signup() {
             </style>
 
             <div className="signup-container-wrapper">
+
                 <div className="signup-content">
                     <h1>Assine e Desbloqueie o Futuro da Sua Cura</h1>
+
                     <div className="signup-highlight-box">
                         <p>
                             Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a:
                         </p>
+
                         <ul className="highlight-list">
                             <li className="highlight-item">
                                 <FaHandshake />
-                                <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span>
+                                <span>Médicos prescritores e fornecedores premium.</span>
                             </li>
+
                             <li className="highlight-item">
                                 <FaCannabis />
-                                <span>As melhores Espécies de Flores em Natura e Extrações do mercado: THC (ICE, Hash, Rosin, FullSpectrum, Diamonds), Gummies de THC, CBD e muito mais.</span>
+                                <span>Flores, extrações, gummies THC e CBD.</span>
                             </li>
+
                             <li className="highlight-item">
                                 <FaCheckCircle />
-                                <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores mensalmente, assim como SUPORTE para agendamento de consultas, compra e pós venda da aquisição de produtos.</span>
+                                <span>Catálogo mensal + suporte completo.</span>
                             </li>
+
                             <li className="highlight-item">
                                 <FaCheckCircle />
-                                <span>A sua consulta Médica já está inclusa no valor do plano, oque muda é o tempo de acesso a área de membros com catálogo atualizado.</span>
+                                <span>Consulta médica já inclusa.</span>
                             </li>
                         </ul>
-                        <p>
-                            Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. Essa é sua chance de fazer parte de algo único.
-                             Acesso imediato a todas as novidades liberadas nos catálogos de THC (Flores em Natura, ICE, Hash, Rosin, FullSpectrum, Diamonds) e CBD, promovendo saúde e consciência.
-                        </p>
                     </div>
                 </div>
+
                 {submitMessage.text && (
                     <div className={`message ${submitMessage.type}`}>
                         {submitMessage.text}
                     </div>
                 )}
+
                 <div className="signup-form-glass">
 
-    {/*
-    ============================
-    FORMULÁRIO DE SIGNUP DESATIVADO
-    Pagamento via WhatsApp externo
-    ============================
+                    <h2>Escolha Seu Plano</h2>
 
-    <h2>Criar sua Conta</h2>
+                    <div className="plans-wrapper">
+                        {['mensal', 'semestral', 'anual'].map((plan) => (
+                            <div
+                                key={plan}
+                                onClick={() => setSelectedPlan(plan)}
+                                className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
+                            >
+                                <h4>{planOptions[plan].description}</h4>
 
-    <form onSubmit={(e) => e.preventDefault()}>
-
-        <div className="form-group">
-            <input
-                type="text"
-                name="name"
-                placeholder="Nome completo"
-                value={formData.name}
-                onChange={handleChange}
-                required
-            />
-        </div>
-
-        <div className="form-group">
-            <input
-                type="email"
-                name="email"
-                placeholder="seuemail@exemplo.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-            />
-        </div>
-
-        <div className="form-group">
-            <input
-                type="password"
-                name="password"
-                placeholder="••••••••••••"
-                value={formData.password}
-                onChange={handleChange}
-                required
-            />
-        </div>
-
-        <div className="form-group">
-            <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Confirme sua senha"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                required
-            />
-        </div>
-
-        <div className="terms-checkbox">
-            <input type="checkbox" />
-            <label>Aceito os Termos</label>
-        </div>
-
-        <button className="submit-gradient-btn">
-            Finalizar pagamento
-        </button>
-
-    </form>
-
-    <div className="login-link">
-        Já tem uma conta? <a href="/login">Faça Login</a>
-    </div>
-    */}
-
-    {/* ============================
-        PLANOS VISÍVEIS
-    ============================ */}
-    <h2>Escolha Seu Plano</h2>
-
-    <div className="plans-wrapper">
-        {['mensal', 'semestral', 'anual'].map((plan) => (
-            <div
-                key={plan}
-                onClick={() => setSelectedPlan(plan)}
-                className={`plan-option ${selectedPlan === plan ? 'selected' : ''}`}
-            >
-                <h4>{planOptions[plan].description}</h4>
-
-                <div className="price-row">
-                    <span className="currency">R$</span>
-                    <span className="main-price">{planOptions[plan].price}</span>
-                    <span className="duration">
-                        {plan === 'anual'
-                            ? '/ Ano'
-                            : plan === 'mensal'
-                            ? '/ Mês | Renovação • R$ 77,90'
-                            : '/ Semestre'}
-                    </span>
-                </div>
-            </div>
-        ))}
-    </div>
-
-    {/* ============================
-        CTA ÚNICO — WHATSAPP
-    ============================ */}
-    <button
-        type="button"
-        className="submit-gradient-btn"
-        onClick={() =>
-            window.open(
-                `https://wa.me/5561995276936?text=${encodeURIComponent(
-                    `Olá! Quero assinar o plano ${selectedPlan}.`
-                )}`,
-                '_blank'
-            )
-        }
-    >
-        Concluir Pagamento
-    </button>
-
-</div>
-
-            </div>
-
-            {/* Modal de Termos (usado apenas nesta página de signup) */}
-            {showTermsModal && (
-                <div className="terms-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
-                    <div className="terms-modal">
-                        <h2 id="termsModalTitle">Termos de Uso do Clube</h2>
-                        <p>Bem-vindo ao nosso Clube! 🚀</p>
-                        <p>Antes de entrar na área restrita, precisamos alinhar algumas coisinhas rápidas:</p>
-
-                        <ol>
-                            <li>
-                                <strong>Conteúdo educativo</strong>
-                                <p>O que você vai ver aqui é informação sobre produtos de cannabis medicinal. Não é propaganda, não é venda aberta. É um espaço para pacientes trocarem conhecimento.</p>
-                            </li>
-                            <li>
-                                <strong>Prescrição é lei</strong>
-                                <p>Só um médico pode indicar e prescrever tratamento com cannabis. Nada do que está aqui substitui consulta médica. Sempre converse com seu doutor(a) 👩‍⚕️👨‍⚕️.</p>
-                            </li>
-                            <li>
-                                <strong>Acesso restrito</strong>
-                                <p>Essa área é só para membros assinantes. As informações não são públicas e você se compromete a não repassar prints ou dados fora daqui.</p>
-                            </li>
-                            <li>
-                                <strong>Responsabilidade</strong>
-                                <p>O clube não vende diretamente medicamentos. Os produtos listados aparecem apenas como referência informativa. O acesso legal a cannabis medicinal no Brasil depende da RDC 327/2019 e RDC 660/2022 da Anvisa.</p>
-                            </li>
-                            <li>
-                                <strong>Política de Cancelamento</strong>
-                                <p>Os valores pagos para adesão ou manutenção da assinatura do Clube possuem caráter não reembolsável, em razão da natureza do serviço prestado (conteúdo digital e informativo disponibilizado de forma imediata após a contratação). O usuário declara ciência de que a adesão é realizada em caráter irrevogável e irretratável, não assistindo direito a devolução ou estorno, ainda que haja cancelamento posterior. Em conformidade com o art. 49 do Código de Defesa do Consumidor, o usuário possui o direito de arrependimento no prazo de 7 (sete) dias corridos, contados da adesão.
-Todavia, ao clicar em “Concordo” e acessar imediatamente os conteúdos digitais disponibilizados pelo Clube, o usuário manifesta seu consentimento expresso para a execução imediata do serviço e reconhece que o início do acesso caracteriza plena fruição do produto, hipótese em que não subsistirá o direito de arrependimento previsto no referido artigo.
-Após o prazo legal de 7 (sete) dias, toda adesão será considerada irrevogável e irretratável, não gerando direito a reembolso ou estorno, ainda que haja cancelamento da assinatura.</p>
-                            </li>
-                            <li>
-                                <strong>Aceite</strong>
-                                <p>Ao clicar em “Concordo”, você está dizendo:
-                                <ul>
-                                    <li>que entende que é um conteúdo informativo,</li>
-                                    <li>que não substitui médico,</li>
-                                    <li>e que respeita as regras do clube.</li>
-                                </ul>
-                                </p>
-                            </li>
-                        </ol>
-
-                        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            <button onClick={() => setShowTermsModal(false)}>Fechar</button>
-                        </div>
+                                <div className="price-row">
+                                    <span className="currency">R$</span>
+                                    <span className="main-price">{planOptions[plan].price}</span>
+                                    <span className="duration">
+                                        {plan === 'anual'
+                                            ? '/ Ano'
+                                            : plan === 'mensal'
+                                            ? '/ Mês'
+                                            : '/ Semestre'}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
+
+                    {/* ✅ BOTÃO ALTERADO */}
+                    <button
+                        type="button"
+                        className="submit-gradient-btn"
+                        onClick={handleExternalCheckout}
+                        onMouseMove={handleMouseMove}
+                    >
+                        Concluir Pagamento
+                    </button>
+
                 </div>
-            )}
+            </div>
         </div>
     );
 }
