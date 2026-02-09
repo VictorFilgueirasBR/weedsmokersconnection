@@ -18,7 +18,7 @@ const propertiesData = [
         id: 2,
         image: '/images/rosin-flower.png',
         title: 'Rosin Hash (THC)',
-        location: '5g',
+        location: '10g',
         price: 'WSC-E118',
         description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(Frete incluso).',
         cta: 'Saiba mais',
