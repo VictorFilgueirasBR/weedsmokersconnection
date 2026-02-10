@@ -42,7 +42,7 @@ const propertiesData = [
     price: 'WSC-E750',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Saiba mais',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/556195276936'
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const propertiesData = [
     price: 'WSC-E222',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Saiba mais',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/556195276936'
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const propertiesData = [
     price: 'WSC-E125',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Saiba mais',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/556195276936'
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ const propertiesData = [
     price: 'WSC-F880',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
     cta: 'Saiba mais',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/556195276936'
   },
   {
     id: 8,
@@ -92,18 +92,39 @@ const propertiesData = [
     price: 'WSC-P275',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
     cta: 'Saiba mais',
-    link: 'https://www.aliancamedicinal.org/'
+    link: 'https://wa.me/556195276936'
   },
   {
     id: 10,
     image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple (THC)',
     location: '10g',
-    price: 'WSC-C750',
+    price: 'Esgotada',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'Saiba mais',
     link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
   },
+    {
+        id: 11,
+        image: '/images/wsc-flower-24k.png',
+        title: '24K | Gold (THC)',
+        location: '10g',
+        price: 'WSC-C750',
+        description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
+        cta: 'Saiba mais',
+        link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
+      },
+    {
+        id: 12,
+        image: '/images/wsc-flower-kk.png',
+        title: 'Cherry Pie Homie (THC)',
+        location: '10g',
+        price: 'WSC-C750',
+        description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
+        cta: 'Saiba mais',
+        link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
+      },
+
 ];
 
 const PropertiesGrid = ({ title = 'Reviews Atualizados', id = 'properties-grid' }) => {
