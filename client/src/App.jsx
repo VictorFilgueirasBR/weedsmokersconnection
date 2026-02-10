@@ -16,7 +16,7 @@ import Profile from './pages/Profile';
 import ChatPage from './pages/ChatPage';
 
 // ✅ IMPORT NECESSÁRIO PARA O CLUB POR LINK
-import WSCClub from './pages/WSCClub';
+import WSCClub from "./pages/ProtectedClub";
 
 export const AuthContext = createContext();
 
