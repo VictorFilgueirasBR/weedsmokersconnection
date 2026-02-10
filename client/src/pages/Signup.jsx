@@ -516,7 +516,7 @@ export default function Signup() {
                                         {plan === 'anual'
                                             ? '/ Ano'
                                             : plan === 'mensal'
-                                            ? '/ Mês'
+                                            ? '/ Especial'
                                             : '/ Semestre'}
                                     </span>
                                 </div>
