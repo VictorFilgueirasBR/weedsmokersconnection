@@ -136,7 +136,7 @@ const propertiesData = [
       },
     {
         id: 14,
-        image: '/images/jet-fly-import.png',
+        image: '/images/jet-fly-br.png',
         title: 'WSC | Frete Nacional',
         location: '45,00',
         price: 'WSC-JET-BR',
@@ -146,9 +146,9 @@ const propertiesData = [
       },
     {
         id: 15,
-        image: '/images/jet-fly-br.png',
+        image: '/images/jet-fly-import.png',
         title: 'WSC | Frete Import',
-        location: '170',
+        location: '170,00',
         price: 'WSC-JET-USA',
         description: 'Frete Importação | Califórnia - Miami - SP - Destino',
         cta: 'Saiba mais',
@@ -157,7 +157,7 @@ const propertiesData = [
 
 ];
 
-const PropertiesGrid = ({ title = 'Reviews Atualizados', id = 'properties-grid' }) => {
+const PropertiesGrid = ({ title = 'WSC | SOLUTIONS', id = 'properties-grid' }) => {
   return (
     <section className="properties-grid-section" id={id}>
       <h2 className="section-title">{title}</h2>
