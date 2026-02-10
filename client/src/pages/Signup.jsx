@@ -535,6 +535,19 @@ export default function Signup() {
                     </button>
 
                 </div>
+
+
+                {/* ✅ BOTÃO ALTERADO */}
+                <button
+                    type="button"
+                    className="submit-gradient-btn"
+                    onClick={() => window.open("https://www.instagram.com/wsconnectionbrasil/", "_blank")}
+                    onMouseMove={handleMouseMove}
+                >
+                    INSTAGRAM
+                </button>
+
+
             </div>
         </div>
     );
