@@ -547,6 +547,15 @@ export default function Signup() {
                     INSTAGRAM
                 </button>
 
+                <button
+                    type="button"
+                    className="submit-gradient-btn"
+                    onClick={() => window.open("https://wa.me/message/WQS3YHS6QHS2I1", "_blank")}
+                    onMouseMove={handleMouseMove}
+                >
+                    ATENDIMENTO WHATSAPP
+                </button>
+
 
             </div>
         </div>
