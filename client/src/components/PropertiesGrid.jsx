@@ -124,6 +124,36 @@ const propertiesData = [
         cta: 'Saiba mais',
         link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
       },
+    {
+        id: 13,
+        image: '/images/pac-wsc-complete.png',
+        title: 'WSC Consulta | ANVISA ',
+        location: '400,00',
+        price: 'WSC-COMPLETE',
+        description: 'Serviço de suporte e agenciamento para consulta médica + emissão de documentação pela ANVISA.',
+        cta: 'Saiba mais',
+        link: 'https://ws-connectioncommerce.com/produto/702/'
+      },
+    {
+        id: 14,
+        image: '/images/jet-fly-import.png',
+        title: 'WSC | Frete Nacional',
+        location: '45,00',
+        price: 'WSC-JET-BR',
+        description: 'Frete Nacional | Fornecedor - SP - Destino',
+        cta: 'Saiba mais',
+        link: 'https://ws-connectioncommerce.com/produto/wsc-jet-br/'
+      },
+    {
+        id: 15,
+        image: '/images/jet-fly-br.png',
+        title: 'WSC | Frete Import',
+        location: '170',
+        price: 'WSC-JET-USA',
+        description: 'Frete Importação | Califórnia - Miami - SP - Destino',
+        cta: 'Saiba mais',
+        link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
+      },
 
 ];
 
