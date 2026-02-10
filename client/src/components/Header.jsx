@@ -60,7 +60,6 @@ const Header = ({ onEditProfile, onShowPopup }) => {
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <Link to="/" onClick={handleLinkClick} translate="no" lang="en">Home</Link>
-        <Link to="https://ws-connectioncommerce.com/" onClick={handleLinkClick} translate="no" lang="en">Institucional</Link>
         {/* LÓGICA CORRIGIDA: MOSTRA "SOBRE" SOMENTE SE NÃO ESTIVER LOGADO */}
         {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>Teste IA</Link>}
 
