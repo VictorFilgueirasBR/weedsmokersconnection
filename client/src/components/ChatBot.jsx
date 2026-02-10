@@ -133,7 +133,7 @@ export default function ChatBot() {
     if (currentStepData && currentStepData.isCTA) {
       return (
         <a href="/signup" className="cta-button-chat" target="_self" rel="noopener noreferrer">
-          Assine esse Lyfe Style Agora 🍃
+          CONTRATAR AGORA 🍃
         </a>
       );
     }
