@@ -30,7 +30,6 @@ export default function Signup() {
        EDITE AQUI
     ========================= */
     const planCheckoutLinks = {
-        meses: "https://ws-connectioncommerce.com/produto/wsc-signature-nevoeiro710-off/",
         mensal: "https://ws-connectioncommerce.com/produto/wsc-signature-mensal/",
         semestral: "https://ws-connectioncommerce.com/produto/wsc-signature-semestral/",
         anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/"
@@ -75,8 +74,7 @@ export default function Signup() {
     }, [searchParams, navigate]);
 
     const planOptions = {
-        meses: { price: '379,90', amount: 77.9, description: 'Plano NEVOEIRO710-OFF' },
-        mensal: { price: '499,90', amount: 77.9, description: 'Plano NEVOEIRO710' },
+        mensal: { price: '389,90', amount: 77.9, description: 'Plano NEVOEIRO710' },
         semestral: { price: '580,90', amount: 280.9, description: 'Plano Semestral' },
         anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
     };
