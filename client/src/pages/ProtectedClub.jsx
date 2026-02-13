@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 
 import HeroHashLegal from "../components/HeroHashLegal";
 import FirstClub from "../components/FirstClub";
-import WelcomeClubVideo from "../components/WelcomeClubVideo";
 import VideoPlayer from "../components/VideoPlayer";
 import CannabisSlides from "../components/CannabisSlides";
 import GlassCardNacional from "../components/GlassCardNacional";
@@ -72,7 +71,7 @@ export default function WSCClub() {
     <div className="wsc-club-page">
       <FirstClub />
 
-      <WelcomeClubVideo />
+      
 
       <StepByStepInline />
 
