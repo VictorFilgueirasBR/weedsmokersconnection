@@ -49,7 +49,7 @@ export default function HowItWorksSection() {
         </motion.h2>
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
-          Basta conversar com a nossa IA. Caso o resultado do teste seja superior a 50%, vamos te guiar no passo a passo para
+          Basta fazer nosso teste de IA. Caso o resultado do teste seja superior a 50%, vamos te guiar no passo a passo para
           obter sua autorização e acesso aos melhores Médicos Prescritores e Fornecedores de produtos com THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds),
           Flores e Extrações de forma 100% legal, leve, rápida e descomplicada! Para isso, é só assinar o Weed Smoker Pass para conquistar mais saúde, liberdade, conexão e um estilo de vida mais leve e consciente.
         </motion.p>
