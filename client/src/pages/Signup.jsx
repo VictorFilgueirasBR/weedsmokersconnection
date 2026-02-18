@@ -74,7 +74,7 @@ export default function Signup() {
     }, [searchParams, navigate]);
 
     const planOptions = {
-        mensal: { price: '389,90', amount: 77.9, description: 'Plano NEVOEIRO710' },
+        mensal: { price: '399,90', amount: 77.9, description: 'Plano NEVOEIRO710' },
         semestral: { price: '580,90', amount: 280.9, description: 'Plano Semestral' },
         anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
     };
