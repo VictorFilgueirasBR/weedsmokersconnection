@@ -550,7 +550,7 @@ export default function Signup() {
                 <button
                     type="button"
                     className="submit-gradient-btn"
-                    onClick={() => window.open("https://wa.me/message/WQS3YHS6QHS2I1", "_blank")}
+                    onClick={() => window.open("https://www.instagram.com/wsconnectionbrasil/", "_blank")}
                     onMouseMove={handleMouseMove}
                 >
                     ATENDIMENTO WHATSAPP
