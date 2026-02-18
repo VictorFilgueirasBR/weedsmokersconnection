@@ -67,7 +67,7 @@ const Header = ({ onEditProfile, onShowPopup }) => {
           <>
             <Link to="/signup" onClick={handleLinkClick} translate="no" lang="en">Assinar</Link>
             <Link to="/login" onClick={handleLinkClick} translate="no" lang="en">Login</Link>
-            <Link to="https://www.instagram.com/wsconnectionbrasil/" onClick={handleLinkClick} translate="no" lang="en">Suporte</Link>
+            <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">Suporte</Link>
           </>
         ) : (
           <>
