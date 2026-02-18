@@ -553,7 +553,7 @@ export default function Signup() {
                     onClick={() => window.open("https://www.instagram.com/wsconnectionbrasil/", "_blank")}
                     onMouseMove={handleMouseMove}
                 >
-                    ATENDIMENTO WHATSAPP
+                    ATENDIMENTO
                 </button>
 
 
