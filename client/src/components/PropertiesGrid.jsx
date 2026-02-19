@@ -7,22 +7,22 @@ const propertiesData = [
     {
     id: 1,
     image: '/images/cannac.jpg',
-    title: 'KETAMA ICE (THC)',
+    title: 'KETAMA ICE (THCa)',
     location: '10g',
     price: 'WSC-E120',
     description: 'Fornecedor Importado (EUA) de Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
     cta: 'Saiba mais',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-e120/'
+    link: 'https://wa.me/5561995276936'
   },
     {
         id: 2,
         image: '/images/rosin-flower.png',
-        title: 'Rosin Hash (THC)',
+        title: 'Rosin Hash (THCa)',
         location: '10g',
         price: 'WSC-E118',
         description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(Frete incluso).',
         cta: 'Saiba mais',
-        link: 'https://ws-connectioncommerce.com/produto/wsc-e118/'
+        link: 'https://wa.me/5561995276936'
       },
     {
     id: 3,
@@ -32,12 +32,12 @@ const propertiesData = [
     price: 'WSC-E680',
     description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
     cta: 'Saiba mais',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-e680/'
+    link: 'https://wa.me/5561995276936'
   },
     {
     id: 4,
     image: '/images/hash-legalizado-anvisa.jpg',
-    title: 'Hash ICE (THC)',
+    title: 'Hash ICE (THCa)',
     location: '5g',
     price: 'WSC-E750',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
@@ -77,7 +77,7 @@ const propertiesData = [
   {
     id: 8,
     image: '/images/wsc-vape-thc.webp',
-    title: 'Refil THC puro',
+    title: 'Refil THCa puro',
     location: '1ml',
     price: 'WSC-W521',
     description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Epécies).',
@@ -102,7 +102,7 @@ const propertiesData = [
     price: 'Esgotada',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'Saiba mais',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
+    link: 'https://wa.me/5561995276936'
   },
     {
         id: 11,
@@ -112,7 +112,7 @@ const propertiesData = [
         price: 'WSC-C750',
         description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
         cta: 'Saiba mais',
-        link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
+        link: 'https://wa.me/5561995276936'
       },
     {
         id: 12,
@@ -122,7 +122,7 @@ const propertiesData = [
         price: 'WSC-C750',
         description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
         cta: 'Saiba mais',
-        link: 'https://ws-connectioncommerce.com/produto/wsc-f700/'
+        link: 'https://wa.me/5561995276936'
       },
     {
         id: 13,

@@ -66,7 +66,7 @@ const Header = ({ onEditProfile, onShowPopup }) => {
         {!isLoggedIn ? (
           <>
             <Link to="/signup" onClick={handleLinkClick} translate="no" lang="en">Assinar</Link>
-            <Link to="/login" onClick={handleLinkClick} translate="no" lang="en">Login</Link>
+            <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">Login</Link>
             <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">Suporte</Link>
           </>
         ) : (
