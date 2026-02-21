@@ -20,7 +20,7 @@ const propertiesData = [
         title: 'Rosin Hash (THCa)',
         location: '10g',
         price: 'WSC-E118',
-        description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.(Frete incluso).',
+        description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.',
         cta: 'Saiba mais',
         link: 'https://wa.me/5561995276936'
       },

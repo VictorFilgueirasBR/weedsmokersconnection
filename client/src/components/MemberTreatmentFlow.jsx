@@ -67,16 +67,15 @@ export default function MemberTreatmentFlow() {
             <h3 style={styles.optionTitle}>Opção 2: Com Fornecedor</h3>
             <p style={styles.optionText}>
               Apartir do seu segundo pedido damos a liberdade para que escolha um <strong>FORNECEDOR LEGALIZADO</strong> na plataforma e tenha
-              acesso a um catálogo premium de <strong> gummyes, FLORES DE DIVERSS ESPÉCIES, óleos e extrações de THC e CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds)</strong>. O
-              fornecedor conectará você a um médico prescritor dos seus medicamentos para continuar
-              o processo com segurança.
+              acesso a um catálogo premium de <strong> gummyes, Flores de Diversas Espécies, Óleos e Extrações ricas em THC, THCa e CBD (ICE, Bubble Hash, Rosin, Wax, FullSpectrum, Diamonds)</strong>. Para o
+              fornecimento de terceiros você poderá solicitar atualizações de seus de receita para pelo período contratado.
             </p>
           </div>
         </motion.div>
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
           Nosso objetivo é garantir que você tenha acesso a <strong>tratamentos
-          personalizados, com máxima qualidade</strong>, utilizando THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e Flores Indicas, Sativas e Híbridas — tudo de forma
+          personalizados, com máxima qualidade</strong>, utilizando THC, THCa, CBD (ICE, Bubble Hash, Rosin, Live Rosin, Wax, FullSpectrum, Diamonds) e Flores Indicas, Sativas e Híbridas — tudo de forma
           legal, simples, tranquila, descomplicada, SAUDÁVEL e com QUALIDADE.
         </motion.p>
       </motion.div>
