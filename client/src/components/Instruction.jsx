@@ -1,13 +1,13 @@
 // src/components/InstructionGlass.jsx
 import React, { useRef, useEffect } from "react";
 // Importando os ícones do React Icons (Font Awesome)
-import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import { FaWhatsapp, FaCommentDots } from 'react-icons/fa';
 
 export default function Instruction({
   title = "Seja bem-vindo ao CLUB",
   subtitle = "Entre em contato para instruções ou parcelamentos.",
   whatsappUrl = "https://wa.me/5561995276936",
-  telegramUrl = "https://t.me/+GvhYlf4XjFJiMzNh",
+  telegramUrl = "hhttps://signal.group/#CjQKIKc82owGqCZ5x8lLrGEHGKgymEAH3-BuKAqQad5ia_xnEhC8fCjMbEbUvhoj5DQ-flj_",
   backgroundImage = "/images/hemp222.jpeg", 
   contactTitle = "Fale Conosco",
   contactSubtitle = "Suporte | Dúvidas | Pagamentos",
@@ -78,8 +78,8 @@ export default function Instruction({
               style={styles.actionBtn}
             >
               {/* Ícone do Telegram (React Icon) */}
-              <FaTelegramPlane size={22} />
-              Telegram
+              <FaCommentDots size={22} />
+              Encrypted Chat
             </a>
           </div>
         </div>
