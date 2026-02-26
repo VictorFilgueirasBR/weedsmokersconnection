@@ -1,12 +1,11 @@
 import React from 'react';
 import ChatWsc from '../components/ChatWsc';
 
-export default function ChatWsc() {
+export default function ChatWscPage() {
   return (
-    <div className="chat-wsc-container">
+    <div className="chat-page-container">
       <style>{`
         .chat-page-container {
-          /* Para ocupar a tela toda e centralizar o chatbot */
           display: flex;
           justify-content: center;
           align-items: center;
