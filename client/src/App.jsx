@@ -14,7 +14,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import Profile from './pages/Profile';
 import ChatPage from './pages/ChatPage';
-import ChatWsc from './pages/ChatPage';
+import ChatWsc from './pages/ChatWsc';
 
 // ✅ IMPORT NECESSÁRIO PARA O CLUB POR LINK
 import WSCClub from "./pages/ProtectedClub";
@@ -81,7 +81,7 @@ export default function App() {
 
             <Route path="/chat" element={<ChatPage />} />
 
-            <Route path="/wsc" element={<ChatWscPage />} />
+            <Route path="/wsc" element={<ChatWsc />} />
           </Route>
 
           {/* Página de pagamento */}
