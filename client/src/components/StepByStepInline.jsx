@@ -10,18 +10,18 @@ const steps = [
   },
   {
     title: 'Como conseguir autorização e receita?',
-    description: 'Faça sua consulta com a profissional CERTA e autorizada que vai te receitar nossos produtos.',
+    description: 'Faça sua consulta com a profissional CERTA e autorizada que vai te atender da melhor forma em uma consulta exclusiva e personalizada.',
     status: 'completed',
   },
   {
     title: 'Escolha suas Flores e Extrações com THC',
     description:
-      'Flores em Natura, Extrações THC (Hash, ICE, Diamonds, Crumble, Gummyes) e também opções com CBD.',
+      'Flores em Natura, Extrações: THC, THCa, Δ9-THC ou Δ8-THC (Hash, ICE, Diamonds, Rosin, Wax, STATIC, Gummyes, Óleos diversos) e também opções com CBD, CBN, CBG.',
     status: 'current',
   },
   {
     title: 'Finalize seu pedido com segurança',
-    description: 'Receba a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 24 horas.',
+    description: 'Receba seu código de rastreamento com Seguro incluso e aguarde a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 34 horas.',
     status: 'upcoming',
   },
 ];
