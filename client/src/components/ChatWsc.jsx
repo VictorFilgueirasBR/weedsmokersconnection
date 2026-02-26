@@ -24,18 +24,18 @@ const menuSteps = [
   {
     step: 1,
     botMessage:
-      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o cardápio completo através do link abaixo:\n\n👉 <a href="https://SEULINKNACIONAL.com" target="_blank">CLIQUE AQUI PARA ACESSAR</a>',
+      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o cardápio completo através do link abaixo:\n\n👉 <a href="https://SEULINKNACIONAL.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
     isFinal: true,
   },
   {
     step: 2,
     botMessage:
-      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o cardápio completo através do link abaixo:\n\n👉 <a href="https://SEULINKIMPORTADO.com" target="_blank">CLIQUE AQUI PARA ACESSAR</a>',
+      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o cardápio completo através do link abaixo:\n\n👉 <a href="https://SEULINKIMPORTADO.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
     isFinal: true,
   },
 ];
 
-export default function ChatBot() {
+export default function ChatWsc() {
   const [messages, setMessages] = useState([
     { sender: "bot", text: menuSteps[0].botMessage },
   ]);

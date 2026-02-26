@@ -81,7 +81,7 @@ export default function App() {
 
             <Route path="/chat" element={<ChatPage />} />
 
-            <Route path="/chatwsc" element={<ChatWsc />} />
+            <Route path="/wsc" element={<ChatWsc />} />
           </Route>
 
           {/* Página de pagamento */}
