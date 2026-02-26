@@ -1,9 +1,9 @@
 import React from 'react';
-import ChatBot from '../components/ChatBot';
+import ChatWsc from '../components/ChatWsc';
 
 export default function ChatWsc() {
   return (
-    <div className="chat-page-container">
+    <div className="chat-wsc-container">
       <style>{`
         .chat-page-container {
           /* Para ocupar a tela toda e centralizar o chatbot */
