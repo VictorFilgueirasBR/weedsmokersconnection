@@ -5,23 +5,23 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     title: 'Assine e veja o Tutorial Rápido',
-    description: 'Aprenda rapidamente os principais pontos antes de seguir.',
+    description: 'Aprenda rapidamente os principais pontos antes de começar o seu tratamento da melhor forma, com consciência, RESPALDO MÉDICO, JURÍDICO E REGULATÓRIO garantido pela WS | Connection®. Fomentamos o acesso à informação de qualidade. Oque na prática te da a maior liberdade em variações de catálogos diversos do BRASIL & IMPORTADOS!',
     status: 'completed',
   },
   {
     title: 'Como conseguir autorização e receita?',
-    description: 'Faça sua consulta com a profissional CERTA e autorizada que vai te atender da melhor forma em uma consulta exclusiva e personalizada.',
+    description: 'Faça sua consulta com a profissional certa: A melhor médica endocanabinoide do Brasil, autorizada para atendê-lo(a) e fazer sua consulta de forma exclusiva e personalizada.',
     status: 'completed',
   },
   {
     title: 'Escolha suas Flores e Extrações com THC',
     description:
-      'Flores em Natura, Extrações: THC, THCa, Δ9-THC ou Δ8-THC (Hash, ICE, Diamonds, Rosin, Wax, STATIC, Gummyes, Óleos diversos) e também opções com CBD, CBN, CBG.',
+      'Flores em Natura, Extrações: THC, THCa, Δ9-THC ou Δ8-THC (Bubble-Hash, Fresh Frozen, Dry, Diamonds, Rosin, Wax, STATIC, Gummyes, Óleos diversos) e também opções com CBD, CBN, CBG.',
     status: 'current',
   },
   {
     title: 'Finalize seu pedido com segurança',
-    description: 'Receba seu código de rastreamento com Seguro incluso e aguarde a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 34 horas.',
+    description: 'Receba seu código de RASTREAMENTO com SEGURO TRANSPORTE INCLUSO e aguarde a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 36 horas.',
     status: 'upcoming',
   },
 ];
