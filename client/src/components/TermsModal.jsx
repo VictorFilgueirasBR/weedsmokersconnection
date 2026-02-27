@@ -180,7 +180,7 @@ export default function TermsModal({
               <li>
                 <strong>Acesso restrito e confidencialidade</strong>
                 <br />
-                O acesso é exclusivo para membros assinantes.
+                O acesso é exclusivo para contratantes/pacientes WS | Connection .
                 É vedado compartilhar logins, conteúdos, prints ou
                 informações fora da plataforma.
               </li>

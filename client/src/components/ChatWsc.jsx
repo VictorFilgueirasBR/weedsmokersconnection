@@ -24,13 +24,13 @@ const menuSteps = [
   {
     step: 1,
     botMessage:
-      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://SEULINKNACIONAL.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
+      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://wa.me/5561995276936?text=J%C3%A1%20sou%20paciente%20WS%20%7C%20Connection%C2%AE%20receitado%20e%20quero%20o%20conte%C3%BAdo%20institucional%20educativo%20sobre%20variedades%20do%20BRASIL%20PARA%20TRATAMENTO%20COM%20CANNABIS%20MEDICINAL.%20Pode%20me%20enviar%20por%20favor%3F" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
     isFinal: true,
   },
   {
     step: 2,
     botMessage:
-      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://SEULINKIMPORTADO.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
+      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://wa.me/5561995276936?text=J%C3%A1%20sou%20paciente%20WS%20%7C%20Connection%C2%AE%20receitado%20e%20quero%20o%20conte%C3%BAdo%20institucional%20educativo%20sobre%20variedades%20de%20IMPORTA%C3%87%C3%95ES%20PARA%20TRATAMENTO%20COM%20CANNABIS%20MEDICINAL.%20Pode%20me%20enviar%20por%20favor%3F" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
     isFinal: true,
   },
 ];
