@@ -7,7 +7,7 @@ const menuSteps = [
   {
     step: 0,
     botMessage:
-      "🌿 Bem-vindo ao nosso cardápio exclusivo.\n\nEscolha uma das opções abaixo para acessar:",
+      "🌿 Bem-vindo ao nosso conteúdo exclusivo para pacientes medicinais receitados.\n\nEscolha uma das opções abaixo para acessar:",
     userOptions: [
       {
         text: "NACIONAL",
@@ -24,13 +24,13 @@ const menuSteps = [
   {
     step: 1,
     botMessage:
-      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o cardápio completo através do link abaixo:\n\n👉 <a href="https://SEULINKNACIONAL.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
+      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://SEULINKNACIONAL.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
     isFinal: true,
   },
   {
     step: 2,
     botMessage:
-      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o cardápio completo através do link abaixo:\n\n👉 <a href="https://SEULINKIMPORTADO.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
+      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://SEULINKIMPORTADO.com" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
     isFinal: true,
   },
 ];
