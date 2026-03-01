@@ -12,7 +12,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-E750',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/556195276936'
   },
   {
@@ -22,7 +22,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-E222',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/556195276936'
   },
   {
@@ -32,7 +32,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-E125',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/556195276936'
   },
   {
@@ -42,7 +42,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-F880',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/556195276936'
   },
   {
@@ -52,7 +52,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-P275',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/556195276936'
   },
   {
@@ -62,7 +62,7 @@ const propertiesData = [
     location: '10g',
     price: 'Esgotada',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -72,7 +72,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-C750',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -82,7 +82,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-C750',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
-    cta: 'Saiba mais',
+    cta: 'PEDIR',
     link: 'https://wa.me/5561995276936'
   }
 ];

@@ -11,7 +11,7 @@ const propertiesUtilsData = [
     location: 'R$ 400,00',
     price: 'WSC-COMPLETE',
     description: 'Serviço de suporte e agenciamento para consulta médica + emissão de documentação pela ANVISA para importação legal.',
-    cta: 'Saiba mais',
+    cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/702/'
   },
   {
@@ -21,7 +21,7 @@ const propertiesUtilsData = [
     location: 'R$ 45,00',
     price: 'WSC-JET-BR',
     description: 'Logística de transporte para produtos nacionais. Trecho: Fornecedor - Centro de Distribuição - Seu endereço.',
-    cta: 'Saiba mais',
+    cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-jet-br/'
   },
   {
@@ -31,8 +31,28 @@ const propertiesUtilsData = [
     location: 'R$ 170,00',
     price: 'WSC-JET-USA',
     description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
-    cta: 'Saiba mais',
+    cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
+  },
+  {
+    id: 4,
+    image: '/images/wsc-bomb.png',
+    title: 'WSC | Import 5k',
+    location: 'R$ 5.000,00',
+    price: 'WSC-5k',
+    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    cta: 'Contratar',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
+  },
+  {
+    id: 5,
+    image: '/images/wsc-bomb.png',
+    title: 'WSC | Import 10k',
+    location: 'R$ 10.000,00',
+    price: 'WSC-10k',
+    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    cta: 'Contratar',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   }
 ];
 
