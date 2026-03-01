@@ -8,82 +8,82 @@ const propertiesData = [
   {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
-    title: 'Hash ICE (THCa)',
+    title: 'Hash ICE | THC',
     location: '5g',
     price: 'WSC-E750',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://wa.me/556195276936'
+    link: 'https://abecmed.com.br/'
   },
   {
     id: 2,
     image: '/images/beautiful-buds.jpg',
-    title: 'Flores HK (THC)',
+    title: 'Flores HK | THC',
     location: '10g',
     price: 'WSC-E222',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://wa.me/556195276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
   {
     id: 3,
     image: '/images/club-flores.jpeg',
-    title: 'Flores Z-Kittlez Pie (THC)',
+    title: 'Flores Z-Kittlez Pie | THC',
     location: '5g',
     price: 'WSC-E125',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://wa.me/556195276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
   {
     id: 4,
     image: '/images/hash-legalizado-anvisa-capa.jpg',
-    title: 'Hash ICE - 24K (THC)',
+    title: 'Hash ICE 24K | THC',
     location: '5g',
     price: 'WSC-F880',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://wa.me/556195276936'
+    link: 'https://abecmed.com.br/'
   },
   {
     id: 5,
     image: '/images/buds-pp-alianca.png',
-    title: 'Buds PP (THC)',
+    title: 'Buds PP | THC',
     location: '5g',
     price: 'WSC-P275',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
     cta: 'PEDIR',
-    link: 'https://wa.me/556195276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
   {
     id: 6,
     image: '/images/cherry-pie-nacional.png',
-    title: 'Cherry Pie Purple (THC)',
+    title: 'Cherry Pie Purple | THC',
     location: '10g',
-    price: 'Esgotada',
+    price: 'WSC-f265',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
-    cta: 'PEDIR',
+    cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
   {
     id: 7,
     image: '/images/wsc-flower-24k.png',
-    title: '24K | Gold (THC)',
+    title: '24K Gold | THC',
     location: '10g',
     price: 'WSC-C750',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
   {
     id: 8,
     image: '/images/wsc-flower-kk.png',
-    title: 'Cherry Pie Homie (THC)',
+    title: 'Cherry Pie Homie | THC',
     location: '10g',
     price: 'WSC-C750',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   }
 ];
 
