@@ -96,11 +96,12 @@ export default function WSCClub() {
       {/* IDs internos para suporte às âncoras */}
       <PropertiesGrid id="properties-grid" />
 
+      <ListNacional />
+
       <PropertiesUtils id="properties-utils" />
 
       <PropertiesImp id="properties-imp" />
 
-      <ListNacional />
 
       <IceSection />
 
