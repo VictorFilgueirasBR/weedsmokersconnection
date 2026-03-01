@@ -61,7 +61,7 @@ const Header = ({ onEditProfile, onShowPopup }) => {
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | HOME</Link>
         {/* LÓGICA CORRIGIDA: MOSTRA "SOBRE" SOMENTE SE NÃO ESTIVER LOGADO */}
-        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>wsc | TEST IA</Link>}
+        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>WSC | TEST IA</Link>}
 
         {!isLoggedIn ? (
           <>
