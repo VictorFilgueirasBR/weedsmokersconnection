@@ -1,22 +1,23 @@
 /* client/src/components/PropertiesImp.scss - Estilo para o Grid de Importados */
 
-/* Variáveis (paleta luxuosa branca, mantendo gradiente original do botão e preço) */
-$text-color-light: #ffffff; // Texto principal branco
-$text-color-dark: #333333; // Texto secundário escuro
-$glass-card-bg: rgba(255, 255, 255, 0.03); // Fundo sutil para cards (luxuoso)
-$glass-card-border: rgba(255, 255, 255, 0.2); // Borda sutil para cards
-$card-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); // Sombra mais suave
-$accent-color-light: #686868; // Cor de destaque para título (bege dourado)
+$text-color-light: #ffffff;
+$text-color-dark: #333333;
+$glass-card-bg: rgba(255, 255, 255, 0.03);
+$glass-card-border: rgba(255, 255, 255, 0.2);
+$card-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+$accent-color-light: #686868;
 
-/* Gradiente do botão e do preço permanece igual ao original */
 $primary-gradient-start: rgba(160, 236, 250, 0.7);
 $primary-gradient-end: rgba(30, 77, 94, 0.75);
 
 .properties-imp-section {
   padding: 4rem 2rem;
-  background-color: #f8f8f8; // Fundo branco luxuoso
+  background-color: #f8f8f8;
   color: $text-color-dark;
   text-align: center;
+
+  /* Implementação para âncora não ficar colada no topo */
+  scroll-margin-top: 100px;
 
   .section-title {
     display: inline-block;
@@ -90,7 +91,7 @@ $primary-gradient-end: rgba(30, 77, 94, 0.75);
     padding: 0.4rem 0.8rem;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.85rem; // Reduzi levemente para caber "% CANAB." melhor
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -107,11 +108,14 @@ $primary-gradient-end: rgba(30, 77, 94, 0.75);
 
   .property-title {
     font-family: 'Satoshi', sans-serif;
-    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: $accent-color-light;
     line-height: 1.2;
+    min-height: 3.6rem; // Mantém alinhamento entre cards
+    display: flex;
+    align-items: center;
   }
 
   .property-location {
@@ -162,35 +166,12 @@ $primary-gradient-end: rgba(30, 77, 94, 0.75);
 }
 
 /* Responsividade */
-@media (max-width: 1200px) {
-  .properties-imp-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .properties-imp-section { padding: 3rem 1.5rem; }
-  .properties-imp-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.8rem;
-  }
-  .property-image-wrapper { height: 180px; }
-  .property-info { padding: 1.2rem; }
-}
-
 @media (max-width: 768px) {
   .properties-imp-section {
     padding: 2.5rem 1rem;
-    .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
   }
   .properties-imp-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-}
-
-@media (max-width: 480px) {
-  .property-image-wrapper { height: 160px; }
-  .property-description { -webkit-line-clamp: 2; }
 }
