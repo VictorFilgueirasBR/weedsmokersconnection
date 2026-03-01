@@ -20,7 +20,7 @@ const propertiesData = [
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-710',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
@@ -30,7 +30,7 @@ const propertiesData = [
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-710',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
@@ -50,7 +50,7 @@ const propertiesData = [
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-710',
     description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
@@ -70,7 +70,7 @@ const propertiesData = [
     image: '/images/wsc-flower-24k.png',
     title: '24K Gold | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-710',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
@@ -80,7 +80,7 @@ const propertiesData = [
     image: '/images/wsc-flower-kk.png',
     title: 'Cherry Pie Homie | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-710',
     description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
