@@ -59,15 +59,15 @@ const Header = ({ onEditProfile, onShowPopup }) => {
       </div>
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={handleLinkClick} translate="no" lang="en">Home</Link>
+        <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | HOME</Link>
         {/* LÓGICA CORRIGIDA: MOSTRA "SOBRE" SOMENTE SE NÃO ESTIVER LOGADO */}
-        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>Teste IA</Link>}
+        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>TEST IA</Link>}
 
         {!isLoggedIn ? (
           <>
-            <Link to="/signup" onClick={handleLinkClick} translate="no" lang="en">Assinar</Link>
-            <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">Login</Link>
-            <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">Suporte</Link>
+            <Link to="/signup" onClick={handleLinkClick} translate="no" lang="en">WSC | PLANS</Link>
+            <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>
+            <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPORT</Link>
           </>
         ) : (
           <>
