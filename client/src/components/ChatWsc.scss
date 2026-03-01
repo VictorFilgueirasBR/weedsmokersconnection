@@ -174,7 +174,7 @@
 }
 
 /* ======== BOTÃO FINAL PREMIUM WS ======== */
-.property-cta {
+.property-wsc {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +209,7 @@
 }
 
 /* Hover */
-.property-cta:hover {
+.property-wsc:hover {
   transform: translateY(-3px) scale(1.05);
 
   box-shadow:
@@ -219,6 +219,6 @@
 }
 
 /* Active click */
-.property-cta:active {
+.property-wsc:active {
   transform: scale(0.97);
 }

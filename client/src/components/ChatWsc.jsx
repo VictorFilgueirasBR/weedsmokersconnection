@@ -28,7 +28,7 @@ const menuSteps = [
         href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid"
         target="_blank"
         rel="noopener noreferrer"
-        className="property-cta"
+        className="property-wsc"
       >
         Conteúdo Exclusívo
       </a>
@@ -42,7 +42,7 @@ const menuSteps = [
         href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp"
         target="_blank"
         rel="noopener noreferrer"
-        className="property-cta"
+        className="property-wsc"
       >
         Conteúdo Exclusívo
       </a>
