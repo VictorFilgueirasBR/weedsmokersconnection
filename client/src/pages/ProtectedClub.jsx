@@ -32,6 +32,19 @@ export default function WSCClub() {
 
     if (token === SECRET_ACCESS_TOKEN) {
       setHasAccess(true);
+
+      // --- IMPLEMENTAÇÃO DA ÂNCORA ---
+      const hash = window.location.hash;
+      if (hash) {
+        // Pequeno delay para garantir que os componentes foram renderizados após a liberação do acesso
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 600); 
+      }
+      // -------------------------------
     }
 
     setChecked(true);
@@ -80,11 +93,12 @@ export default function WSCClub() {
 
       <Instruction />
 
-      <PropertiesGrid />
+      {/* IDs internos para suporte às âncoras */}
+      <PropertiesGrid id="properties-grid" />
 
-      <PropertiesUtils />
+      <PropertiesUtils id="properties-utils" />
 
-      <PropertiesImp />
+      <PropertiesImp id="properties-imp" />
 
       <ListNacional />
 
