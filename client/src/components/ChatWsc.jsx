@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaFlag, FaGlobe } from "react-icons/fa";
 import "./ChatBot.scss";
 
-// Novo fluxo simples de cardápio
+// ======== MENU FLOW ========
 const menuSteps = [
   {
     step: 0,
@@ -23,14 +23,30 @@ const menuSteps = [
   },
   {
     step: 1,
-    botMessage:
-      '🇧🇷 Você escolheu **NACIONAL**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://wa.me/5561995276936?text=J%C3%A1%20sou%20paciente%20WS%20%7C%20Connection%C2%AE%20receitado%20e%20quero%20o%20conte%C3%BAdo%20institucional%20educativo%20sobre%20variedades%20do%20BRASIL%20PARA%20TRATAMENTO%20COM%20CANNABIS%20MEDICINAL.%20Pode%20me%20enviar%20por%20favor%3F" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
+    botMessage: (
+      <a
+        href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="property-cta"
+      >
+        Conteúdo Exclusívo
+      </a>
+    ),
     isFinal: true,
   },
   {
     step: 2,
-    botMessage:
-      '🌎 Você escolheu **IMPORTADO**.\n\nAcesse o conteúdo completo através do link abaixo:\n\n👉 <a href="https://wa.me/5561995276936?text=J%C3%A1%20sou%20paciente%20WS%20%7C%20Connection%C2%AE%20receitado%20e%20quero%20o%20conte%C3%BAdo%20institucional%20educativo%20sobre%20variedades%20de%20IMPORTA%C3%87%C3%95ES%20PARA%20TRATAMENTO%20COM%20CANNABIS%20MEDICINAL.%20Pode%20me%20enviar%20por%20favor%3F" target="_blank" rel="noopener noreferrer">CLIQUE AQUI PARA ACESSAR</a>',
+    botMessage: (
+      <a
+        href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="property-cta"
+      >
+        Conteúdo Exclusívo
+      </a>
+    ),
     isFinal: true,
   },
 ];
@@ -39,6 +55,7 @@ export default function ChatWsc() {
   const [messages, setMessages] = useState([
     { sender: "bot", text: menuSteps[0].botMessage },
   ]);
+
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(0);
   const [particles, setParticles] = useState([]);
@@ -100,7 +117,6 @@ export default function ChatWsc() {
 
   return (
     <div className="chatbot-page">
-      {/* Partículas */}
       {particles.map((p) => (
         <div
           key={p.id}
@@ -116,21 +132,20 @@ export default function ChatWsc() {
       ))}
 
       <div className="chatbot-main">
-        {/* Área de mensagens */}
         <div className="chatbot-left">
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`message ${msg.sender}`}
-                dangerouslySetInnerHTML={{ __html: msg.text }}
-              />
+              >
+                {msg.text}
+              </div>
             ))}
             {loading && <div className="typing">Digitando...</div>}
           </div>
         </div>
 
-        {/* Botões */}
         {renderContent()}
       </div>
     </div>

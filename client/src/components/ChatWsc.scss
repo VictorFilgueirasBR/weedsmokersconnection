@@ -172,3 +172,24 @@
     height: 350px;
   }
 }
+
+/* ======== BOTÃO FINAL ======== */
+.property-cta {
+  align-self: flex-start;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(129.981deg, #00c96b 0%, #00ff84 100%);
+  color: #000 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.property-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
