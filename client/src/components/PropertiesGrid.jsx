@@ -4,38 +4,9 @@ import './PropertiesGrid.scss';
 
 // Dados dos imóveis com as imagens fornecidas e informações atualizadas
 const propertiesData = [
+  
   {
     id: 1,
-    image: '/images/cannac.jpg',
-    title: 'KETAMA ICE (THCa)',
-    location: '10g',
-    price: 'WSC-E120',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
-    cta: 'Saiba mais',
-    link: 'https://wa.me/5561995276936'
-  },
-  {
-    id: 2,
-    image: '/images/rosin-flower.png',
-    title: 'Rosin Hash (THCa)',
-    location: '10g',
-    price: 'WSC-E118',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA.',
-    cta: 'Saiba mais',
-    link: 'https://wa.me/5561995276936'
-  },
-  {
-    id: 3,
-    image: '/images/hash-ice-import.png',
-    title: 'Bubble Hash (D-8)',
-    location: '5g',
-    price: 'WSC-E680',
-    description: 'Fornecedor Importado (EUA) de Extrações tipo ICE com THC legalizado pela ANVISA. CannCalm Delta-8 Bubble Hash – 3150 mg / 10g.',
-    cta: 'Saiba mais',
-    link: 'https://wa.me/5561995276936'
-  },
-  {
-    id: 4,
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash ICE (THCa)',
     location: '5g',
@@ -45,7 +16,7 @@ const propertiesData = [
     link: 'https://wa.me/556195276936'
   },
   {
-    id: 5,
+    id: 2,
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK (THC)',
     location: '10g',
@@ -55,7 +26,7 @@ const propertiesData = [
     link: 'https://wa.me/556195276936'
   },
   {
-    id: 6,
+    id: 3,
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie (THC)',
     location: '5g',
@@ -65,7 +36,7 @@ const propertiesData = [
     link: 'https://wa.me/556195276936'
   },
   {
-    id: 7,
+    id: 4,
     image: '/images/hash-legalizado-anvisa-capa.jpg',
     title: 'Hash ICE - 24K (THC)',
     location: '5g',
@@ -75,17 +46,7 @@ const propertiesData = [
     link: 'https://wa.me/556195276936'
   },
   {
-    id: 8,
-    image: '/images/wsc-vape-thc.webp',
-    title: 'Refil THCa puro',
-    location: '1ml',
-    price: 'WSC-W521',
-    description: 'Fornecedor Importado (EU) de Extrações com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'Saiba mais',
-    link: 'https://wa.me/556195276936'
-  },
-  {
-    id: 9,
+    id: 5,
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP (THC)',
     location: '5g',
@@ -95,7 +56,7 @@ const propertiesData = [
     link: 'https://wa.me/556195276936'
   },
   {
-    id: 10,
+    id: 6,
     image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple (THC)',
     location: '10g',
@@ -105,7 +66,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 11,
+    id: 7,
     image: '/images/wsc-flower-24k.png',
     title: '24K | Gold (THC)',
     location: '10g',
@@ -115,7 +76,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 12,
+    id: 8,
     image: '/images/wsc-flower-kk.png',
     title: 'Cherry Pie Homie (THC)',
     location: '10g',
