@@ -28,7 +28,7 @@ const propertiesData = [
   {
     id: 3,
     image: '/images/club-flores.jpeg',
-    title: 'Flores Z-Kittlez Pie | THC',
+    title: 'Flores Z-Kittlez Pie THC',
     location: '5g',
     price: 'WSC-E125',
     description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
