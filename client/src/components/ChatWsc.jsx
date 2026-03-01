@@ -7,7 +7,7 @@ const menuSteps = [
   {
     step: 0,
     botMessage:
-      "🌿 Bem-vindo ao nosso conteúdo exclusivo para pacientes medicinais receitados.\n\nEscolha uma das opções abaixo para acessar:",
+      "🌿 Bem-vindo ao nosso conteúdo exclusivo para pacientes medicinais receitados.\n\nEscolha uma das opções abaixo para acessar",
     userOptions: [
       {
         text: "NACIONAL",
