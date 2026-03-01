@@ -173,23 +173,52 @@
   }
 }
 
-/* ======== BOTÃO FINAL ======== */
+/* ======== BOTÃO FINAL PREMIUM WS ======== */
 .property-cta {
-  align-self: flex-start;
-  padding: 0.8rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 1.8rem;
   font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 50px;
-  background: linear-gradient(129.981deg, #00c96b 0%, #00ff84 100%);
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  border-radius: 60px;
+  border: 1px solid rgba(0, 255, 132, 0.6);
+
+  background: linear-gradient(
+    135deg,
+    #00ff84 0%,
+    #00d46f 40%,
+    #00b35c 100%
+  );
+
   color: #000 !important;
   text-transform: uppercase;
   text-decoration: none;
-  transition: all 0.2s ease;
-  display: inline-block;
-  margin-top: 8px;
+
+  box-shadow:
+    0 0 10px rgba(0, 255, 132, 0.6),
+    0 0 25px rgba(0, 255, 132, 0.4),
+    inset 0 0 8px rgba(255, 255, 255, 0.3);
+
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  backdrop-filter: blur(4px);
 }
 
+/* Hover */
 .property-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow:
+    0 0 15px rgba(0, 255, 132, 0.9),
+    0 0 35px rgba(0, 255, 132, 0.6),
+    inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Active click */
+.property-cta:active {
+  transform: scale(0.97);
 }
