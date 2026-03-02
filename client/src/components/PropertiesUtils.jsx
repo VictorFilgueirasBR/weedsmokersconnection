@@ -58,12 +58,12 @@ const propertiesUtilsData = [
   {
     id: 6,
     image: '/images/wsc-bomb.png',
-    title: 'WSC | Import 10k',
+    title: 'WSC | Import 20k',
     location: 'R$ 20.000,00',
     price: 'WSC-20k',
     description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-support-20k/'
   }
 ];
 
