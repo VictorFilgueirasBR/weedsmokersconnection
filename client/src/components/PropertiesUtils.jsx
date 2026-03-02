@@ -42,7 +42,7 @@ const propertiesUtilsData = [
     price: 'WSC-5k',
     description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   },
   {
     id: 5,
@@ -50,6 +50,17 @@ const propertiesUtilsData = [
     title: 'WSC | Import 10k',
     location: 'R$ 10.000,00',
     price: 'WSC-10k',
+    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    cta: 'Contratar',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
+  },
+  ,
+  {
+    id: 6,
+    image: '/images/wsc-bomb.png',
+    title: 'WSC | Import 10k',
+    location: 'R$ 20.000,00',
+    price: 'WSC-20k',
     description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'

@@ -85,6 +85,16 @@ const propertiesData = [
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
+  {
+    id: 9,
+    image: '/images/wsc-nacional-12.png',
+    title: 'Hash ICE 24K | THC',
+    location: '5g',
+    price: 'WSC-DIRECT',
+    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    cta: 'PEDIR',
+    link: 'https://abecmed.com.br/'
+  },
 ];
 
 const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
