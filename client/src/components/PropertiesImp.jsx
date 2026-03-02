@@ -20,7 +20,7 @@ const propertiesImpData = [
     title: 'Hemp Oil Gold THCa',
     location: '5g',
     price: 'WSC-989',
-    description: 'Extrações tipo HEMP OIL com THC/THCa legalizado pela ANVISA. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
+    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
@@ -30,7 +30,7 @@ const propertiesImpData = [
     title: 'Hemp Oil Gold CBD',
     location: '5g',
     price: 'WSC-789',
-    description: 'Extrações tipo HEMP OIL com CBD legalizado pela ANVISA. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO DE BEM ESTAR.',
+    description: 'HEMP OIL Budder CBD. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO DE BEM ESTAR.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd/'
   },
@@ -40,7 +40,7 @@ const propertiesImpData = [
     title: 'Hemp Oil Seryng THCa',
     location: '1ml',
     price: 'WSC-529',
-    description: 'Extrações Hemp Oil com THC/THCa legalizado pela ANVISA. Extração líquida de alta pureza perfil terpenico fiel à OG KUSH.',
+    description: 'Hemp Oil THC/THCa. Extração líquida de alta pureza perfil terpenico fiel à OG KUSH.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-529/'
   },
@@ -50,7 +50,7 @@ const propertiesImpData = [
     title: 'Hemp Oil Seryng CBD',
     location: '1ml',
     price: 'WSC-469',
-    description: 'Extrações Hemp Oil com CBD legalizado pela ANVISA. Extração líquida de alta pureza perfil terpenico fiel à OG KUSH.',
+    description: 'Hemp Oil CBD. Extração líquida de alta pureza perfil terpenico fiel à OG KUSH.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-469/'
   },
