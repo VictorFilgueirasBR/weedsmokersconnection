@@ -117,7 +117,7 @@ $primary-gradient-end: rgba(30, 77, 94, 0.75);
     /* Garante que títulos de 1 ou 2 linhas mantenham o card alinhado */
     min-height: 3.5rem; 
     display: flex;
-    align-items: center;
+    align-items: start;
   }
 
   .property-location {
