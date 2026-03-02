@@ -87,7 +87,7 @@ const propertiesData = [
   },
 ];
 
-const PropertiesGrid = ({ title = 'WSC Nacional', id = 'properties-grid' }) => {
+const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
   if (!propertiesData || propertiesData.length === 0) return null;
 
   return (
