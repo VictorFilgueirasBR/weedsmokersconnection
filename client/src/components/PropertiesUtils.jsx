@@ -56,7 +56,7 @@ const propertiesUtilsData = [
   }
 ];
 
-const PropertiesUtils = ({ title = 'Serviços & Logística', id = 'properties-utils' }) => {
+const PropertiesUtils = ({ title = 'WS | Services', id = 'properties-utils' }) => {
   if (!propertiesUtilsData || propertiesUtilsData.length === 0) return null;
 
   return (

@@ -51,7 +51,7 @@ const propertiesData = [
     title: 'Buds PP | THC',
     location: '10g',
     price: 'WSC-710',
-    description: 'Fornecedor Nacional (BR) de Flores com THC com buds pequenos.(Entrega qualidade porém buds pequenos).',
+    description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
@@ -61,7 +61,7 @@ const propertiesData = [
     title: 'Cherry Pie Purple | THC',
     location: '10g',
     price: 'WSC-SOLDOUT',
-    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
+    description: 'Fornecedor Nacional de Flores com THC alto nível de concentração. (O valor pode variar de acordo com as Espécies).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
@@ -71,7 +71,7 @@ const propertiesData = [
     title: '24K Gold | THC',
     location: '10g',
     price: 'WSC-710',
-    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
+    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
@@ -81,7 +81,7 @@ const propertiesData = [
     title: 'Cherry Pie Homie | THC',
     location: '10g',
     price: 'WSC-710',
-    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração.(Esse fornecedor tem mais de 5 Espécies diferentes).',
+    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },

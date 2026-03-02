@@ -14,7 +14,7 @@ export default function CreditGlassCard({
   amount = " ",
   delta = "R$300,00",
   subtitle = "Consulta | Terapia | Receita | Tratamentos",
-  last4 = "ver",
+  last4 = "wsc",
 }) {
   const cardRef = useRef(null);
 
@@ -69,7 +69,11 @@ export default function CreditGlassCard({
               <a href="#" style={styles.viewLink}> </a>
             </div>
 
-            <button className="glass-btn" style={styles.editBtn}>
+            <button
+              className="glass-btn"
+              style={styles.editBtn}
+              onClick={() => window.open("https://wa.me/message/WQS3YHS6QHS2I1", "_blank")}
+            >
               Agendar
               <svg
                 width="16"
