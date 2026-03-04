@@ -65,7 +65,7 @@ const propertiesImpData = [
     link: 'https://wa.me/5561995276936'
   },
   { id: 5, image: '/images/wsc-import-1.png', title: 'Piatella | D9', location: '3g', price: 'WSC-879', description: 'Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-879/' },
-  { id: 6, image: '/images/wsc-import-2.png', title: '00 SIFT | D9', location: '3g', price: 'WSC-00.', description: 'Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/00/' },
+  { id: 6, image: '/images/wsc-import-2.png', title: '00 SIFT | D9', location: '3g', price: 'WSC-749', description: 'Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/00/' },
   { id: 7, image: '/images/wsc-import-3.png', title: 'Gold Seal | D9', location: '3g', price: 'WSC-759', description: 'Concentrado artesanal que celebra os métodos afegãos de resinas prensadas à mão. (70,11% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-759/' },
   { id: 8, image: '/images/wsc-import-4.png', title: 'THCA Sugar | D9', location: '3g', price: 'WSC-849', description: 'Concentrado premium de cera cristalizada com alto teor de THCA. (80,08% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
   { id: 9, image: '/images/wsc-import-5.png', title: 'Ketama Gold | D9', location: '3g', price: 'WSC-719', description: 'Textura suave e cremosa com tons dourados, processo de altíssima qualidade. (70,64% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-719/' },
