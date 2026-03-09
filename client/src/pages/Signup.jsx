@@ -12,7 +12,7 @@ export default function Signup() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState({ type: '', text: '' });
 
-    const [selectedPlan, setSelectedPlan] = useState('mensal');
+    const [selectedPlan, setSelectedPlan] = useState('semestral');
 
     const [couponCode, setCouponCode] = useState('');
     const [discountPercent, setDiscountPercent] = useState(0);
@@ -30,7 +30,6 @@ export default function Signup() {
        EDITE AQUI
     ========================= */
     const planCheckoutLinks = {
-        mensal: "https://ws-connectioncommerce.com/produto/wsc-signature-mensal/",
         semestral: "https://ws-connectioncommerce.com/produto/wsc-signature-semestral/",
         anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/"
     };
@@ -74,7 +73,6 @@ export default function Signup() {
     }, [searchParams, navigate]);
 
     const planOptions = {
-        mensal: { price: '449,90', amount: 77.9, description: 'Plano NEVOEIRO710' },
         semestral: { price: '499,90', amount: 280.9, description: 'Plano Semestral' },
         anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
     };
@@ -487,7 +485,34 @@ export default function Signup() {
                 <div className="signup-content">
                     <h1>Assine e Desbloqueie o Futuro da Sua Cura</h1>
 
-                    <div className="signup-highlight-box"> <p> Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a: </p> <ul className="highlight-list"> <li className="highlight-item"> <FaHandshake /> <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span> </li> <li className="highlight-item"> <FaCannabis /> <span>As melhores Espécies de Flores em Natura e Extrações do mercado: THC (ICE, Hash, Rosin, FullSpectrum, Diamonds), Gummies de THC, CBD e muito mais.</span> </li> <li className="highlight-item"> <FaCheckCircle /> <span>Como assinante, você entra para um círculo seleto que recebe um catálogo atualizado de fornecedores mensalmente, assim como SUPORTE para agendamento de consultas, compra e pós venda da aquisição de produtos.</span> </li> <li className="highlight-item"> <FaCheckCircle /> <span>A sua consulta Médica já está inclusa no valor do plano, oque muda é o tempo de acesso a área de membros com catálogo atualizado.</span> </li> </ul> <p> Tudo em um só lugar, pensado para sua cura, liberdade e lifestyle leve. Essa é sua chance de fazer parte de algo único. Acesso imediato a todas as novidades liberadas nos catálogos de THC (Flores em Natura, ICE, Hash, Rosin, FullSpectrum, Diamonds) e CBD, promovendo saúde e consciência. </p> </div> 
+                    <div className="signup-highlight-box">
+                        <p> Cadastre-se em segundos e tenha acesso imediato a um ecossistema exclusivo que conecta você a: </p>
+
+                        <ul className="highlight-list">
+
+                            <li className="highlight-item">
+                                <FaHandshake />
+                                <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span>
+                            </li>
+
+                            <li className="highlight-item">
+                                <FaCannabis />
+                                <span>As melhores Espécies de Flores em Natura e Extrações do mercado.</span>
+                            </li>
+
+                            <li className="highlight-item">
+                                <FaCheckCircle />
+                                <span>Catálogo atualizado de fornecedores mensalmente.</span>
+                            </li>
+
+                            <li className="highlight-item">
+                                <FaCheckCircle />
+                                <span>Consulta médica já inclusa no valor do plano.</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
                 </div>
 
                 {submitMessage.text && (
@@ -501,7 +526,7 @@ export default function Signup() {
                     <h2>Escolha Seu Plano</h2>
 
                     <div className="plans-wrapper">
-                        {['mensal', 'semestral', 'anual'].map((plan) => (
+                        {['semestral', 'anual'].map((plan) => (
                             <div
                                 key={plan}
                                 onClick={() => setSelectedPlan(plan)}
@@ -513,18 +538,13 @@ export default function Signup() {
                                     <span className="currency">R$</span>
                                     <span className="main-price">{planOptions[plan].price}</span>
                                     <span className="duration">
-                                        {plan === 'anual'
-                                            ? '/ Ano'
-                                            : plan === 'mensal'
-                                            ? '/ Semestre'
-                                            : '/ Semestre'}
+                                        {plan === 'anual' ? '/ Ano' : '/ Semestre'}
                                     </span>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* ✅ BOTÃO ALTERADO */}
                     <button
                         type="button"
                         className="submit-gradient-btn"
@@ -535,7 +555,6 @@ export default function Signup() {
                     </button>
 
                 </div>
-
 
             </div>
         </div>
