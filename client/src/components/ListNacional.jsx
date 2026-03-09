@@ -6,10 +6,6 @@ const fornecedores = [
     link: "https://abecmed.com.br/"
   },
   {
-    nome: "ASPAEC Brasil",
-    link: "https://acesso.aspaec.com/AreaAssociados/MinhaConta/CadastroAssociadoPF"
-  },
-  {
     nome: "Aliança Medicinal Brasil",
     link: "https://www.aliancamedicinal.org/"
   },
