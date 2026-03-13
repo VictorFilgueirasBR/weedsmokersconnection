@@ -73,7 +73,7 @@ export default function Signup() {
     }, [searchParams, navigate]);
 
     const planOptions = {
-        semestral: { price: '489,90', amount: 280.9, description: 'Plano Semestral' },
+        semestral: { price: '449,90', amount: 280.9, description: 'Plano Semestral' },
         anual: { price: '767,90', amount: 467.9, description: 'Plano Anual' }
     };
 
