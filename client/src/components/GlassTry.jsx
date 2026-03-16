@@ -9,7 +9,7 @@ import React, { useRef, useEffect } from "react";
  */
 export default function CreditGlassCard({
   backgroundImage = "/images/medicine-guide-club.jpeg", // fundo simples (troque se quiser)
-  name = "Dra. Natália",
+  name = "Médicos",
   currency = "Consulta",
   amount = " ",
   delta = "R$300,00",

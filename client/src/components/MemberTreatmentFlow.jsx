@@ -55,7 +55,7 @@ export default function MemberTreatmentFlow() {
             <User size={36} style={styles.icon} />
             <h3 style={styles.optionTitle}>Opção 1: Com Médico</h3>
             <p style={styles.optionText}>
-              Agende a sua consulta com a <strong>Médica de confiança do CLUB, DRA. NATÁLIA </strong>  logo abaixo. Ela
+              Agende a sua consulta com a <strong>Médicos de confiança do CLUB </strong>  logo abaixo. Ela
               indicará os fornecedores dos produtos que receita, garantindo
               qualidade e acesso seguro às medicações aprovadas pela ANVISA. <strong>RECOMENDAMOS QUE NA SUA PRIMEIRA CONSULTA SEJA FEITA COM ESSA OPÇÃO. </strong>
             </p>
