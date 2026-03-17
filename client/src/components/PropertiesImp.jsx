@@ -89,7 +89,7 @@ const propertiesImpData = [
   { id: 27, image: '/images/wsc-import-15.png', title: 'Bubble Hash Blackberry CBD', location: '10g', price: 'WSC-1249', description: 'Feito com água gelada para separar os tricomas. Relaxamento. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
   { id: 28, image: '/images/wsc-import-15.png', title: 'Bubble Hash Chocolope CBD', location: '10g', price: 'WSC-1249', description: 'Alto teor de canabinoides. Genética Chocolope (Sativa): Euforia. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
   { id: 29, image: '/images/wsc-import-15.png', title: 'Bubble Hash Wedding Cake CBD', location: '10g', price: 'WSC-1249', description: 'Genética Wedding Cake (Híbrida): Relaxamento e equilíbrio. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
-  { id: 30, image: '/images/wsc-import-16.png', title: 'Vegan Gummies Sleep CBD', location: '113g', price: 'WSC-529', description: 'Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
+  { id: 30, image: '/images/wsc-import-16.png', title: 'Vegan Gummies Sleep CBD', location: '113g', price: 'WSC-529', description: 'Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
   { id: 31, image: '/images/wsc-import-17.png', title: 'CBN Tincture Sleep CBD', location: '30ml', price: 'WSC-629', description: 'Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' }
 ];
 
