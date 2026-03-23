@@ -8,12 +8,12 @@ const propertiesData = [
   {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
-    title: 'Hash ICE | THC',
+    title: 'Hash Full spectrum | THC',
     location: '5g',
-    price: 'WSC-DIRECT',
+    price: 'WSC-769,00',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 2,
@@ -38,12 +38,12 @@ const propertiesData = [
   {
     id: 4,
     image: '/images/hash-legalizado-anvisa-capa.jpg',
-    title: 'Hash ICE 24K | THC',
+    title: 'Hash Full spectrum | THC',
     location: '5g',
-    price: 'WSC-DIRECT',
+    price: 'WSC-849,90',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 5,
@@ -88,12 +88,12 @@ const propertiesData = [
   {
     id: 9,
     image: '/images/wsc-nacional-12.png',
-    title: 'Hash ICE SIFT | THC',
+    title: 'Hash Full spectrum | THC',
     location: '5g',
-    price: 'WSC-DIRECT',
+    price: 'WSC-789,90',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://abecmed.com.br/'
+    link: 'https://wa.me/5561995276936'
   },
 ];
 
