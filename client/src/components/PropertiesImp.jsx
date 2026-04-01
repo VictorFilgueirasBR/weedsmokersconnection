@@ -5,6 +5,47 @@ import './PropertiesImp.scss';
 const propertiesImpData = [
 
   {
+    id: 100,
+    image: '/images/glitter-bomb.jpg',
+    title: 'glitter-bomb | THCa',
+    location: '14g',
+    price: 'WSC-1950,00',
+    description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
+  },
+  {
+    id: 101,
+    image: '/images/Forbidden-Fruit.jpg',
+    title: 'Forbidden-Fruit | D8',
+    location: '14g',
+    price: 'WSC-1750,00',
+    description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
+  },
+  {
+    id: 102,
+    image: '/images/astrocand-thca.jpg',
+    title: 'Astro Candy | THCa',
+    location: '14g',
+    price: 'WSC-1950,00',
+    description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
+  },
+  {
+    id: 103,
+    image: '/images/gelato.jpg',
+    title: 'Gellato | D8',
+    location: '14g',
+    price: 'WSC-1750,00',
+    description: 'Flor medicinal importada de alta qualidade. 55% Indica - 45% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
+  },
+
+  {
     id: 1,
     image: '/images/cannac.jpg',
     title: 'KETAMA SIFT | D8',

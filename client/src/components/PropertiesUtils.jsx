@@ -28,7 +28,7 @@ const propertiesUtilsData = [
     id: 3,
     image: '/images/jet-fly-import.png',
     title: 'WSC | Frete Import',
-    location: 'R$ 170,00',
+    location: 'R$ 175,00',
     price: 'WSC-JET-USA',
     description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
     cta: 'Contratar',
