@@ -6,7 +6,7 @@ const propertiesImpData = [
 
   {
     id: 100,
-    image: '/images/glitter-bomb.jpg',
+    image: '/images/glitter-bombbud.jpg',
     title: 'glitter-bomb | THCa',
     location: '14g',
     price: 'WSC-1950,00',
@@ -36,7 +36,7 @@ const propertiesImpData = [
   },
   {
     id: 103,
-    image: '/images/gelato.jpg',
+    image: '/images/gellato-flwrimp.webp',
     title: 'Gellato | D8',
     location: '14g',
     price: 'WSC-1750,00',
