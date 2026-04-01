@@ -16,7 +16,7 @@ const propertiesImpData = [
   },
   {
     id: 101,
-    image: '/images/Forbidden-Fruit.jpg',
+    image: '/images/Forbidden-Fruit.webp',
     title: 'Forbidden-Fruit | D8',
     location: '14g',
     price: 'WSC-1750,00',
@@ -26,7 +26,7 @@ const propertiesImpData = [
   },
   {
     id: 102,
-    image: '/images/astrocand-thca.jpg',
+    image: '/images/astrocand-thca.jpeg',
     title: 'Astro Candy | THCa',
     location: '14g',
     price: 'WSC-1950,00',
