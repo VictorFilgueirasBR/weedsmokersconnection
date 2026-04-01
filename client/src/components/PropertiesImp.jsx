@@ -7,7 +7,7 @@ const propertiesImpData = [
   {
     id: 100,
     image: '/images/glitter-bombbud.jpg',
-    title: 'glitter-bomb | THCa',
+    title: 'Glitter Bomb | THCa',
     location: '14g',
     price: 'WSC-1950,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
@@ -17,7 +17,7 @@ const propertiesImpData = [
   {
     id: 101,
     image: '/images/Forbidden-Fruit.webp',
-    title: 'Forbidden-Fruit | D8',
+    title: 'Forbidden Fruit | D8',
     location: '14g',
     price: 'WSC-1750,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',

@@ -21,7 +21,7 @@ const propertiesData = [
     title: 'Flores HK | THC',
     location: '10g',
     price: 'WSC-710,00',
-    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
@@ -31,7 +31,7 @@ const propertiesData = [
     title: 'Flores Z-Kittlez Pie THC',
     location: '10g',
     price: 'WSC-710,00',
-    description: 'Fornecedor Nacional de Flores em Natura com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
@@ -61,7 +61,7 @@ const propertiesData = [
     title: 'Cherry Pie Purple | THC',
     location: '10g',
     price: 'WSC-SOLDOUT',
-    description: 'Fornecedor Nacional de Flores com THC alto nível de concentração. (O valor pode variar de acordo com as Espécies).',
+    description: 'Inflorescência - Cultivo Indoor 60% Indica - 40% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
@@ -71,7 +71,7 @@ const propertiesData = [
     title: '24K Gold | THC',
     location: '10g',
     price: 'WSC-710,00',
-    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração. (O valor pode variar de acordo com as Espécies).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
@@ -81,7 +81,7 @@ const propertiesData = [
     title: 'Cherry Pie Homie | THC',
     location: '10g',
     price: 'WSC-710,00',
-    description: 'Fornecedor Nacional (BR) de Flores com THC alto nível de concentração. (O valor pode variar de acordo com as Espécies).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
