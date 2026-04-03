@@ -32,112 +32,103 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'linear-gradient(135deg, #1d9d92, #005a5a)',
-    backgroundSize: 'cover',
-    fontFamily: "'Inter', sans-serif",
+    background: 'linear-gradient(135deg, #0b1f33, #0f2e4d)',
+    fontFamily: "'Satoshi', sans-serif",
     padding: '20px',
     marginTop: '60px',
-    boxSizing: 'border-box',
   },
+
   stepContainer: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'rgba(255, 255, 255, 0.98)',
-    borderRadius: '15px',
-    padding: '30px',
-    maxWidth: '450px',
+    backdropFilter: 'blur(16px)',
+    background: 'linear-gradient(135deg, rgba(77,166,255,0.08), rgba(30,77,122,0.05))',
+    borderRadius: '18px',
+    padding: '28px',
+    maxWidth: '480px',
     width: '100%',
-    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+    border: '1px solid rgba(120,180,255,0.18)',
+    boxShadow: '0 15px 50px rgba(0,0,0,0.45)',
   },
+
   stepItem: {
     display: 'flex',
     alignItems: 'flex-start',
     position: 'relative',
-    marginBottom: '20px',
-    paddingLeft: '35px',
+    marginBottom: '22px',
+    paddingLeft: '38px',
   },
+
   stepItemLast: {
     marginBottom: '0',
   },
+
   stepIcon: {
     position: 'absolute',
     left: '0',
     top: '0',
-    width: '24px',
-    height: '24px',
-    borderRadius: '8px',
+    width: '26px',
+    height: '26px',
+    borderRadius: '10px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 'bold',
     fontSize: '14px',
     color: '#fff',
-    backgroundColor: '#1d9d92', // Cor única para todos os ícones
-    transition: 'background-color 0.3s, border-color 0.3s, box-shadow 0.3s',
+    background: 'linear-gradient(135deg, #4da6ff, #1e4d7a)',
+    boxShadow: '0 0 12px rgba(77,166,255,0.6)',
   },
+
   stepLine: {
     position: 'absolute',
-    left: '12px',
-    top: '24px',
+    left: '13px',
+    top: '28px',
     width: '2px',
-    height: 'calc(100% - 24px)',
-    backgroundColor: '#1d9d92',
-    transition: 'background-color 0.3s',
+    height: 'calc(100% - 28px)',
+    background: 'linear-gradient(to bottom, #4da6ff, rgba(30,77,122,0.2))',
   },
-  stepContent: {
-    // Mantém o layout de fluxo
-  },
+
   h3: {
     margin: '0',
-    fontSize: '16px',
-    fontWeight: '600',
-    color: '#34495e',
-    transition: 'color 0.3s',
+    fontSize: '15px',
+    fontWeight: '700',
+    color: '#eaf4ff',
+    letterSpacing: '-0.02em',
   },
+
   p: {
-    margin: '5px 0 0',
-    fontSize: '14px',
-    color: '#7f8c8d',
-    lineHeight: '1.4',
-    transition: 'color 0.3s',
+    margin: '6px 0 0',
+    fontSize: '13px',
+    color: 'rgba(234,244,255,0.7)',
+    lineHeight: '1.5',
   },
 };
 
 const getStatusStyles = (status) => {
-  const currentGreen = '#1d9d92';
-  const lightGray = '#d9d9d9';
-  const darkText = '#34495e';
-  const lightText = '#7f8c8d';
-
-  // O ícone agora sempre tem a mesma cor de fundo e formato
-  const iconBaseStyle = {
-    backgroundColor: currentGreen,
-    borderRadius: '8px',
-    color: '#fff',
-  };
+  const blueBaby = '#a0ecfa';
+  const blueMid = '#4da6ff';
+  const blueDeep = '#1e4d7a';
+  const gray = '#7f8c8d';
 
   if (status === 'completed') {
     return {
-      icon: { ...iconBaseStyle },
-      content: {
-        h3: { color: darkText },
-        p: { color: lightText },
+      icon: {
+        background: `linear-gradient(135deg, ${blueBaby}, ${blueMid})`,
+        boxShadow: `0 0 14px rgba(160,236,250,0.7)`,
       },
       line: {
-        backgroundColor: currentGreen,
-      }
+        background: `linear-gradient(to bottom, ${blueMid}, transparent)`,
+      },
     };
   }
-  
+
   if (status === 'current') {
     return {
       icon: {
-        ...iconBaseStyle,
-        boxShadow: `0 0 0 4px rgba(29, 157, 146, 0.4)`,
-      },
-      content: {
-        h3: { color: darkText, fontWeight: '700' },
-        p: { color: lightText },
+        background: `linear-gradient(135deg, ${blueMid}, ${blueDeep})`,
+        boxShadow: `0 0 18px rgba(77,166,255,0.9)`,
+        animation: 'pulse 2s infinite',
       },
     };
   }
@@ -145,24 +136,35 @@ const getStatusStyles = (status) => {
   if (status === 'upcoming') {
     return {
       icon: {
-        ...iconBaseStyle,
-        backgroundColor: lightGray,
+        background: 'rgba(255,255,255,0.15)',
+        boxShadow: 'none',
       },
       content: {
-        h3: { color: lightGray },
-        p: { color: lightGray },
+        h3: { color: gray },
+        p: { color: gray },
       },
       line: {
-        backgroundColor: lightGray,
-      }
+        background: 'rgba(255,255,255,0.1)',
+      },
     };
   }
+
   return {};
 };
 
 export default function StepByStepInlineRefactored() {
   return (
     <div style={styles.backgroundContainer}>
+      <style>
+        {`
+          @keyframes pulse {
+            0% { box-shadow: 0 0 10px rgba(77,166,255,0.5); }
+            50% { box-shadow: 0 0 22px rgba(77,166,255,1); }
+            100% { box-shadow: 0 0 10px rgba(77,166,255,0.5); }
+          }
+        `}
+      </style>
+
       <div style={styles.stepContainer}>
         {steps.map((step, index) => {
           const statusStyles = getStatusStyles(step.status);
@@ -172,23 +174,25 @@ export default function StepByStepInlineRefactored() {
             <motion.div
               key={index}
               style={{ ...styles.stepItem, ...(isLastItem && styles.stepItemLast) }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.12 }}
             >
-              <div
-                style={{ ...styles.stepIcon, ...statusStyles.icon }}
-              >
-                {step.status === 'completed' && '✔'}
+              <div style={{ ...styles.stepIcon, ...statusStyles.icon }}>
+                {step.status === 'completed' ? '✔' : index + 1}
               </div>
+
               {!isLastItem && (
-                <div
-                  style={{ ...styles.stepLine, ...statusStyles.line }}
-                ></div>
+                <div style={{ ...styles.stepLine, ...statusStyles.line }} />
               )}
-              <div style={styles.stepContent}>
-                <h3 style={{ ...styles.h3, ...statusStyles.content?.h3 }}>{step.title}</h3>
-                <p style={{ ...styles.p, ...statusStyles.content?.p }}>{step.description}</p>
+
+              <div>
+                <h3 style={{ ...styles.h3, ...statusStyles.content?.h3 }}>
+                  {step.title}
+                </h3>
+                <p style={{ ...styles.p, ...statusStyles.content?.p }}>
+                  {step.description}
+                </p>
               </div>
             </motion.div>
           );
