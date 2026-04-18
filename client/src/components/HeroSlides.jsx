@@ -83,7 +83,7 @@ const HeroSlides = () => {
         onMouseMove={handleMouseMove}
         onClick={() => navigate('/signup')}
       >
-        ENTRAR PRO CLUB →
+        ENTRAR NO CLUB →
       </button>
 
       {/* Conteúdo fixo sobre o slider, com estilo glassmorphism */}

@@ -4,13 +4,15 @@ import { motion } from 'framer-motion';
 
 const steps = [
   {
-    title: 'Assine e veja o Tutorial Rápido',
-    description: 'Aprenda rapidamente os principais pontos antes de começar o seu tratamento da melhor forma, com consciência, RESPALDO MÉDICO, JURÍDICO E REGULATÓRIO garantido pela WS | Connection®. Fomentamos o acesso à informação de qualidade. Oque na prática te da a maior liberdade em variações de catálogos diversos do BRASIL & IMPORTADOS!',
+    title: 'Entre para o CLUB',
+    description:
+      'Converse com nossa equipe e entenda rapidamente os principais pontos antes de começar o seu tratamento da melhor forma, com consciência, RESPALDO MÉDICO, JURÍDICO E REGULATÓRIO garantido pela WS | Connection®.',
     status: 'completed',
   },
   {
     title: 'Como conseguir autorização e receita?',
-    description: 'Faça sua consulta com a profissional certa: A melhor médica endocanabinoide do Brasil, autorizada para atendê-lo(a) e fazer sua consulta de forma exclusiva e personalizada.',
+    description:
+      'Faça sua consulta com um de nossos Médicos Colaboradores: Todos(as) são ótimos(as), uma delas é a MELHOR médica endocanabinoide do Brasil, autorizada para atendê-lo(a) e fazer sua consulta de forma exclusiva e personalizada.',
     status: 'completed',
   },
   {
@@ -21,7 +23,8 @@ const steps = [
   },
   {
     title: 'Finalize seu pedido com segurança',
-    description: 'Receba seu código de RASTREAMENTO com SEGURO TRANSPORTE INCLUSO e aguarde a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 36 horas.',
+    description:
+      'Receba seu código de RASTREAMENTO com SEGURO TRANSPORTE INCLUSO e aguarde a entrega da sua medicação em casa. Entrega para todo o BRASIL em até 36 horas.',
     status: 'upcoming',
   },
 ];
@@ -42,7 +45,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     backdropFilter: 'blur(16px)',
-    background: 'linear-gradient(135deg, rgba(77,166,255,0.08), rgba(30,77,122,0.05))',
+    background:
+      'linear-gradient(135deg, rgba(77,166,255,0.08), rgba(30,77,122,0.05))',
     borderRadius: '18px',
     padding: '28px',
     maxWidth: '480px',
@@ -86,7 +90,8 @@ const styles = {
     top: '28px',
     width: '2px',
     height: 'calc(100% - 28px)',
-    background: 'linear-gradient(to bottom, #4da6ff, rgba(30,77,122,0.2))',
+    background:
+      'linear-gradient(to bottom, #4da6ff, rgba(30,77,122,0.2))',
   },
 
   h3: {
@@ -101,7 +106,9 @@ const styles = {
     margin: '6px 0 0',
     fontSize: '13px',
     color: 'rgba(234,244,255,0.7)',
-    lineHeight: '1.5',
+    lineHeight: '1.6',
+    textAlign: 'justify',
+    textJustify: 'inter-word',
   },
 };
 
@@ -173,7 +180,10 @@ export default function StepByStepInlineRefactored() {
           return (
             <motion.div
               key={index}
-              style={{ ...styles.stepItem, ...(isLastItem && styles.stepItemLast) }}
+              style={{
+                ...styles.stepItem,
+                ...(isLastItem && styles.stepItemLast),
+              }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.12 }}
@@ -183,7 +193,9 @@ export default function StepByStepInlineRefactored() {
               </div>
 
               {!isLastItem && (
-                <div style={{ ...styles.stepLine, ...statusStyles.line }} />
+                <div
+                  style={{ ...styles.stepLine, ...statusStyles.line }}
+                />
               )}
 
               <div>
