@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
  * - Personalizável via props
  */
 function GlassCard({
-  name = "Weed Smokers Pass",
+  name = "WS | Semestral",
   currency = "R$",
   amount = "449,90",
   delta = "| até 12x",
