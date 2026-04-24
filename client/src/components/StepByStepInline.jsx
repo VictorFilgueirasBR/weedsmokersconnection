@@ -75,13 +75,18 @@ export default function StepByStepUltraHealthPro() {
         })}
 
         {/* CTA CLEAN PREMIUM */}
-        <motion.button
-          className="cta"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.97 }}
+        <a 
+          href="https://weedsmokersconnection.com/signup" 
+          style={{ textDecoration: 'none' }}
         >
-          Iniciar atendimento com especialista
-        </motion.button>
+          <motion.button
+            className="cta"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Escolha seu Plano
+          </motion.button>
+        </a>
 
         <div className="trust">
            Seguro  •  Médicos certificados •  Entrega rápida
