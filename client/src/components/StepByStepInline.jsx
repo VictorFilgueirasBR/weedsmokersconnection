@@ -10,7 +10,7 @@ const steps = [
     status: 'completed',
   },
   {
-    title: 'Autorização e Receita',
+    title: 'Consulta Especializada',
     description:
       'Consulta com Médicos especialistas (CRM) altamente qualificados em terapia canabinoide.',
     status: 'completed',
