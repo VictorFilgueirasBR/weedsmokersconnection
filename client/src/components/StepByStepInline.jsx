@@ -12,19 +12,19 @@ const steps = [
   {
     title: 'Autorização e Receita',
     description:
-      'Consulta com especialistas altamente qualificados em terapia canabinoide.',
+      'Consulta com Médicos especialistas (CRM) altamente qualificados em terapia canabinoide.',
     status: 'completed',
   },
   {
-    title: 'Escolha suas Extrações',
+    title: 'Tratamento Personalizado',
     description:
-      'THC, THCa, Rosin, Diamonds, Hash, Gummies e linha completa com CBD.',
+      'THC, THCa, Rosin, Diamonds, Hash, Flores, Óleos, Gummies e opções com CBD.',
     status: 'current',
   },
   {
     title: 'Entrega Segura',
     description:
-      'Rastreamento + seguro incluso. Entrega em até 36h em todo Brasil.',
+      'Rastreamento + seguro incluso. Envios em até 36h para todo Brasil.',
     status: 'upcoming',
   },
 ];
