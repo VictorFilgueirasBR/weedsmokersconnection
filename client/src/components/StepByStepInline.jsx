@@ -1,4 +1,4 @@
-// src/components/StepByStepUltra.jsx
+// src/components/StepByStepUltraHealthPro.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -29,14 +29,22 @@ const steps = [
   },
 ];
 
-export default function StepByStepUltra() {
+export default function StepByStepUltraHealthPro() {
   return (
     <div className="ultra-container">
+      <div className="ambient-glow" />
       <div className="cyber-grid" />
-      <div className="particles" />
       <div className="scanner" />
 
       <div className="card">
+
+        {/* HEADER */}
+        <div className="header">
+          <span className="badge">WS CONNECTION®</span>
+          <h2>Fluxo de Atendimento Inteligente</h2>
+          <p>Ambiente seguro com validação médica e acompanhamento profissional</p>
+        </div>
+
         {steps.map((step, index) => {
           const isLast = index === steps.length - 1;
 
@@ -44,10 +52,10 @@ export default function StepByStepUltra() {
             <motion.div
               key={index}
               className={`step ${step.status}`}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15 }}
-              whileHover={{ scale: 1.03 }}
+              transition={{ delay: index * 0.12 }}
+              whileHover={{ scale: 1.015 }}
             >
               <div className="icon">
                 <div className="icon-core">
@@ -65,6 +73,20 @@ export default function StepByStepUltra() {
             </motion.div>
           );
         })}
+
+        {/* CTA CLEAN PREMIUM */}
+        <motion.button
+          className="cta"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          Iniciar atendimento com especialista
+        </motion.button>
+
+        <div className="trust">
+           Seguro  •  Médicos certificados •  Entrega rápida
+        </div>
+
       </div>
 
       <style>{`
@@ -79,56 +101,74 @@ export default function StepByStepUltra() {
           overflow: hidden;
         }
 
-        /* GRID CYBERPUNK */
+        /* GLOW AMBIENTE */
+        .ambient-glow {
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(circle, rgba(77,166,255,0.15), transparent);
+          filter: blur(120px);
+        }
+
+        /* GRID */
         .cyber-grid {
           position: absolute;
           inset: 0;
           background-image:
-            linear-gradient(rgba(77,166,255,0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(77,166,255,0.08) 1px, transparent 1px);
-          background-size: 40px 40px;
-          opacity: 0.2;
-        }
-
-        /* PARTICLES */
-        .particles::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background-image: radial-gradient(#4da6ff 1px, transparent 1px);
-          background-size: 80px 80px;
-          opacity: 0.08;
+            linear-gradient(rgba(77,166,255,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77,166,255,0.05) 1px, transparent 1px);
+          background-size: 60px 60px;
         }
 
         /* SCANNER */
         .scanner {
           position: absolute;
           width: 100%;
-          height: 2px;
+          height: 1px;
           background: linear-gradient(90deg, transparent, #4da6ff, transparent);
-          top: 0;
-          animation: scan 6s linear infinite;
-          opacity: 0.4;
+          animation: scan 8s linear infinite;
+          opacity: 0.25;
         }
 
         @keyframes scan {
-          0% { top: 0; }
-          100% { top: 100%; }
+          0% { top: 0 }
+          100% { top: 100% }
         }
 
         /* CARD */
         .card {
           width: 100%;
-          max-width: 540px;
-          padding: 32px;
+          max-width: 560px;
+          padding: 36px;
           border-radius: 24px;
-          backdrop-filter: blur(25px);
+          backdrop-filter: blur(30px);
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.08);
           box-shadow:
-            0 0 80px rgba(0,0,0,0.7),
-            inset 0 0 40px rgba(77,166,255,0.08);
-          position: relative;
+            0 20px 80px rgba(0,0,0,0.6),
+            inset 0 0 30px rgba(77,166,255,0.06);
+        }
+
+        /* HEADER */
+        .header {
+          margin-bottom: 28px;
+        }
+
+        .badge {
+          font-size: 11px;
+          color: #4da6ff;
+          letter-spacing: 0.12em;
+        }
+
+        h2 {
+          margin: 6px 0;
+          font-size: 20px;
+          color: #eaf4ff;
+        }
+
+        .header p {
+          font-size: 13px;
+          color: rgba(234,244,255,0.6);
         }
 
         /* STEP */
@@ -136,11 +176,7 @@ export default function StepByStepUltra() {
           position: relative;
           display: flex;
           gap: 16px;
-          margin-bottom: 28px;
-        }
-
-        .icon {
-          position: relative;
+          margin-bottom: 26px;
         }
 
         .icon-core {
@@ -150,68 +186,75 @@ export default function StepByStepUltra() {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: bold;
+          font-weight: 600;
           background: linear-gradient(135deg, #4da6ff, #1e4d7a);
           color: white;
-          box-shadow: 0 0 20px rgba(77,166,255,0.8);
-          z-index: 2;
+          box-shadow: 0 0 16px rgba(77,166,255,0.6);
         }
 
         .pulse-ring {
           position: absolute;
           inset: -6px;
           border-radius: 12px;
-          border: 1px solid rgba(77,166,255,0.5);
-          animation: pulseRing 2s infinite;
+          border: 1px solid rgba(77,166,255,0.4);
+          animation: pulse 2s infinite;
         }
 
-        @keyframes pulseRing {
-          0% { transform: scale(1); opacity: 0.7; }
-          100% { transform: scale(1.6); opacity: 0; }
+        @keyframes pulse {
+          0% { opacity: 0.6; transform: scale(1); }
+          100% { opacity: 0; transform: scale(1.5); }
         }
 
-        /* LINE ENERGY */
         .line {
           position: absolute;
           left: 14px;
           top: 34px;
           width: 2px;
           height: calc(100% - 34px);
-          background: linear-gradient(
-            to bottom,
-            #4da6ff,
-            rgba(77,166,255,0.1)
-          );
-          animation: flow 2s linear infinite;
+          background: linear-gradient(to bottom, rgba(77,166,255,0.6), transparent);
         }
 
-        @keyframes flow {
-          0% { background-position: 0 0; }
-          100% { background-position: 0 40px; }
-        }
-
-        /* CONTENT */
         h3 {
           margin: 0;
-          font-size: clamp(14px, 1.5vw, 16px);
+          font-size: 15px;
           color: #eaf4ff;
         }
 
         p {
-          margin-top: 6px;
-          font-size: clamp(13px, 1.4vw, 14px);
-          color: rgba(234,244,255,0.75);
+          margin-top: 5px;
+          font-size: 13px;
+          color: rgba(234,244,255,0.7);
           line-height: 1.6;
           text-align: justify;
         }
 
-        /* STATES */
         .completed .icon-core {
           background: linear-gradient(135deg, #a0ecfa, #4da6ff);
         }
 
         .upcoming {
-          opacity: 0.4;
+          opacity: 0.35;
+        }
+
+        /* CTA */
+        .cta {
+          width: 100%;
+          margin-top: 24px;
+          padding: 14px;
+          border-radius: 12px;
+          border: none;
+          background: linear-gradient(90deg, #4da6ff, #00cfff);
+          color: #fff;
+          font-weight: 600;
+          box-shadow: 0 8px 25px rgba(77,166,255,0.3);
+          cursor: pointer;
+        }
+
+        .trust {
+          margin-top: 12px;
+          font-size: 12px;
+          text-align: center;
+          color: rgba(234,244,255,0.5);
         }
 
       `}</style>
