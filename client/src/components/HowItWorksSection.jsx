@@ -1,47 +1,34 @@
 // client/src/components/HowItWorksSection.jsx
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-/**
- * HowItWorksSection — PRO MOTION / 3D / INTERACTIVE
- * - Mantém conteúdo original
- * - Adiciona 3D (Three.js) + floating elements
- * - Interação com mouse (parallax + tilt)
- * - Sem dependência obrigatória de Router
- */
-
-// ---------- 3D LOGO ----------
-const ThreeDLogo = () => {
+// ---------- 3D INTERACTIVE ----------
+const ThreeDInteractive = () => {
   const mountRef = useRef(null);
-  const sceneRef = useRef(null);
-  const cameraRef = useRef(null);
-  const rendererRef = useRef(null);
   const meshRef = useRef(null);
 
-  const init = useCallback(() => {
+  useEffect(() => {
     if (!mountRef.current || !window.THREE) return;
 
     const scene = new window.THREE.Scene();
-    sceneRef.current = scene;
-
     const camera = new window.THREE.PerspectiveCamera(60, mountRef.current.clientWidth / mountRef.current.clientHeight, 0.1, 1000);
     camera.position.z = 4;
-    cameraRef.current = camera;
 
     const renderer = new window.THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
     mountRef.current.appendChild(renderer.domElement);
-    rendererRef.current = renderer;
 
     const light = new window.THREE.PointLight(0xffffff, 1.5);
     light.position.set(5, 5, 5);
     scene.add(light);
 
-    const geometry = new window.THREE.BoxGeometry(2, 2, 0.2);
-    const material = new window.THREE.MeshStandardMaterial({
-      color: 0x111111,
-      metalness: 0.6,
+    const geometry = new window.THREE.IcosahedronGeometry(1.4, 1);
+    const material = new window.THREE.MeshPhysicalMaterial({
+      color: 0x0b0f14,
+      metalness: 0.7,
       roughness: 0.2,
+      clearcoat: 1,
+      clearcoatRoughness: 0.1
     });
 
     const mesh = new window.THREE.Mesh(geometry, material);
@@ -50,28 +37,20 @@ const ThreeDLogo = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
-      if (meshRef.current) {
-        meshRef.current.rotation.y += 0.01;
-        meshRef.current.rotation.x += 0.005;
-      }
+      mesh.rotation.y += 0.008;
       renderer.render(scene, camera);
     };
     animate();
+
+    return () => {
+      mountRef.current?.removeChild(renderer.domElement);
+    };
   }, []);
 
-  useEffect(() => {
-    init();
-    return () => {
-      if (rendererRef.current && mountRef.current) {
-        mountRef.current.removeChild(rendererRef.current.domElement);
-      }
-    };
-  }, [init]);
-
-  return <div ref={mountRef} style={{ width: "100%", height: "300px" }} />;
+  return <div ref={mountRef} style={{ width: "100%", height: "120px", position: "absolute", top: 0, opacity: 0.5 }} />;
 };
 
-// ---------- MAIN COMPONENT ----------
+// ---------- MAIN ----------
 export default function HowItWorksSection({ onNavigate }) {
   const prefersReducedMotion = useReducedMotion();
   const containerRef = useRef(null);
@@ -81,60 +60,73 @@ export default function HowItWorksSection({ onNavigate }) {
     else window.location.href = "/chat";
   };
 
-  // mouse parallax
   const handleMouseMove = (e) => {
     const rect = containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-    containerRef.current.style.transform = `rotateY(${x * 6}deg) rotateX(${y * -6}deg)`;
+    const x = (e.clientX - rect.left);
+    const y = (e.clientY - rect.top);
+    containerRef.current.style.setProperty('--x', `${x}px`);
+    containerRef.current.style.setProperty('--y', `${y}px`);
   };
 
   return (
     <section style={styles.section}>
-      <div style={styles.backgroundGlow} />
+      <div style={styles.spotlight} />
 
-      <div
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        style={styles.container}
-      >
+      <div ref={containerRef} onMouseMove={handleMouseMove} style={styles.container}>
 
-        {/* 3D ELEMENT */}
-        {!prefersReducedMotion && <ThreeDLogo />}
+        {!prefersReducedMotion && <ThreeDInteractive />}
 
-        <motion.span style={styles.badge}>
+        {/* BADGE */}
+        <motion.span
+          style={styles.badge}
+          initial={{ y: -40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           PROCESSO 100% LEGALIZADO
         </motion.span>
 
-        <motion.h2 style={styles.title}>
+        {/* TITLE */}
+        <motion.h2
+          style={styles.title}
+          initial={{ x: -60, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           Como funciona?
         </motion.h2>
 
-        {/* ORIGINAL CONTENT */}
         <div style={styles.contentGrid}>
 
-          <motion.div style={styles.mainCard} whileHover={{ y: -6 }}>
+          {/* PARAGRAPH */}
+          <motion.div
+            style={styles.mainCard}
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            animate={!prefersReducedMotion ? { y: [0, -7, 0, 7, 0] } : {}}
+          >
             <p style={styles.paragraphBold}>
-              Basta fazer nosso teste de IA. Caso o resultado do teste seja superior a 50%, vamos te guiar no passo a passo para
-              obter sua autorização e acesso aos melhores Médicos Prescritores e Fornecedores de produtos com THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds),
-              Flores e Extrações de forma 100% legal, leve, rápida e descomplicada!
+              Basta fazer nosso teste de IA. Caso o resultado do teste seja superior a 50%, vamos te guiar no passo a passo para obter sua autorização e acesso aos melhores Médicos Prescritores e Fornecedores.
             </p>
           </motion.div>
 
+          {/* CARDS */}
           <div style={styles.infoGrid}>
-            {["01", "02", "✓"].map((step, i) => (
+            {["01 — Acesso completo","02 — Execução rápida","✓ — Compliance total"].map((text, i) => (
               <motion.div
                 key={i}
-                style={i === 2 ? styles.fullWidthCard : styles.glassCard}
-                whileHover={{ y: -8, scale: 1.02 }}
+                style={styles.floatingCard}
+                initial={{ y: 60, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                whileHover={{ y: -10, scale: 1.03 }}
               >
-                <div style={styles.iconTag}>{step}</div>
-                <p style={styles.smallText}>
-                  {i === 0 && "Acesse guia completo com médicos e fornecedores aprovados."}
-                  {i === 1 && "Receita em até 2h e entrega em até 24h."}
-                  {i === 2 && "Anexe receita e notas para garantir transporte legal."}
-                </p>
+                {text}
               </motion.div>
             ))}
           </div>
@@ -142,8 +134,12 @@ export default function HowItWorksSection({ onNavigate }) {
 
         {/* CTA */}
         <motion.div style={styles.ctaWrapper}>
-          <button style={styles.ctaButton} onClick={handleNavigate}>
-            INICIAR TESTE IA →
+          <button
+            className="submit-gradient-btn"
+            onClick={handleNavigate}
+            onMouseMove={handleMouseMove}
+          >
+            INICIAR TESTE IA
           </button>
           <span style={styles.ctaNote}>Resultado imediato via IA</span>
         </motion.div>
@@ -156,92 +152,73 @@ export default function HowItWorksSection({ onNavigate }) {
 const styles = {
   section: {
     background: "#f5f7fb",
-    padding: "120px 20px",
-    perspective: "1200px",
+    padding: "24px 20px 48px",
+    position: "relative",
+    overflow: "hidden",
   },
+
+  spotlight: {
+    position: "absolute",
+    inset: 0,
+    background: "radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(0,120,255,0.15), transparent 40%)",
+    pointerEvents: "none",
+  },
+
   container: {
     maxWidth: "1000px",
     margin: "0 auto",
-    transition: "transform 0.2s ease",
+    paddingTop: "8px",
   },
-  backgroundGlow: {
-    position: "absolute",
-    width: "500px",
-    height: "500px",
-    background: "radial-gradient(circle, rgba(0,120,255,0.2), transparent)",
-    filter: "blur(100px)",
-  },
+
   badge: {
-    display: "inline-block",
     background: "#000",
     color: "#fff",
     padding: "6px 14px",
     borderRadius: "999px",
-    fontSize: "12px",
-    marginBottom: "20px",
   },
+
   title: {
-    fontSize: "40px",
+    fontSize: "42px",
     color: "#000",
-    marginBottom: "30px",
+    margin: "16px 0",
   },
+
   contentGrid: {
     display: "flex",
     flexDirection: "column",
     gap: "20px",
   },
+
   mainCard: {
     background: "#fff",
     padding: "30px",
     borderRadius: "20px",
   },
+
   paragraphBold: {
     color: "#000",
   },
+
   infoGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    display: "flex",
     gap: "20px",
+    flexWrap: "wrap",
   },
-  glassCard: {
+
+  floatingCard: {
     background: "rgba(255,255,255,0.9)",
     padding: "20px",
-    borderRadius: "20px",
+    borderRadius: "16px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
   },
-  fullWidthCard: {
-    gridColumn: "1 / -1",
-    background: "#000",
-    color: "#fff",
-    padding: "20px",
-    borderRadius: "20px",
-  },
-  iconTag: {
-    background: "#000",
-    color: "#fff",
-    width: "30px",
-    height: "30px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: "8px",
-  },
-  smallText: {
-    marginTop: "10px",
-    color: "inherit",
-  },
+
   ctaWrapper: {
     marginTop: "40px",
     textAlign: "center",
   },
-  ctaButton: {
-    padding: "16px 40px",
-    borderRadius: "999px",
-    background: "#000",
-    color: "#fff",
-    border: "none",
-  },
+
   ctaNote: {
-    marginTop: "10px",
     display: "block",
+    marginTop: "10px",
   },
 };

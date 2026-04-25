@@ -24,7 +24,7 @@ const steps = [
   {
     title: 'Entrega Segura',
     description:
-      'Rastreamento + seguro incluso. Envios em até 36h para todo Brasil.',
+      'Sempre com rastreamento + seguro inclusos. Envios personalizados em até 36h para todo Brasil.',
     status: 'upcoming',
   },
 ];
