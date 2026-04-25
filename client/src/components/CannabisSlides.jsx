@@ -77,17 +77,40 @@ export default function CannabisSlides() {
           animate={{ opacity: fade ? 1 : 0, y: fade ? 0 : 20 }}
           transition={{ duration: 0.5 }}
         >
+
+          {/* subtle top glow line */}
+          <div className="cs-top-line" />
+
           <h2 className="cs-title">{slide.title}</h2>
           <h3 className="cs-subtitle">{slide.subtitle}</h3>
+
+          <div className="cs-divider" />
+
           <p className="cs-content">{slide.content}</p>
 
-          {/* PROGRESS NAV */}
+          {/* PROGRESS NAV (INSANE UI) */}
           <div className="cs-nav">
             <div className="cs-progress" onClick={handleNext}>
+
+              {/* animated glow trail */}
+              <div className="cs-progress-glow" />
+
+              {/* segments */}
+              <div className="cs-segments">
+                {slides.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`cs-segment ${i <= currentSlide ? "active" : ""}`}
+                  />
+                ))}
+              </div>
+
+              {/* moving bar */}
               <div
                 className="cs-progress-bar"
                 style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
               />
+
             </div>
           </div>
 
@@ -154,46 +177,47 @@ export default function CannabisSlides() {
 
       .cs-card {
         background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(22px);
         border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 24px;
+        padding: 32px;
         box-shadow:
           inset 0 1px 0 rgba(255,255,255,0.05),
-          0 20px 50px rgba(0,0,0,0.4);
+          0 25px 60px rgba(0,0,0,0.5);
         position: relative;
+        overflow: hidden;
       }
 
-      .cs-card::before {
-        content: '';
+      .cs-top-line {
         position: absolute;
-        left: var(--mx);
-        top: var(--my);
-        transform: translate(-50%, -50%);
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
-        transition: width .3s, height .3s, opacity .3s;
-        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #00cfff, transparent);
+        opacity: 0.6;
       }
 
-      .cs-card:hover::before {
-        width: 300px;
-        height: 300px;
-        opacity: 1;
+      .cs-divider {
+        width: 40px;
+        height: 3px;
+        margin: 10px auto 20px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #00cfff, #4da6ff);
+        box-shadow: 0 0 10px rgba(0,200,255,0.5);
       }
 
       .cs-title {
         font-size: 32px;
         font-weight: 900;
         color: #eaf6ff;
+        text-align: center;
       }
 
       .cs-subtitle {
         font-size: 18px;
         color: #00cfff;
-        margin-bottom: 20px;
+        text-align: center;
       }
 
       .cs-content {
@@ -209,29 +233,53 @@ export default function CannabisSlides() {
 
       .cs-progress {
         width: 100%;
-        height: 8px;
-        background: rgba(255,255,255,0.1);
+        height: 10px;
+        background: rgba(255,255,255,0.08);
         border-radius: 999px;
         overflow: hidden;
         cursor: pointer;
         position: relative;
       }
 
-      .cs-progress::before {
-        content: '';
+      .cs-progress-glow {
         position: absolute;
         inset: 0;
         background: linear-gradient(90deg, #00cfff, #4da6ff);
-        opacity: 0.2;
-        filter: blur(10px);
+        opacity: 0.15;
+        filter: blur(12px);
+      }
+
+      .cs-segments {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        gap: 4px;
+        padding: 2px;
+        z-index: 2;
+      }
+
+      .cs-segment {
+        flex: 1;
+        background: rgba(255,255,255,0.08);
+        border-radius: 999px;
+        transition: all 0.4s ease;
+      }
+
+      .cs-segment.active {
+        background: linear-gradient(90deg, #00cfff, #4da6ff);
+        box-shadow: 0 0 8px rgba(0,200,255,0.6);
       }
 
       .cs-progress-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
         height: 100%;
         background: linear-gradient(90deg, #00cfff, #4da6ff);
         border-radius: 999px;
-        transition: width 0.4s ease;
-        box-shadow: 0 0 15px rgba(0,200,255,0.6);
+        transition: width 0.5s ease;
+        z-index: 1;
+        box-shadow: 0 0 20px rgba(0,200,255,0.6);
       }
 
       `}</style>
