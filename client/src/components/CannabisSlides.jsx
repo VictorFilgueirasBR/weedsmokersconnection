@@ -153,6 +153,7 @@ export default function CannabisSlides() {
       .cs-wrap {
         position: relative;
         width: 100%;
+        margin-top: 2rem;
         padding: 60px 20px;
         display: flex;
         justify-content: center;
@@ -285,3 +286,5 @@ export default function CannabisSlides() {
     </section>
   );
 }
+
+
