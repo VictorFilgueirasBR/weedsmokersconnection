@@ -15,6 +15,15 @@ export default function ChatPage() {
           background: radial-gradient(circle at top left, #0f0f0f, #000);
           color: #fff;
           font-family: 'Segoe UI', sans-serif;
+          
+          /* Compensação para o Header Fixo */
+          padding-top: 80px; 
+          box-sizing: border-box;
+        }
+
+        /* Reforço de segurança para o Header aparecer sobre o fundo gradiente */
+        .main-header {
+          z-index: 99999 !important;
         }
       `}</style>
       <ChatBot />
