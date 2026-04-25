@@ -24,7 +24,7 @@ const steps = [
   {
     title: 'Entrega Segura',
     description:
-      'Sempre com rastreamento + seguro inclusos. Pacientes em todos os Estados do Brasil. (Realmente todo DDD)',
+      'Sempre com rastreamento + seguro inclusos. Pacientes em todos os estados do Brasil. (Todos os DDDs)',
     status: 'upcoming',
   },
 ];
