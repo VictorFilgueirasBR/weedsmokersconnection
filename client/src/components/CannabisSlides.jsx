@@ -1,13 +1,6 @@
 // client/src/components/CannabisSlides.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-/**
- * CannabisSlides
- * - Slides minimalistas com autoplay (10s) e transição de fade
- * - UI/UX consistente com HowItWorksSection
- * - Navegação manual também disponível
- * - Divisores superior e inferior (verde escuro quase transparente)
- */
 export default function CannabisSlides() {
   const slides = [
     {
@@ -38,6 +31,7 @@ export default function CannabisSlides() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fade, setFade] = useState(true);
+  const wrapRef = useRef(null);
 
   const handlePrev = () => {
     setFade(false);
@@ -55,7 +49,6 @@ export default function CannabisSlides() {
     }, 300);
   };
 
-  // autoplay a cada 10s
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
@@ -63,14 +56,33 @@ export default function CannabisSlides() {
     return () => clearInterval(interval);
   }, []);
 
+  // Spotlight + tilt
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+
+    const move = (e) => {
+      const r = el.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+
+      el.style.setProperty("--mx", `${x}px`);
+      el.style.setProperty("--my", `${y}px`);
+    };
+
+    el.addEventListener("mousemove", move);
+    return () => el.removeEventListener("mousemove", move);
+  }, []);
+
   const slide = slides[currentSlide];
 
   return (
-    <div style={styles.section}>
-      {/* Divisor Superior */}
+    <div ref={wrapRef} style={styles.section} className="cs-wrap">
       <div style={styles.divider} />
 
-      <div style={{ ...styles.textWrapper, opacity: fade ? 1 : 0 }}>
+      <div style={{ ...styles.textWrapper, opacity: fade ? 1 : 0 }} className="cs-card">
+        <div className="cs-glow" />
+
         <h2 style={styles.title}>{slide.title}</h2>
         <h3 style={styles.subtitle}>{slide.subtitle}</h3>
         <p style={styles.content}>{slide.content}</p>
@@ -88,7 +100,36 @@ export default function CannabisSlides() {
         </div>
       </div>
 
-      
+      <style>{`
+        .cs-wrap {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .cs-wrap::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(0,255,150,0.15), transparent 40%);
+          pointer-events: none;
+        }
+
+        .cs-card {
+          position: relative;
+          border-radius: 20px;
+          backdrop-filter: blur(20px);
+          background: rgba(255,255,255,0.05);
+          padding: 20px;
+        }
+
+        .cs-glow {
+          position: absolute;
+          inset: -10px;
+          background: radial-gradient(circle, rgba(0,255,150,0.25), transparent 70%);
+          filter: blur(30px);
+          z-index: -1;
+        }
+      `}</style>
     </div>
   );
 }
@@ -114,7 +155,7 @@ const styles = {
   divider: {
     width: "90%",
     height: "1px",
-    backgroundColor: "rgba(3, 24, 3, 0.48)", // verde escuro quase transparente
+    backgroundColor: "rgba(3, 24, 3, 0.48)",
     margin: "1.5rem auto",
   },
   title: {
@@ -123,16 +164,12 @@ const styles = {
     margin: 0,
     marginBottom: "0.5rem",
     lineHeight: 1.2,
-    fontFamily:
-      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
   },
   subtitle: {
     fontSize: "1.3rem",
     fontWeight: 600,
     marginBottom: "1.5rem",
     opacity: 0.85,
-    fontFamily:
-      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
   },
   content: {
     fontSize: "1.1rem",
@@ -140,8 +177,6 @@ const styles = {
     marginBottom: "2rem",
     lineHeight: 1.6,
     textAlign: "justify",
-    fontFamily:
-      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
   },
   navigation: {
     display: "flex",
@@ -158,7 +193,6 @@ const styles = {
     fontSize: "1rem",
     fontWeight: 600,
     cursor: "pointer",
-    transition: "all 0.2s ease",
   },
   counter: {
     fontSize: "1rem",
