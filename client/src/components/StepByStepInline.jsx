@@ -96,7 +96,7 @@ export default function StepByStepUltraHealthPro() {
         </a>
 
         <div className="trust">
-          Método Seguro • Médicos certificados • Entrega rápida
+          Método Seguro • Médicos Certificados • Entrega Rápida
         </div>
 
       </div>
