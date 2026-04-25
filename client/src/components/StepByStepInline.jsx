@@ -12,7 +12,7 @@ const steps = [
   {
     title: 'Consulta Especializada',
     description:
-      'Consulta com Médicos especialistas (CRM) altamente qualificados em terapia canabinoide.',
+      'Consulta com médicos especialistas (CRM) altamente qualificados em terapia canabinoide.',
     status: 'completed',
   },
   {
@@ -41,8 +41,10 @@ export default function StepByStepUltraHealthPro() {
         {/* HEADER */}
         <div className="header">
           <span className="badge">WS CONNECTION®</span>
-          <h2>Fluxo de Atendimento Inteligente</h2>
-          <p>Ambiente seguro com validação médica e acompanhamento profissional</p>
+          <h2 className="title">Fluxo de Atendimento Inteligente</h2>
+          <p className="subtitle">
+            Ambiente seguro com validação médica e acompanhamento profissional
+          </p>
         </div>
 
         {steps.map((step, index) => {
@@ -55,7 +57,7 @@ export default function StepByStepUltraHealthPro() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.12 }}
-              whileHover={{ scale: 1.015 }}
+              whileHover={{ scale: 1.02 }}
             >
               <div className="icon">
                 <div className="icon-core">
@@ -67,29 +69,29 @@ export default function StepByStepUltraHealthPro() {
               {!isLast && <div className="line" />}
 
               <div className="content">
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
+                <h3 className="step-title">{step.title}</h3>
+                <p className="step-text">{step.description}</p>
               </div>
             </motion.div>
           );
         })}
 
-        {/* CTA CLEAN PREMIUM */}
+        {/* CTA */}
         <a 
           href="https://weedsmokersconnection.com/signup" 
-          style={{ textDecoration: 'none' }}
+          className="cta-link"
         >
           <motion.button
             className="cta"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.96 }}
           >
             Escolha seu Plano
           </motion.button>
         </a>
 
         <div className="trust">
-           Seguro  •  Médicos certificados •  Entrega rápida
+          Método Seguro • Médicos certificados • Entrega rápida
         </div>
 
       </div>
@@ -106,33 +108,31 @@ export default function StepByStepUltraHealthPro() {
           overflow: hidden;
         }
 
-        /* GLOW AMBIENTE */
-        .ambient-glow {
+        /* AMBIENTE */
+        .ultra-container .ambient-glow {
           position: absolute;
-          width: 500px;
-          height: 500px;
-          background: radial-gradient(circle, rgba(77,166,255,0.15), transparent);
-          filter: blur(120px);
+          width: 600px;
+          height: 600px;
+          background: radial-gradient(circle, rgba(77,166,255,0.12), transparent);
+          filter: blur(140px);
         }
 
-        /* GRID */
-        .cyber-grid {
+        .ultra-container .cyber-grid {
           position: absolute;
           inset: 0;
           background-image:
-            linear-gradient(rgba(77,166,255,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(77,166,255,0.05) 1px, transparent 1px);
+            linear-gradient(rgba(77,166,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77,166,255,0.04) 1px, transparent 1px);
           background-size: 60px 60px;
         }
 
-        /* SCANNER */
-        .scanner {
+        .ultra-container .scanner {
           position: absolute;
           width: 100%;
           height: 1px;
           background: linear-gradient(90deg, transparent, #4da6ff, transparent);
           animation: scan 8s linear infinite;
-          opacity: 0.25;
+          opacity: 0.2;
         }
 
         @keyframes scan {
@@ -141,122 +141,128 @@ export default function StepByStepUltraHealthPro() {
         }
 
         /* CARD */
-        .card {
+        .ultra-container .card {
           width: 100%;
           max-width: 560px;
-          padding: 36px;
-          border-radius: 24px;
-          backdrop-filter: blur(30px);
-          background: rgba(255,255,255,0.04);
+          padding: 40px;
+          border-radius: 28px;
+          backdrop-filter: blur(40px);
+          background: rgba(255,255,255,0.03);
           border: 1px solid rgba(255,255,255,0.08);
           box-shadow:
-            0 20px 80px rgba(0,0,0,0.6),
-            inset 0 0 30px rgba(77,166,255,0.06);
+            0 30px 100px rgba(0,0,0,0.65),
+            inset 0 0 40px rgba(77,166,255,0.05);
         }
 
         /* HEADER */
-        .header {
-          margin-bottom: 28px;
+        .ultra-container .header {
+          margin-bottom: 32px;
         }
 
-        .badge {
+        .ultra-container .badge {
           font-size: 11px;
           color: #4da6ff;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.14em;
         }
 
-        h2 {
-          margin: 6px 0;
-          font-size: 20px;
+        .ultra-container .title {
+          margin: 8px 0;
+          font-size: 22px;
           color: #eaf4ff;
+          font-weight: 600;
         }
 
-        .header p {
+        .ultra-container .subtitle {
           font-size: 13px;
           color: rgba(234,244,255,0.6);
         }
 
         /* STEP */
-        .step {
+        .ultra-container .step {
           position: relative;
           display: flex;
           gap: 16px;
-          margin-bottom: 26px;
+          margin-bottom: 28px;
         }
 
-        .icon-core {
-          width: 30px;
-          height: 30px;
-          border-radius: 10px;
+        .ultra-container .icon-core {
+          width: 32px;
+          height: 32px;
+          border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: 600;
           background: linear-gradient(135deg, #4da6ff, #1e4d7a);
           color: white;
-          box-shadow: 0 0 16px rgba(77,166,255,0.6);
+          box-shadow: 0 0 18px rgba(77,166,255,0.6);
         }
 
-        .pulse-ring {
+        .ultra-container .pulse-ring {
           position: absolute;
           inset: -6px;
-          border-radius: 12px;
+          border-radius: 14px;
           border: 1px solid rgba(77,166,255,0.4);
           animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
           0% { opacity: 0.6; transform: scale(1); }
-          100% { opacity: 0; transform: scale(1.5); }
+          100% { opacity: 0; transform: scale(1.6); }
         }
 
-        .line {
+        .ultra-container .line {
           position: absolute;
-          left: 14px;
-          top: 34px;
+          left: 15px;
+          top: 36px;
           width: 2px;
-          height: calc(100% - 34px);
-          background: linear-gradient(to bottom, rgba(77,166,255,0.6), transparent);
+          height: calc(100% - 36px);
+          background: linear-gradient(to bottom, rgba(77,166,255,0.5), transparent);
         }
 
-        h3 {
+        .ultra-container .step-title {
           margin: 0;
           font-size: 15px;
           color: #eaf4ff;
+          font-weight: 500;
         }
 
-        p {
-          margin-top: 5px;
+        .ultra-container .step-text {
+          margin-top: 6px;
           font-size: 13px;
           color: rgba(234,244,255,0.7);
           line-height: 1.6;
-          text-align: justify;
         }
 
-        .completed .icon-core {
+        .ultra-container .completed .icon-core {
           background: linear-gradient(135deg, #a0ecfa, #4da6ff);
         }
 
-        .upcoming {
+        .ultra-container .upcoming {
           opacity: 0.35;
         }
 
         /* CTA */
-        .cta {
+        .ultra-container .cta-link {
+          text-decoration: none;
+        }
+
+        .ultra-container .cta {
           width: 100%;
-          margin-top: 24px;
-          padding: 14px;
-          border-radius: 12px;
+          margin-top: 28px;
+          padding: 15px;
+          border-radius: 14px;
           border: none;
           background: linear-gradient(90deg, #4da6ff, #00cfff);
           color: #fff;
           font-weight: 600;
-          box-shadow: 0 8px 25px rgba(77,166,255,0.3);
+          letter-spacing: 0.02em;
+          box-shadow: 0 10px 30px rgba(77,166,255,0.35);
           cursor: pointer;
         }
 
-        .trust {
-          margin-top: 12px;
+        .ultra-container .trust {
+          margin-top: 14px;
           font-size: 12px;
           text-align: center;
           color: rgba(234,244,255,0.5);
