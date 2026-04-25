@@ -24,7 +24,7 @@ const steps = [
   {
     title: 'Entrega Segura',
     description:
-      'Sempre com rastreamento + seguro inclusos. Pacientes em todos os estados do Brasil. (Todos os DDDs)',
+      'Sempre com rastreamento + seguro inclusos. Garantimos serviço com tratamentos personalizados em todos os estados do Brasil.',
     status: 'upcoming',
   },
 ];
