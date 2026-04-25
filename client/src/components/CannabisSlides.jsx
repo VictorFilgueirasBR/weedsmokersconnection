@@ -34,14 +34,6 @@ export default function CannabisSlides() {
   const [fade, setFade] = useState(true);
   const wrapRef = useRef(null);
 
-  const handlePrev = () => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-      setFade(true);
-    }, 300);
-  };
-
   const handleNext = () => {
     setFade(false);
     setTimeout(() => {
@@ -55,7 +47,6 @@ export default function CannabisSlides() {
     return () => clearInterval(interval);
   }, []);
 
-  // Spotlight igual HowItWorks
   useEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
@@ -74,7 +65,6 @@ export default function CannabisSlides() {
 
   return (
     <section ref={wrapRef} className="cs-wrap">
-      {/* BACKGROUNDS */}
       <div className="cs-bg-gradient" />
       <div className="cs-bg-grid" />
       <div className="cs-bg-noise" />
@@ -91,36 +81,16 @@ export default function CannabisSlides() {
           <h3 className="cs-subtitle">{slide.subtitle}</h3>
           <p className="cs-content">{slide.content}</p>
 
+          {/* PROGRESS NAV */}
           <div className="cs-nav">
-            <div className="cs-roulette">
-
+            <div className="cs-progress" onClick={handleNext}>
               <div
-                className="cs-wheel"
-                style={{ transform: `rotate(${currentSlide * (360 / slides.length)}deg)` }}
-              >
-                {slides.map((_, i) => {
-                  const angle = (360 / slides.length) * i;
-                  const radius = 60;
-                  const x = 50 + radius * Math.cos((angle * Math.PI) / 180);
-                  const y = 50 + radius * Math.sin((angle * Math.PI) / 180);
-
-                  return (
-                    <div
-                      key={i}
-                      className={`cs-dot ${i === currentSlide ? "active" : ""}`}
-                      style={{ left: `${x}%`, top: `${y}%` }}
-                      onClick={() => setCurrentSlide(i)}
-                    />
-                  );
-                })}
-              </div>
-
-              <div className="cs-center-btn" onClick={handleNext}>
-                ▶
-              </div>
-
+                className="cs-progress-bar"
+                style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
+              />
             </div>
           </div>
+
         </motion.div>
 
       </div>
@@ -234,72 +204,34 @@ export default function CannabisSlides() {
       }
 
       .cs-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
+        margin-top: 20px;
       }
 
-      /* ===== ROULETTE NAV ===== */
-      .cs-roulette {
-        position: relative;
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        border: 1px solid rgba(255,255,255,0.15);
-        backdrop-filter: blur(12px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow:
-          inset 0 0 20px rgba(255,255,255,0.05),
-          0 10px 40px rgba(0,0,0,0.4);
-      }
-
-      .cs-wheel {
-        position: absolute;
+      .cs-progress {
         width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        transition: transform 0.6s ease;
-      }
-
-      .cs-dot {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: rgba(255,255,255,0.3);
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .cs-dot.active {
-        background: #00cfff;
-        box-shadow: 0 0 10px #00cfff;
-      }
-
-      .cs-center-btn {
-        position: relative;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #00cfff, #4da6ff);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-weight: bold;
+        height: 8px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 999px;
+        overflow: hidden;
         cursor: pointer;
-        box-shadow: 0 0 20px rgba(0,200,255,0.5);
-        transition: transform 0.2s ease;
+        position: relative;
       }
 
-      .cs-center-btn:hover {
-        transform: scale(1.1);
+      .cs-progress::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #00cfff, #4da6ff);
+        opacity: 0.2;
+        filter: blur(10px);
       }
 
-      .cs-center-btn:active {
-        transform: scale(0.95);
+      .cs-progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #00cfff, #4da6ff);
+        border-radius: 999px;
+        transition: width 0.4s ease;
+        box-shadow: 0 0 15px rgba(0,200,255,0.6);
       }
 
       `}</style>
