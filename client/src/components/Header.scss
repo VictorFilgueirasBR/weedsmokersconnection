@@ -7,24 +7,22 @@ body {
   overflow-x: hidden !important;
 }
 
-// Bloqueia scroll quando menu está aberto no mobile
 body.menu-active {
   overflow: hidden !important;
 }
 
-// Variáveis
-$text-color-light: #fff;
-$text-color-dark: #333;
-$glass-bg-color: rgba(255, 255, 255, 0.05);
+// Variáveis atualizadas com as refs do site integrado
+$text-color-light: #f2f2f2;
+$text-color-dark: #222;
+$accent-color: #9fe7f5; // Cor de hover das refs
 $glass-border-color: rgba(255, 255, 255, 0.15);
-$accent-color: rgba(160, 236, 250, 0.9);
 
 .main-header {
-  /* FIX: Fixed para evitar duplicidade visual e garantir o floating */
+  /* Layout e Posicionamento */
   position: fixed !important;
   top: 1rem;
   left: 50%;
-  transform: translateX(-50%); // Mantido para centralização
+  transform: translateX(-50%);
   width: calc(100% - 2rem);
   max-width: 1200px;
   padding: 0 0.8rem;
@@ -34,8 +32,8 @@ $accent-color: rgba(160, 236, 250, 0.9);
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; // Equivalente ao e-con-inner
   z-index: 9999;
   transition: all 0.3s ease;
 
@@ -49,141 +47,127 @@ $accent-color: rgba(160, 236, 250, 0.9);
     }
   }
 
-  .header-right-controls {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .menu-toggle {
-    position: relative;
-    z-index: 10001; // Hamburguer sempre acima
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 18%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    color: $text-color-light;
-    cursor: pointer;
-    font-size: 2rem;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    border: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 70%);
-      pointer-events: none;
-    }
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: $accent-color;
-    }
-  }
-
+  /* LINKS (Refs do site integrado) */
   .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
-    transition: all 0.3s ease;
 
-    a, .edit-profile-btn, .logout-btn {
+    a {
       color: $text-color-light;
-      text-decoration: none;
       font-weight: 500;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      padding: 0;
+      text-decoration: none;
+      transition: color 0.25s ease;
+
       &:hover {
         color: $accent-color;
       }
     }
   }
 
-  .user-icon-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid $glass-border-color;
-    backdrop-filter: blur(10px);
-    color: $text-color-light;
-    cursor: pointer;
+  /* CTA / BOTÕES (Refs do site integrado) */
+  .cta-button, .logout-btn {
+    background: #f5f5f5;
+    color: $text-color-dark;
+    border-radius: 50px;
+    padding: 0.75rem 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
     transition: all 0.3s ease;
-    font-size: 1.2rem;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 70%);
-      pointer-events: none;
-    }
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.85rem;
 
     &:hover {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      color: $accent-color;
+      opacity: 0.95;
     }
+  }
+
+  .edit-profile-btn {
+    background: transparent;
+    color: $text-color-light;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.25s ease;
+    &:hover { color: $accent-color; }
+  }
+
+  .header-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 10001;
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 45px;
+    height: 45px;
   }
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
-  .main-header { width: 95%; height: 65px; }
-}
-
+/* === RESPONSIVIDADE E DROPDOWN === */
 @media (max-width: 768px) {
-  .main-header { height: 60px; }
-  .main-header .menu-toggle { display: flex; }
-  
-  /* FIX DEFINITIVO: Menu Lateral Branco */
-  .main-header .nav-links {
-    position: fixed !important;
-    top: 0;
-    right: -100%; // Escondido
-    width: 280px;
-    max-width: 85vw;
-    height: 100vh;
-    background: #ffffff !important;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 2rem 2rem 2rem;
-    z-index: 10000;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.15);
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: none;
-    gap: 1.5rem;
-
-    &.open {
-      right: 0; // Aberto
+  .main-header {
+    min-height: 60px;
+    padding: 0 1rem;
+    
+    .menu-toggle {
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    a, .edit-profile-btn, .logout-btn { 
-      color: #333 !important; 
-      font-size: 1.1rem;
-      width: 100%;
-      text-align: left;
+    .nav-links {
+      display: none;
+      
+      &.open {
+        display: flex;
+        position: fixed !important;
+        
+        /* Ajustes solicitados: Margens e Posicionamento */
+        top: 0;
+        right: 0;
+        margin-top: 3.5rem;   /* Espaço solicitado */
+        margin-right: 1rem;  /* Espaço solicitado */
+        
+        width: 280px;
+        max-width: 85vw;
+        height: auto;        /* Ajustado para não cobrir a tela toda se não houver muitos itens */
+        max-height: 80vh;
+        background: #ffffff !important;
+        border-radius: 20px; /* Bordas arredondadas para combinar com o estilo */
+        padding: 2rem;
+        z-index: 10000;
+        box-shadow: -10px 10px 30px rgba(0,0,0,0.25);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        overflow-y: auto;
+
+        a, .edit-profile-btn, .logout-btn {
+          color: #222 !important;
+          width: 100%;
+          text-align: left;
+          padding: 0.5rem 0;
+        }
+
+        .cta-button, .logout-btn {
+          text-align: center;
+          margin-top: 1rem;
+        }
+      }
     }
   }
-}
-
-@media (max-width: 480px) {
-  .main-header { width: 98%; height: 55px; }
 }
