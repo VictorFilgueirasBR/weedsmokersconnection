@@ -95,7 +95,7 @@ export default function Signup() {
                     transition={{ delay: 0.2 }}
                 >
                     ASSINE E DESBLOQUEIE <br />
-                    <span>O SEU FUTURO</span>
+                    <span>O SEU ACESSO</span>
                 </motion.h1>
 
                 {/* BOX DE DESTAQUES (Glassmorphism Avançado) */}

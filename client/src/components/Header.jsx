@@ -5,8 +5,7 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import './Header.scss';
 
-// Recebe a nova propriedade onShowPopup
-const Header = ({ onEditProfile, onShowPopup }) => {
+const Header = ({ onShowPopup }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, setUser, setToken } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -25,7 +24,6 @@ const Header = ({ onEditProfile, onShowPopup }) => {
     if (location.pathname !== '/profile') {
       navigate('/profile');
     }
-    // Chame a nova função para exibir o popup
     if (typeof onShowPopup === 'function') {
       onShowPopup();
     }
@@ -50,6 +48,15 @@ const Header = ({ onEditProfile, onShowPopup }) => {
     setIsMenuOpen(false);
   };
 
+  // Sincroniza o estado do menu com o body para o bloqueio de scroll
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-active');
+    } else {
+      document.body.classList.remove('menu-active');
+    }
+  }, [isMenuOpen]);
+
   return (
     <header className="main-header">
       <div className="logo">
@@ -60,7 +67,6 @@ const Header = ({ onEditProfile, onShowPopup }) => {
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | HOME</Link>
-        {/* LÓGICA CORRIGIDA: MOSTRA "SOBRE" SOMENTE SE NÃO ESTIVER LOGADO */}
         {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>WSC | TEST IA</Link>}
 
         {!isLoggedIn ? (
@@ -72,7 +78,6 @@ const Header = ({ onEditProfile, onShowPopup }) => {
         ) : (
           <>
             <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
-            {/* O onClick aqui agora usa handleEditProfile para ativar o popup */}
             <button onClick={handleEditProfile} className="edit-profile-btn">
               Edit
             </button>
