@@ -108,15 +108,15 @@ export default function Signup() {
                     <ul className="highlight-list">
                         <li className="highlight-item">
                             <FaHandshake /> 
-                            <span>Médicos prescritores e fornecedores premium selecionados.</span>
+                            <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span>
                         </li>
                         <li className="highlight-item">
                             <FaCannabis /> 
-                            <span>Acesso a Flores In Natura, Extrações (ICE, Rosin) e Gummies.</span>
+                            <span>Acesso as melhores Espécies de Flores in Natura e Extrações do mercado: THC (ICE, Hash, Rosin, FullSpectrum, Diamonds), Gummies de THC, CBD, Óleos e muito mais.</span>
                         </li>
                         <li className="highlight-item">
                             <FaShieldAlt /> 
-                            <span>Consulta médica já inclusa no valor de qualquer plano.</span>
+                            <span>Consulta médica já inclusa no valor de qualquer plano, oque muda é o tempo de acesso a área de membros com catálogo atualizado.</span>
                         </li>
                     </ul>
                 </motion.div>
@@ -162,7 +162,7 @@ export default function Signup() {
                     </button>
                     
                     <p className="login-link">
-                        Já possui conta? <a href="/login">Fazer Login</a>
+                        Já possui conta? <a href="https://ws-connectioncommerce.com/minha-conta/">My Account</a>
                     </p>
                 </div>
 
