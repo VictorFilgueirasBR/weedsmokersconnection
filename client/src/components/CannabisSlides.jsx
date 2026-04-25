@@ -267,6 +267,20 @@ export default function CannabisSlides() {
         transition: width 0.1s linear;
       }
 
+      
+
+      @media (max-width: 768px) {
+        .cs-title {
+          font-size: 22px;
+          text-align: left;
+        }
+
+        .cs-subtitle {
+          font-size: 14px;
+          text-align: left;
+        }
+      }
+
       `}</style>
     </section>
   );
