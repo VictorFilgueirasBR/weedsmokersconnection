@@ -11,14 +11,13 @@ body.menu-active {
   overflow: hidden !important;
 }
 
-// Variáveis atualizadas com as refs do site integrado
+// Variáveis
 $text-color-light: #f2f2f2;
 $text-color-dark: #222;
-$accent-color: #9fe7f5; // Cor de hover das refs
+$accent-color: #9fe7f5;
 $glass-border-color: rgba(255, 255, 255, 0.15);
 
 .main-header {
-  /* Layout e Posicionamento */
   position: fixed !important;
   top: 1rem;
   left: 50%;
@@ -33,7 +32,7 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
-  justify-content: space-between; // Equivalente ao e-con-inner
+  justify-content: space-between;
   z-index: 9999;
   transition: all 0.3s ease;
 
@@ -47,7 +46,6 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
     }
   }
 
-  /* LINKS (Refs do site integrado) */
   .nav-links {
     display: flex;
     gap: 2rem;
@@ -65,7 +63,6 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
     }
   }
 
-  /* CTA / BOTÕES (Refs do site integrado) */
   .cta-button, .logout-btn {
     background: #f5f5f5;
     color: $text-color-dark;
@@ -114,60 +111,79 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
     border-radius: 12px;
     width: 45px;
     height: 45px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-/* === RESPONSIVIDADE E DROPDOWN === */
+/* === RESPONSIVIDADE E DROPDOWN LATERAL === */
 @media (max-width: 768px) {
   .main-header {
     min-height: 60px;
-    padding: 0 1rem;
     
     .menu-toggle {
       display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .nav-links {
-      display: none;
+      display: none; // Escondido por padrão
       
       &.open {
         display: flex;
         position: fixed !important;
         
-        /* Ajustes solicitados: Margens e Posicionamento */
+        /* Posicionamento solicitado */
         top: 0;
         right: 0;
-        margin-top: 3.5rem;   /* Espaço solicitado */
-        margin-right: 1rem;  /* Espaço solicitado */
+        margin-top: 4rem;      /* Margem superior solicitada */
+        margin-right: 0.5rem;  /* Margem lateral solicitada */
         
+        /* Dimensões */
         width: 280px;
         max-width: 85vw;
-        height: auto;        /* Ajustado para não cobrir a tela toda se não houver muitos itens */
-        max-height: 80vh;
+        height: calc(100vh - 4rem); /* Vai exatamente até o pé da tela */
+        
+        /* Estilo do corpo do menu */
         background: #ffffff !important;
-        border-radius: 20px; /* Bordas arredondadas para combinar com o estilo */
-        padding: 2rem;
+        border-radius: 12px 12px 0 0; /* Arredondado apenas em cima para parecer que brota da base */
+        padding: 2.5rem 1.5rem;
         z-index: 10000;
-        box-shadow: -10px 10px 30px rgba(0,0,0,0.25);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+        
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.2rem;
+        gap: 1.5rem;
         overflow-y: auto;
+        animation: slideInRight 0.3s ease-out;
 
         a, .edit-profile-btn, .logout-btn {
           color: #222 !important;
           width: 100%;
           text-align: left;
-          padding: 0.5rem 0;
+          padding: 0.8rem 0;
+          border-bottom: 1px solid rgba(0,0,0,0.05);
+          font-size: 1.1rem;
         }
 
         .cta-button, .logout-btn {
           text-align: center;
           margin-top: 1rem;
+          border-bottom: none;
+          background: #222;
+          color: #fff !important;
         }
       }
     }
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
