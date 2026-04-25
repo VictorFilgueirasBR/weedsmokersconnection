@@ -14,6 +14,14 @@ export default function ChatWscPage() {
           background: radial-gradient(circle at top left, #0f0f0f, #000);
           color: #fff;
           font-family: 'Segoe UI', sans-serif;
+          /* Adiciona um recuo para o conteúdo não ficar sob o Header fixo */
+          padding-top: 80px; 
+          box-sizing: border-box;
+        }
+
+        /* Garante que o Header tenha prioridade visual se houver conflito */
+        .main-header {
+          z-index: 99999 !important;
         }
       `}</style>
       <ChatWsc />
