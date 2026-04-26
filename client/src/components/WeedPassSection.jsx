@@ -56,19 +56,19 @@ export default function WeedPassSection() {
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         >
           <p>
-            Liberdade total com Weed Smoker Pass: THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds), médicos, fornecedores. Vida leve, saudável e cura garantida! E sim… os caras conseguiram colocar tudo isso num software. Dá pra acreditar? 😂
+            Liberdade total com a WS | Connection: THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds), médicos, fornecedores. Vida leve, saudável e cura garantida! E sim… os caras conseguiram colocar tudo isso num software. Dá pra acreditar? 😂
           </p>
 
           <p>
-            Assina e destrava: acesso direto aos médicos prescritores que liberam sua receita de Cannabis medicinal! 🍃 Sem stress, sem enrolação — insônia, ansiedade, dores crônicas, TDAH, TEA, epilepsia, depressão e outras condições reconhecidas pela ANVISA. Weed Smokers Connection: Tudo que você precisa saber, sem complicação. 💨
+            Assina e destrava: acesso direto aos médicos prescritores que liberam sua receita de Cannabis medicinal! 🍃 Sem stress, sem enrolação — insônia, ansiedade, dores crônicas, TDAH, TEA, epilepsia, depressão e outras condições reconhecidas pela ANVISA. WS | Connection: Tudo que você precisa saber, sem complicação. 💨
           </p>
 
           <p>
-            Dentro da plataforma é mamão com açúcar: você segue o passo a passo para conseguir sua autorização, separa os documentos e pronto. Ainda tem contato direto com fornecedores confiáveis de espécies e extrações top de linha com THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e outros canabinoides — tanto nacionais quanto importados, e eles entregam rápido, sem enrolação. Ou seja: menos burocracia, mais vantagem e mais liberdade pra você.
+            Dentro da plataforma é mamão com açúcar: Segue o passo a passo para conseguir suas autorizações de forma orientada pela nossa equipe, separa os documentos e pronto. Ainda tem contato direto com fornecedores confiáveis de espécies e extrações top de linha com THC, CBD (ICE, Hash, Rosin, FullSpectrum, Diamonds) e outros canabinoides — tanto nacionais quanto importados, e eles entregam rápido, sem enrolação. Ou seja: Menos burocracia, mais vantagem e mais liberdade pra você.
           </p>
 
           <p>
-            Tá fácil: joga sua receita e as notas fiscais lá no perfil e pronto. O Weed Smoker Pass te dá a liberdade que você sempre quis — pode curtir seus produtos sem dor de cabeça, com segurança e na legalidade. E o melhor: você ainda tem acesso a um catálogo só com coisa boa, especialmente selecionada pra sua cura, disponível pra comprar sem enrolação, além dos fornecedores que sabem indicar médicos de confiança. Ou seja… menos burocracia, mais liberdade. 🍃
+            Tá fácil: Joga sua receita e as notas fiscais lá no perfil e pronto. A WS | Connection te dá a liberdade que você sempre quis — pode curtir seu tratamento sem dor de cabeça, com segurança e na legalidade. E o melhor: Você ainda tem acesso a um catálogo só com coisa boa, especialmente selecionada para sua cura, disponível para adiquirir sem enrolação, além dos fornecedores de confiança. Ou seja… Menos burocracia, mais liberdade. 🍃
           </p>
         </motion.div>
 
