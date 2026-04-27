@@ -80,7 +80,7 @@ const Footer = () => {
             }}
           >
             {/* DUPLICANDO O TEXTO AQUI */}
-            Copyright &copy; WEED SMOKERS CONNECTION inc. &nbsp; Copyright &copy; WEED SMOKERS CONNECTION. &nbsp; Copyright &copy; WEED SMOKERS CONNECTION.
+            Copyright &copy; WS | CONNECTION inc. &nbsp; Copyright &copy; WS | CONNECTION. &nbsp; Copyright &copy; WS | CONNECTION. &nbsp; Copyright &copy; WS | CONNECTION. &nbsp; Copyright &copy; WS | CONNECTION. &nbsp; Copyright &copy; WS | CONNECTION.
           </motion.div>
         </div>
       </div>
