@@ -108,7 +108,7 @@ export default function Signup() {
                     <ul className="highlight-list">
                         <li className="highlight-item">
                             <FaHandshake /> 
-                            <span>Médicos prescritores e fornecedores premium, selecionados a dedo.</span>
+                            <span>Conectamos você aos melhores médicos prescritores e fornecedores do mercado, através de uma seleção criteriosa com muitos anos de Experiência e pesquisa prática.</span>
                         </li>
                         <li className="highlight-item">
                             <FaCannabis /> 
@@ -116,7 +116,7 @@ export default function Signup() {
                         </li>
                         <li className="highlight-item">
                             <FaShieldAlt /> 
-                            <span>Consulta médica + atualizações necessárias já inclusas no valor dos plano, oque muda é o tempo de acesso LEGALIZADO & conteúdo exclusivo com catálogo atualizado mensalmente.</span>
+                            <span>Consulta médica + atualizações necessárias + SUPORTE já inclusas no valor dos planos! VOCÊ ESCOLHE o tempo de acesso LEGALIZADO & conteúdo exclusivo com tratamentos atualizado mensalmente.</span>
                         </li>
                     </ul>
                 </motion.div>
