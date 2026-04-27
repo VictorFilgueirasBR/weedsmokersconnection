@@ -108,7 +108,7 @@ export default function Signup() {
                     <ul className="highlight-list">
                         <li className="highlight-item">
                             <FaHandshake /> 
-                            <span>Conectamos você aos melhores médicos prescritores e fornecedores do mercado, através de uma seleção criteriosa com muitos anos de Experiência e pesquisa prática.</span>
+                            <span>Conectamos você aos melhores médicos prescritores e fornecedores do mercado, através de uma seleção criteriosa com muitos anos de Experiência & Pesquisa prática.</span>
                         </li>
                         <li className="highlight-item">
                             <FaCannabis /> 
