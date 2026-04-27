@@ -116,7 +116,7 @@ export default function Signup() {
                         </li>
                         <li className="highlight-item">
                             <FaShieldAlt /> 
-                            <span>Consulta médica já inclusa no valor de qualquer plano, oque muda é o tempo de acesso a área de membros com catálogo atualizado.</span>
+                            <span>Consulta médica + atualizações necessárias já inclusas no valor dos plano, oque muda é o tempo de acesso LEGALIZADO & conteúdo exclusivo com catálogo atualizado mensalmente.</span>
                         </li>
                     </ul>
                 </motion.div>
