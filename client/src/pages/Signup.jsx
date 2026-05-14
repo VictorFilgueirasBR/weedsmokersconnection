@@ -21,14 +21,16 @@ export default function Signup() {
     const wrapRef = useRef(null);
 
     /* =========================
-       🔹 LINKS DE CHECKOUT
+        🔹 LINKS DE CHECKOUT
     ========================= */
     const planCheckoutLinks = {
+        start: "https://ws-connectioncommerce.com/produto/wsc-plano-start/",
         semestral: "https://ws-connectioncommerce.com/produto/wsc-signature-semestral/",
         anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/"
     };
 
     const planOptions = {
+        start: { price: '249,90', description: 'Plano Start', duration: '/ 3 Meses' },
         semestral: { price: '449,90', description: 'Plano Semestral', duration: '/ Semestre' },
         anual: { price: '767,90', description: 'Plano Anual', duration: '/ Ano' }
     };
@@ -116,7 +118,7 @@ export default function Signup() {
                         </li>
                         <li className="highlight-item">
                             <FaShieldAlt /> 
-                            <span>Consulta médica + atualizações necessárias + SUPORTE já inclusas no valor dos planos! VOCÊ ESCOLHE o tempo de acesso LEGALIZADO & conteúdo exclusivo com tratamentos atualizado mensalmente.</span>
+                            <span>Consulta médica + atualizações necessárias + suporte já incluso no valor dos planos! Você escolhe o tempo de acesso ao tratamento e conteúdo exclusivo com tratamentos atualizado mensalmente.</span>
                         </li>
                     </ul>
                 </motion.div>
