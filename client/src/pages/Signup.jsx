@@ -19,35 +19,49 @@ export default function Signup() {
     const [searchParams] = useSearchParams();
     const prefersReducedMotion = useReducedMotion();
     const wrapRef = useRef(null);
+    const ctaRef = useRef(null);
 
     /* =========================
         🔹 LINKS DE CHECKOUT
     ========================= */
     const planCheckoutLinks = {
-        start: "https://ws-connectioncommerce.com/produto/wsc-plano-start/",
+        derve: "https://ws-connectioncommerce.com/produto/wsc-plano-derve/",
+        euyasmin: "https://ws-connectioncommerce.com/produto/wsc-plano-euyasmin/",
         semestral: "https://ws-connectioncommerce.com/produto/wsc-signature-semestral/",
         anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/"
     };
 
     const planOptions = {
-        start: { price: '389,90', description: 'Plano Start', duration: '/ 3 Meses' },
+        derve: { price: '420,00', description: 'Plano Derve', duration: '/ 6 Meses' },
+        euyasmin: { price: '420,00', description: 'Plano EuYasmin', duration: '/ 6 Meses' },
         semestral: { price: '449,90', description: 'Plano Semestral', duration: '/ 6 Meses' },
         anual: { price: '767,90', description: 'Plano Anual', duration: '/ 1 Ano' }
     };
 
-    // Spotlight Effect (Neural Tracking)
+    // Spotlight Effect (Neural Tracking) para o Container e o Botão CTA
     useEffect(() => {
         const el = wrapRef.current;
+        const cta = ctaRef.current;
         if (!el) return;
+
         const move = (e) => {
             const r = el.getBoundingClientRect();
             const x = e.clientX - r.left;
             const y = e.clientY - r.top;
             el.style.setProperty("--mx", `${x}px`);
             el.style.setProperty("--my", `${y}px`);
+
+            if (cta) {
+                const ctaRect = cta.getBoundingClientRect();
+                const ctaX = e.clientX - ctaRect.left;
+                const ctaY = e.clientY - ctaRect.top;
+                cta.style.setProperty("--cx", `${ctaX}px`);
+                cta.style.setProperty("--cy", `${ctaY}px`);
+            }
         };
-        el.addEventListener("mousemove", move);
-        return () => el.removeEventListener("mousemove", move);
+
+        window.addEventListener("mousemove", move);
+        return () => window.removeEventListener("mousemove", move);
     }, []);
 
     // Monitoramento de Status de Pagamento
@@ -157,6 +171,7 @@ export default function Signup() {
                     </div>
 
                     <button 
+                        ref={ctaRef}
                         className="wsc-cta" 
                         onClick={handleExternalCheckout}
                     >
@@ -363,13 +378,15 @@ export default function Signup() {
                     position: relative;
                     overflow: hidden;
                     transition: transform 0.3s ease;
+                    --cx: 50%;
+                    --cy: 50%;
                 }
 
                 .wsc-cta::before {
                     content: '';
                     position: absolute;
-                    left: var(--mx);
-                    top: var(--my);
+                    left: var(--cx);
+                    top: var(--cy);
                     transform: translate(-50%, -50%);
                     width: 0;
                     height: 0;
