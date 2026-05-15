@@ -31,8 +31,8 @@ export default function Signup() {
 
     const planOptions = {
         start: { price: '389,90', description: 'Plano Start', duration: '/ 3 Meses' },
-        semestral: { price: '449,90', description: 'Plano Semestral', duration: '/ Semestre' },
-        anual: { price: '767,90', description: 'Plano Anual', duration: '/ Ano' }
+        semestral: { price: '449,90', description: 'Plano Semestral', duration: '/ 6 Meses' },
+        anual: { price: '767,90', description: 'Plano Anual', duration: '/ 1 Ano' }
     };
 
     // Spotlight Effect (Neural Tracking)
