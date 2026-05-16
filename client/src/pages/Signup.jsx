@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { AuthContext } from '../App';
 import { motion, useReducedMotion } from 'framer-motion';
-import { FaCheckCircle, FaHandshake, FaCannabis, FaShieldAlt } from 'react-icons/fa';
+import { FaCheckCircle, FaHandshake, FaCannabis, FaShieldAlt, FaStar, FaUserCheck } from 'react-icons/fa';
 
 export default function Signup() {
     const [formData, setFormData] = useState({ name: '', email: '', password: '', confirmPassword: '' });
@@ -25,20 +25,24 @@ export default function Signup() {
         🔹 LINKS DE CHECKOUT
     ========================= */
     const planCheckoutLinks = {
-        derve: "https://ws-connectioncommerce.com/produto/wsc-plano-derve/",
-        euyasmin: "https://ws-connectioncommerce.com/produto/wsc-plano-euyasmin/",
         semestral: "https://ws-connectioncommerce.com/produto/wsc-signature-semestral/",
-        anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/"
+        anual: "https://ws-connectioncommerce.com/produto/wsc-signature-anual/",
+        derve: "https://ws-connectioncommerce.com/produto/wsc-plano-start/",
+        euyasmin: "https://ws-connectioncommerce.com/produto/wsc-plano-start/"
     };
 
-    const planOptions = {
-        derve: { price: '420,00', description: 'Plano Derve', duration: '/ 6 Meses' },
-        euyasmin: { price: '420,00', description: 'Plano EuYasmin', duration: '/ 6 Meses' },
-        semestral: { price: '449,90', description: 'Plano Semestral', duration: '/ 6 Meses' },
-        anual: { price: '767,90', description: 'Plano Anual', duration: '/ 1 Ano' }
+    // Divisão Inteligente de Planos (Oficiais vs Parceiros)
+    const mainPlans = {
+        semestral: { price: '449,90', description: 'Plano Semestral', duration: '/ 6 Meses', badge: 'Mais Procurado' },
+        anual: { price: '767,90', description: 'Plano Anual', duration: '/ 1 Ano', badge: 'Melhor Custo-Benefício' }
     };
 
-    // Spotlight Effect (Neural Tracking) para o Container e o Botão CTA
+    const creatorPlans = {
+        derve: { price: '420,00', description: 'Plano Derve', duration: '/ 6 Meses', creator: 'Parceiro Oficial' },
+        euyasmin: { price: '420,00', description: 'Plano EuYasmin', duration: '/ 6 Meses', creator: 'Parceiro Oficial' }
+    };
+
+    // Spotlight Effect (Neural Tracking)
     useEffect(() => {
         const el = wrapRef.current;
         const cta = ctaRef.current;
@@ -84,9 +88,26 @@ export default function Signup() {
         window.location.href = link;
     };
 
+    // Variantes de animação para entrada em cascata (Staggered Animation)
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.12 }
+        }
+    };
+
+    const cardVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: { 
+            y: 0, 
+            opacity: 1,
+            transition: { type: "spring", stiffness: 100, damping: 15 }
+        }
+    };
+
     return (
         <section ref={wrapRef} className="wsc-wrap">
-            {/* Camadas de Fundo Inspiradas na Referência */}
             <div className="wsc-bg-gradient" />
             <div className="wsc-bg-grid" />
             <div className="wsc-bg-noise" />
@@ -114,7 +135,7 @@ export default function Signup() {
                     <span>O SEU ACESSO</span>
                 </motion.h1>
 
-                {/* BOX DE DESTAQUES (Glassmorphism Avançado) */}
+                {/* BOX DE DESTAQUES */}
                 <motion.div 
                     className="signup-highlight-box"
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -144,19 +165,30 @@ export default function Signup() {
                     </div>
                 )}
 
-                {/* CONTAINER DE PLANOS */}
+                {/* CONTAINER DE PLANOS COM SEPARAÇÃO INTELIGENTE */}
                 <div className="signup-form-glass">
-                    <h2 className="section-subtitle">Escolha Seu Plano</h2>
                     
-                    <div className="plans-wrapper">
-                        {Object.entries(planOptions).map(([key, opt]) => (
+                    {/* CATEGORIA 1: PLANOS PRINCIPAIS */}
+                    <h3 className="category-divider">
+                        <span>Planos Oficiais</span>
+                    </h3>
+                    
+                    <motion.div 
+                        className="plans-wrapper row-layout"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        {Object.entries(mainPlans).map(([key, opt]) => (
                             <motion.div
                                 key={key}
                                 onClick={() => setSelectedPlan(key)}
-                                className={`plan-option ${selectedPlan === key ? 'selected' : ''}`}
-                                whileHover={{ scale: 1.02, translateY: -5 }}
+                                className={`plan-option standard-card ${selectedPlan === key ? 'selected' : ''}`}
+                                variants={cardVariants}
+                                whileHover={{ scale: 1.03, y: -4 }}
                                 whileTap={{ scale: 0.98 }}
                             >
+                                <div className="plan-badge-tag"><FaStar /> {opt.badge}</div>
                                 <div className="plan-info">
                                     <h4>{opt.description}</h4>
                                     <div className="price-row">
@@ -168,7 +200,41 @@ export default function Signup() {
                                 {selectedPlan === key && <FaCheckCircle className="check-icon" />}
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
+
+                    {/* CATEGORIA 2: PLANOS INFLUENCERS */}
+                    <h3 className="category-divider creator-divider">
+                        <span>Cupons de Influenciadores</span>
+                    </h3>
+
+                    <motion.div 
+                        className="plans-wrapper row-layout"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        {Object.entries(creatorPlans).map(([key, opt]) => (
+                            <motion.div
+                                key={key}
+                                onClick={() => setSelectedPlan(key)}
+                                className={`plan-option creator-card ${selectedPlan === key ? 'selected' : ''}`}
+                                variants={cardVariants}
+                                whileHover={{ scale: 1.03, y: -4 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <div className="plan-badge-tag creator-tag"><FaUserCheck /> {opt.creator}</div>
+                                <div className="plan-info">
+                                    <h4>{opt.description}</h4>
+                                    <div className="price-row">
+                                        <span className="currency">R$</span>
+                                        <span className="main-price">{opt.price}</span>
+                                        <span className="duration">{opt.duration}</span>
+                                    </div>
+                                </div>
+                                {selectedPlan === key && <FaCheckCircle className="check-icon" />}
+                            </motion.div>
+                        ))}
+                    </motion.div>
 
                     <button 
                         ref={ctaRef}
@@ -239,7 +305,7 @@ export default function Signup() {
                 .wsc-container {
                     position: relative;
                     z-index: 3;
-                    max-width: 600px;
+                    max-width: 680px;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -310,7 +376,7 @@ export default function Signup() {
                     flex-shrink: 0;
                 }
 
-                /* FORM & PLANS */
+                /* FORM & PLANS DIVISION */
                 .signup-form-glass {
                     background: rgba(255, 255, 255, 0.02);
                     backdrop-filter: blur(15px);
@@ -320,47 +386,109 @@ export default function Signup() {
                     box-shadow: 0 25px 50px rgba(0,0,0,0.4);
                 }
 
-                .section-subtitle {
-                    color: #fff;
-                    font-size: 1.2rem;
-                    margin-bottom: 20px;
-                    text-align: center;
+                .category-divider {
+                    width: 100%;
+                    text-align: left;
+                    font-size: 0.85rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.15em;
+                    color: rgba(255, 255, 255, 0.4);
+                    margin: 24px 0 16px 0;
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .category-divider::after {
+                    content: '';
+                    flex-grow: 1;
+                    height: 1px;
+                    background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
+                    margin-left: 15px;
                 }
 
-                .plans-wrapper {
-                    display: flex;
-                    flex-direction: column;
+                .creator-divider {
+                    color: #4da6ff;
+                    margin-top: 32px;
+                }
+                .creator-divider::after {
+                    background: linear-gradient(90deg, rgba(77,166,255,0.2), transparent);
+                }
+
+                .plans-wrapper.row-layout {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
                     gap: 16px;
-                    margin-bottom: 24px;
+                    margin-bottom: 16px;
                 }
 
                 .plan-option {
+                    position: relative;
                     display: flex;
+                    flex-direction: column;
                     justify-content: space-between;
-                    align-items: center;
-                    padding: 20px;
-                    background: rgba(255,255,255,0.03);
-                    border: 1px solid rgba(255,255,255,0.1);
+                    padding: 24px 20px 20px 20px;
+                    background: rgba(255,255,255,0.02);
+                    border: 1px solid rgba(255,255,255,0.06);
                     border-radius: 16px;
                     cursor: pointer;
-                    transition: all 0.3s ease;
+                    overflow: hidden;
+                    transition: border-color 0.3s, box-shadow 0.3s;
                 }
 
-                .plan-option.selected {
-                    background: rgba(0, 207, 255, 0.1);
+                .plan-badge-tag {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 9px;
+                    font-weight: 700;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    padding: 4px 10px;
+                    border-radius: 0 0 8px 0;
+                    background: rgba(0, 207, 255, 0.15);
+                    color: #00cfff;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+
+                .creator-tag {
+                    background: rgba(166, 77, 255, 0.15);
+                    color: #b777ff;
+                }
+
+                .plan-option.selected.standard-card {
+                    background: radial-gradient(circle at top left, rgba(0, 207, 255, 0.08), transparent);
                     border-color: #00cfff;
-                    box-shadow: 0 0 20px rgba(0, 207, 255, 0.2);
+                    box-shadow: 0 0 25px rgba(0, 207, 255, 0.15);
+                }
+
+                .plan-option.selected.creator-card {
+                    background: radial-gradient(circle at top left, rgba(166, 77, 255, 0.08), transparent);
+                    border-color: #a64dff;
+                    box-shadow: 0 0 25px rgba(166, 77, 255, 0.15);
                 }
 
                 .price-row {
                     display: flex;
                     align-items: baseline;
                     gap: 4px;
-                    margin-top: 4px;
+                    margin-top: 12px;
                 }
-                .main-price { font-size: 1.5rem; font-weight: 800; color: #fff; }
-                .currency, .duration { font-size: 0.8rem; color: #00cfff; }
-                .check-icon { color: #00cfff; font-size: 1.5rem; }
+                .main-price { font-size: 1.6rem; font-weight: 800; color: #fff; }
+                .currency, .duration { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+                
+                .plan-option.selected .currency { color: #00cfff; }
+                .plan-option.selected.creator-card .currency { color: #a64dff; }
+
+                .check-icon { 
+                    position: absolute;
+                    top: 16px;
+                    right: 16px;
+                    color: #00cfff; 
+                    font-size: 1.2rem; 
+                }
+                .creator-card .check-icon { color: #a64dff; }
 
                 /* BOTÃO CTA ESTILO NEURAL */
                 .wsc-cta {
@@ -378,6 +506,7 @@ export default function Signup() {
                     position: relative;
                     overflow: hidden;
                     transition: transform 0.3s ease;
+                    margin-top: 20px;
                     --cx: 50%;
                     --cy: 50%;
                 }
