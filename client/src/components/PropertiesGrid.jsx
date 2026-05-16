@@ -73,7 +73,7 @@ const propertiesData = [
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 8,
@@ -83,7 +83,7 @@ const propertiesData = [
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 9,
