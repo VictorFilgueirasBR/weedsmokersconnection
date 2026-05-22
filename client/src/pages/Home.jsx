@@ -8,7 +8,6 @@ import StepByStepInline from "../components/StepByStepInline";
 import HeroHashLegal from "../components/HeroHashLegal";
 import HowItWorksSection from "../components/HowItWorksSection";
 import WeedPassSection from "../components/WeedPassSection";
-import VideoPlayer from "../components/VideoPlayer";
 import CannabisSlides from "../components/CannabisSlides";
 import IceSection from "../components/IceSection";
 import FlowerWsc from "../components/FlowersWcs";
@@ -41,7 +40,7 @@ export default function Home() {
 
       <CannabisSlides />
 
-      <VideoPlayer />
+      
 
     </div>
   );
