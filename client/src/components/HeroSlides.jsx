@@ -81,7 +81,7 @@ const HeroSlides = () => {
       <button
         className="hero-main-cta-button submit-gradient-btn"
         onMouseMove={handleMouseMove}
-        onClick={() => navigate('/signup')}
+        onClick={() => window.location.href = 'https://ws-connectioncommerce.com/'}
       >
         CONTRATAR →
       </button>

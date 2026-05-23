@@ -63,7 +63,7 @@ function GlassCard({
           <button
             className="glass-btn"
             style={styles.editBtn}
-            onClick={() => navigate("/signup")}
+            onClick={() => window.location.href = 'https://ws-connectioncommerce.com/'}
           >
             {cta}
             <svg

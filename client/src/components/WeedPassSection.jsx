@@ -77,7 +77,7 @@ export default function WeedPassSection() {
           className="wsp-cta"
           onClick={() =>
             (window.location.href =
-              "https://weedsmokersconnection.com/signup")
+              "https://ws-connectioncommerce.com/")
           }
         >
           Quero meu Pass

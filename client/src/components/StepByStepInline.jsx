@@ -83,7 +83,7 @@ export default function StepByStepUltraHealthPro() {
 
         {/* CTA */}
         <a 
-          href="https://weedsmokersconnection.com/signup" 
+          href="https://ws-connectioncommerce.com/" 
           className="cta-link"
         >
           <motion.button
