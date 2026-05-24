@@ -66,14 +66,14 @@ const Header = ({ onShowPopup }) => {
       </div>
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>WS | TEST IA</Link>}
+        <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | CONNECTION</Link>
+        {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>}
 
         {!isLoggedIn ? (
           <>
-            <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>
-            <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick} translate="no" lang="en">WS | PLANS</Link>
+            <Link to="/chat" onClick={handleLinkClick}>WSC | TEST IA</Link>
+            <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick} translate="no" lang="en">WSC | PLANS</Link>
             <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
-            <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WS | BLOG</Link>
           </>
         ) : (
           <>
