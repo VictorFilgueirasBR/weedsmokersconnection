@@ -12,7 +12,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-769,00',
     description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'PEDIR',
+    cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -22,7 +22,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
-    cta: 'PEDIR',
+    cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -33,7 +33,7 @@ const propertiesData = [
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl3/'
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-849,90',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'PEDIR',
+    cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -53,7 +53,7 @@ const propertiesData = [
     price: 'WSC-710,00',
     description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl3/'
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const propertiesData = [
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
   {
     id: 8,
@@ -83,7 +83,7 @@ const propertiesData = [
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
   },
   {
     id: 9,
