@@ -51,48 +51,48 @@ const Header = ({ onShowPopup }) => {
   // Sincroniza o estado do menu com o body para o bloqueio de scroll
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('glx-ambient-viewactive');
+      document.body.classList.add('menu-active');
     } else {
-      document.body.classList.remove('glx-ambient-viewactive');
+      document.body.classList.remove('menu-active');
     }
   }, [isMenuOpen]);
 
   return (
-    <header className="glx-navigation-bar">
-      <div className="glx-brand-plate">
+    <header className="main-header">
+      <div className="logo">
         <Link to="/" onClick={handleLinkClick}>
           <img src="/logo192.png" alt="WeedSmokersClub" />
         </Link>
       </div>
 
-      <nav ref={menuRef} className={`glx-link-container ${isMenuOpen ? 'glx-state-visible' : ''}`}>
-        <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | HOME</Link>
-        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>WSC | TEST IA</Link>}
+      <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>WS | TEST IA</Link>}
 
         {!isLoggedIn ? (
           <>
-            <Link to="https://ws-connectioncommerce.com/" onClick={handleLinkClick} translate="no" lang="en">WSC | PLANS</Link>
             <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>
+            <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick} translate="no" lang="en">WS | PLANS</Link>
             <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
+            <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WS | BLOG</Link>
           </>
         ) : (
           <>
             <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
-            <button onClick={handleEditProfile} className="glx-account-modifier">
+            <button onClick={handleEditProfile} className="edit-profile-btn">
               Edit
             </button>
-            <button onClick={handleLogout} className="glx-exit-trigger" type="button">
+            <button onClick={handleLogout} className="logout-btn" type="button">
               Sair
             </button>
           </>
         )}
       </nav>
 
-      <div className="glx-interface-panel-right">
+      <div className="header-right-controls">
         {isLoggedIn && (
           <a
             href="/profile"
-            className="glx-avatar-sensor"
+            className="user-icon-btn"
             onClick={(e) => {
               e.preventDefault();
               handleEditProfile();
@@ -110,7 +110,7 @@ const Header = ({ onShowPopup }) => {
         )}
 
         <button
-          className="glx-viewport-switch"
+          className="menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
