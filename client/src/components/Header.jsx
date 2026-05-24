@@ -67,7 +67,7 @@ const Header = ({ onShowPopup }) => {
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | CONNECTION</Link>
-        {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>}
+        {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/zzz/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>}
 
         {!isLoggedIn ? (
           <>
