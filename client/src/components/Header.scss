@@ -7,17 +7,17 @@ body {
   overflow-x: hidden !important;
 }
 
-body.menu-active {
+body.glx-ambient-viewactive {
   overflow: hidden !important;
 }
 
-// Variáveis
-$text-color-light: #f2f2f2;
-$text-color-dark: #222;
-$accent-color: #9fe7f5;
-$glass-border-color: rgba(255, 255, 255, 0.15);
+// Variáveis de Escopo Técnico
+$glx-color-text-bright: #f2f2f2;
+$glx-color-text-shade: #222;
+$glx-color-prime-neon: #9fe7f5;
+$glx-line-overlay-alpha: rgba(255, 255, 255, 0.15);
 
-.main-header {
+.glx-navigation-bar {
   position: fixed !important;
   top: 1rem;
   left: 50%;
@@ -36,7 +36,7 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
   z-index: 9999;
   transition: all 0.3s ease;
 
-  .logo {
+  .glx-brand-plate {
     display: flex;
     align-items: center;
     img {
@@ -46,26 +46,26 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
     }
   }
 
-  .nav-links {
+  .glx-link-container {
     display: flex;
     gap: 2rem;
     align-items: center;
 
     a {
-      color: $text-color-light;
+      color: $glx-color-text-bright;
       font-weight: 500;
       text-decoration: none;
       transition: color 0.25s ease;
 
       &:hover {
-        color: $accent-color;
+        color: $glx-color-prime-neon;
       }
     }
   }
 
-  .cta-button, .logout-btn {
+  .glx-action-trigger, .glx-exit-trigger {
     background: #f5f5f5;
-    color: $text-color-dark;
+    color: $glx-color-text-shade;
     border-radius: 50px;
     padding: 0.75rem 1.7rem;
     font-weight: 600;
@@ -83,23 +83,23 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
     }
   }
 
-  .edit-profile-btn {
+  .glx-account-modifier {
     background: transparent;
-    color: $text-color-light;
+    color: $glx-color-text-bright;
     border: none;
     cursor: pointer;
     font-weight: 500;
     transition: color 0.25s ease;
-    &:hover { color: $accent-color; }
+    &:hover { color: $glx-color-prime-neon; }
   }
 
-  .header-right-controls {
+  .glx-interface-panel-right {
     display: flex;
     align-items: center;
     gap: 0.8rem;
   }
 
-  .menu-toggle {
+  .glx-viewport-switch {
     position: relative;
     z-index: 10001;
     display: none;
@@ -118,34 +118,31 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
 
 /* === RESPONSIVIDADE E DROPDOWN LATERAL === */
 @media (max-width: 768px) {
-  .main-header {
+  .glx-navigation-bar {
     min-height: 60px;
     
-    .menu-toggle {
+    .glx-viewport-switch {
       display: flex;
     }
 
-    .nav-links {
-      display: none; // Escondido por padrão
+    .glx-link-container {
+      display: none; 
       
-      &.open {
+      &.glx-state-visible {
         display: flex;
         position: fixed !important;
         
-        /* Posicionamento solicitado */
         top: 0;
         right: 0;
-        margin-top: 4rem;      /* Margem superior solicitada */
-        margin-right: 0.5rem;  /* Margem lateral solicitada */
+        margin-top: 4rem;      
+        margin-right: 0.5rem;  
         
-        /* Dimensões */
         width: 280px;
         max-width: 85vw;
-        height: calc(100vh - 4rem); /* Vai exatamente até o pé da tela */
+        height: calc(100vh - 4rem); 
         
-        /* Estilo do corpo do menu */
         background: #ffffff !important;
-        border-radius: 12px 12px 0 0; /* Arredondado apenas em cima para parecer que brota da base */
+        border-radius: 12px 12px 0 0; 
         padding: 2.5rem 1.5rem;
         z-index: 10000;
         box-shadow: -10px 0 30px rgba(0,0,0,0.2);
@@ -154,9 +151,9 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
         align-items: flex-start;
         gap: 1.5rem;
         overflow-y: auto;
-        animation: slideInRight 0.3s ease-out;
+        animation: glxTransitionSlideRight 0.3s ease-out;
 
-        a, .edit-profile-btn, .logout-btn {
+        a, .glx-account-modifier, .glx-exit-trigger {
           color: #222 !important;
           width: 100%;
           text-align: left;
@@ -165,7 +162,7 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
           font-size: 1.1rem;
         }
 
-        .cta-button, .logout-btn {
+        .glx-action-trigger, .glx-exit-trigger {
           text-align: center;
           margin-top: 1rem;
           border-bottom: none;
@@ -177,7 +174,7 @@ $glass-border-color: rgba(255, 255, 255, 0.15);
   }
 }
 
-@keyframes slideInRight {
+@keyframes glxTransitionSlideRight {
   from {
     transform: translateX(100%);
     opacity: 0;

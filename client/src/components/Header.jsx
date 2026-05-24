@@ -51,21 +51,21 @@ const Header = ({ onShowPopup }) => {
   // Sincroniza o estado do menu com o body para o bloqueio de scroll
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('menu-active');
+      document.body.classList.add('glx-ambient-viewactive');
     } else {
-      document.body.classList.remove('menu-active');
+      document.body.classList.remove('glx-ambient-viewactive');
     }
   }, [isMenuOpen]);
 
   return (
-    <header className="main-header">
-      <div className="logo">
+    <header className="glx-navigation-bar">
+      <div className="glx-brand-plate">
         <Link to="/" onClick={handleLinkClick}>
           <img src="/logo192.png" alt="WeedSmokersClub" />
         </Link>
       </div>
 
-      <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+      <nav ref={menuRef} className={`glx-link-container ${isMenuOpen ? 'glx-state-visible' : ''}`}>
         <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | HOME</Link>
         {!isLoggedIn && <Link to="/chat" onClick={handleLinkClick}>WSC | TEST IA</Link>}
 
@@ -78,21 +78,21 @@ const Header = ({ onShowPopup }) => {
         ) : (
           <>
             <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
-            <button onClick={handleEditProfile} className="edit-profile-btn">
+            <button onClick={handleEditProfile} className="glx-account-modifier">
               Edit
             </button>
-            <button onClick={handleLogout} className="logout-btn" type="button">
+            <button onClick={handleLogout} className="glx-exit-trigger" type="button">
               Sair
             </button>
           </>
         )}
       </nav>
 
-      <div className="header-right-controls">
+      <div className="glx-interface-panel-right">
         {isLoggedIn && (
           <a
             href="/profile"
-            className="user-icon-btn"
+            className="glx-avatar-sensor"
             onClick={(e) => {
               e.preventDefault();
               handleEditProfile();
@@ -110,7 +110,7 @@ const Header = ({ onShowPopup }) => {
         )}
 
         <button
-          className="menu-toggle"
+          className="glx-viewport-switch"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
