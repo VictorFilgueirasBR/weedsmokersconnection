@@ -132,7 +132,7 @@ export default function ChatBot() {
   const renderContent = () => {
     if (currentStepData && currentStepData.isCTA) {
       return (
-        <a href="https://ws-connectioncommerce.com/minha-conta/" className="cta-button-chat" target="_self" rel="noopener noreferrer">
+        <a href="https://ws-connectioncommerce.com/" className="cta-button-chat" target="_self" rel="noopener noreferrer">
           CONTRATAR AGORA 🍃
         </a>
       );
