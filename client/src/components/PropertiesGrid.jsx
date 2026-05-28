@@ -73,7 +73,7 @@ const propertiesData = [
     price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'SOLD OUT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 8,
