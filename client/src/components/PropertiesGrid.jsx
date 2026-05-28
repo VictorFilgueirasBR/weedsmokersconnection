@@ -8,12 +8,12 @@ const propertiesData = [
   {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
-    title: 'Hash Full spectrum | THC',
+    title: 'Hash Fullspectrum 90u ',
     location: '5g',
-    price: 'WSC-769,00',
-    description: 'Fornecedor Nacional de Hash e Extrações tipo ICE legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
-    cta: 'SOLD OUT',
-    link: 'https://wa.me/5561995276936'
+    price: 'WSC-789,90',
+    description: 'Fullspectrum Hash tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl95u/'
   },
   {
     id: 2,
@@ -32,15 +32,15 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl3/'
+    cta: 'SOLD OUT',
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 4,
     image: '/images/hash-legalizado-anvisa-capa.jpg',
-    title: 'Hash Full spectrum | THC',
+    title: 'Hash Full spectrum 45u ',
     location: '5g',
-    price: 'WSC-849,90',
+    price: 'WSC-989,90',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
@@ -50,10 +50,10 @@ const propertiesData = [
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-760,00',
     description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl3/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
-    cta: 'PEDIR',
+    cta: 'SOLD OUT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
   },
   {
@@ -82,18 +82,28 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-710,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
+    cta: 'SOLD OUT',
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 9,
     image: '/images/wsc-nacional-12.png',
-    title: 'Hash Full spectrum | THC',
+    title: 'Hash FullSpectrum 90u |',
     location: '5g',
-    price: 'WSC-789,90',
-    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    price: 'WSC-989,90',
+    description: 'Fullspectrum Hash tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
+  },
+  {
+    id: 10,
+    image: '/images/bahiabds.jpeg',
+    title: 'BAHIA STRAIN | THC',
+    location: '10g',
+    price: 'WSC-760,00',
+    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
   },
 ];
 
