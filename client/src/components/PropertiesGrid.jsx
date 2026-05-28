@@ -105,6 +105,16 @@ const propertiesData = [
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
   },
+  {
+    id: 11,
+    image: '/images/bahiabds.jpeg',
+    title: 'MARACUJÁ STRAIN | THC',
+    location: '10g',
+    price: 'WSC-760,00',
+    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
+  },
 ];
 
 const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
