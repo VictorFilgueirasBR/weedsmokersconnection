@@ -20,7 +20,7 @@ const propertiesData = [
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
@@ -30,7 +30,7 @@ const propertiesData = [
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
@@ -40,7 +40,7 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa-capa.jpg',
     title: 'Hash Full spectrum 45u ',
     location: '5g',
-    price: 'WSC-989,90',
+    price: 'WSC-SOLDOUT',
     description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
@@ -80,7 +80,7 @@ const propertiesData = [
     image: '/images/wsc-flower-kk.png',
     title: 'Cherry Pie Homie | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
