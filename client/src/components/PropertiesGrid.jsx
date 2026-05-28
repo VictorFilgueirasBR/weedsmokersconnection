@@ -70,7 +70,7 @@ const propertiesData = [
     image: '/images/wsc-flower-24k.png',
     title: '24K Gold | THC',
     location: '10g',
-    price: 'WSC-710,00',
+    price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl1/'
