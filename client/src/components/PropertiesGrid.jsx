@@ -13,7 +13,7 @@ const propertiesData = [
     price: 'WSC-789,90',
     description: 'Fullspectrum Hash tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl95u/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl90u/'
   },
   {
     id: 2,
@@ -88,7 +88,7 @@ const propertiesData = [
   {
     id: 9,
     image: '/images/wsc-nacional-12.png',
-    title: 'Hash FullSpectrum 90u |',
+    title: 'Hash FullSpectrum 45u ',
     location: '5g',
     price: 'WSC-989,90',
     description: 'Fullspectrum Hash tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
