@@ -11,7 +11,7 @@ const propertiesData = [
     title: 'Hash Fullspectrum 90u ',
     location: '5g',
     price: 'WSC-789,90',
-    description: 'Fullspectrum Hash tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 90 micras).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u-2/'
   },
@@ -41,7 +41,7 @@ const propertiesData = [
     title: 'Hash Full spectrum 45u ',
     location: '5g',
     price: 'WSC-SOLDOUT',
-    description: 'Fornecedor Nacional de Extrações tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 25 micras).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
@@ -50,10 +50,10 @@ const propertiesData = [
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP | THC',
     location: '10g',
-    price: 'WSC-760,00',
+    price: 'WSC-SOLDOUT',
     description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl3/'
+    cta: 'SOLD OUT',
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const propertiesData = [
     title: 'Cherry Pie Purple | THC',
     location: '10g',
     price: 'WSC-SOLDOUT',
-    description: 'Inflorescência - Cultivo Indoor 60% Indica - 40% Indica (24% THC).',
+    description: 'Inflorescência - Cultivo Indoor 63% Sativa - 37% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
@@ -71,7 +71,7 @@ const propertiesData = [
     title: '24K Gold | THC',
     location: '10g',
     price: 'WSC-SOLDOUT',
-    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
@@ -81,7 +81,7 @@ const propertiesData = [
     title: 'Cherry Pie Homie | THC',
     location: '10g',
     price: 'WSC-SOLDOUT',
-    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
+    description: 'Inflorescência - Cultivo Outdoor 34% Sativa - 66% Indica (24% THC).',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
@@ -91,7 +91,7 @@ const propertiesData = [
     title: 'Hash FullSpectrum 45u ',
     location: '5g',
     price: 'WSC-989,90',
-    description: 'Fullspectrum Hash tipo ICE com THC legalizado pela ANVISA. (O valor pode variar de acordo com as Espécies).',
+    description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
   },
@@ -101,7 +101,7 @@ const propertiesData = [
     title: 'BAHIA STRAIN | THC',
     location: '10g',
     price: 'WSC-760,00',
-    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
   },
@@ -111,7 +111,7 @@ const propertiesData = [
     title: 'MARACUJÁ STRAIN | THC',
     location: '10g',
     price: 'WSC-760,00',
-    description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
+    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
   },
