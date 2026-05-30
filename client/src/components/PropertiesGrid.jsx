@@ -10,10 +10,10 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash Fullspectrum 90u ',
     location: '5g',
-    price: 'WSC-789,90',
+    price: 'WSC-SOLD OUT',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 90 micras).',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u-2/'
+    cta: 'SOLD OUT',
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 2,
