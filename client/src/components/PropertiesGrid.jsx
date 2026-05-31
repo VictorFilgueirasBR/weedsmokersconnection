@@ -93,9 +93,9 @@ const propertiesData = [
     price: 'WSC-989,90',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
+    link: 'https://wa.me/5561995276936'
   },
-  {
+  /*/{
     id: 10,
     image: '/images/bahiabds.jpeg',
     title: 'BAHIA STRAIN | THC',
@@ -103,7 +103,7 @@ const propertiesData = [
     price: 'WSC-760,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 11,
@@ -113,8 +113,8 @@ const propertiesData = [
     price: 'WSC-760,00',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrncnl2/'
-  },
+    link: 'https://wa.me/5561995276936'
+  },*/
 ];
 
 const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
