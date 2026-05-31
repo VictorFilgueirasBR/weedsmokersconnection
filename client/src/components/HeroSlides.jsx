@@ -83,7 +83,7 @@ const HeroSlides = () => {
         onMouseMove={handleMouseMove}
         onClick={() => window.location.href = 'https://ws-connectioncommerce.com/'}
       >
-        CONTRATAR →
+        ENTRAR PRO CLUB →
       </button>
 
       {/* Conteúdo fixo sobre o slider, com estilo glassmorphism */}

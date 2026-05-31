@@ -133,7 +133,7 @@ export default function ChatBot() {
     if (currentStepData && currentStepData.isCTA) {
       return (
         <a href="https://ws-connectioncommerce.com/" className="cta-button-chat" target="_self" rel="noopener noreferrer">
-          CONTRATAR AGORA 🍃
+          ENTRAR PRO CLUB 🍃
         </a>
       );
     }
