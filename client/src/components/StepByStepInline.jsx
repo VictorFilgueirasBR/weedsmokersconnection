@@ -96,7 +96,7 @@ export default function StepByStepUltraHealthPro() {
         </a>
 
         <div className="trust">
-          Método Seguro • Médicos Certificados • Serviço Exclusivo
+          100% Online • Médicos Certificados • SAS Inteligente
         </div>
 
       </div>
