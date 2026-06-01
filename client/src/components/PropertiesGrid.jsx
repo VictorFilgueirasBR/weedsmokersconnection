@@ -10,9 +10,9 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash Fullspectrum 90u ',
     location: '5g',
-    price: 'WSC-SOLD OUT',
+    price: 'WSC-INDISPONÍVEL',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 90 micras).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -22,7 +22,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -32,7 +32,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -42,7 +42,7 @@ const propertiesData = [
     location: '5g',
     price: 'WSC-SOLDOUT',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 25 micras).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -52,7 +52,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-SOLDOUT',
     description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -62,7 +62,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Indoor 63% Sativa - 37% Indica (24% THC).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -72,7 +72,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -82,7 +82,7 @@ const propertiesData = [
     location: '10g',
     price: 'WSC-SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 34% Sativa - 66% Indica (24% THC).',
-    cta: 'SOLD OUT',
+    cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
