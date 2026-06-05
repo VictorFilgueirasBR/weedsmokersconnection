@@ -10,7 +10,7 @@ const propertiesUtilsData = [
     title: 'WSC Consulta | ANVISA',
     location: 'R$ 400,00',
     price: 'WSC-COMPLETE',
-    description: 'Renovação 6 meses para pacientes: Consulta médica + emissão de documentação pela ANVISA para importação legal.',
+    description: 'Renovação 6 meses para pacientes:       Consulta médica + emissão de documentação pela ANVISA para importação legal.',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/702/'
   },
