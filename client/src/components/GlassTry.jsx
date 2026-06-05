@@ -12,7 +12,7 @@ export default function CreditGlassCard({
   name = "Médicos",
   currency = "Consulta",
   amount = " ",
-  delta = "R$300,00",
+  delta = "R$400,00",
   subtitle = "Consulta | Terapia | Receita | Tratamentos",
   last4 = "wsc",
 }) {

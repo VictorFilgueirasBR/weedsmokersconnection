@@ -7,7 +7,6 @@ import VideoPlayer from "../components/VideoPlayer";
 import CannabisSlides from "../components/CannabisSlides";
 import GlassCardNacional from "../components/GlassCardNacional";
 import GlassCardImport from "../components/GlassCardImport";
-import GlassTry from "../components/GlassTry";
 import MemberTreatmentFlow from "../components/MemberTreatmentFlow";
 import Instruction from "../components/Instruction";
 import IceSection from "../components/IceSection";
@@ -87,7 +86,7 @@ export default function WSCClub() {
 
       <MemberTreatmentFlow />
 
-      <GlassTry />
+      
       <GlassCardNacional />
       <GlassCardImport />
 
