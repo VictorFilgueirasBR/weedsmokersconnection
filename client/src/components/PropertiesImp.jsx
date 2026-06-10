@@ -49,6 +49,50 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
   },
   {
+    id: 104,
+    images: ['/images/d9-tincture-w.png'],
+    title: 'Óleo Green Gene Delta-9 THC Full-spectrum 3000mg',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-694,90',
+    description: 'Óleo de THC 3000 mg é um produto full-spectrum de alta qualidade.',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+{
+    id: 105,
+    images: ['/images/cbd-oil-6000-w.webp'],
+    title: 'Óleo Green Gene de CBD Full-Spectrum 6000mg 0.3% THC',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-694,90',
+    description: 'O óleo de 6000 mg corresponde a uma alta concentração de canabidiol full spectrum.',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+{
+    id: 106,
+    images: ['/images/cbd-oil-6000-w.webp'],
+    title: 'Óleo Green Gene de CBD Full-Spectrum 3000mg 0.3% THC',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-605,00',
+    description: 'O óleo de CBD Full Spectrum reúne múltiplos canabinoides para o efeito comitiva.',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+{
+    id: 107,
+    images: ['/images/thcv-tincture-5000-w.png'],
+    title: 'Óleo Green Gene de emagrecimento natural com THCV + CBD',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-659,90',
+    description: 'Óleo focado em emagrecimento natural e controle de apetite com a combinação de THCV e CBD.',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+  {
     id: 1,
     images: ['/images/cannac.jpg'],
     title: 'KETAMA SIFT | D8',
