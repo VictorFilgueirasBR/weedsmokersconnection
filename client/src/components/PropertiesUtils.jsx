@@ -10,7 +10,7 @@ const propertiesUtilsData = [
     title: 'WSC Consulta | ANVISA',
     location: 'R$ 400,00',
     price: 'WSC-COMPLETE',
-    description: 'Renovação 6 meses para pacientes:       Consulta médica + emissão de documentação pela ANVISA para importação legal.',
+    description: 'Renovação 6 meses para pacientes: Consulta médica + emissão de documentação pela ANVISA para importação legal.',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/702/'
   },
@@ -54,7 +54,6 @@ const propertiesUtilsData = [
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   },
-  ,
   {
     id: 6,
     image: '/images/wsc-bomb.png',
@@ -82,15 +81,21 @@ const PropertiesUtils = ({ title = 'WS | Services', id = 'properties-utils' }) =
               <img 
                 src={item.image} 
                 alt={item.title} 
-                className="property-image" 
+                className="property-image active" 
                 loading="lazy" 
               />
               <span className="property-price">{item.price}</span>
             </div>
+            
             <div className="property-info">
               <h3 className="property-title">{item.title}</h3>
-              <p className="property-location">{item.location}</p>
+              
+              <div className="property-meta-row">
+                <span className="property-location">{item.location}</span>
+              </div>
+              
               <p className="property-description">{item.description}</p>
+              
               <a 
                 href={item.link} 
                 target="_blank" 
