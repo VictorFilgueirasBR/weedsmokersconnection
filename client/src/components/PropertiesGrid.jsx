@@ -93,17 +93,7 @@ const propertiesData = [
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
-  },
-  {
-    id: 10,
-    image: '/images/wsc-flower-kk.png',
-    title: 'Cherry Pie Homie | THC',
-    location: '10g',
-    price: 'WSC-SOLDOUT',
-    description: 'Inflorescência - Cultivo Outdoor 34% Sativa - 66% Indica (24% THC).',
-    cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
-  },
+  }
 ];
 
 const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
