@@ -26,7 +26,13 @@ const propertiesUtilsData = [
     title: 'WSC | Frete Nacional',
     location: 'R$ 45,00',
     price: 'WSC-JET-BR',
-    description: 'Logística de transporte para produtos nacionais.  Fornecedor - Centro de Distribuição - Seu endereço',
+   description: (
+  <>
+    Logística de transporte nacional.
+    <br />
+    Fornecedor - Centro de Distribuição - Seu endereço
+  </>
+),
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-jet-br/'
   },
@@ -36,7 +42,13 @@ const propertiesUtilsData = [
     title: 'WSC | Frete Import',
     location: 'R$ 175,00',
     price: 'WSC-JET-USA',
-    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil',
+    description: (
+    <>
+      Logística de importação facilitada.
+      <br />
+      Califórnia - Miami - Brasil
+    </>
+  ),
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
   },
@@ -46,7 +58,13 @@ const propertiesUtilsData = [
     title: 'WSC | Import 5k',
     location: 'R$ 5.000,00',
     price: 'WSC-5k',
-    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil ',
+    description: (
+  <>
+    Logística de importação facilitada.
+    <br />
+    Califórnia - Miami - Brasil
+  </>
+),
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   },
@@ -56,7 +74,13 @@ const propertiesUtilsData = [
     title: 'WSC | Import 10k',
     location: 'R$ 10.000,00',
     price: 'WSC-10k',
-    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil ',
+    description: (
+  <>
+    Logística de importação facilitada.
+    <br />
+    Califórnia - Miami - Brasil
+  </>
+),
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   },
@@ -66,7 +90,13 @@ const propertiesUtilsData = [
     title: 'WSC | Import 20k',
     location: 'R$ 20.000,00',
     price: 'WSC-20k',
-    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil ',
+    description: (
+  <>
+    Logística de importação facilitada.
+    <br />
+    Califórnia - Miami - Brasil
+  </>
+),
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-20k/'
   }
