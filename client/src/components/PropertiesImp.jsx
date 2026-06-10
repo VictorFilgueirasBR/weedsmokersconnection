@@ -213,6 +213,39 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil100/'
 },
+{
+    id: 140,
+    images: ['/images/freshq-w.jpeg', '/images/freshq1-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 05 Caps',
+    location: '5g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-900,00',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa PANCANN. Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh5/'
+},
+{
+    id: 141,
+    images: ['/images/freshq-w.jpeg', '/images/freshq1-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 10 Caps',
+    location: '10g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.500,00',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa PANCANN. Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh10/'
+},
+{
+    id: 142,
+    images: ['/images/freshq-w.jpeg', '/images/freshq1-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 20 Caps',
+    location: '20g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-2.900,00',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa PANCANN. Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
+},
   {
     id: 1,
     images: ['/images/cannac.jpg'],
@@ -220,7 +253,7 @@ const propertiesImpData = [
     location: '6g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-921,90',
-    description: 'Extrações tipo ICE legalizado pela ANVISA. Bubble Sift Delta-8 Bubble Hash – 3150 mg / 10g.',
+    description: 'Marrocan Ketama Gold Seal Hashish - White Runtz, mundialmente reconhecido por sua textura macia e flexíve. Extração de flores premium com THCa - TOP QUALITY',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ktmsifit/'
   },
