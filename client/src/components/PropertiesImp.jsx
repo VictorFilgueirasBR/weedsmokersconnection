@@ -169,6 +169,50 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-slimvibes/'
 },
+{
+    id: 136,
+    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoil-dscr.jpeg' ],
+    title: 'Hemp Oil Pancann Badder Full-Spectrum 7250mg',
+    location: '10g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.200,00',
+    description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-pancann10/'
+},
+{
+    id: 137,
+    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoil-dscr.jpeg' ],
+    title: 'Hemp Oil Pancann Badder Full-Spectrum 14500mg',
+    location: '20g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'place-here',
+    description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-pancann20/'
+},
+{
+    id: 138,
+    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoil-dscr.jpeg' ],
+    title: 'Hemp Oil Pancann Badder Full-Spectrum 36250mg',
+    location: '50g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-4.750,00',
+    description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-pancann50/'
+},
+{
+    id: 139,
+    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoil-dscr.jpeg' ],
+    title: 'Hemp Oil Pancann Badder Full-Spectrum',
+    location: '100g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-9.000,00',
+    description: 'Extração Premium Full-Spectrum de Cannabis em condições de pré-venda exclusiva. Produto de qualidade premium, extração avançada, 100% natural e sem aditivos. Padrão Lineage com acesso limitado.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-prevenda100/'
+},
   {
     id: 1,
     images: ['/images/cannac.jpg'],
