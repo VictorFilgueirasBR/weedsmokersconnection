@@ -1,18 +1,18 @@
 // client/src/components/PropertiesImp.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './PropertiesImp.scss';
 
 const propertiesImpData = [
   {
     id: 100,
-    images: ['/images/glitter-bombbud.jpg'],
+    images: ['/images/glitter-bombbud.jpg', '/images/astrocand-thca.jpeg'],
     title: 'Glitter Bomb | THCa',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1950,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
-    badge: 'Bestseller',
+    badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
   },
   {
@@ -146,19 +146,18 @@ const propertiesImpData = [
 
 const PropertyCard = ({ item }) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+  const touchStart = useRef(0);
+  const touchEnd = useRef(0);
   const hasMultipleImages = item.images && item.images.length > 1;
 
-  // Lógica do Slider Automático (Timer de 5s)
+  // Slider automático de 5 segundos com limpeza de memória eficiente
   useEffect(() => {
     if (!hasMultipleImages) return;
-    const autoSliderTimer = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
     }, 5000);
-    // Limpa o timer quando o index muda ou componente desmonta
-    return () => clearInterval(autoSliderTimer);
-  }, [hasMultipleImages, item.images.length, currentImgIndex]);
+    return () => clearInterval(interval);
+  }, [hasMultipleImages, item.images.length]);
 
   const nextSlide = (e) => {
     if (e) e.preventDefault();
@@ -174,21 +173,26 @@ const PropertyCard = ({ item }) => {
     }
   };
 
-  // Lógica Touch / Drag Responsive
-  const handleTouchStart = (e) => setTouchStart(e.targetTouches[0].clientX);
-  const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  // Engenharia de Touch para Mobile (Sensível e Fluido)
+  const handleTouchStart = (e) => {
+    touchStart.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEnd.current = e.targetTouches[0].clientX;
+  };
+
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
-    
+    if (!touchStart.current || !touchEnd.current) return;
+    const distance = touchStart.current - touchEnd.current;
+    const isLeftSwipe = distance > 40;
+    const isRightSwipe = distance < -40;
+
     if (isLeftSwipe) nextSlide();
     if (isRightSwipe) prevSlide();
-    
-    // Resetar variáveis de touch
-    setTouchStart(0);
-    setTouchEnd(0);
+
+    touchStart.current = 0;
+    touchEnd.current = 0;
   };
 
   return (
@@ -199,31 +203,27 @@ const PropertyCard = ({ item }) => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {item.badge && (
-          <div className="property-badge">{item.badge}</div>
-        )}
+        {item.badge && <div className="property-badge">{item.badge}</div>}
         
         {item.images.map((imgUrl, idx) => (
           <img
             key={idx}
             src={imgUrl}
-            alt={`${item.title} - Foto ${idx + 1}`}
+            alt={`${item.title} - ${idx + 1}`}
             className={`property-image ${idx === currentImgIndex ? 'active' : ''}`}
             loading="lazy"
           />
         ))}
         
-        {/* Etiqueta de Preço Refinada */}
         <span className="property-price">{item.price}</span>
 
-        {/* Controles do Slider */}
         {hasMultipleImages && (
           <>
             <button className="slider-arrow prev" onClick={prevSlide} aria-label="Anterior">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
             </button>
             <button className="slider-arrow next" onClick={nextSlide} aria-label="Próximo">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
             <div className="slider-dots">
               {item.images.map((_, idx) => (
@@ -242,12 +242,10 @@ const PropertyCard = ({ item }) => {
         <h3 className="property-title">{item.title}</h3>
         
         <div className="property-meta-row">
-          <span className="property-location">
-            {item.location}
-          </span>
-          <span className="meta-separator">•</span>
+          <span className="property-location">{item.location}</span>
+          <span className="meta-dot">•</span>
           <span className="property-delivery">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             {item.deliveryTime}
           </span>
         </div>
