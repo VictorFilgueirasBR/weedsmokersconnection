@@ -125,6 +125,50 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd6000/'
 },
+{
+    id: 124,
+    images: ['/images/vibes6000.png'],
+    title: 'GreenBudzCBD Deep Vibe Oil Full Spectrum 3000mg 100mg/ml + Terps - 30ml',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-550,00',
+    description: 'Óleo full spectrum rico em Canabidiol com até 0,2% de THC e outros canabinoides minoritários com adição de terpenos do perfil "indica" com predominância de Mirceno e Linalool.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vibes6000/'
+},
+{
+    id: 125,
+    images: ['/images/vibes1500.png'],
+    title: 'GreenBudzCBD Super Vibe Oil Full Spectrum 3000mg 100mg/ml + Terps - 30ml',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-550,00',
+    description: 'Óleo full spectrum rico em Canabidiol com até 0,2% de THC e outros canabinoides minoritários com adição de terpenos do perfil "sativa" com predominância de Limoneno e Pineno.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vibes1500/'
+},
+{
+    id: 126,
+    images: ['/images/calmvibes.png'],
+    title: 'GreenBudzCBD Calm Vibe Oil Full Spectrum 6000mg 200mg/ml - 30ml',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-640,00',
+    description: 'Óleo full spectrum rico em Canabidiol com até 0,2% de THC e outros canabinoides minoritários. Adicionado saborizador natural de menta.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vibescalm/'
+},
+{
+    id: 127,
+    images: ['/images/slimvibes.png'],
+    title: 'GreenBudzCBD Slim Vibe Oil Full Spectrum 1500mg THCv 1500 CBD 100mg/ml - 30ml',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-840,00',
+    description: 'Óleo full spectrum rico em Canabidiol e Tetraidrocanabivarina (THC-V) com até 0,2% de THC d9 e outros canabinoides minoritários. Adicionado saborizador natural de menta.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-slimvibes/'
+},
   {
     id: 1,
     images: ['/images/cannac.jpg'],
@@ -227,7 +271,7 @@ const propertiesImpData = [
 },
 {
     id: 116,
-    images: ['/images/superboof.png'],
+    images: ['/images/superboof-rosin-w.png'],
     title: 'THCa LIVE ROSIN OIL - SUPER BOOF',
     location: '6g',
     deliveryTime: '15-35 dias úteis',
@@ -269,6 +313,17 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-jackhere/'
 },
+{
+    id: 120,
+    images: ['/images/nightcap-blue-w.png'],
+    title: 'Night Cap Crystallino THCa-CBN - Blueberry',
+    location: '3g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-681,00',
+    description: 'Apresentamos o Night Cap Crystallino - Blueberry THCA-CBN, a solução definitiva para uma noite de sono tranquila e revigorante. Este produto contém alto teor de CBN e THC-a, por isso deve ser usado apenas no período da noite, antes de dormir, pois causa',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-nightblue/'
+},
   {
     id: 4,
     images: ['/images/hash-ice-import.png'],
@@ -280,7 +335,7 @@ const propertiesImpData = [
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'
   },
-  { id: 5, images: ['/images/wsc-import-1.png', '/images/wsc-import-2.png'], title: 'Piatella | D9', location: '3g', deliveryTime: '15-50 dias úteis', price: 'WSC-879,00', description: 'Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-879/' },
+  { id: 5, images: ['/images/wsc-import-1.png'], title: 'Piatella | D9', location: '3g', deliveryTime: '15-50 dias úteis', price: 'WSC-879,00', description: 'Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-879/' },
   { id: 6, images: ['/images/wsc-import-2.png'], title: '00 SIFT | D9', location: '3g', deliveryTime: '15-50 dias úteis', price: 'WSC-749,00', description: 'Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/00/' },
   { id: 7, images: ['/images/wsc-import-3.png'], title: 'Gold Seal | D9', location: '3g', deliveryTime: '15-50 dias úteis', price: 'WSC-759,00', description: 'Concentrado artesanal que celebra os métodos afegãos de resinas prensadas à mão. (70,11% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-759/' },
   { id: 8, images: ['/images/wsc-import-4.png'], title: 'THCA Sugar | D9', location: '3g', deliveryTime: '15-50 dias úteis', price: 'WSC-849,00', description: 'Concentrado premium de cera cristalizada com alto teor de THCA. (80,08% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
@@ -307,27 +362,16 @@ const propertiesImpData = [
   { id: 29, images: ['/images/wsc-import-15.png'], title: 'Bubble Hash Wedding Cake CBD', location: '10g', deliveryTime: '15-50 dias úteis', price: 'WSC-1249,00', description: 'Genética Wedding Cake (Híbrida): Relaxamento e equilíbrio. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
   { id: 30, images: ['/images/wsc-import-16.png'], title: 'Vegan Gummies Sleep CBD', location: '113g', deliveryTime: '15-50 dias úteis', price: 'WSC-529,00', description: 'Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
   { id: 31, images: ['/images/wsc-import-17.png'], title: 'CBN Tincture Sleep CBD', location: '30ml', deliveryTime: '15-50 dias úteis', price: 'WSC-629,00', description: 'Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' },
-  {
-    id: 120,
-    images: ['/images/nightcap-blue-w.png'],
-    title: 'Night Cap Crystallino THCa-CBN - Blueberry',
-    location: '3g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'place-here',
-    description: 'Apresentamos o Night Cap Crystallino - Blueberry THCA-CBN, a solução definitiva para uma noite de sono tranquila e revigorante. Este produto contém alto teor de CBN e THC-a, por isso deve ser usado apenas no período da noite, antes de dormir, pois causa',
-    cta: 'IMPORT',
-    link: 'place here'
-},
 {
     id: 121,
     images: ['/images/d9-gumm-w.png'],
     title: 'Cherry D9 Gummies - 140mg',
     location: '10Unidades',
     deliveryTime: '15-35 dias úteis',
-    price: 'place-here',
-    description: 'Se você está procurando uma guloseima saborosa e com um efeito poderoso, deixe-me apresentar as deliciosas Gomas Cherry D9 Gummies - 140 mg! Essas gomas não são apenas balas comuns; elas são infundidas com Delta-9 de alta qualidade para',
+    price: 'WSC-222,00',
+    description: 'Ingredientes: Cada goma contém uma dose medida de 14mg de Delta-9, facilitando o monitoramento do seu consumo - Contém 10 unidades. Dosagem: Δ-9 - 0,29%THCa - 0,007%CDB - 0,006%CBG - 0,007%CBN - 0,065%Canabinoides totais - 20,1 mgSe você está procurando uma guloseima saborosa e com um efeito poderoso, deixe-me apresentar as deliciosas Gomas Cherry D9 Gummies - 140 mg! Essas gomas não são apenas balas comuns; elas são infundidas com Delta-9 de alta qualidade para',
     cta: 'IMPORT',
-    link: 'place here'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
 },
 {
     id: 122,
@@ -335,10 +379,10 @@ const propertiesImpData = [
     title: 'Green Gene Vegan Gummies Delta-9 THC',
     location: '25capsulas',
     deliveryTime: '15-35 dias úteis',
-    price: 'place-here',
+    price: 'WSC-445,00',
     description: 'Nossas gomas de Delta-9 de 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar. Formuladas com extrato de cânhamo de espectro completo de alta qualidade, essas gomas combinam',
     cta: 'IMPORT',
-    link: 'place here'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
 },
 {
     id: 123,
@@ -346,10 +390,10 @@ const propertiesImpData = [
     title: 'Cherry Vanilla D9 Gummies - 250mg',
     location: '5Unidades',
     deliveryTime: '15-35 dias úteis',
-    price: 'place-here',
+    price: 'WSC-279,90',
     description: 'Se você é fã de comestíveis e gosta de explorar novos sabores no mundo da cannabis, apresentamos uma delícia: As Gomas Cherry Vanilla D9 - 250mg. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada de',
     cta: 'IMPORT',
-    link: 'place here'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
 },
 ];
 
