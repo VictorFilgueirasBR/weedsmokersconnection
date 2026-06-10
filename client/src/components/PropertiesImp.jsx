@@ -440,6 +440,28 @@ const propertiesImpData = [
   { id: 30, images: ['/images/wsc-import-16.png'], title: 'Vegan Gummies Sleep CBD', location: '113g', deliveryTime: '15-50 dias úteis', price: 'WSC-529,00', description: 'Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
   { id: 31, images: ['/images/wsc-import-17.png'], title: 'CBN Tincture Sleep CBD', location: '30ml', deliveryTime: '15-50 dias úteis', price: 'WSC-629,00', description: 'Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' },
   {
+    id: 143,
+    images: ['/images/gumm-pn-w-blue.jpeg'],
+    title: 'CBD Gummies Midnight Blue Dream 30mg',
+    location: '30g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-489,90',
+    description: 'Durma melhor com Midnight Blue Dream 30mg 10mg THC, 10mg CBD e 10mg CBN. Desbloqueie um sono profundo e restaurador com nossas gomas premium. Inspiradas no perfil relaxante da Blue Dream, cada unidade contém 30mg de CBD de amplo espectro para transformar sua rotina noturna de forma natural.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gummblue/'
+},
+{
+    id: 144,
+    images: ['/images/gumm-pn-w-green.jpeg'],
+    title: 'Gummies Chill Bites 20mg com 30und',
+    location: '30und',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-489,90',
+    description: 'Relaxe e adoce o seu dia com as Chill Bites da PANCANN. Nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade, offering uma forma prática e deliciosa de encontrar o seu centro em meio à rotina.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
+},
+  {
     id: 128,
     images: ['/images/drops1.png'],
     title: 'GreenBudzCBD Gummies Chill Vibe THC 10mg 1:1 CBD 10mg – gomas',
