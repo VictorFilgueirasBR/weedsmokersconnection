@@ -4,7 +4,6 @@ import './PropertiesGrid.scss';
 
 // Dados dos imóveis com as imagens fornecidas e informações atualizadas
 const propertiesData = [
-  
   {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
@@ -94,27 +93,7 @@ const propertiesData = [
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
     link: 'https://wa.me/5561995276936'
-  },
-  /*/{
-    id: 10,
-    image: '/images/bahiabds.jpeg',
-    title: 'BAHIA STRAIN | THC',
-    location: '10g',
-    price: 'WSC-760,00',
-    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
-    cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
-  },
-  {
-    id: 11,
-    image: '/images/bahiabds.jpeg',
-    title: 'MARACUJÁ STRAIN | THC',
-    location: '10g',
-    price: 'WSC-760,00',
-    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
-    cta: 'PEDIR',
-    link: 'https://wa.me/5561995276936'
-  },*/
+  }
 ];
 
 const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
@@ -122,34 +101,46 @@ const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => 
 
   return (
     <section className="properties-grid-section" id={id}>
-      <h2 className="section-title">{title}</h2>
+      <div className="section-header">
+        <h2 className="section-title">{title}</h2>
+      </div>
       <div className="properties-grid-container">
-        {propertiesData.map(property => (
-          <div className="property-card" key={property.id}>
-            <div className="property-image-wrapper">
-              <img 
-                src={property.image} 
-                alt={property.title} 
-                className="property-image" 
-                loading="lazy"
-              />
-              <span className="property-price">{property.price}</span>
+        {propertiesData.map(property => {
+          const isUnavailable = property.cta === 'INDISPONÍVEL' || property.cta === 'SOLD OUT';
+          
+          return (
+            <div className="property-card" key={property.id}>
+              <div className="property-image-wrapper">
+                <img 
+                  src={property.image} 
+                  alt={property.title} 
+                  className="property-image active" 
+                  loading="lazy"
+                />
+                <span className="property-price">{property.price}</span>
+              </div>
+              
+              <div className="property-info">
+                <h3 className="property-title">{property.title}</h3>
+                
+                <div className="property-meta-row">
+                  <span className="property-location">{property.location}</span>
+                </div>
+                
+                <p className="property-description">{property.description}</p>
+                
+                <a 
+                  href={property.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={`property-cta ${isUnavailable ? 'sold-out' : ''}`}
+                >
+                  {property.cta}
+                </a>
+              </div>
             </div>
-            <div className="property-info">
-              <h3 className="property-title">{property.title}</h3>
-              <p className="property-location">{property.location}</p>
-              <p className="property-description">{property.description}</p>
-              <a 
-                href={property.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="property-cta submit-gradient-btn"
-              >
-                {property.cta}
-              </a>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
