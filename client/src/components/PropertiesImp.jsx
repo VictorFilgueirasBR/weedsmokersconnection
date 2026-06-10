@@ -92,13 +92,57 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'place here'
 },
+{
+    id: 108,
+    images: ['/images/alpha-cbd-cbg-3000-w.png'],
+    title: 'ÓLEO BROAD-SPECTRUM ALPHA-CAT 10Ml - 10% - 3000mg - CBG + CBD',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-789,90',
+    description: 'O Óleo de CBD + CBG 3000 mg (10%) da Alpha-Cat foi desenvolvido para oferecer um suporte natural ao corpo e à mente. Sua fórmula combina canabidiol (CBD) e canabigerol (CBG).',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+{
+    id: 109,
+    images: ['/images/alpha-cbd-3000-w.png'],
+    title: 'ÓLEO BROAD-SPECTRUM ALPHA-CAT 30Ml - 10% - 3000mg CBD',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-689,90',
+    description: 'A Alpha-cat oferece a melhor qualidade de CBD, disponível em um concentrado de óleo de 10%. Nossos óleos de CBD de amplo espectro de 3000 mg são feitos de cânhamo europeu e têm garantia de serem livres de pesticidas.',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+{
+    id: 110,
+    images: ['/images/alpha-cbd-3000-w.png'],
+    title: 'ÓLEO BROAD-SPECTRUM ALPHA-CAT 30Ml - 20% 6000mg CBD',
+    location: '30ML',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-849,90',
+    description: 'Óleo de CBD de 6000 mg de qualidade de laboratório, misturado com azeite de oliva extravirgem orgânico da Provença. Disponível em frasco de 30 ml com concentração de óleo de 20%.',
+    cta: 'IMPORT',
+    link: 'place here'
+},
+{
+    id: 111,
+    images: ['/images/cartridge-concentrate-w.png'],
+    title: 'CARTRIDGE CONCENTRATED OIL',
+    location: '2g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-649,90',
+    description: 'CONCENTRATED OIL PEN 2g. Ingredientes: THCa Live Resin, Terpene-rich, Potent, Smooth. Dosagem: THCa 79.6%',
+    cta: 'IMPORT',
+    link: 'place here'
+},
   {
     id: 1,
     images: ['/images/cannac.jpg'],
     title: 'KETAMA SIFT | D8',
-    location: '10g',
+    location: '6g',
     deliveryTime: '15-35 dias úteis',
-    price: 'WSC-SOLDOUT',
+    price: 'WSC-921,90',
     description: 'Extrações tipo ICE legalizado pela ANVISA. Bubble Sift Delta-8 Bubble Hash – 3150 mg / 10g.',
     cta: 'SOLD OUT',
     link: 'https://wa.me/5561995276936'

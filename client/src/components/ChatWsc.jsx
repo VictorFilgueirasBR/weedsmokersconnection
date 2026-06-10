@@ -25,7 +25,7 @@ const menuSteps = [
     step: 1,
     botMessage: (
       <a
-        href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid"
+        href="/"
         target="_blank"
         rel="noopener noreferrer"
         className="property-wsc"
@@ -39,7 +39,7 @@ const menuSteps = [
     step: 2,
     botMessage: (
       <a
-        href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp"
+        href="/"
         target="_blank"
         rel="noopener noreferrer"
         className="property-wsc"
