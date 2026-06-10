@@ -1,5 +1,5 @@
 // client/src/components/PropertiesImp.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PropertiesImp.scss';
 
 const propertiesImpData = [
@@ -12,7 +12,7 @@ const propertiesImpData = [
     price: 'WSC-1950,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
-    badge: 'Mais Vendido', // Gatilho de prova social
+    badge: 'Bestseller',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
   },
   {
@@ -68,7 +68,7 @@ const propertiesImpData = [
     price: 'WSC-989,00',
     description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
     cta: 'IMPORT',
-    badge: 'Últimas Unidades', // Gatilho de escassez
+    badge: 'Últimas Unidades',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
   {
@@ -146,25 +146,59 @@ const propertiesImpData = [
 
 const PropertyCard = ({ item }) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const hasMultipleImages = item.images && item.images.length > 1;
 
+  // Lógica do Slider Automático (Timer de 5s)
+  useEffect(() => {
+    if (!hasMultipleImages) return;
+    const autoSliderTimer = setInterval(() => {
+      setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
+    }, 5000);
+    // Limpa o timer quando o index muda ou componente desmonta
+    return () => clearInterval(autoSliderTimer);
+  }, [hasMultipleImages, item.images.length, currentImgIndex]);
+
   const nextSlide = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     if (hasMultipleImages) {
       setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
     }
   };
 
   const prevSlide = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     if (hasMultipleImages) {
       setCurrentImgIndex((prev) => (prev - 1 + item.images.length) % item.images.length);
     }
   };
 
+  // Lógica Touch / Drag Responsive
+  const handleTouchStart = (e) => setTouchStart(e.targetTouches[0].clientX);
+  const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    
+    if (isLeftSwipe) nextSlide();
+    if (isRightSwipe) prevSlide();
+    
+    // Resetar variáveis de touch
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
   return (
     <div className="property-card">
-      <div className="property-image-wrapper">
+      <div 
+        className="property-image-wrapper"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {item.badge && (
           <div className="property-badge">{item.badge}</div>
         )}
@@ -173,21 +207,23 @@ const PropertyCard = ({ item }) => {
           <img
             key={idx}
             src={imgUrl}
-            alt={`${item.title} - ${idx + 1}`}
+            alt={`${item.title} - Foto ${idx + 1}`}
             className={`property-image ${idx === currentImgIndex ? 'active' : ''}`}
             loading="lazy"
           />
         ))}
         
+        {/* Etiqueta de Preço Refinada */}
         <span className="property-price">{item.price}</span>
 
+        {/* Controles do Slider */}
         {hasMultipleImages && (
           <>
             <button className="slider-arrow prev" onClick={prevSlide} aria-label="Anterior">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
             </button>
             <button className="slider-arrow next" onClick={nextSlide} aria-label="Próximo">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
             <div className="slider-dots">
               {item.images.map((_, idx) => (
@@ -207,11 +243,11 @@ const PropertyCard = ({ item }) => {
         
         <div className="property-meta-row">
           <span className="property-location">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             {item.location}
           </span>
+          <span className="meta-separator">•</span>
           <span className="property-delivery">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             {item.deliveryTime}
           </span>
         </div>
