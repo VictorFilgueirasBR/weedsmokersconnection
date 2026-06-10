@@ -14,7 +14,7 @@ const propertiesUtilsData = [
   <>
     Renovação 6 meses para pacientes:
     <br />
-    Consulta médica + emissão de documentação pela ANVISA para importação legal.
+    Consulta médica + emissão de documentação pela ANVISA
   </>
 ),
     cta: 'Contratar',
@@ -26,7 +26,7 @@ const propertiesUtilsData = [
     title: 'WSC | Frete Nacional',
     location: 'R$ 45,00',
     price: 'WSC-JET-BR',
-    description: 'Logística de transporte para produtos nacionais.  Fornecedor - Centro de Distribuição - Seu endereço.',
+    description: 'Logística de transporte para produtos nacionais.  Fornecedor - Centro de Distribuição - Seu endereço',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-jet-br/'
   },
@@ -36,7 +36,7 @@ const propertiesUtilsData = [
     title: 'WSC | Frete Import',
     location: 'R$ 175,00',
     price: 'WSC-JET-USA',
-    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
   },
