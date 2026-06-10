@@ -178,7 +178,7 @@ const propertiesImpData = [
     price: 'WSC-1200,00',
     description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-pancann10/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil10/'
 },
 {
     id: 137,
@@ -189,7 +189,7 @@ const propertiesImpData = [
     price: 'WSC-2300,00',
     description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-pancann20/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil20/'
 },
 {
     id: 138,
@@ -200,7 +200,7 @@ const propertiesImpData = [
     price: 'WSC-4750,00',
     description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-pancann50/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil50/'
 },
 {
     id: 139,
@@ -211,7 +211,7 @@ const propertiesImpData = [
     price: 'WSC-9000,00',
     description: 'Extração Premium Full-Spectrum de Cannabis em condições de pré-venda exclusiva. Produto de qualidade premium, extração avançada, 100% natural e sem aditivos. Padrão Lineage com acesso limitado.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-prevenda100/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil100/'
 },
   {
     id: 1,
