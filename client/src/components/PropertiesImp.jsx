@@ -5,7 +5,7 @@ import './PropertiesImp.scss';
 const propertiesImpData = [
   {
     id: 100,
-    images: ['/images/glitter-bombbud.jpg', '/images/astrocand-thca.jpeg'],
+    images: ['/images/glitter-bombbud.jpg'],
     title: 'Glitter Bomb | THCa',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
@@ -150,30 +150,28 @@ const PropertyCard = ({ item }) => {
   const touchEnd = useRef(0);
   const hasMultipleImages = item.images && item.images.length > 1;
 
-  // Slider automático de 5 segundos com limpeza de memória eficiente
+  // Slide automático inteligente a cada 5 segundos
   useEffect(() => {
     if (!hasMultipleImages) return;
-    const interval = setInterval(() => {
+    const autoSlider = setInterval(() => {
       setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
     }, 5000);
-    return () => clearInterval(interval);
+    return () => clearInterval(autoSlider);
   }, [hasMultipleImages, item.images.length]);
 
-  const nextSlide = (e) => {
-    if (e) e.preventDefault();
+  const handleNext = () => {
     if (hasMultipleImages) {
       setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
     }
   };
 
-  const prevSlide = (e) => {
-    if (e) e.preventDefault();
+  const handlePrev = () => {
     if (hasMultipleImages) {
       setCurrentImgIndex((prev) => (prev - 1 + item.images.length) % item.images.length);
     }
   };
 
-  // Engenharia de Touch para Mobile (Sensível e Fluido)
+  // Lógica invisível e responsiva para Touch (Swipe)
   const handleTouchStart = (e) => {
     touchStart.current = e.targetTouches[0].clientX;
   };
@@ -184,12 +182,10 @@ const PropertyCard = ({ item }) => {
 
   const handleTouchEnd = () => {
     if (!touchStart.current || !touchEnd.current) return;
-    const distance = touchStart.current - touchEnd.current;
-    const isLeftSwipe = distance > 40;
-    const isRightSwipe = distance < -40;
-
-    if (isLeftSwipe) nextSlide();
-    if (isRightSwipe) prevSlide();
+    const swipeDistance = touchStart.current - touchEnd.current;
+    
+    if (swipeDistance > 40) handleNext();  // Arrasto p/ esquerda -> Próxima
+    if (swipeDistance < -40) handlePrev(); // Arrasto p/ direita -> Anterior
 
     touchStart.current = 0;
     touchEnd.current = 0;
@@ -216,26 +212,6 @@ const PropertyCard = ({ item }) => {
         ))}
         
         <span className="property-price">{item.price}</span>
-
-        {hasMultipleImages && (
-          <>
-            <button className="slider-arrow prev" onClick={prevSlide} aria-label="Anterior">
-              <svg width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button className="slider-arrow next" onClick={nextSlide} aria-label="Próximo">
-              <svg width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-            <div className="slider-dots">
-              {item.images.map((_, idx) => (
-                <span 
-                  key={idx} 
-                  className={`dot ${idx === currentImgIndex ? 'active' : ''}`}
-                  onClick={(e) => { e.preventDefault(); setCurrentImgIndex(idx); }}
-                />
-              ))}
-            </div>
-          </>
-        )}
       </div>
 
       <div className="property-info">
@@ -243,9 +219,9 @@ const PropertyCard = ({ item }) => {
         
         <div className="property-meta-row">
           <span className="property-location">{item.location}</span>
-          <span className="meta-dot">•</span>
+          <span className="meta-divider">•</span>
           <span className="property-delivery">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             {item.deliveryTime}
           </span>
         </div>
