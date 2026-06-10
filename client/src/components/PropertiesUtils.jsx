@@ -10,7 +10,13 @@ const propertiesUtilsData = [
     title: 'WSC Consulta | ANVISA',
     location: 'R$ 400,00',
     price: 'WSC-COMPLETE',
-    description: 'Renovação 6 meses para pacientes: Consulta médica + emissão de documentação pela ANVISA para importação legal.',
+    description: (
+  <>
+    Renovação 6 meses para pacientes:
+    <br />
+    Consulta médica + emissão de documentação pela ANVISA para importação legal.
+  </>
+),
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/702/'
   },
@@ -20,7 +26,7 @@ const propertiesUtilsData = [
     title: 'WSC | Frete Nacional',
     location: 'R$ 45,00',
     price: 'WSC-JET-BR',
-    description: 'Logística de transporte para produtos nacionais. Trecho: Fornecedor - Centro de Distribuição - Seu endereço.',
+    description: 'Logística de transporte para produtos nacionais.  Fornecedor - Centro de Distribuição - Seu endereço.',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-jet-br/'
   },
@@ -40,7 +46,7 @@ const propertiesUtilsData = [
     title: 'WSC | Import 5k',
     location: 'R$ 5.000,00',
     price: 'WSC-5k',
-    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil ',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   },
@@ -50,7 +56,7 @@ const propertiesUtilsData = [
     title: 'WSC | Import 10k',
     location: 'R$ 10.000,00',
     price: 'WSC-10k',
-    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil ',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
   },
@@ -60,7 +66,7 @@ const propertiesUtilsData = [
     title: 'WSC | Import 20k',
     location: 'R$ 20.000,00',
     price: 'WSC-20k',
-    description: 'Logística de importação internacional facilitada. Trecho: Califórnia - Miami - Brasil - Seu endereço.',
+    description: 'Logística de importação internacional facilitada. Califórnia - Miami - Brasil ',
     cta: 'Contratar',
     link: 'https://ws-connectioncommerce.com/produto/wsc-support-20k/'
   }
