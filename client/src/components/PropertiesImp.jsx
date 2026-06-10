@@ -5,13 +5,14 @@ import './PropertiesImp.scss';
 const propertiesImpData = [
   {
     id: 100,
-    images: ['/images/glitter-bombbud.jpg', '/images/astrocand-thca.jpeg'], // Exemplo com 2 imagens para teste do slider
+    images: ['/images/glitter-bombbud.jpg'],
     title: 'Glitter Bomb | THCa',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1950,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
+    badge: 'Mais Vendido', // Gatilho de prova social
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
   },
   {
@@ -67,10 +68,11 @@ const propertiesImpData = [
     price: 'WSC-989,00',
     description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
     cta: 'IMPORT',
+    badge: 'Últimas Unidades', // Gatilho de escassez
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
   {
-    id: 202, // Corrigido ID duplicado
+    id: 202,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold CBD',
     location: '5g',
@@ -92,7 +94,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-529/'
   },
   {
-    id: 303, // Corrigido ID duplicado
+    id: 303,
     images: ['/images/wsc-vape-thc.webp'],
     title: 'Hemp Oil Seryng CBD',
     location: '1ml',
@@ -163,6 +165,10 @@ const PropertyCard = ({ item }) => {
   return (
     <div className="property-card">
       <div className="property-image-wrapper">
+        {item.badge && (
+          <div className="property-badge">{item.badge}</div>
+        )}
+        
         {item.images.map((imgUrl, idx) => (
           <img
             key={idx}
@@ -177,8 +183,12 @@ const PropertyCard = ({ item }) => {
 
         {hasMultipleImages && (
           <>
-            <button className="slider-arrow prev" onClick={prevSlide} aria-label="Anterior">‹</button>
-            <button className="slider-arrow next" onClick={nextSlide} aria-label="Próximo">›</button>
+            <button className="slider-arrow prev" onClick={prevSlide} aria-label="Anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button className="slider-arrow next" onClick={nextSlide} aria-label="Próximo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
             <div className="slider-dots">
               {item.images.map((_, idx) => (
                 <span 
@@ -194,16 +204,25 @@ const PropertyCard = ({ item }) => {
 
       <div className="property-info">
         <h3 className="property-title">{item.title}</h3>
+        
         <div className="property-meta-row">
-          <span className="property-location">{item.location}</span>
-          <span className="property-delivery">{item.deliveryTime}</span>
+          <span className="property-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            {item.location}
+          </span>
+          <span className="property-delivery">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            {item.deliveryTime}
+          </span>
         </div>
+        
         <p className="property-description">{item.description}</p>
+        
         <a 
           href={item.link} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="property-cta"
+          className={`property-cta ${item.cta === 'SOLD OUT' ? 'sold-out' : ''}`}
         >
           {item.cta}
         </a>
