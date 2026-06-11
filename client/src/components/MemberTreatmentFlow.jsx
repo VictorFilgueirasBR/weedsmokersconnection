@@ -176,7 +176,7 @@ const styles = {
   section: {
     background: "#FFFFFF",
     color: "#0F172A",
-    padding: "6rem 1.5rem",
+    padding: "4rem 1.5rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

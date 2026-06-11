@@ -1,84 +1,96 @@
 // src/components/InstructionGlass.jsx
-import React, { useRef, useEffect } from "react";
-// Importando os ícones do React Icons (Font Awesome)
-import { FaWhatsapp, FaCommentDots } from 'react-icons/fa';
 
-export default function Instruction({
+import React, { useRef, useEffect } from "react";
+import { FaWhatsapp, FaCommentDots } from "react-icons/fa";
+
+export default function InstructionGlass({
   title = "Seja bem-vindo ao CLUB",
-  subtitle = "Entre em contato para isuporte",
+  subtitle = "Entre em contato para suporte",
   whatsappUrl = "https://wa.me/5561995276936",
-  telegramUrl = "hhttps://signal.group/#CjQKIKc82owGqCZ5x8lLrGEHGKgymEAH3-BuKAqQad5ia_xnEhC8fCjMbEbUvhoj5DQ-flj_",
-  backgroundImage = "/images/hemp233.jpeg", 
+  
+  // URL aponta para o Signal, mantida a variável telegramUrl por compatibilidade
+  telegramUrl = "https://signal.group/#CjQKIKc82owGqCZ5x8lLrGEHGKgymEAH3-BuKAqQad5ia_xnEhC8fCjMbEbUvhoj5DQ-flj_",
+  
   contactTitle = "Fale Conosco",
   contactSubtitle = "Suporte | Dúvidas | Pagamentos",
 }) {
   const cardRef = useRef(null);
 
-  // Efeito para o highlight que segue o mouse
   useEffect(() => {
     const el = cardRef.current;
     if (!el) return;
+
     const onMove = (e) => {
       const rect = el.getBoundingClientRect();
+
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
+
       const px = (x / rect.width) * 100;
       const py = (y / rect.height) * 100;
+
       el.style.setProperty("--mx", `${px}%`);
       el.style.setProperty("--my", `${py}%`);
     };
+
     window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
+
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+    };
   }, []);
 
   return (
-    <div style={{ ...styles.page, backgroundImage: `url(${backgroundImage})` }}>
-      {/* Estilos locais */}
+    <div style={styles.page}>
       <style>{css}</style>
 
-      {/* Card Principal */}
-      <div ref={cardRef} className="glass-card instruction-card" style={styles.card}>
-        {/* Overlay de chromatic edge (halo sutil nas bordas) */}
+      <div
+        ref={cardRef}
+        className="glass-card instruction-card"
+        style={styles.card}
+      >
         <div className="edge-chroma" />
-        {/* Textura de vidro (noise SVG embutido) */}
         <div className="noise" />
 
-        {/* Conteúdo */}
         <div style={styles.contentWrap}>
-          {/* Header */}
           <header style={styles.header}>
             <h2 style={styles.title}>{title}</h2>
-            <p style={styles.subtitle}>{subtitle}</p>
+
+            <p style={styles.subtitle}>
+              {subtitle}
+            </p>
           </header>
 
-          {/* Área de Contato (no lugar dos dados do 'cartão') */}
           <div style={styles.contactArea}>
-            <h3 style={styles.contactTitle}>{contactTitle}</h3>
-            <p style={styles.contactSubtitle}>{contactSubtitle}</p>
+            <h3 style={styles.contactTitle}>
+              {contactTitle}
+            </h3>
+
+            <p style={styles.contactSubtitle}>
+              {contactSubtitle}
+            </p>
           </div>
 
-          {/* Ações (Botões) */}
           <div style={styles.actionsRow}>
-            <a 
-              href={whatsappUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="glass-btn whatsapp-btn" 
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-btn"
               style={styles.actionBtn}
             >
-              {/* Ícone do WhatsApp (React Icon) */}
-              <FaWhatsapp size={22} />
+              <FaWhatsapp size={20} />
               WhatsApp
             </a>
-            <a 
-              href={telegramUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="glass-btn telegram-btn" 
+
+            <a
+              href={telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-btn"
               style={styles.actionBtn}
             >
-              {/* Ícone do Telegram (React Icon) */}
-              <FaCommentDots size={22} />
+              <FaCommentDots size={20} />
               Encrypted Chat
             </a>
           </div>
@@ -88,191 +100,317 @@ export default function Instruction({
   );
 }
 
-// ----------------------------------------------------------------------
-// --- CSS puro (glass + refração + distorção + textura + halo) adaptado ---
-// ----------------------------------------------------------------------
 const css = `
   :root {
-    --whatsapp-color: #25D366;
-    --telegram-color: #0088CC;
+    --wsc-start: rgba(160,236,250,1);
+    --wsc-end: rgba(30,77,94,1);
   }
+
+  /* ==========================
+     Fundo Hospital Premium
+  ========================== */
+
+  @keyframes hospitalFlow {
+    0% {
+      background-position:
+        0% 0%,
+        100% 0%,
+        50% 100%,
+        center;
+    }
+    50% {
+      background-position:
+        8% 10%,
+        92% 18%,
+        46% 88%,
+        center;
+    }
+    100% {
+      background-position:
+        0% 0%,
+        100% 0%,
+        50% 100%,
+        center;
+    }
+  }
+
+  /* ==========================
+     Glass Card Premium
+  ========================== */
 
   .glass-card {
     --mx: 50%;
     --my: 50%;
+
     position: relative;
-    border-radius: 24px;
     overflow: hidden;
     isolation: isolate;
-    backdrop-filter: blur(2px) contrast(1.1) saturate(160%);
-    -webkit-backdrop-filter: blur(1px) contrast(1.1) saturate(160%);
-    background: rgba(255,255,255,0.02);
-    border: 6px solid rgba(236, 236, 236, 0.16);
+    border-radius: 28px;
+
+    backdrop-filter:
+      blur(18px)
+      saturate(180%)
+      contrast(115%);
+
+    -webkit-backdrop-filter:
+      blur(18px)
+      saturate(180%)
+      contrast(115%);
+
+    background: rgba(255,255,255,.42);
+    border: 1px solid rgba(255,255,255,.55);
+
     box-shadow:
-      inset 0 0 0 1px rgba(255,255,255,0.08),
-      0 30px 80px rgba(0,0,0,0.45);
+      0 30px 80px rgba(30,77,94,.12),
+      inset 0 1px 0 rgba(255,255,255,.7);
+
     animation: card-wobble 12s ease-in-out infinite;
-    cursor: default;
-    transition: transform 0.3s ease-out;
-  }
-  .glass-card:hover {
-    transform: scale(1.01);
+
+    transition:
+      transform .4s ease,
+      box-shadow .4s ease;
   }
 
-  /* Reflexo/distorção que segue o mouse */
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 40px 100px rgba(30,77,94,.18),
+      inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  /* ==========================
+     Reflexo Glass
+  ========================== */
+
   .glass-card::before {
     content: "";
-    position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
-    background: radial-gradient(
-      circle at var(--mx) var(--my),
-      rgba(255,255,255,0.28) 0%,
-      rgba(255,255,255,0.08) 35%,
-      rgba(255,255,255,0.00) 70%
-    );
-    backdrop-filter: blur(6px) contrast(1.15);
-    -webkit-backdrop-filter: blur(6px) contrast(1.15);
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        circle at var(--mx) var(--my),
+        rgba(255,255,255,.35) 0%,
+        rgba(255,255,255,.12) 35%,
+        rgba(255,255,255,0) 70%
+      );
+
     mix-blend-mode: screen;
     animation: wave 6s ease-in-out infinite;
   }
 
-  /* Halo cromático sutil nas bordas (prisma) */
+  /* ==========================
+     Halo Prismático
+  ========================== */
+
   .edge-chroma {
-    position: absolute; inset: -1px; border-radius: inherit; pointer-events:none;
-    background: conic-gradient(from 0deg,
-      rgba(255,0,122,0.18), rgba(0,255,255,0.2), rgba(255,255,255,0.12), rgba(255,0,122,0.18)
-    );
-    mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);
-    -webkit-mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);
-    -webkit-mask-composite: xor; mask-composite: exclude;
-    padding: 1px; /* espessura do brilho de borda */
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background:
+      conic-gradient(
+        from 0deg,
+        rgba(160,236,250,.28),
+        rgba(0,123,255,.18),
+        rgba(255,255,255,.20),
+        rgba(160,236,250,.28)
+      );
+
+    mask:
+      linear-gradient(#000,#000) content-box,
+      linear-gradient(#000,#000);
+
+    -webkit-mask:
+      linear-gradient(#000,#000) content-box,
+      linear-gradient(#000,#000);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    padding: 1px;
     opacity: .55;
-    filter: blur(.5px);
   }
 
-  /* Textura de vidro com noise (SVG fractal noise embutido) */
+  /* ==========================
+     Noise
+  ========================== */
+
   .noise {
-    position: absolute; inset: 0; border-radius: inherit; pointer-events:none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.18'/></svg>");
-    background-size: 240px 240px; background-repeat: repeat;
-    mix-blend-mode: overlay; opacity: .35;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.18'/></svg>");
+
+    background-size: 240px 240px;
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+    opacity: .22;
   }
 
-  /* Botão de vidro leve base */
+  /* ==========================
+     WSC Premium Buttons
+  ========================== */
+
   .glass-btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    gap: 10px;
-    font-family: 'Satoshi', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 14px 20px;
-    border-radius: 14px; 
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform .15s ease, opacity .2s ease;
+    margin-top: auto;
     width: 100%;
-    
-    background: rgba(255,255,255,0.08); 
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.25);
-  }
-  .glass-btn:hover { 
-    transform: translateY(-1px); 
-    background: rgba(255,255,255,0.15); 
-    opacity: 0.9;
-  }
-  
-  /* Estilos específicos para WhatsApp */
-  .whatsapp-btn {
-    background-color: var(--whatsapp-color); 
-    border-color: var(--whatsapp-color);
-    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
-    background-blend-mode: overlay; 
-  }
-  .whatsapp-btn:hover {
-    background-color: #27e06e;
-    transform: translateY(-2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1.05rem;
+    font-size: .85rem;
+    font-weight: 700;
+    font-family: 'Satoshi', sans-serif;
+    border-radius: 10px;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(160,236,250,1) 0%,
+        rgba(30,77,94,1) 100%
+      );
+
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    text-decoration: none;
+    transition: all .4s cubic-bezier(0.16,1,0.3,1);
+    border: none;
+    box-shadow: 0 4px 16px rgba(30,77,94,.18);
   }
 
-  /* Estilos específicos para Telegram */
-  .telegram-btn {
-    background-color: var(--telegram-color);
-    border-color: var(--telegram-color);
-    box-shadow: 0 4px 14px rgba(0, 136, 204, 0.4);
-    background-blend-mode: overlay; 
-  }
-  .telegram-btn:hover {
-    background-color: #0099e5;
+  .glass-btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(30,77,94,.32);
+    filter: brightness(1.06);
   }
 
-  /* Animações */
+  /* ==========================
+     Motion
+  ========================== */
+
   @keyframes wave {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    0%,100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
   }
 
   @keyframes card-wobble {
-    0%   { transform: scale(1) skewX(0deg) skewY(0deg); }
-    25%  { transform: scale(1.01) skewX(0.6deg) skewY(-0.6deg); }
-    50%  { transform: scale(1.008) skewX(-0.6deg) skewY(0.6deg); }
-    75%  { transform: scale(1.012) skewX(0.3deg) skewY(-0.3deg); }
-    100% { transform: scale(1) skewX(0deg) skewY(0deg); }
+    0% { transform: scale(1); }
+    25% { transform: scale(1.01); }
+    50% { transform: scale(1.008); }
+    75% { transform: scale(1.012); }
+    100% { transform: scale(1); }
   }
 `;
 
-// ----------------------------------------------------------------------
-// --- Estilos JS (Layout e Tipografia) adaptados ---
-// ----------------------------------------------------------------------
 const styles = {
   page: {
     minHeight: "100vh",
     display: "grid",
     placeItems: "center",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    filter: "saturate(180%) contrast(135%) brightness(0.95)",
-    padding: "20px",
+    position: "relative",
+    overflow: "hidden",
+    padding: "24px",
+
+    background: `
+      radial-gradient(circle at 10% 20%, rgba(160,236,250,.55), transparent 30%),
+      radial-gradient(circle at 85% 15%, rgba(0,123,255,.18), transparent 35%),
+      radial-gradient(circle at 70% 80%, rgba(30,77,94,.14), transparent 40%),
+      linear-gradient(
+        135deg,
+        #edf9ff 0%,
+        #dff4ff 50%,
+        #f7fcff 100%
+      )
+    `,
+    backgroundSize: "120% 120%",
+    animation: "hospitalFlow 16s ease-in-out infinite",
   },
+
   card: {
-    width: "min(500px, 92vw)",
-    height: "auto",
-    zIndex: 1,
-    padding: "30px",
+    width: "min(560px, 94vw)",
+    padding: "36px",
     textAlign: "center",
+    zIndex: 2,
   },
+
   contentWrap: {
     position: "relative",
-    zIndex: 2,
-    height: "100%",
-    color: "#fff",
-    fontFamily: "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji",
+    zIndex: 3,
     display: "flex",
     flexDirection: "column",
-    gap: "24px",
+    gap: "28px",
+    color: "#000",
+    fontFamily: "Satoshi, sans-serif",
   },
+
   header: {
-    marginBottom: "10px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
   },
-  title: { fontSize: "2rem", lineHeight: 1.1, fontWeight: 800, margin: 0 },
-  subtitle: { marginTop: "10px", fontSize: "1rem", opacity: 0.8, fontWeight: 400 },
+
+  title: {
+    margin: 0,
+    fontSize: "clamp(2rem, 4vw, 2.8rem)",
+    fontWeight: 800,
+    lineHeight: 1.05,
+    color: "#000",
+    letterSpacing: "-0.03em",
+    fontFamily: "Satoshi, sans-serif",
+  },
+
+  subtitle: {
+    margin: 0,
+    color: "#000",
+    opacity: 0.75,
+    fontSize: "1rem",
+    lineHeight: 1.7,
+    fontWeight: 500,
+    fontFamily: "Satoshi, sans-serif",
+  },
 
   contactArea: {
-    padding: "16px 0",
-    borderTop: "1px solid rgba(255,255,255,0.1)",
-    borderBottom: "1px solid rgba(255,255,255,0.1)",
+    padding: "20px 0",
+    borderTop: "1px solid rgba(0,0,0,.08)",
+    borderBottom: "1px solid rgba(0,0,0,.08)",
   },
-  contactTitle: { fontSize: "1.25rem", fontWeight: 700, margin: 0, opacity: 0.95 },
-  contactSubtitle: { marginTop: "4px", fontSize: "0.9rem", opacity: 0.7, fontWeight: 300 },
 
-  actionsRow: { 
-    display: "flex", 
-    flexDirection: "column", 
-    gap: "1rem", 
-    marginTop: "10px", 
+  contactTitle: {
+    margin: 0,
+    fontSize: "1.25rem",
+    fontWeight: 700,
+    color: "#000",
+    fontFamily: "Satoshi, sans-serif",
   },
-  actionBtn: { 
-    // Garante que o CSS puro cuide da maioria dos estilos
+
+  contactSubtitle: {
+    marginTop: "8px",
+    fontSize: ".95rem",
+    color: "#000",
+    opacity: 0.65,
+    fontWeight: 500,
+    fontFamily: "Satoshi, sans-serif",
   },
+
+  actionsRow: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "14px",
+    marginTop: "4px",
+  },
+
+  actionBtn: {},
 };
