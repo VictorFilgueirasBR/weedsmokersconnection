@@ -156,7 +156,7 @@ const propertiesData = [
     title: 'Hash FullSpectrum 45u ',
     location: '5g',
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-989,90',
+    price: 'WSC-869,90',
     description: 'Fullspectrum ICEOLATOR THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
