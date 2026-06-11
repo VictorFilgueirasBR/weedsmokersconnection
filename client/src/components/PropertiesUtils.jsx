@@ -6,7 +6,7 @@ import './PropertiesUtils.scss';
 const propertiesUtilsData = [
   {
     id: 1,
-    image: '/images/pac-wsc-complete.png',
+    image: '/images/ws-life.png',
     title: 'WSC Consulta | ANVISA',
     location: 'R$ 400,00',
     price: 'WSC-COMPLETE',
@@ -22,7 +22,7 @@ const propertiesUtilsData = [
   },
   {
     id: 2,
-    image: '/images/jet-fly-br.png',
+    image: '/images/ws-life.png',
     title: 'WSC | Frete Nacional',
     location: 'R$ 45,00',
     price: 'WSC-JET-BR',
@@ -38,7 +38,7 @@ const propertiesUtilsData = [
   },
   {
     id: 3,
-    image: '/images/jet-fly-import.png',
+    image: '/images/ws-life.png',
     title: 'WSC | Frete Import',
     location: 'R$ 175,00',
     price: 'WSC-JET-USA',
@@ -54,7 +54,7 @@ const propertiesUtilsData = [
   },
   {
     id: 4,
-    image: '/images/wsc-bomb.png',
+    image: '/images/ws-life.png',
     title: 'WSC | Import 5k',
     location: 'R$ 5.000,00',
     price: 'WSC-5k',
@@ -70,7 +70,7 @@ const propertiesUtilsData = [
   },
   {
     id: 5,
-    image: '/images/wsc-bomb.png',
+    image: '/images/ws-life.png',
     title: 'WSC | Import 10k',
     location: 'R$ 10.000,00',
     price: 'WSC-10k',
@@ -86,7 +86,7 @@ const propertiesUtilsData = [
   },
   {
     id: 6,
-    image: '/images/wsc-bomb.png',
+    image: '/images/ws-life.png',
     title: 'WSC | Import 20k',
     location: 'R$ 20.000,00',
     price: 'WSC-20k',
