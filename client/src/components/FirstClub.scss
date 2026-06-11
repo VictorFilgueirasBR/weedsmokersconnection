@@ -70,6 +70,7 @@
   /* Tablet */
   @media (max-width: 768px) {
     padding: 0.75rem 0.75rem 2rem;
+    margin-top: 3rem;
 
     .image-wrapper {
       border-radius: 20px;
@@ -84,6 +85,7 @@
   /* Mobile */
   @media (max-width: 450px) {
     padding: 0.5rem;
+    margin-top: 3rem;
     margin-left: 0;
     margin-right: 0;
 
