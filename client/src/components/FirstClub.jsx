@@ -8,7 +8,7 @@ const WallStyle = () => {
     <section className="wsc-style">
       <div className="image-wrapper">
         
-        <img src="/images/ws-connection-new-era.png" alt="Wall Background" />
+        <img src="/images/first-start.png" alt="Wall Background" />
       </div>
     </section>
   );
