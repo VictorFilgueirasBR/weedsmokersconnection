@@ -6,9 +6,14 @@ import { FaCommentDots } from "react-icons/fa";
 
 export default function InstructionGlass({
   title = "Bem vindo ao CLUB",
-  subtitle = "Todo mês tem novidade, suporte exclusivo e atendimento.",
+  subtitle = "Acesse nossas plataformas para suporte exclusivo e atendimento.",
   whatsappUrl = "https://wa.me/5561995276936",
   
+  // URL aponta para o Signal, mantida a variável telegramUrl por compatibilidade
+  telegramUrl = "https://signal.group/#CjQKIKc82owGqCZ5x8lLrGEHGKgymEAH3-BuKAqQad5ia_xnEhC8fCjMbEbUvhoj5DQ-flj_",
+  
+  contactTitle = "Fale Conosco",
+  contactSubtitle = "Suporte | Dúvidas | Pagamentos",
 }) {
   const cardRef = useRef(null);
   const mountRef = useRef(null);
@@ -320,7 +325,7 @@ const css = `
      PAGE LAYOUT & BACKGROUNDS
   ========================== */
   .page-wrapper {
-    min-height: 0vh;
+    min-height: 100vh;
     width: 100%; /* Força a respeitar o limite da tela */
     box-sizing: border-box; /* ESSENCIAL: impede que o padding empurre o eixo X para a direita */
     overflow-x: hidden;
@@ -346,8 +351,8 @@ const css = `
   .three-canvas-container {
     position: fixed; /* Alterado de absolute para fixed */
     inset: 0;
-    width: 0vw;
-    height: 0vh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden; /* Corta qualquer resíduo do canvas */
     pointer-events: none;
     z-index: 0;
@@ -455,7 +460,7 @@ const css = `
   ========================== */
   #nbl-cinema-slider-root {
     position: fixed;
-    bottom: 3rem;
+    bottom: 0.5rem;
     left: 0;
     z-index: 9999;
     width: 100%;
