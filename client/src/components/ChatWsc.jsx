@@ -12,8 +12,8 @@ const menuSteps = [
       { text: "IMPORTADO", icon: <FaGlobe color="#00ff84" size={20} />, nextStep: 2 },
     ],
   },
-  { step: 1, botMessage: (<a href="/" target="_blank" rel="noopener noreferrer" className="property-wsc">Conteúdo Exclusívo</a>), isFinal: true },
-  { step: 2, botMessage: (<a href="/" target="_blank" rel="noopener noreferrer" className="property-wsc">Conteúdo Exclusívo</a>), isFinal: true },
+  { step: 1, botMessage: (<a href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid" target="_blank" rel="noopener noreferrer" className="property-wsc">Conteúdo Exclusívo</a>), isFinal: true },
+  { step: 2, botMessage: (<a href="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp" target="_blank" rel="noopener noreferrer" className="property-wsc">Conteúdo Exclusívo</a>), isFinal: true },
 ];
 
 export default function ChatWsc() {
