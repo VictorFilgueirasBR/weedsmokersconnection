@@ -55,12 +55,12 @@ const propertiesUtilsData = [
   {
     id: 4,
     image: '/images/ws-life.png',
-    title: 'WSC | Import 5k',
-    location: 'R$ 5.000,00',
-    price: 'WSC-5k',
+    title: 'WSC | Import 50k',
+    location: 'R$ 50.000,00',
+    price: 'WSC-50k',
     description: (
   <>
-    Logística de importação facilitada.
+    Logística de importação facilitada 700G.
     <br />
     Califórnia - Miami - Brasil
   </>
@@ -76,7 +76,7 @@ const propertiesUtilsData = [
     price: 'WSC-10k',
     description: (
   <>
-    Logística de importação facilitada.
+    Logística de importação facilitada 120G.
     <br />
     Califórnia - Miami - Brasil
   </>
@@ -92,7 +92,7 @@ const propertiesUtilsData = [
     price: 'WSC-20k',
     description: (
   <>
-    Logística de importação facilitada.
+    Logística de importação facilitada 250G.
     <br />
     Califórnia - Miami - Brasil
   </>

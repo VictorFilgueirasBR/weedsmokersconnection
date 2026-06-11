@@ -381,7 +381,7 @@ const propertiesImpData = [
 },
 {
     id: 114,
-    images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.jpg'],
+    images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.png'],
     title: 'THCa LIVE ROSIN OIL - PAPAYA',
     location: '6g',
     deliveryTime: '15-35 dias úteis',
@@ -392,7 +392,7 @@ const propertiesImpData = [
 },
 {
     id: 116,
-    images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.jpg'],
+    images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.png'],
     title: 'THCa LIVE ROSIN OIL - SUPER BOOF',
     location: '6g',
     deliveryTime: '15-35 dias úteis',
