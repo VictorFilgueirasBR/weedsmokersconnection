@@ -277,16 +277,25 @@ export default function InstructionGlass({
           </div>
 
           <div style={styles.actionsRow}>
-            <a
-              href={telegramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
               className="glass-btn"
               style={styles.actionBtn}
+              onClick={() => {
+                try {
+                  window.open(
+                    telegramUrl,
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                } catch (err) {
+                  window.location.href = telegramUrl;
+                }
+              }}
             >
               <FaCommentDots size={20} />
               Encrypted Chat
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -629,6 +638,15 @@ const css = `
     #nbl-cinema-trigger{ width:52px; height:52px; }
     .nbl-cinema-label{ font-size:9px !important; letter-spacing:4px !important; }
   }
+    .glass-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.glass-btn:hover {
+  cursor: pointer;
+}
 `;
 
 const styles = {
