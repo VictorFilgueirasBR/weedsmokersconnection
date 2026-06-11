@@ -370,7 +370,7 @@ const propertiesImpData = [
 },
 {
     id: 113,
-    images: ['/images/cbd-isolate-w.png'],
+    images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Isolate Powder CBD 99%',
     location: '3g',
     deliveryTime: '15-35 dias úteis',
@@ -381,7 +381,7 @@ const propertiesImpData = [
 },
 {
     id: 114,
-    images: ['/images/thca-live-rosin-papaya-w.png'],
+    images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.jpg'],
     title: 'THCa LIVE ROSIN OIL - PAPAYA',
     location: '6g',
     deliveryTime: '15-35 dias úteis',
@@ -392,7 +392,7 @@ const propertiesImpData = [
 },
 {
     id: 116,
-    images: ['/images/superboof-rosin-w.png'],
+    images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.jpg'],
     title: 'THCa LIVE ROSIN OIL - SUPER BOOF',
     location: '6g',
     deliveryTime: '15-35 dias úteis',
@@ -403,7 +403,7 @@ const propertiesImpData = [
 },
 {
     id: 117,
-    images: ['/images/alienog-w.png'],
+    images: ['/images/alien-og-w.png'],
     title: 'THCA Sauce Oil - Alien OG',
     location: '3g',
     deliveryTime: '15-35 dias úteis',
@@ -414,7 +414,7 @@ const propertiesImpData = [
 },
 {
     id: 118,
-    images: ['/images/nightcap-w.png'],
+    images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Crystallino 5:1 THCa/CBD - Cherry Pie',
     location: '3g',
     deliveryTime: '15-35 dias úteis',
@@ -425,7 +425,7 @@ const propertiesImpData = [
 },
 {
     id: 119,
-    images: ['/images/jackhere-w.png'],
+    images: ['/images/jackhrr-w.png'],
     title: 'THCA Budder Oil - Jack Herer',
     location: '6g',
     deliveryTime: '15-35 dias úteis',
@@ -436,7 +436,7 @@ const propertiesImpData = [
 },
 {
     id: 120,
-    images: ['/images/nightcap-blue-w.png'],
+    images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Night Cap Crystallino THCa-CBN - Blueberry',
     location: '3g',
     deliveryTime: '15-35 dias úteis',
