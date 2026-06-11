@@ -161,6 +161,7 @@ const css = `
   .glass-btn {
     display: inline-flex; align-items: center; justify-content: center;
     gap: 10px;
+    font-family: 'Satoshi', sans-serif;
     font-weight: 600;
     font-size: 1rem;
     padding: 14px 20px;

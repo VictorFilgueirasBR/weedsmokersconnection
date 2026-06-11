@@ -116,7 +116,7 @@ const styles = {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     fontFamily:
-      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
+      " Satoshi",
   },
   subtitle: {
     fontSize: "1.15rem",
@@ -125,7 +125,7 @@ const styles = {
     lineHeight: 1.7,
     textAlign: "justify",
     fontFamily:
-      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
+      "Satoshi",
   },
   optionsGrid: {
     display: "grid",
