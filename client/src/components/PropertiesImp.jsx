@@ -215,7 +215,7 @@ const propertiesImpData = [
 },
 {
     id: 136,
-    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum 7250mg',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
@@ -226,7 +226,7 @@ const propertiesImpData = [
 },
 {
     id: 137,
-    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum 14500mg',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
@@ -237,7 +237,7 @@ const propertiesImpData = [
 },
 {
     id: 138,
-    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum 36250mg',
     location: '50g',
     deliveryTime: '15-35 dias úteis',
@@ -248,7 +248,7 @@ const propertiesImpData = [
 },
 {
     id: 139,
-    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum',
     location: '100g',
     deliveryTime: '15-35 dias úteis',
