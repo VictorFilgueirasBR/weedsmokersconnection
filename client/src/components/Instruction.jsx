@@ -55,6 +55,7 @@ export default function InstructionGlass({
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.domElement.style.display = "block"; 
     currentMount.appendChild(renderer.domElement);
 
     const geometry = new THREE.BufferGeometry();
@@ -325,12 +326,14 @@ const css = `
   ========================== */
   .page-wrapper {
     min-height: 100vh;
+    width: 100%; /* Força a respeitar o limite da tela */
+    box-sizing: border-box; /* ESSENCIAL: impede que o padding empurre o eixo X para a direita */
     overflow-x: hidden;
     position: relative;
     display: grid;
     place-items: center;
     padding: 24px;
-    padding-bottom: 120px; /* Espaço inferior para o Slider Flutuante */
+    padding-bottom: 120px;
     background: radial-gradient(circle at center, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 40%), linear-gradient(180deg, #020202 0%, #050505 50%, #000000 100%);
     font-family: 'Plus Jakarta Sans', Inter, sans-serif;
   }
@@ -346,8 +349,11 @@ const css = `
   }
 
   .three-canvas-container {
-    position: absolute;
+    position: fixed; /* Alterado de absolute para fixed */
     inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Corta qualquer resíduo do canvas */
     pointer-events: none;
     z-index: 0;
   }
