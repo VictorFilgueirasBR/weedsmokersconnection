@@ -66,7 +66,7 @@ const propertiesUtilsData = [
   </>
 ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
+    link: 'https://ws-connectioncommerce.com/produto/wsc-support50k/'
   },
   {
     id: 5,
