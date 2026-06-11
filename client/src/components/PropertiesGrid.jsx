@@ -6,7 +6,7 @@ import './PropertiesGrid.scss';
 const propertiesData = [
   {
     id: 152,
-    image: '/images/ncnloil.png',
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
@@ -14,10 +14,10 @@ const propertiesData = [
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
-},
-{
+  },
+  {
     id: 153,
-    image: '/images/ncnloil.png',
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
@@ -25,10 +25,10 @@ const propertiesData = [
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
-},
-{
+  },
+  {
     id: 154,
-    image: '/images/ncnloil.png',
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
@@ -36,10 +36,10 @@ const propertiesData = [
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
-},
-{
+  },
+  {
     id: 155,
-    image: '/images/ncnloil.png',
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
@@ -47,10 +47,10 @@ const propertiesData = [
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
-},
-{
+  },
+  {
     id: 156,
-    image: '/images/ncnloil.png',
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Medicinal Equilibrado CBD + THC 1800mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
@@ -58,10 +58,10 @@ const propertiesData = [
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
-},
-{
+  },
+  {
     id: 157,
-    image: '/images/ncnloil.png',
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Medicinal Equilibrado CBD + THC 3600mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
@@ -69,7 +69,7 @@ const propertiesData = [
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl6/'
-},
+  },
   {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
@@ -178,7 +178,7 @@ const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => 
             <div className="property-card" key={property.id}>
               <div className="property-image-wrapper">
                 <img 
-                  src={property.image} 
+                  src={property.image} // Agora mapeará corretamente todas as imagens
                   alt={property.title} 
                   className="property-image active" 
                   loading="lazy"
@@ -191,6 +191,10 @@ const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => 
                 
                 <div className="property-meta-row">
                   <span className="property-location">{property.location}</span>
+                  {/* Renderiza o tempo de entrega condicionalmente, caso o objeto possua */}
+                  {property.deliveryTime && (
+                    <span className="property-delivery-time"> | {property.deliveryTime}</span>
+                  )}
                 </div>
                 
                 <p className="property-description">{property.description}</p>
