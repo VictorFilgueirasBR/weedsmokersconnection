@@ -43,7 +43,7 @@ export default function MemberTreatmentFlow() {
 
         <motion.p style={styles.subtitle} variants={itemVariants}>
           Agora que você é membro, vamos te guiar no passo a passo para obter
-          sua autorização e acesso aos melhores produtos com THC, CBD, Flores
+          sua autorização e acesso aos melhores tratamentos com THC, THCa, THCV, CBD, CBG, D-9, D-8, Flores, Óleos
           e Extrações de forma 100% legal e segura, aprovados pela ANVISA.
           Você tem <strong>duas opções</strong> para iniciar seu tratamento:
         </motion.p>
@@ -55,9 +55,9 @@ export default function MemberTreatmentFlow() {
             <User size={36} style={styles.icon} />
             <h3 style={styles.optionTitle}>Opção 1: Com Médico</h3>
             <p style={styles.optionText}>
-              Agende a sua consulta com a <strong>Médicos de confiança do CLUB </strong>  logo abaixo. Ela
-              indicará os fornecedores dos produtos que receita, garantindo
-              qualidade e acesso seguro às medicações aprovadas pela ANVISA. <strong>RECOMENDAMOS QUE NA SUA PRIMEIRA CONSULTA SEJA FEITA COM ESSA OPÇÃO. </strong>
+              Agende a sua consulta com um dos <strong>Médicos de confiança do CLUB </strong>  logo abaixo. Eles
+              prescrevem todo nosso catálogo de aquisição, garantindo
+              qualidade e acesso seguro às medicações com COAS e autorizadas pela ANVISA. <strong> SEMPRE RECOMENDAMOS QUE FAÇA SUA AQUISIÇÃO CONOSCO PARA GARANTIR A SEGURANÇA DA AQUISIÇÃO DO SEU TRATAMENTO.</strong>
             </p>
           </div>
 
@@ -67,8 +67,8 @@ export default function MemberTreatmentFlow() {
             <h3 style={styles.optionTitle}>Opção 2: Com Fornecedor</h3>
             <p style={styles.optionText}>
               Apartir do seu segundo pedido damos a liberdade para que escolha um <strong>FORNECEDOR LEGALIZADO</strong> na plataforma e tenha
-              acesso a um catálogo premium de <strong> gummyes, Flores de Diversas Espécies, Óleos e Extrações ricas em THC, THCa e CBD (ICE, Bubble Hash, Rosin, Wax, FullSpectrum, Diamonds)</strong>. Para o
-              fornecimento de terceiros você poderá solicitar atualizações de seus de receita para pelo período contratado.
+              acesso a um catálogo premium de <strong> gummyes, Flores de Diversas Espécies, Óleos e Extrações ricas em TTHC, THCa, THCV, CBD, CBG, D-9, D-8 (Fresh Frozen, Hemp Oil, Bubble Hash, Rosin, Wax, FullSpectrum, Diamonds)</strong>. Para o
+              fornecimento de terceiros você deverá solicitar atualizações das suas prescrições para a empresa que irá fazer aquisição.
             </p>
           </div>
         </motion.div>
