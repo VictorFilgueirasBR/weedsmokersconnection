@@ -441,7 +441,7 @@ const propertiesImpData = [
   { id: 31, images: ['/images/wsc-import-17.png'], title: 'CBN Tincture Sleep CBD', location: '30ml', deliveryTime: '15-50 dias úteis', price: 'WSC-629,00', description: 'Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' },
   {
     id: 143,
-    images: ['/images/gumm-pn-w-blue.jpeg'],
+    images: ['/images/gumm-pn-w-blue.png'],
     title: 'CBD Gummies Midnight Blue Dream 30mg',
     location: '30g',
     deliveryTime: '15-35 dias úteis',
@@ -452,7 +452,7 @@ const propertiesImpData = [
 },
 {
     id: 144,
-    images: ['/images/gumm-pn-w-green.jpeg'],
+    images: ['/images/gumm-pn-w-green.png'],
     title: 'Gummies Chill Bites 20mg com 30und',
     location: '30und',
     deliveryTime: '15-35 dias úteis',
