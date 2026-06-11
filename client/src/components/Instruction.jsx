@@ -8,7 +8,7 @@ export default function Instruction({
   subtitle = "Entre em contato para instruções ou parcelamentos.",
   whatsappUrl = "https://wa.me/5561995276936",
   telegramUrl = "hhttps://signal.group/#CjQKIKc82owGqCZ5x8lLrGEHGKgymEAH3-BuKAqQad5ia_xnEhC8fCjMbEbUvhoj5DQ-flj_",
-  backgroundImage = "/images/hemp222.jpeg", 
+  backgroundImage = "/images/hemp233.jpeg", 
   contactTitle = "Fale Conosco",
   contactSubtitle = "Suporte | Dúvidas | Pagamentos",
 }) {
