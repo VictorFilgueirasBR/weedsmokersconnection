@@ -5,6 +5,72 @@ import './PropertiesGrid.scss';
 // Dados dos imóveis com as imagens fornecidas e informações atualizadas
 const propertiesData = [
   {
+    id: 152,
+    images: ['/images/oilncnl.jpg'],
+    title: 'Hemp Oil CBD Full Spectrum 3000mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-620,00', // R$ 500,00 + 120,00
+    description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
+},
+{
+    id: 153,
+    images: ['/images/oilncnl.jpg'],
+    title: 'Hemp Oil CBD Full Spectrum 6000mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-920,00', // R$ 800,00 + 120,00
+    description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
+},
+{
+    id: 154,
+    images: ['/images/oilncnl.jpg'],
+    title: 'Hemp Oil THC Full Spectrum 600mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-420,00', // R$ 300,00 + 120,00
+    description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
+},
+{
+    id: 155,
+    images: ['/images/oilncnl.jpg'],
+    title: 'Hemp Oil THC Full Spectrum 1200mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-520,00', // R$ 400,00 + 120,00
+    description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
+},
+{
+    id: 156,
+    images: ['/images/oilncnl.jpg'],
+    title: 'Hemp Oil Medicinal Equilibrado CBD + THC 1800mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-520,00', // R$ 400,00 + 120,00
+    description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
+},
+{
+    id: 157,
+    images: ['/images/oilncnl.jpg'],
+    title: 'Hemp Oil Medicinal Equilibrado CBD + THC 3600mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-620,00', // R$ 500,00 + 120,00
+    description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl6/'
+},
+  {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash Fullspectrum 90u ',
@@ -90,7 +156,7 @@ const propertiesData = [
     title: 'Hash FullSpectrum 45u ',
     location: '5g',
     price: 'WSC-989,90',
-    description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 45 micras).',
+    description: 'Fullspectrum ICEOLATOR THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
   }
