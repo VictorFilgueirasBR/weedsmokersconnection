@@ -9,7 +9,7 @@ const propertiesImpData = [
     title: 'Glitter Bomb | THCa',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
-    price: 'WSC-1950,00',
+    price: 'WSC-1750,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
@@ -21,7 +21,7 @@ const propertiesImpData = [
     title: 'Forbidden Fruit | D8',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
-    price: 'WSC-1750,00',
+    price: 'WSC-1550,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
@@ -32,7 +32,7 @@ const propertiesImpData = [
     title: 'Astro Candy | THCa',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
-    price: 'WSC-1950,00',
+    price: 'WSC-1750,00',
     description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
@@ -43,7 +43,7 @@ const propertiesImpData = [
     title: 'Gellato | D8',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
-    price: 'WSC-1750,00',
+    price: 'WSC-1550,00',
     description: 'Flor medicinal importada de alta qualidade. 55% Indica - 45% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'

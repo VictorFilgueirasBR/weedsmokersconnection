@@ -4,8 +4,8 @@ import React, { useRef, useEffect } from "react";
 import { FaWhatsapp, FaCommentDots } from "react-icons/fa";
 
 export default function InstructionGlass({
-  title = "Seja bem-vindo ao CLUB",
-  subtitle = "Entre em contato para suporte",
+  title = "Bem vindo ao CLUB",
+  subtitle = "Acesse nossas plataformas para suporte exclusivo e atendimento.",
   whatsappUrl = "https://wa.me/5561995276936",
   
   // URL aponta para o Signal, mantida a variável telegramUrl por compatibilidade
