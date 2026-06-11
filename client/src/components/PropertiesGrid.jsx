@@ -17,7 +17,7 @@ const propertiesData = [
 },
 {
     id: 153,
-    images: ['/images/oil1.png'],
+    images: '/images/ncnloil.png',
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
     deliveryTime: '15-35 dias úteis',
@@ -28,7 +28,7 @@ const propertiesData = [
 },
 {
     id: 154,
-    images: ['/images/oil2.png'],
+    images: '/images/ncnloil.png',
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
     deliveryTime: '15-35 dias úteis',
@@ -39,7 +39,7 @@ const propertiesData = [
 },
 {
     id: 155,
-    images: ['/images/oil2.png'],
+    images: '/images/ncnloil.png',
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
     deliveryTime: '15-35 dias úteis',
@@ -50,7 +50,7 @@ const propertiesData = [
 },
 {
     id: 156,
-    images: ['/images/ncnloil.png'],
+    images: '/images/ncnloil.png',
     title: 'Hemp Oil Medicinal Equilibrado CBD + THC 1800mg',
     location: '30ml',
     deliveryTime: '15-35 dias úteis',
@@ -61,7 +61,7 @@ const propertiesData = [
 },
 {
     id: 157,
-    images: ['/images/ncnloil.png'],
+    images: '/images/ncnloil.png',
     title: 'Hemp Oil Medicinal Equilibrado CBD + THC 3600mg',
     location: '30ml',
     deliveryTime: '15-35 dias úteis',
