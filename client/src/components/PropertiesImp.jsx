@@ -4,6 +4,50 @@ import './PropertiesImp.scss';
 
 const propertiesImpData = [
   {
+    id: 145,
+    images: ['/images/flwrct1.png', '/images/flwrct1a.png'],
+    title: 'Inflorescência Sour Lifter - CBD',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.250,00',
+    description: 'Energético, Foco, Sem Psicoatividade. Ingredientes: Flores in Natura ricas em CBD. Dosagem: 25% Indica 75% Sativa - 14g',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct1/'
+},
+{
+    id: 146,
+    images: ['/images/flwrct2.png', '/images/flwrct2a.png'],
+    title: 'Inflorescência Lemon Octane - CBD',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.250,00',
+    description: 'Relaxante, Calmante muscular, Sedativo leve Limoneno, Mirceno, Cariofileno Dor, Ansiedade, Insônia. Ingredientes: Flores In Natura Ricas em CBD. Dosagem: 80% INDICA - 20% SATIVA - 14g',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct2/'
+},
+{
+    id: 147,
+    images: ['/images/flwrct3.png'],
+    title: 'Inflorescência Tropicana Banana - THCa',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.650,00',
+    description: 'Aumento no Foco, Energia, Criatividade e melhora no humor. Ingredientes: Flores In Natura Ricas em THCa. Dosagem: 70% Indica - 30% Sativa',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct3/'
+},
+{
+    id: 148,
+    images: ['/images/flwrct4.png'],
+    title: 'Girl Scout Cookies - THCa',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.650,00',
+    description: 'Promove o relaxamento, melhora o apetite e melhora o humor. Ingredientes: Flores In Natura Ricas em THCa. Dosagem: 70% Sativa 30% Indica',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
+},
+  {
     id: 100,
     images: ['/images/glitter-bombbud.jpg'],
     title: 'Glitter Bomb | THCa',
@@ -171,7 +215,7 @@ const propertiesImpData = [
 },
 {
     id: 136,
-    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum 7250mg',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
@@ -182,7 +226,7 @@ const propertiesImpData = [
 },
 {
     id: 137,
-    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum 14500mg',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
@@ -193,7 +237,7 @@ const propertiesImpData = [
 },
 {
     id: 138,
-    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum 36250mg',
     location: '50g',
     deliveryTime: '15-35 dias úteis',
@@ -204,7 +248,7 @@ const propertiesImpData = [
 },
 {
     id: 139,
-    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
+    images: ['/images/hmp-caps-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg', '/images/hmpoilq-dscr.jpeg' ],
     title: 'Hemp Oil Pancann Badder Full-Spectrum',
     location: '100g',
     deliveryTime: '15-35 dias úteis',
@@ -215,7 +259,7 @@ const propertiesImpData = [
 },
 {
     id: 140,
-    images: ['/images/freshq-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg'],
     title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 05 Caps',
     location: '5g',
     deliveryTime: '15-35 dias úteis',
@@ -226,7 +270,7 @@ const propertiesImpData = [
 },
 {
     id: 141,
-    images: ['/images/freshq-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg'],
     title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 10 Caps',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
@@ -237,7 +281,7 @@ const propertiesImpData = [
 },
 {
     id: 142,
-    images: ['/images/freshq-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg'],
     title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 20 Caps',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
