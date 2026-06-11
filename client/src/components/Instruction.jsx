@@ -5,7 +5,7 @@ import { FaWhatsapp, FaCommentDots } from 'react-icons/fa';
 
 export default function Instruction({
   title = "Seja bem-vindo ao CLUB",
-  subtitle = "Entre em contato para instruções ou parcelamentos.",
+  subtitle = "Entre em contato para isuporte",
   whatsappUrl = "https://wa.me/5561995276936",
   telegramUrl = "hhttps://signal.group/#CjQKIKc82owGqCZ5x8lLrGEHGKgymEAH3-BuKAqQad5ia_xnEhC8fCjMbEbUvhoj5DQ-flj_",
   backgroundImage = "/images/hemp233.jpeg", 
