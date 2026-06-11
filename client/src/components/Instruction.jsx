@@ -6,7 +6,7 @@ import { FaCommentDots } from "react-icons/fa";
 
 export default function InstructionGlass({
   title = "Bem vindo ao CLUB",
-  subtitle = "Acesse nossas plataformas para suporte exclusivo e atendimento.",
+  subtitle = "Temos grupo cryptografado",
   whatsappUrl = "https://wa.me/5561995276936",
   
   // URL aponta para o Signal, mantida a variável telegramUrl por compatibilidade
@@ -324,6 +324,11 @@ const css = `
   /* ==========================
      PAGE LAYOUT & BACKGROUNDS
   ========================== */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .page-wrapper {
     min-height: 100vh;
     width: 100%; /* Força a respeitar o limite da tela */
@@ -337,6 +342,7 @@ const css = `
     background: radial-gradient(circle at center, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 40%), linear-gradient(180deg, #020202 0%, #050505 50%, #000000 100%);
     font-family: 'Plus Jakarta Sans', Inter, sans-serif;
   }
+    
 
   .grid-bg {
     position: absolute;
@@ -349,10 +355,10 @@ const css = `
   }
 
   .three-canvas-container {
-    position: fixed; /* Alterado de absolute para fixed */
+    position: fixed;
     inset: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden; /* Corta qualquer resíduo do canvas */
     pointer-events: none;
     z-index: 0;
@@ -370,6 +376,9 @@ const css = `
     --mx: 50%;
     --my: 50%;
     position: relative;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
     isolation: isolate;
     border-radius: 28px;
@@ -430,6 +439,7 @@ const css = `
   .glass-btn {
     margin-top: auto;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,9 +633,10 @@ const css = `
 
 const styles = {
   card: {
-    width: "min(560px, 94vw)",
+    width: "min(560px, calc(100vw - 48px))",
     padding: "36px",
     textAlign: "center",
+    boxSizing: "border-box",
   },
 
   contentWrap: {
