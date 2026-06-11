@@ -656,8 +656,8 @@ const styles = {
 
   title: {
     margin: 0,
-    fontSize: "clamp(2rem, 4vw, 2.8rem)",
-    fontWeight: 800,
+    fontSize: "clamp(1.6rem, 3.2vw, 2.24rem)", // Reduzido de 2, 4, 2.8
+    fontWeight: 400,
     lineHeight: 1.05,
     letterSpacing: "-0.03em",
   },
@@ -665,9 +665,9 @@ const styles = {
   subtitle: {
     margin: 0,
     opacity: 0.85,
-    fontSize: "1rem",
+    fontSize: "0.8rem", // Reduzido de 1
     lineHeight: 1.7,
-    fontWeight: 500,
+    fontWeight: 300,
   },
 
   contactArea: {
