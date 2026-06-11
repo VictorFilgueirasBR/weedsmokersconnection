@@ -6,7 +6,7 @@ import './PropertiesGrid.scss';
 const propertiesData = [
   {
     id: 152,
-    images: ['/images/oil1.jpg'],
+    images: '/images/ncnloil.png',
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
     deliveryTime: '15-35 dias úteis',
