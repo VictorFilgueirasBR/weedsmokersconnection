@@ -215,7 +215,7 @@ const propertiesImpData = [
 },
 {
     id: 140,
-    images: ['/images/freshq-w.jpeg', '/images/freshq1-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    images: ['/images/freshq-w.jpeg', 'images/caps-freshq-w.jpeg'],
     title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 05 Caps',
     location: '5g',
     deliveryTime: '15-35 dias úteis',
@@ -226,7 +226,7 @@ const propertiesImpData = [
 },
 {
     id: 141,
-    images: ['/images/freshq-w.jpeg', '/images/freshq1-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    images: ['/images/freshq-w.jpeg', 'images/caps-freshq-w.jpeg'],
     title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 10 Caps',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
@@ -237,7 +237,7 @@ const propertiesImpData = [
 },
 {
     id: 142,
-    images: ['/images/freshq-w.jpeg', '/images/freshq1-w.jpeg', 'images/caps-freshq-w.jpeg'],
+    images: ['/images/freshq-w.jpeg', 'images/caps-freshq-w.jpeg'],
     title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 20 Caps',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
