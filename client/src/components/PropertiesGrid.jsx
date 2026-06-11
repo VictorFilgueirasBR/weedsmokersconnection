@@ -6,10 +6,10 @@ import './PropertiesGrid.scss';
 const propertiesData = [
   {
     id: 152,
-    images: '/images/ncnloil.png',
+    image: '/images/ncnloil.png',
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
-    deliveryTime: '15-35 dias úteis',
+    deliveryTime: '3-8 dias úteis',
     price: 'WSC-620,00', // R$ 500,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -17,10 +17,10 @@ const propertiesData = [
 },
 {
     id: 153,
-    images: '/images/ncnloil.png',
+    image: '/images/ncnloil.png',
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
-    deliveryTime: '15-35 dias úteis',
+    deliveryTime: '3-8 dias úteis',
     price: 'WSC-920,00', // R$ 800,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -28,10 +28,10 @@ const propertiesData = [
 },
 {
     id: 154,
-    images: '/images/ncnloil.png',
+    image: '/images/ncnloil.png',
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
-    deliveryTime: '15-35 dias úteis',
+    deliveryTime: '3-8 dias úteis',
     price: 'WSC-420,00', // R$ 300,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -39,10 +39,10 @@ const propertiesData = [
 },
 {
     id: 155,
-    images: '/images/ncnloil.png',
+    image: '/images/ncnloil.png',
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
-    deliveryTime: '15-35 dias úteis',
+    deliveryTime: '3-8 dias úteis',
     price: 'WSC-520,00', // R$ 400,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -50,10 +50,10 @@ const propertiesData = [
 },
 {
     id: 156,
-    images: '/images/ncnloil.png',
+    image: '/images/ncnloil.png',
     title: 'Hemp Oil Medicinal Equilibrado CBD + THC 1800mg',
     location: '30ml',
-    deliveryTime: '15-35 dias úteis',
+    deliveryTime: '3-8 dias úteis',
     price: 'WSC-520,00', // R$ 400,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -61,10 +61,10 @@ const propertiesData = [
 },
 {
     id: 157,
-    images: '/images/ncnloil.png',
+    image: '/images/ncnloil.png',
     title: 'Hemp Oil Medicinal Equilibrado CBD + THC 3600mg',
     location: '30ml',
-    deliveryTime: '15-35 dias úteis',
+    deliveryTime: '3-8 dias úteis',
     price: 'WSC-620,00', // R$ 500,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
     cta: 'PEDIR',
