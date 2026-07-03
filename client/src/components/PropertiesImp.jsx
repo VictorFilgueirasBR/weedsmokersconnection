@@ -216,7 +216,7 @@ const propertiesImpData = [
 {
     id: 136,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
-    title: 'Hemp Oil Pancann Badder Full-Spectrum 7250mg',
+    title: 'Hemp Oil  Badder Full-Spectrum 7250mg',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1200,00',
@@ -227,7 +227,7 @@ const propertiesImpData = [
 {
     id: 137,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
-    title: 'Hemp Oil Pancann Badder Full-Spectrum 14500mg',
+    title: 'Hemp Oil  Badder Full-Spectrum 14500mg',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-2300,00',
@@ -238,7 +238,7 @@ const propertiesImpData = [
 {
     id: 138,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
-    title: 'Hemp Oil Pancann Badder Full-Spectrum 36250mg',
+    title: 'Hemp Oil  Badder Full-Spectrum 36250mg',
     location: '50g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-4750,00',
@@ -249,7 +249,7 @@ const propertiesImpData = [
 {
     id: 139,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
-    title: 'Hemp Oil Pancann Badder Full-Spectrum',
+    title: 'Hemp Oil  Badder Full-Spectrum',
     location: '100g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-9000,00',
@@ -260,33 +260,33 @@ const propertiesImpData = [
 {
     id: 140,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg'],
-    title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 05 Caps',
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120 05 Caps',
     location: '5g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-900,00',
-    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa PANCANN. Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh5/'
 },
 {
     id: 141,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg'],
-    title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 10 Caps',
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120 10 Caps',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.500,00',
-    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa PANCANN. Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh10/'
 },
 {
     id: 142,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg'],
-    title: 'Hemp Capsule Pancann Fresh-Frozen Purified 120 20 Caps',
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120 20 Caps',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-2.900,00',
-    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa PANCANN. Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
 },
@@ -498,7 +498,7 @@ const propertiesImpData = [
     location: '30und',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-489,90',
-    description: 'Relaxe e adoce o seu dia com as Chill Bites da PANCANN. Nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade, offering uma forma prática e deliciosa de encontrar o seu centro em meio à rotina.',
+    description: 'Relaxe e adoce o seu dia com as Chill Bites da . Nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade, offering uma forma prática e deliciosa de encontrar o seu centro em meio à rotina.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
 },
