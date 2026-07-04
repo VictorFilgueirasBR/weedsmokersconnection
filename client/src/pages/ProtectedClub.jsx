@@ -3,14 +3,11 @@ import React, { useState, useEffect } from "react";
 
 import HeroHashLegal from "../components/HeroHashLegal";
 import FirstClub from "../components/FirstClub";
-import VideoPlayer from "../components/VideoPlayer";
-import CannabisSlides from "../components/CannabisSlides";
 import GlassCardNacional from "../components/GlassCardNacional";
 import GlassCardImport from "../components/GlassCardImport";
 import MemberTreatmentFlow from "../components/MemberTreatmentFlow";
 import Instruction from "../components/Instruction";
 import IceSection from "../components/IceSection";
-import FlowerWsc from "../components/FlowersWcs";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
 import PropertiesUtils from "../components/PropertiesUtils";
@@ -103,12 +100,6 @@ export default function WSCClub() {
 
 
       <IceSection />
-
-      <FlowerWsc />
-
-      <VideoPlayer />
-
-      <CannabisSlides />
 
       <HeroHashLegal />
 
