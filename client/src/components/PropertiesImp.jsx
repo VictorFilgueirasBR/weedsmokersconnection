@@ -484,7 +484,7 @@ const propertiesImpData = [
     id: 143,
     images: ['/images/gumm-pn-w-blue.png'],
     title: 'CBD Gummies Midnight Blue Dream 30mg',
-    location: '30g',
+    location: '30und',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-489,90',
     description: 'Durma melhor com Midnight Blue Dream 30mg 10mg THC, 10mg CBD e 10mg CBN. Desbloqueie um sono profundo e restaurador com nossas gomas premium. Inspiradas no perfil relaxante da Blue Dream, cada unidade contém 30mg de CBD de amplo espectro para transformar sua rotina noturna de forma natural.',
