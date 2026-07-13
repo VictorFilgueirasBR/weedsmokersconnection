@@ -60,7 +60,7 @@ const Header = ({ onShowPopup }) => {
   return (
     <header className="main-header">
       <div className="logo">
-        <Link to="/" onClick={handleLinkClick}>
+        <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick}>
           <img src="/logo192.png" alt="WeedSmokersClub" />
         </Link>
       </div>
