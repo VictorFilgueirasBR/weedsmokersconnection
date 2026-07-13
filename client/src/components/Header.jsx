@@ -73,9 +73,8 @@ const Header = ({ onShowPopup }) => {
         {!isLoggedIn ? (
           <>
             
-            <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick} translate="no" lang="en">WSC | PLANS</Link>
-            <Link to="/chat" onClick={handleLinkClick}>WSC | TEST IA</Link>
-            <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WSC | ABOUT</Link>
+            <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick} translate="no" lang="en">WS | PLANS</Link>
+            <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WS | ABOUT</Link>
             <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
           </>
         ) : (
