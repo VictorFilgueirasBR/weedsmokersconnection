@@ -260,8 +260,8 @@ const propertiesImpData = [
 {
     id: 140,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120 05 Caps',
-    location: '5g',
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg  05 Caps',
+    location: '5cps',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-900,00',
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
@@ -271,8 +271,8 @@ const propertiesImpData = [
 {
     id: 141,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120 10 Caps',
-    location: '10g',
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 10 Caps',
+    location: '10cps',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.500,00',
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
@@ -282,8 +282,8 @@ const propertiesImpData = [
 {
     id: 142,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120 20 Caps',
-    location: '20g',
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 20 Caps',
+    location: '20cps',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-2.900,00',
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
