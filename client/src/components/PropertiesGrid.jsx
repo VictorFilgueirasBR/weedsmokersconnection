@@ -76,36 +76,36 @@ const propertiesData = [
   // ==========================================
   {
     id: 158,
-    images: ['/images/buds-cbd.jpeg', '/images/buds-cbd1.jpeg', '/images/buds-cbd2.jpeg'],
+    images: '/images/buds-cbd1.jpeg', 
     title: 'Inflorescência Rica em CBD 29% - Genética Valley Kush',
     location: '10g', 
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-450,00', 
+    price: 'WSC-710,00', 
     description: 'Inflorescência cultivada em outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc10/'
+    link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd10/'
   },
   {
     id: 160,
-    images: '/images/buds-cbd.jpeg', 
+    images: '/images/buds-cbd1.jpeg', 
     title: 'Inflorescência Rica em CBD 29% - Genética Valley Kush',
     location: '20g', 
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-850,00', 
+    price: 'WSC-1400,00', 
     description: 'Inflorescência cultivada em outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc20/'
+    link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd20/'
   },
   {
     id: 161,
-    images: '/images/buds-cbd.jpeg', 
+    images: '/images/buds-cbd1.jpeg', 
     title: 'Inflorescência Rica em CBD 29% - Genética Valley Kush',
     location: '40g', 
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-1600,00', 
+    price: 'WSC-2700,00', 
     description: 'Inflorescência cultivada em outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc40/'
+    link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd40/'
   },
 
   // ==========================================
@@ -113,36 +113,36 @@ const propertiesData = [
   // ==========================================
   {
     id: 159,
-    images: '/images/buds-thc.jpeg',
+    images: '/images/buds-thcw.jpeg',
     title: 'Inflorescência Rica em THC 15-20% - Híbrida',
     location: '10g',
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-480,00', 
+    price: 'WSC-710,00', 
     description: 'Inflorescência de genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd10/'
+    link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc10/'
   },
   {
     id: 162,
-    images: '/images/buds-thc.jpeg',
+    images: '/images/buds-thcw.jpeg',
     title: 'Inflorescência Rica em THC 15-20% - Híbrida',
     location: '20g',
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-900,00', 
+    price: 'WSC-1400,00', 
     description: 'Inflorescência de genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd20/'
+    link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc20/'
   },
   {
     id: 163,
-    images: '/images/buds-thc.jpeg',
+    images: '/images/buds-thcw.jpeg',
     title: 'Inflorescência Rica em THC 15-20% - Híbrida',
     location: '40g',
     deliveryTime: '3-8 dias úteis',
-    price: 'WSC-1700,00', 
+    price: 'WSC-2700,00', 
     description: 'Inflorescência de genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd40/'
+    link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc40/'
   },
   /*{
     id: 1,
