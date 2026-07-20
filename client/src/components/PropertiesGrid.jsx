@@ -1,5 +1,5 @@
 // client/src/components/PropertiesGrid.jsx
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import './PropertiesGrid.scss';
 
 // Dados dos imóveis com as imagens fornecidas e informações atualizadas
@@ -87,7 +87,7 @@ const propertiesData = [
   },
   {
     id: 160,
-    images: ['/images/buds-cbd.jpeg', '/images/buds-cbd1.jpeg', '/images/buds-cbd2.jpeg'],
+    images: '/images/buds-cbd.jpeg', 
     title: 'Inflorescência Rica em CBD 29% - Genética Valley Kush',
     location: '20g', 
     deliveryTime: '3-8 dias úteis',
@@ -98,7 +98,7 @@ const propertiesData = [
   },
   {
     id: 161,
-    images: ['/images/buds-cbd.jpeg', '/images/buds-cbd1.jpeg', '/images/buds-cbd2.jpeg'],
+    images: '/images/buds-cbd.jpeg', 
     title: 'Inflorescência Rica em CBD 29% - Genética Valley Kush',
     location: '40g', 
     deliveryTime: '3-8 dias úteis',
@@ -113,7 +113,7 @@ const propertiesData = [
   // ==========================================
   {
     id: 159,
-    images: ['/images/buds-thc.jpeg', '/images/buds-thc1.jpeg', '/images/buds-thc2.jpeg'],
+    images: '/images/buds-thc.jpeg',
     title: 'Inflorescência Rica em THC 15-20% - Híbrida',
     location: '10g',
     deliveryTime: '3-8 dias úteis',
@@ -124,7 +124,7 @@ const propertiesData = [
   },
   {
     id: 162,
-    images: ['/images/buds-thc.jpeg', '/images/buds-thc1.jpeg', '/images/buds-thc2.jpeg'],
+    images: '/images/buds-thc.jpeg',
     title: 'Inflorescência Rica em THC 15-20% - Híbrida',
     location: '20g',
     deliveryTime: '3-8 dias úteis',
@@ -135,7 +135,7 @@ const propertiesData = [
   },
   {
     id: 163,
-    images: ['/images/buds-thc.jpeg', '/images/buds-thc1.jpeg', '/images/buds-thc2.jpeg'],
+    images: '/images/buds-thc.jpeg',
     title: 'Inflorescência Rica em THC 15-20% - Híbrida',
     location: '40g',
     deliveryTime: '3-8 dias úteis',
@@ -237,116 +237,7 @@ const propertiesData = [
   }
 ];
 
-const PropertyCardNacional = ({ property }) => {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0);
-  const touchStart = useRef(0);
-  const touchEnd = useRef(0);
-  
-  // Trata tanto array de imagens quanto uma imagem única para manter compatibilidade
-  const images = property.images ? property.images : (property.image ? [property.image] : []);
-  const hasMultipleImages = images.length > 1;
-
-  // Slide automático inteligente a cada 5 segundos
-  useEffect(() => {
-    if (!hasMultipleImages) return;
-    const autoSlider = setInterval(() => {
-      setCurrentImgIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(autoSlider);
-  }, [hasMultipleImages, images.length]);
-
-  const handleNext = () => {
-    if (hasMultipleImages) {
-      setCurrentImgIndex((prev) => (prev + 1) % images.length);
-    }
-  };
-
-  const handlePrev = () => {
-    if (hasMultipleImages) {
-      setCurrentImgIndex((prev) => (prev - 1 + images.length) % images.length);
-    }
-  };
-
-  // Lógica invisível e responsiva para Touch (Swipe)
-  const handleTouchStart = (e) => {
-    touchStart.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEnd.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart.current || !touchEnd.current) return;
-    const swipeDistance = touchStart.current - touchEnd.current;
-    
-    if (swipeDistance > 40) handleNext();  // Arrasto p/ esquerda -> Próxima
-    if (swipeDistance < -40) handlePrev(); // Arrasto p/ direita -> Anterior
-
-    touchStart.current = 0;
-    touchEnd.current = 0;
-  };
-
-  const isUnavailable = property.cta === 'INDISPONÍVEL' || property.cta === 'SOLD OUT';
-
-  return (
-    <div className="property-card">
-      <div 
-        className="property-image-wrapper"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {images.map((imgUrl, idx) => (
-          <img
-            key={idx}
-            src={imgUrl}
-            alt={`${property.title} - ${idx + 1}`}
-            className={`property-image ${idx === currentImgIndex ? 'active' : ''}`}
-            loading="lazy"
-          />
-        ))}
-        <span className="property-price">{property.price}</span>
-      </div>
-      
-      <div className="property-info">
-        <h3 className="property-title">{property.title}</h3>
-        
-        <div className="property-meta-row">
-          <span className="property-location">{property.location}</span>
-          
-          {/* Renderiza o tempo de entrega condicionalmente */}
-          {property.deliveryTime && (
-            <span className="property-delivery">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="1" y="3" width="15" height="13"></rect>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-              </svg>
-              {property.deliveryTime}
-            </span>
-          )}
-        </div>
-        
-        <p className="property-description">{property.description}</p>
-        
-        <a 
-          href={property.link} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className={`property-cta ${isUnavailable ? 'sold-out' : ''}`}
-        >
-          {property.cta}
-        </a>
-      </div>
-    </div>
-  );
-};
-
-// 2. Componente Principal que itera sobre os dados
-const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid', propertiesData }) => {
-  // OBS: Certifique-se de que propertiesData está sendo importado ou recebido como prop corretamente
+const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
   if (!propertiesData || propertiesData.length === 0) return null;
 
   return (
@@ -355,10 +246,49 @@ const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid', prope
         <h2 className="section-title">{title}</h2>
       </div>
       <div className="properties-grid-container">
-        {propertiesData.map(property => (
-          // O card isolado agora é renderizado aqui
-          <PropertyCardNacional key={property.id} property={property} />
-        ))}
+        {propertiesData.map(property => {
+          const isUnavailable = property.cta === 'INDISPONÍVEL' || property.cta === 'SOLD OUT';
+          
+          return (
+            <div className="property-card" key={property.id}>
+              <div className="property-image-wrapper">
+                <img 
+                  src={property.image} // Agora mapeará corretamente todas as imagens
+                  alt={property.title} 
+                  className="property-image active" 
+                  loading="lazy"
+                />
+                <span className="property-price">{property.price}</span>
+              </div>
+              
+              <div className="property-info">
+                <h3 className="property-title">{property.title}</h3>
+                
+                <div className="property-meta-row">
+                  <span className="property-location">{property.location}</span>
+                  {/* Renderiza o tempo de entrega condicionalmente, caso o objeto possua */}
+                  {property.deliveryTime && (
+                    <span className="property-delivery">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            {property.deliveryTime}
+          </span>
+                  )}
+                </div>
+                
+                <p className="property-description">{property.description}</p>
+                
+                <a 
+                  href={property.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={`property-cta ${isUnavailable ? 'sold-out' : ''}`}
+                >
+                  {property.cta}
+                </a>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
