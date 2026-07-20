@@ -1,0 +1,250 @@
+/* client/src/components/PropertiesImp.scss */
+
+/* Configuração do Gradiente de Conversão Icônico da WSC */
+$blue-grad-start: rgba(160, 236, 250, 1);
+$blue-grad-end: rgba(30, 77, 94, 1);
+$wsc-gradient: linear-gradient(135deg, $blue-grad-start 0%, $blue-grad-end 100%);
+
+/* Cores Neutras de Suporte */
+$text-main: #1e293b;
+$text-sub: #64748b;
+$bg-clean: #f8fafc;
+
+/* Curva de Motion Design Avançada */
+$luxury-timing: cubic-bezier(0.16, 1, 0.3, 1);
+
+.properties-imp-section {
+  /* Fonte DECO aplicada universalmente a todo o escopo do componente */
+  font-family: 'Satoshi', sans-serif;
+  padding: 5.5rem 2rem;
+  background-color: $bg-clean;
+  color: $text-main;
+  text-align: center;
+  scroll-margin-top: 100px;
+
+  .section-title {
+    display: inline-block;
+    font-size: clamp(1.6rem, 3.6vw, 2.24rem);
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 4.5rem;
+    color: $text-main;
+  }
+}
+
+.properties-imp-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.property-card {
+  background: #ffffff;
+  border-radius: 14px;
+  /* Linhas e traços removidos. Utilização de sombras invisíveis para profundidade limpa */
+  border: none; 
+  box-shadow: 0 10px 35px rgba(30, 77, 94, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.6s $luxury-timing, box-shadow 0.6s $luxury-timing;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(30, 77, 94, 0.1);
+
+    .property-image-wrapper img.active {
+      transform: scale(1.05); /* Transição suave de aproximação do produto */
+    }
+  }
+}
+
+.property-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  cursor: grab; /* Feedback visual que a imagem aceita swipe touch */
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  /* Badge Flutuante Minimalista */
+  .property-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    color: $blue-grad-end;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    z-index: 4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  img.property-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 1s $luxury-timing, opacity 0.7s ease-in-out;
+    z-index: 1;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  /* Tag de Preço Realçada com o Gradiente Original */
+  .property-price {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: $wsc-gradient;
+    color: #ffffff;
+    padding: 0.5rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 6px 16px rgba(30, 77, 94, 0.22);
+    z-index: 2;
+  }
+}
+
+.property-info {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+
+  .property-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    color: $text-main;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 3.5rem;
+  }
+
+  /* Meta Row Sem Nenhuma Linha ou Traço Azul */
+  .property-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+    border: none; 
+    padding: 0;
+  }
+
+  .meta-divider {
+    color: #cbd5e1;
+    font-size: 0.8rem;
+  }
+
+  .property-location {
+    font-size: 0.85rem;
+    color: $text-sub;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .property-delivery {
+    font-size: 0.8rem;
+    color: $text-sub;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    svg {
+      color: $text-sub;
+    }
+  }
+
+  .property-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: $text-sub;
+    margin-bottom: 2.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Botão CTA Impecável e Convincente */
+  .property-cta {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.05rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 10px;
+    background: $wsc-gradient;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    transition: all 0.4s $luxury-timing;
+    border: none;
+    box-shadow: 0 4px 16px rgba(30, 77, 94, 0.18);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(30, 77, 94, 0.32);
+      filter: brightness(1.06);
+    }
+
+    &.sold-out {
+      background: #e2e8f0;
+      color: #94a3b8 !important;
+      box-shadow: none;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+/* Responsividade de Alta Performance UX */
+@media (max-width: 992px) {
+  .properties-imp-section { padding: 4rem 1.5rem; }
+  .properties-imp-container { gap: 1.8rem; }
+  .property-image-wrapper { height: 230px; }
+}
+
+@media (max-width: 768px) {
+  .properties-imp-container {
+    grid-template-columns: 1fr;
+  }
+  .property-info {
+    padding: 1.5rem;
+    .property-title { height: auto; -webkit-line-clamp: unset; }
+  }
+}
