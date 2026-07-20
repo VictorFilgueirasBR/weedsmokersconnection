@@ -108,7 +108,7 @@ export default function MemberTreatmentFlow() {
 
             <p style={styles.optionText}>
               Agende a sua consulta com um dos{" "}
-              <strong>Médicos de confiança do CLUB</strong> logo abaixo.
+              <strong>Médicos colaboradores WS</strong>.
               Eles prescrevem todo nosso catálogo de aquisição,
               garantindo qualidade e acesso seguro às medicações
               com COAS e autorizadas pela ANVISA.
