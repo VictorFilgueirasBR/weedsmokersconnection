@@ -312,7 +312,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
-  {
+  /*{
     id: 202,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold CBD',
@@ -356,7 +356,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     badge: 'Últimas Unidades',
     link: 'https://ws-connectioncommerce.com/produto/wsc-catridgehmp/'
-},
+},*/
 {
     id: 112,
     images: ['/images/creamlikebudda-w.png'],
