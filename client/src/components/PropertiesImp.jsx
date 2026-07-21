@@ -301,7 +301,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ktmsifit/'
   },
-  {
+  /*{
     id: 2,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold THCa',
@@ -312,7 +312,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
-  /*{
+  {
     id: 202,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold CBD',
@@ -478,9 +478,9 @@ const propertiesImpData = [
   { id: 25, images: ['/images/wsc-import-14.png'], title: 'Live Rosin Watermelon THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1459,00', description: ' Extração ICE do material fresco, prensado até consistência ideal.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' },
   { id: 26, images: ['/images/wsc-import-14.png'], title: 'Live Rosin Maui Wowie THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1459,00', description: ' Genética Maui Wowie (Sativa): Euforia e ânimo premium.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' },
   { id: 27, images: ['/images/wsc-import-15.png'], title: 'Bubble Hash Blackberry CBD', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1249,00', description: ' Feito com água gelada para separar os tricomas. Relaxamento. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
-  { id: 30, images: ['/images/wsc-import-16.png'], title: 'Vegan Gummies Sleep CBD', location: '113g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-529,00', description: ' Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
+  /*{ id: 30, images: ['/images/wsc-import-16.png'], title: 'Vegan Gummies Sleep CBD', location: '113g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-529,00', description: ' Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
   { id: 31, images: ['/images/wsc-import-17.png'], title: 'CBN Tincture Sleep CBD', location: '30ml', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-629,00', description: ' Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' },
-  {
+  */{
     id: 143,
     images: ['/images/gumm-pn-w-blue.png'],
     title: 'CBD Gummies Midnight Blue Dream 30mg',
@@ -602,17 +602,6 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
 },
 {
-    id: 122,
-    images: ['/images/d9-tropical-w.png'],
-    title: 'Green Gene Vegan Gummies Delta-9 THC',
-    location: '25capsulas',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-445,00',
-    description: 'Nossas gomas de Delta-9 de 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar. Formuladas com extrato de cânhamo de espectro completo de alta qualidade, essas gomas combinam',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
-},
-{
     id: 123,
     images: ['/images/d9-gumm-vanilla-w.png'],
     title: 'Cherry Vanilla D9 Gummies - 250mg',
@@ -622,6 +611,17 @@ const propertiesImpData = [
     description: 'Se você é fã de comestíveis e gosta de explorar novos sabores no mundo da cannabis, apresentamos uma delícia: As Gomas Cherry Vanilla D9 - 250mg. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada de',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
+},
+{
+    id: 122,
+    images: ['/images/d9-tropical-w.png'],
+    title: 'Green Gene Vegan Gummies Delta-9 THC',
+    location: '25capsulas',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-445,00',
+    description: 'Nossas gomas de Delta-9 de 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar. Formuladas com extrato de cânhamo de espectro completo de alta qualidade, essas gomas combinam',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
 },
 ];
 
