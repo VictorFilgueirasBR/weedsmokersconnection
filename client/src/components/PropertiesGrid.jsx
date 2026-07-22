@@ -113,7 +113,7 @@ const propertiesData = [
   // ==========================================
   {
     id: 159,
-    image: '/images/buds-thc-valley.jpeg',
+    image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '10g',
     deliveryTime: '3-8 dias úteis',
@@ -124,7 +124,7 @@ const propertiesData = [
   },
   {
     id: 162,
-    image: '/images/buds-thc-valley.jpeg',
+    image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '20g',
     deliveryTime: '3-8 dias úteis',
@@ -135,7 +135,7 @@ const propertiesData = [
   },
   {
     id: 163,
-    image: '/images/buds-thc-valley.jpeg',
+    image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '40g',
     deliveryTime: '3-8 dias úteis',
