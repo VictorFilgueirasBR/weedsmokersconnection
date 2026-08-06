@@ -51,7 +51,7 @@ const propertiesData = [
   {
     id: 156,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil Medicinal Equilibrado CBD + THC 1800mg',
+    title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
     price: 'WSC-520,00', // R$ 400,00 + 120,00
@@ -62,7 +62,7 @@ const propertiesData = [
   {
     id: 157,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil Medicinal Equilibrado CBD + THC 3600mg',
+    title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
     location: '30ml',
     deliveryTime: '3-8 dias úteis',
     price: 'WSC-620,00', // R$ 500,00 + 120,00

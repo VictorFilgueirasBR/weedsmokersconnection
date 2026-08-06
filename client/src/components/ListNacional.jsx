@@ -4,14 +4,6 @@ const fornecedores = [
   {
     nome: "ABECMED Brasil",
     link: "https://abecmed.com.br/"
-  },
-  {
-    nome: "Aliança Medicinal Brasil",
-    link: "https://www.aliancamedicinal.org/"
-  },
-  {
-    nome: "Sagrada Cannabis",
-    link: "https://sagradamedicinal.org/"
   }
 ];
 
