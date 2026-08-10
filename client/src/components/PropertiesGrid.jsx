@@ -74,7 +74,7 @@ const propertiesData = [
   // ==========================================
   // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
   // ==========================================
-  {
+    /*{
     id: 158,
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29% ',
@@ -144,7 +144,7 @@ const propertiesData = [
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc40/'
   },
-  /*{
+   {
     id: 1,
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash Fullspectrum 90u ',
@@ -223,7 +223,7 @@ const propertiesData = [
     description: 'Inflorescência - Cultivo Outdoor 34% Sativa - 66% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
-  },*/
+  },
   {
     id: 9,
     image: '/images/wsc-nacional-12.png',
@@ -234,7 +234,7 @@ const propertiesData = [
     description: 'Fullspectrum ICEOLATOR THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
-  }
+  }*/
 ];
 
 const PropertiesGrid = ({ title = 'WS | Nacional', id = 'properties-grid' }) => {
