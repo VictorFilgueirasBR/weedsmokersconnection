@@ -212,8 +212,8 @@ const propertiesImpData = [
     description: 'Óleo full spectrum rico em Canabidiol e Tetraidrocanabivarina (THC-V) com até 0,2% de THC d9 e outros canabinoides minoritários. Adicionado saborizador natural de menta.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-slimvibes/'
-},
-{
+}
+/*{
     id: 136,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum 7250mg',
@@ -289,8 +289,8 @@ const propertiesImpData = [
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
-},
-  {
+},*/
+  ,{
     id: 1,
     images: ['/images/cannac.jpg'],
     title: 'KETAMA GOLD INTEGRAL | D9',
@@ -305,7 +305,7 @@ const propertiesImpData = [
     id: 2,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold THCa',
-    location: '10g',
+    location: '5g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-989,00',
     description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
