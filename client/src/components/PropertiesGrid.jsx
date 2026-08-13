@@ -9,7 +9,7 @@ const propertiesData = [
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-620,00', // R$ 500,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -20,7 +20,7 @@ const propertiesData = [
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-920,00', // R$ 800,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -31,7 +31,7 @@ const propertiesData = [
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-420,00', // R$ 300,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -42,7 +42,7 @@ const propertiesData = [
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-520,00', // R$ 400,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -53,7 +53,7 @@ const propertiesData = [
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
     location: '30ml',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-520,00', // R$ 400,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -64,7 +64,7 @@ const propertiesData = [
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
     location: '30ml',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-620,00', // R$ 500,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
     cta: 'PEDIR',
@@ -79,7 +79,7 @@ const propertiesData = [
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29% ',
     location: '10g', 
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-710,00', 
     description: 'Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
@@ -90,7 +90,7 @@ const propertiesData = [
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29% ',
     location: '20g', 
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-1400,00', 
     description: '}Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
@@ -101,7 +101,7 @@ const propertiesData = [
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29%',
     location: '40g', 
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-2700,00', 
     description: 'Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
@@ -116,7 +116,7 @@ const propertiesData = [
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '10g',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-710,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
@@ -127,7 +127,7 @@ const propertiesData = [
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '20g',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-1400,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
@@ -138,7 +138,7 @@ const propertiesData = [
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '40g',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-2700,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
@@ -229,7 +229,7 @@ const propertiesData = [
     image: '/images/wsc-nacional-12.png',
     title: 'Hash FullSpectrum 45u ',
     location: '5g',
-    deliveryTime: '3-8 dias úteis',
+    deliveryTime: '3-14 dias úteis',
     price: 'WSC-869,90',
     description: 'Fullspectrum ICEOLATOR THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
