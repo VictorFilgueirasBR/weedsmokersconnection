@@ -312,6 +312,17 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
+  {
+    id: 77,
+    images: ['/images/rosin-flower.png'],
+    title: 'Hemp Oil Gold THCa',
+    location: '10g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1889,00',
+    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
+  },
     /*{
     id: 202,
     images: ['/images/rosin-flower.png'],
