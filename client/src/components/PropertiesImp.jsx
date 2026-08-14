@@ -4,6 +4,94 @@ import './PropertiesImp.scss';
 
 const propertiesImpData = [
   {
+    id: 2,
+    images: ['/images/rosin-flower.png'],
+    title: 'Hemp Oil Gold THCa',
+    location: '5g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-989,00',
+    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
+  },
+  {
+    id: 77,
+    images: ['/images/rosin-flower.png'],
+    title: 'Hemp Oil Gold THCa',
+    location: '10g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1889,00',
+    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
+  },
+  {
+    id: 113,
+    images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
+    title: 'Isolate Powder CBD 99%',
+    location: '3g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-621,00',
+    description: ' Ingredientes: Cristais com 99,55% de CBD Isolado Dosagem: Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-cbdislt/'
+},
+  {
+    id: 121,
+    images: ['/images/d9-gumm-w.png'],
+    title: 'Cherry D9 Gummies - 140mg',
+    location: '10Unidades',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-222,00',
+    description: 'Ingredientes: Cada goma contém uma dose medida de 14mg de Delta-9, facilitando o monitoramento do seu consumo - Contém 10 unidades. Dosagem: Δ-9 - 0,29%THCa - 0,007%CDB - 0,006%CBG - 0,007%CBN - 0,065%Canabinoides totais - 20,1 mgSe você está procurando uma guloseima saborosa e com um efeito poderoso, deixe-me apresentar as deliciosas Gomas Cherry D9 Gummies - 140 mg! Essas gomas não são apenas balas comuns; elas são infundidas com Delta-9 de alta qualidade para',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
+},
+{
+    id: 123,
+    images: ['/images/d9-gumm-vanilla-w.png'],
+    title: 'Cherry Vanilla D9 Gummies - 250mg',
+    location: '5Unidades',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-279,90',
+    description: 'Se você é fã de comestíveis e gosta de explorar novos sabores no mundo da cannabis, apresentamos uma delícia: As Gomas Cherry Vanilla D9 - 250mg. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada de',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
+},
+{
+    id: 122,
+    images: ['/images/d9-tropical-w.png'],
+    title: 'Green Gene Vegan Gummies Delta-9 THC',
+    location: '25capsulas',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-445,00',
+    description: 'Nossas gomas de Delta-9 de 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar. Formuladas com extrato de cânhamo de espectro completo de alta qualidade, essas gomas combinam',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
+},
+{
+    id: 143,
+    images: ['/images/gumm-pn-w-blue.png'],
+    title: 'CBD Gummies Midnight Blue Dream 30mg',
+    location: '30und',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-889,90',
+    description: 'Durma melhor com Midnight Blue Dream 30mg 10mg THC, 10mg CBD e 10mg CBN. Desbloqueie um sono profundo e restaurador com nossas gomas premium. Inspiradas no perfil relaxante da Blue Dream, cada unidade contém 30mg de CBD de amplo espectro para transformar sua rotina noturna de forma natural.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gummblue/'
+},
+{
+    id: 144,
+    images: ['/images/gumm-pn-w-green.png'],
+    title: 'Gummies Chill Bites 20mg com 30und',
+    location: '30und',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-889,90',
+    description: 'Relaxe e adoce o seu dia com as Chill Bites da . Nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade, offering uma forma prática e deliciosa de encontrar o seu centro em meio à rotina.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
+},
+  {
     id: 100,
     images: ['/images/glitter-bombbud.jpg'],
     title: 'Glitter Bomb | THCa',
@@ -92,17 +180,6 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
 },
-  {
-    id: 104,
-    images: ['/images/d9-tincture-w.png'],
-    title: 'Óleo Green Gene Delta-9 THC Full-spectrum 3000mg',
-    location: '30ml',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-694,90',
-    description: 'Óleo de THC 3000 mg é um produto full-spectrum de alta qualidade.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gened93000/'
-},
 {
     id: 105,
     images: ['/images/cbd-oil-6000-w.webp'],
@@ -169,7 +246,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd6000/'
 },
-{
+/*{
     id: 124,
     images: ['/images/vibes6000.png'],
     title: 'GreenBudzCBD Deep Vibe Oil Full Spectrum 3000mg 100mg/ml + Terps - 30ml',
@@ -212,7 +289,18 @@ const propertiesImpData = [
     description: 'Óleo full spectrum rico em Canabidiol e Tetraidrocanabivarina (THC-V) com até 0,2% de THC d9 e outros canabinoides minoritários. Adicionado saborizador natural de menta.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-slimvibes/'
-}
+},*\
+{
+    id: 104,
+    images: ['/images/d9-tincture-w.png'],
+    title: 'Óleo Green Gene Delta-9 THC Full-spectrum 3000mg',
+    location: '30ml',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-694,90',
+    description: 'Óleo de THC 3000 mg é um produto full-spectrum de alta qualidade.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-gened93000/'
+},
 /*{
     id: 136,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
@@ -289,7 +377,7 @@ const propertiesImpData = [
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
-},*/
+},
   ,{
     id: 1,
     images: ['/images/cannac.jpg'],
@@ -300,29 +388,7 @@ const propertiesImpData = [
     description: 'Marrocan Ketama Gold Seal Hashish - White Runtz, mundialmente reconhecido por sua textura macia e flexíve. Extração de flores premium com THCa - TOP QUALITY',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ktmsifit/'
-  },
-  {
-    id: 2,
-    images: ['/images/rosin-flower.png'],
-    title: 'Hemp Oil Gold THCa',
-    location: '5g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-989,00',
-    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
-  },
-  {
-    id: 77,
-    images: ['/images/rosin-flower.png'],
-    title: 'Hemp Oil Gold THCa',
-    location: '10g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-1889,00',
-    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
-  },
+  },*/
     /*{
     id: 202,
     images: ['/images/rosin-flower.png'],
@@ -367,7 +433,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     badge: 'Últimas Unidades',
     link: 'https://ws-connectioncommerce.com/produto/wsc-catridgehmp/'
-},*/
+},
 {
     id: 112,
     images: ['/images/creamlikebudda-w.png'],
@@ -378,19 +444,8 @@ const propertiesImpData = [
     description: 'Ingredientes: Extraction from Premium THCA Flowers - OBS: SEM SOLVENTES Dosagem: Δ-9 - 0.26%THCa - 62.4%CBD - <0.01%CBG - 4.61%CBN - <0.01%Total Cannabinoids = 67.42%',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-creamlkbdd/'
-},
-{
-    id: 113,
-    images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
-    title: 'Isolate Powder CBD 99%',
-    location: '3g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-621,00',
-    description: ' Ingredientes: Cristais com 99,55% de CBD Isolado Dosagem: Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-cbdislt/'
-},
-{
+},*/
+/*{
     id: 114,
     images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.png'],
     title: 'THCa LIVE ROSIN OIL - PAPAYA',
@@ -491,28 +546,7 @@ const propertiesImpData = [
   { id: 27, images: ['/images/wsc-import-15.png'], title: 'Bubble Hash Blackberry CBD', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1249,00', description: ' Feito com água gelada para separar os tricomas. Relaxamento. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
   /*{ id: 30, images: ['/images/wsc-import-16.png'], title: 'Vegan Gummies Sleep CBD', location: '113g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-529,00', description: ' Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
   { id: 31, images: ['/images/wsc-import-17.png'], title: 'CBN Tincture Sleep CBD', location: '30ml', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-629,00', description: ' Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' },
-  */{
-    id: 143,
-    images: ['/images/gumm-pn-w-blue.png'],
-    title: 'CBD Gummies Midnight Blue Dream 30mg',
-    location: '30und',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-489,90',
-    description: 'Durma melhor com Midnight Blue Dream 30mg 10mg THC, 10mg CBD e 10mg CBN. Desbloqueie um sono profundo e restaurador com nossas gomas premium. Inspiradas no perfil relaxante da Blue Dream, cada unidade contém 30mg de CBD de amplo espectro para transformar sua rotina noturna de forma natural.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gummblue/'
-},
-{
-    id: 144,
-    images: ['/images/gumm-pn-w-green.png'],
-    title: 'Gummies Chill Bites 20mg com 30und',
-    location: '30und',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-489,90',
-    description: 'Relaxe e adoce o seu dia com as Chill Bites da . Nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade, offering uma forma prática e deliciosa de encontrar o seu centro em meio à rotina.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
-},
+  
   {
     id: 128,
     images: ['/images/drops1.png'],
@@ -600,40 +634,7 @@ const propertiesImpData = [
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Blackberry.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops8/'
-},
-{
-    id: 121,
-    images: ['/images/d9-gumm-w.png'],
-    title: 'Cherry D9 Gummies - 140mg',
-    location: '10Unidades',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-222,00',
-    description: 'Ingredientes: Cada goma contém uma dose medida de 14mg de Delta-9, facilitando o monitoramento do seu consumo - Contém 10 unidades. Dosagem: Δ-9 - 0,29%THCa - 0,007%CDB - 0,006%CBG - 0,007%CBN - 0,065%Canabinoides totais - 20,1 mgSe você está procurando uma guloseima saborosa e com um efeito poderoso, deixe-me apresentar as deliciosas Gomas Cherry D9 Gummies - 140 mg! Essas gomas não são apenas balas comuns; elas são infundidas com Delta-9 de alta qualidade para',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
-},
-{
-    id: 123,
-    images: ['/images/d9-gumm-vanilla-w.png'],
-    title: 'Cherry Vanilla D9 Gummies - 250mg',
-    location: '5Unidades',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-279,90',
-    description: 'Se você é fã de comestíveis e gosta de explorar novos sabores no mundo da cannabis, apresentamos uma delícia: As Gomas Cherry Vanilla D9 - 250mg. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada de',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
-},
-{
-    id: 122,
-    images: ['/images/d9-tropical-w.png'],
-    title: 'Green Gene Vegan Gummies Delta-9 THC',
-    location: '25capsulas',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-445,00',
-    description: 'Nossas gomas de Delta-9 de 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar. Formuladas com extrato de cânhamo de espectro completo de alta qualidade, essas gomas combinam',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
-},
+},*/
 ];
 
 const PropertyCard = ({ item }) => {
