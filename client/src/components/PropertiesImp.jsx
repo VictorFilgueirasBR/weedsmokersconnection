@@ -303,9 +303,10 @@ const propertiesImpData = [
     title: 'Cherry D9 Gummies - 140mg',
     location: '10Unidades',
     deliveryTime: '15-35 dias úteis',
-    price: 'WSC-222,00',
+    price: 'WSC-289,90',
     description: 'Ingredientes: Cada goma contém uma dose medida de 14mg de Delta-9, facilitando o monitoramento do seu consumo - Contém 10 unidades. Dosagem: Δ-9 - 0,29%THCa - 0,007%CDB - 0,006%CBG - 0,007%CBN - 0,065%Canabinoides totais - 20,1 mgSe você está procurando uma guloseima saborosa e com um efeito poderoso, deixe-me apresentar as deliciosas Gomas Cherry D9 Gummies - 140 mg! Essas gomas não são apenas balas comuns; elas são infundidas com Delta-9 de alta qualidade para',
     cta: 'IMPORT',
+    badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
 },
 {
