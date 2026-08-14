@@ -4,7 +4,7 @@ import './PropertiesImp.scss';
 
 const propertiesImpData = [
   {
-    id: 100,
+    id: 1,
     images: ['/images/glitter-bombbud.jpg'],
     title: 'Glitter Bomb | THCa',
     location: '14g',
@@ -16,7 +16,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
   },
   {
-    id: 101,
+    id: 2,
     images: ['/images/Forbidden-Fruit.webp'],
     title: 'Forbidden Fruit | D8',
     location: '14g',
@@ -27,7 +27,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
   },
   {
-    id: 102,
+    id: 3,
     images: ['/images/astrocand-thca.jpeg'],
     title: 'Astro Candy | THCa',
     location: '14g',
@@ -38,7 +38,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
   },
   {
-    id: 103,
+    id: 4,
     images: ['/images/gellato-flwrimp.webp'],
     title: 'Gellato | D8',
     location: '14g',
@@ -49,7 +49,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
   },
   {
-    id: 145,
+    id: 5,
     images: ['/images/flwrct1.png', '/images/flwrct1a.png'],
     title: 'Inflorescência Sour Lifter - CBD',
     location: '14g',
@@ -60,7 +60,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct1/'
 },
 {
-    id: 146,
+    id: 6,
     images: ['/images/flwrct2.png', '/images/flwrct2a.png'],
     title: 'Inflorescência Lemon Octane - CBD',
     location: '14g',
@@ -71,7 +71,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct2/'
 },
 {
-    id: 147,
+    id: 7,
     images: ['/images/flwrct3.png'],
     title: 'Inflorescência Tropicana Banana - THCa',
     location: '14g',
@@ -82,7 +82,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct3/'
 },
 {
-    id: 148,
+    id: 8,
     images: ['/images/flwrct4.png'],
     title: 'Girl Scout Cookies - THCa',
     location: '14g',
@@ -93,7 +93,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
 },
   {
-    id: 2,
+    id: 9,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold THCa',
     location: '5g',
@@ -104,7 +104,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
   {
-    id: 77,
+    id: 10,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold THCa',
     location: '10g',
@@ -115,7 +115,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
   },
   {
-    id: 113,
+    id: 11,
     images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Isolate Powder CBD 99%',
     location: '3g',
@@ -125,24 +125,156 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-cbdislt/'
 },
-{ id: 15, images: ['/images/wsc-import-11.png'], title: 'Diamond Sauce Papaya THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1489,00', description: ' THCa Diamantes formados a partir de extração a frio. Genética Papaya (Indica).', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' },
-  { id: 16, images: ['/images/wsc-import-11.png'], title: 'Diamond Sauce OG Kush THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1489,00', description: ' THCa Cristais puros com mistura de terpenos. Genética OG Kush (Híbrida).', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' },
-  { id: 17, images: ['/images/wsc-import-11.png'], title: 'Diamond Sauce Diesel THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1489,00', description: ' O THC-A se transforma em THC quando aquecido. Genética Sour Diesel (Sativa).', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' },
-  { id: 18, images: ['/images/wsc-import-12.png'], title: 'Diamond CBD Zkittlez', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1199,00', description: ' Extração a frio. Genética Zkittlez (Sativa): Criatividade e foco.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' },
-  { id: 19, images: ['/images/wsc-import-12.png'], title: 'Diamond CBD Berry White', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1199,00', description: ' Genética Berry White (Indica): Relaxamento e sono profundo.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' },
-  { id: 20, images: ['/images/wsc-import-12.png'], title: 'Diamond CBD Kush Mints', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1199,00', description: ' Genética Kush Mints (Híbrida): Relaxamento e alívio.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' },
-  { id: 21, images: ['/images/wsc-import-13.png'], title: 'Diamond D8 Gelato', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1259,00', description: ' Delta-8 oferece efeitos mais suaves que o Delta-9. Genética Gelato.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' },
-  { id: 22, images: ['/images/wsc-import-13.png'], title: 'Diamond D8 Grape Ape', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1259,00', description: ' Genética Grape Ape (Indica): Relaxamento e sono. Terpenos naturais.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' },
-  { id: 23, images: ['/images/wsc-import-13.png'], title: 'Diamond D8 Durban Poison', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1259,00', description: ' Genética Durban Poison (Sativa): Energia e foco.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' },
-  { id: 24, images: ['/images/wsc-import-14.png'], title: 'Live Rosin Blue Dream THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1459,00', description: ' Rosin Vivo feito com flores frescas congeladas (Fresh Frozen).', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' },
-  { id: 25, images: ['/images/wsc-import-14.png'], title: 'Live Rosin Watermelon THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1459,00', description: ' Extração ICE do material fresco, prensado até consistência ideal.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' },
-  { id: 26, images: ['/images/wsc-import-14.png'], title: 'Live Rosin Maui Wowie THCa', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1459,00', description: ' Genética Maui Wowie (Sativa): Euforia e ânimo premium.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' },
-  { id: 27, images: ['/images/wsc-import-15.png'], title: 'Bubble Hash Blackberry CBD', location: '10g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-1249,00', description: ' Feito com água gelada para separar os tricomas. Relaxamento. (CBD)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' },
-  { id: 30, images: ['/images/wsc-import-16.png'], title: 'Vegan Gummies Sleep CBD', location: '113g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-529,00', description: ' Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-529/' },
-  { id: 31, images: ['/images/wsc-import-17.png'], title: 'CBN Tincture Sleep CBD', location: '30ml', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-629,00', description: ' Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-629/' },
-  
-{
-    id: 143,
+{ id: 12, images: ['/images/wsc-import-11.png'], 
+  title: 'Diamond Sauce Papaya THCa', 
+  location: '10g', 
+  deliveryTime: '15-50 dias úteis (sob encomenda)', 
+  price: 'WSC-1489,00', 
+  description: ' THCa Diamantes formados a partir de extração a frio. Genética Papaya (Indica).', 
+  cta: 'IMPORT', 
+  link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
+},
+{ id: 14, 
+    images: ['/images/wsc-import-11.png'], 
+    title: 'Diamond Sauce OG Kush THCa', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1489,00', 
+    description: ' THCa Cristais puros com mistura de terpenos. Genética OG Kush (Híbrida).', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
+  },
+  { id: 15, 
+    images: ['/images/wsc-import-11.png'], 
+    title: 'Diamond Sauce Diesel THCa', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1489,00', 
+    description: ' O THC-A se transforma em THC quando aquecido. Genética Sour Diesel (Sativa).', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
+  },
+  { id: 16, 
+    images: ['/images/wsc-import-12.png'], 
+    title: 'Diamond CBD Zkittlez', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1199,00', 
+    description: ' Extração a frio. Genética Zkittlez (Sativa): Criatividade e foco.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
+  },
+  { id: 17, 
+    images: ['/images/wsc-import-12.png'], 
+    title: 'Diamond CBD Berry White', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1199,00', 
+    description: ' Genética Berry White (Indica): Relaxamento e sono profundo.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
+  },
+  { id: 18, 
+    images: ['/images/wsc-import-12.png'], 
+    title: 'Diamond CBD Kush Mints', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1199,00', 
+    description: ' Genética Kush Mints (Híbrida): Relaxamento e alívio.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
+  },
+  { id: 19, 
+    images: ['/images/wsc-import-13.png'], 
+    title: 'Diamond D8 Gelato', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1259,00', 
+    description: ' Delta-8 oferece efeitos mais suaves que o Delta-9. Genética Gelato.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
+  },
+  { id: 20, 
+    images: ['/images/wsc-import-13.png'], 
+    title: 'Diamond D8 Grape Ape', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1259,00', 
+    description: ' Genética Grape Ape (Indica): Relaxamento e sono. Terpenos naturais.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
+  },
+  { id: 21, 
+    images: ['/images/wsc-import-13.png'], 
+    title: 'Diamond D8 Durban Poison', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1259,00', 
+    description: ' Genética Durban Poison (Sativa): Energia e foco.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
+  },
+  { id: 22, 
+    images: ['/images/wsc-import-14.png'], 
+    title: 'Live Rosin Blue Dream THCa', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1459,00', 
+    description: ' Rosin Vivo feito com flores frescas congeladas (Fresh Frozen).', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
+  },
+  { id: 23, 
+    images: ['/images/wsc-import-14.png'], 
+    title: 'Live Rosin Watermelon THCa', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1459,00', 
+    description: ' Extração ICE do material fresco, prensado até consistência ideal.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
+  },
+  { id: 24, 
+    images: ['/images/wsc-import-14.png'], 
+    title: 'Live Rosin Maui Wowie THCa', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1459,00', 
+    description: ' Genética Maui Wowie (Sativa): Euforia e ânimo premium.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
+  },
+  { id: 25, 
+    images: ['/images/wsc-import-15.png'], 
+    title: 'Bubble Hash Blackberry CBD', 
+    location: '10g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-1249,00', 
+    description: ' Feito com água gelada para separar os tricomas. Relaxamento. (CBD)', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' 
+  },
+  { id: 26, 
+    images: ['/images/wsc-import-16.png'], 
+    title: 'Vegan Gummies Sleep CBD', 
+    location: '113g', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-529,00', 
+    description: ' Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-529/' 
+  },
+  { id: 27, images: ['/images/wsc-import-17.png'], 
+    title: 'CBN Tincture Sleep CBD', 
+    location: '30ml', 
+    deliveryTime: '15-50 dias úteis (sob encomenda)', 
+    price: 'WSC-629,00', 
+    description: ' Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', 
+    cta: 'IMPORT', 
+    link: 'https://ws-connectioncommerce.com/produto/wsc-629/' 
+  },
+  {
+    id: 28,
     images: ['/images/gumm-pn-w-blue.png'],
     title: 'CBD Gummies Midnight Blue Dream 30mg',
     location: '30und',
@@ -153,7 +285,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummblue/'
 },
 {
-    id: 144,
+    id: 29,
     images: ['/images/gumm-pn-w-green.png'],
     title: 'Gummies Chill Bites 20mg com 30und',
     location: '30und',
@@ -164,7 +296,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
 },
   {
-    id: 121,
+    id: 30,
     images: ['/images/d9-gumm-w.png'],
     title: 'Cherry D9 Gummies - 140mg',
     location: '10Unidades',
@@ -175,7 +307,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
 },
 {
-    id: 123,
+    id: 31,
     images: ['/images/d9-gumm-vanilla-w.png'],
     title: 'Cherry Vanilla D9 Gummies - 250mg',
     location: '5Unidades',
@@ -186,7 +318,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
 },
 {
-    id: 122,
+    id: 32,
     images: ['/images/d9-tropical-w.png'],
     title: 'Green Gene Vegan Gummies Delta-9 THC',
     location: '25capsulas',
@@ -197,7 +329,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
 },  
 {
-    id: 105,
+    id: 33,
     images: ['/images/cbd-oil-6000-w.webp'],
     title: 'Óleo Green Gene de CBD Full-Spectrum 6000mg 0.3% THC',
     location: '30ml',
@@ -208,7 +340,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-genecbd6000/'
 },
 {
-    id: 106,
+    id: 34,
     images: ['/images/cbd-oil-6000-w.webp'],
     title: 'Óleo Green Gene de CBD Full-Spectrum 3000mg 0.3% THC',
     location: '30ml',
@@ -219,7 +351,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-genecbd3000/'
 },
 {
-    id: 107,
+    id: 35,
     images: ['/images/thcv-tincture-5000-w.png'],
     title: 'Óleo Green Gene de emagrecimento natural com THCV + CBD',
     location: '30ml',
@@ -230,7 +362,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-genethcv/'
 },
 {
-    id: 108,
+    id: 36,
     images: ['/images/alpha-cbd-cbg-3000-w.png'],
     title: 'ÓLEO BROAD-SPECTRUM ALPHA-CAT 10Ml - 10% - 3000mg - CBG + CBD',
     location: '30ml',
@@ -241,7 +373,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbg3000/'
 },
 {
-    id: 109,
+    id: 37,
     images: ['/images/alpha-cbd-3000-w.png'],
     title: 'ÓLEO BROAD-SPECTRUM ALPHA-CAT 30Ml - 10% - 3000mg CBD',
     location: '30ml',
@@ -252,7 +384,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd3000/'
 },
 {
-    id: 110,
+    id: 38,
     images: ['/images/alpha-cbd-3000-w.png'],
     title: 'ÓLEO BROAD-SPECTRUM ALPHA-CAT 30Ml - 20% 6000mg CBD',
     location: '30ml',
@@ -263,7 +395,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd6000/'
 },
 /*{
-    id: 124,
+    id: 39,
     images: ['/images/vibes6000.png'],
     title: 'GreenBudzCBD Deep Vibe Oil Full Spectrum 3000mg 100mg/ml + Terps - 30ml',
     location: '30ml',
@@ -274,7 +406,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-vibes6000/'
 },
 {
-    id: 125,
+    id: 40,
     images: ['/images/vibes1500.png'],
     title: 'GreenBudzCBD Super Vibe Oil Full Spectrum 3000mg 100mg/ml + Terps - 30ml',
     location: '30ml',
@@ -285,7 +417,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-vibes1500/'
 },
 {
-    id: 126,
+    id: 41,
     images: ['/images/calmvibes.png'],
     title: 'GreenBudzCBD Calm Vibe Oil Full Spectrum 6000mg 200mg/ml - 30ml',
     location: '30ml',
@@ -296,7 +428,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-vibescalm/'
 },
 {
-    id: 127,
+    id: 42,
     images: ['/images/slimvibes.png'],
     title: 'GreenBudzCBD Slim Vibe Oil Full Spectrum 1500mg THCv 1500 CBD 100mg/ml - 30ml',
     location: '30ml',
@@ -307,7 +439,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-slimvibes/'
 },
 {
-    id: 104,
+    id: 43,
     images: ['/images/d9-tincture-w.png'],
     title: 'Óleo Green Gene Delta-9 THC Full-spectrum 3000mg',
     location: '30ml',
@@ -318,7 +450,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-gened93000/'
 },
 {
-    id: 136,
+    id: 44,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum 7250mg',
     location: '10g',
@@ -329,7 +461,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil10/'
 },
 {
-    id: 137,
+    id: 45,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum 14500mg',
     location: '20g',
@@ -340,7 +472,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil20/'
 },
 {
-    id: 138,
+    id: 46,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum 36250mg',
     location: '50g',
@@ -351,7 +483,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil50/'
 },
 {
-    id: 139,
+    id: 47,
     images: ['/images/hmp-cap-w.png', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum',
     location: '100g',
@@ -362,7 +494,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil100/'
 },
 {
-    id: 140,
+    id: 48,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
     title: 'Hemp Capsule  Fresh-Frozen Purified 120mg  05 Caps',
     location: '5cps',
@@ -373,7 +505,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh5/'
 },
 {
-    id: 141,
+    id: 49,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
     title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 10 Caps',
     location: '10cps',
@@ -384,7 +516,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh10/'
 },
 {
-    id: 142,
+    id: 50,
     images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
     title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 20 Caps',
     location: '20cps',
@@ -395,7 +527,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
 },
   ,{
-    id: 1,
+    id: 51,
     images: ['/images/cannac.jpg'],
     title: 'KETAMA GOLD INTEGRAL | D9',
     location: '6g',
@@ -406,7 +538,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-ktmsifit/'
   },*/
     /*{
-    id: 202,
+    id: 52,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold CBD',
     location: '5g',
@@ -417,7 +549,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd/'
   },
   {
-    id: 3,
+    id: 53,
     images: ['/images/wsc-vape-thc.webp'],
     title: 'Hemp Oil Seryng THCa',
     location: '1ml',
@@ -428,7 +560,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-529/'
   },
   {
-    id: 303,
+    id: 54,
     images: ['/images/wsc-vape-thc.webp'],
     title: 'Hemp Oil Seryng CBD',
     location: '1ml',
@@ -439,7 +571,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-469/'
   },
   {
-    id: 111,
+    id: 55,
     images: ['/images/cartridge-concentrate-w.png'],
     title: 'CARTRIDGE CONCENTRATED OIL',
     location: '2ml',
@@ -451,7 +583,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-catridgehmp/'
 },
 {
-    id: 112,
+    id: 56,
     images: ['/images/creamlikebudda-w.png'],
     title: 'Cream Like Buddah 120u Integral',
     location: '6g',
@@ -462,7 +594,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-creamlkbdd/'
 },
 {
-    id: 114,
+    id: 57,
     images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.png'],
     title: 'THCa LIVE ROSIN OIL - PAPAYA',
     location: '6g',
@@ -473,7 +605,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-papayarsn/'
 },
 {
-    id: 116,
+    id: 58,
     images: ['/images/rsn-papaya-w.jpg', '/images/rsn-super-w.png'],
     title: 'THCa LIVE ROSIN OIL - SUPER BOOF',
     location: '6g',
@@ -484,7 +616,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-superboof/'
 },
 {
-    id: 117,
+    id: 59,
     images: ['/images/alien-og-w.png'],
     title: 'THCA Sauce Oil - Alien OG',
     location: '3g',
@@ -495,7 +627,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-alienog/'
 },
 {
-    id: 118,
+    id: 60,
     images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Crystallino 5:1 THCa/CBD - Cherry Pie',
     location: '3g',
@@ -506,7 +638,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-crystalthcacbd/'
 },
 {
-    id: 119,
+    id: 61,
     images: ['/images/jackhrr-w.png'],
     title: 'THCA Budder Oil - Jack Herer',
     location: '6g',
@@ -517,7 +649,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-jackhere/'
 },
 {
-    id: 120,
+    id: 62,
     images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Night Cap Crystallino THCa-CBN - Blueberry',
     location: '3g',
@@ -528,7 +660,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-nightblue/'
 },
   {
-    id: 4,
+    id: 63,
     images: ['/images/hash-ice-import.png'],
     title: 'Bubble Hash | D8',
     location: '5g',
@@ -537,18 +669,107 @@ const propertiesImpData = [
     description: 'Extrações tipo ICE THC/THCa legalizado pela ANVISA. Bubble ice Delta-8 Bubble Hash – 3150 mg / 10g.',
     cta: 'SOLD OUT', link: 'https://wa.me/5561995276936'
   },
-  { id: 5, images: ['/images/wsc-import-1.png'], title: 'Piatella | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-879,00', description: ' Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-879/' },
-  { id: 6, images: ['/images/wsc-import-2.png'], title: '00 SIFT | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-749,00', description: ' Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/00/' },
-  { id: 7, images: ['/images/wsc-import-3.png'], title: 'Gold Seal | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-759,00', description: ' Concentrado artesanal que celebra os métodos afegãos de resinas prensadas à mão. (70,11% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-759/' },
-  { id: 8, images: ['/images/wsc-import-4.png'], title: 'THCA Sugar | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-849,00', description: ' Concentrado premium de cera cristalizada com alto teor de THCA. (80,08% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
-  { id: 9, images: ['/images/wsc-import-5.png'], title: 'Ketama Gold | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-719,00', description: ' Textura suave e cremosa com tons dourados, processo de altíssima qualidade. (70,64% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-719/' },
-  { id: 10, images: ['/images/wsc-import-6.png'], title: 'La mousse | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-749,00', description: ' Combina técnicas tradicionais de peneiramento seco, conhecido pela textura rica. (53,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-749/' },
-  { id: 11, images: ['/images/wsc-import-7.png'], title: 'Temple Ball | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-729,00', description: ' Resultado da lendária tradição nepalesa esfregada à mão. (75,92% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-729/' },
-  { id: 12, images: ['/images/wsc-import-8.png'], title: 'Static Sift | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-829,00', description: ' Resina refinada criada por meio de separação estática moderna. (79,01% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-829/' },
-  { id: 13, images: ['/images/wsc-import-9.png'], title: 'THCA Budder | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-849,00', description: ' Consistência cremosa e efeitos potentes, equilíbrio entre edificante e relaxante. (94,1% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
-  { id: 14, images: ['/images/wsc-import-10.png'], title: 'THCA Rosin | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-869,00', description: ' Extrato obtido sem solventes através de calor e pressão. (61,28 CANAB.) Resina translúcida.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-869/' },
+  { id: 64, 
+   images: ['/images/wsc-import-1.png'], 
+   title: 'Piatella | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-879,00', 
+   description: ' Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-879/' 
+   },
+  { id: 65, 
+   images: ['/images/wsc-import-2.png'], 
+   title: '00 SIFT | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-749,00', 
+   description: ' Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/00/' 
+   },
+  { id: 66, 
+   images: ['/images/wsc-import-3.png'], 
+   title: 'Gold Seal | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-759,00', 
+   description: ' Concentrado artesanal que celebra os métodos afegãos de resinas prensadas à mão. (70,11% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-759/' 
+   },
+  { id: 67, 
+   images: ['/images/wsc-import-4.png'], 
+   title: 'THCA Sugar | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-849,00', 
+   description: ' Concentrado premium de cera cristalizada com alto teor de THCA. (80,08% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-849/' 
+   },
+  { id: 68, 
+   images: ['/images/wsc-import-5.png'], 
+   title: 'Ketama Gold | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-719,00', 
+   description: ' Textura suave e cremosa com tons dourados, processo de altíssima qualidade. (70,64% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-719/' 
+   },
+  { id: 69, 
+   images: ['/images/wsc-import-6.png'], 
+   title: 'La mousse | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-749,00', 
+   description: ' Combina técnicas tradicionais de peneiramento seco, conhecido pela textura rica. (53,09% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-749/' 
+   },
+  { id: 70, 
+   images: ['/images/wsc-import-7.png'], 
+   title: 'Temple Ball | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-729,00', 
+   description: ' Resultado da lendária tradição nepalesa esfregada à mão. (75,92% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-729/' 
+   },
+  { id: 71, 
+   images: ['/images/wsc-import-8.png'], 
+   title: 'Static Sift | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-829,00', 
+   description: ' Resina refinada criada por meio de separação estática moderna. (79,01% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-829/' 
+   },
+  { id: 72, 
+   images: ['/images/wsc-import-9.png'], 
+   title: 'THCA Budder | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-849,00', description: ' Consistência cremosa e efeitos potentes, equilíbrio entre edificante e relaxante. (94,1% CANAB.)', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-849/' 
+   },
+  { id: 73, 
+   images: ['/images/wsc-import-10.png'], 
+   title: 'THCA Rosin | D9', 
+   location: '3g', 
+   deliveryTime: '15-50 dias úteis (sob encomenda)', 
+   price: 'WSC-869,00', 
+   description: ' Extrato obtido sem solventes através de calor e pressão. (61,28 CANAB.) Resina translúcida.', 
+   cta: 'IMPORT', 
+   link: 'https://ws-connectioncommerce.com/produto/wsc-869/' 
+   },
   {
-    id: 128,
+    id: 74,
     images: ['/images/drops1.png'],
     title: 'GreenBudzCBD Gummies Chill Vibe THC 10mg 1:1 CBD 10mg – gomas',
     location: '30 gomas',
@@ -559,7 +780,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops1/'
 },
 {
-    id: 129,
+    id: 75,
     images: ['/images/drops2.png'],
     title: 'Drops By GreenBudzCBD Gummies 5mg THC per ct + STRAIN – 20ct',
     location: '20 gomas',
@@ -570,7 +791,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops2/'
 },
 {
-    id: 130,
+    id: 76,
     images: ['/images/drops3.png'],
     title: 'Drops By GreenBudzCBD Gummies 1mg THC 2.5mg CBN 10mg CBD per ct Lullaby – 20ct',
     location: '20 gomas',
@@ -581,7 +802,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops3/'
 },
 {
-    id: 131,
+    id: 77,
     images: ['/images/drops4.png'],
     title: 'Drops By GreenBudzCBD Gummies 2.5mg THC 2.5mg CBG 2.5mg CBD 2.5mg CBC per ct LOOKING GLASS – 20ct',
     location: '20 gomas',
@@ -592,7 +813,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops4/'
 },
 {
-    id: 132,
+    id: 78,
     images: ['/images/drops5.png'],
     title: 'Drops By GreenBudzCBD Gummies 5mg THC 2.5mg CBD per ct Híbrida BICYCLE DAY – 20ct',
     location: '20 gomas',
@@ -603,7 +824,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops5/'
 },
 {
-    id: 133,
+    id: 79,
     images: ['/images/drops6.png'],
     title: 'Drops By GreenBudzCBD Gummies 5mg THCΔ9 2.5mg CBG per ct Rodeo Queen – 20ct',
     location: '20 gomas',
@@ -614,7 +835,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops6/'
 },
 {
-    id: 134,
+    id: 80,
     images: ['/images/drops7.png'],
     title: 'Drops By GreenBudzCBD Gummies 5mg THC 5mg CBN 5mg CBD per ct Nightshade – 20ct',
     location: '20 gomas',
@@ -625,7 +846,7 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops7/'
 },
 {
-    id: 135,
+    id: 81,
     images: ['/images/drops8.png'],
     title: 'Drops By GreenBudzCBD Gummies 5mg THC 10mg CBD per ct Cricket – 20ct',
     location: '20 gomas',
