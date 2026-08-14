@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import './PropertiesImp.scss';
 
 const propertiesImpData = [
-  [
   {
     id: 1,
     images: ['/images/glitter-bombbud.jpg'],
@@ -412,8 +411,10 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd6000/'
   }
-]
-/*{
+];
+
+/*
+{
     id: 124,
     images: ['/images/vibes6000.png'],
     title: 'GreenBudzCBD Deep Vibe Oil Full Spectrum 3000mg 100mg/ml + Terps - 30ml',
@@ -545,7 +546,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
 },
-  ,{
+{
     id: 1,
     images: ['/images/cannac.jpg'],
     title: 'KETAMA GOLD INTEGRAL | D9',
@@ -555,8 +556,8 @@ const propertiesImpData = [
     description: 'Marrocan Ketama Gold Seal Hashish - White Runtz, mundialmente reconhecido por sua textura macia e flexíve. Extração de flores premium com THCa - TOP QUALITY',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-ktmsifit/'
-  },*/
-    /*{
+},
+{
     id: 202,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold CBD',
@@ -566,8 +567,8 @@ const propertiesImpData = [
     description: 'HEMP OIL Budder CBD. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO DE BEM ESTAR.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd/'
-  },
-  {
+},
+{
     id: 3,
     images: ['/images/wsc-vape-thc.webp'],
     title: 'Hemp Oil Seryng THCa',
@@ -577,8 +578,8 @@ const propertiesImpData = [
     description: 'Hemp Oil THC/THCa. Extração líquida de alta pureza perfil terpenico fiel à OG KUSH.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-529/'
-  },
-  {
+},
+{
     id: 303,
     images: ['/images/wsc-vape-thc.webp'],
     title: 'Hemp Oil Seryng CBD',
@@ -588,8 +589,8 @@ const propertiesImpData = [
     description: 'Hemp Oil CBD. Extração líquida de alta pureza perfil terpenico fiel à OG KUSH.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-469/'
-  },
-  {
+},
+{
     id: 111,
     images: ['/images/cartridge-concentrate-w.png'],
     title: 'CARTRIDGE CONCENTRATED OIL',
@@ -678,7 +679,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-nightblue/'
 },
-  {
+{
     id: 4,
     images: ['/images/hash-ice-import.png'],
     title: 'Bubble Hash | D8',
@@ -687,18 +688,18 @@ const propertiesImpData = [
     price: 'WSC-SOLDOUT',
     description: 'Extrações tipo ICE THC/THCa legalizado pela ANVISA. Bubble ice Delta-8 Bubble Hash – 3150 mg / 10g.',
     cta: 'SOLD OUT', link: 'https://wa.me/5561995276936'
-  },
-  { id: 5, images: ['/images/wsc-import-1.png'], title: 'Piatella | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-879,00', description: ' Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-879/' },
-  { id: 6, images: ['/images/wsc-import-2.png'], title: '00 SIFT | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-749,00', description: ' Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/00/' },
-  { id: 7, images: ['/images/wsc-import-3.png'], title: 'Gold Seal | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-759,00', description: ' Concentrado artesanal que celebra os métodos afegãos de resinas prensadas à mão. (70,11% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-759/' },
-  { id: 8, images: ['/images/wsc-import-4.png'], title: 'THCA Sugar | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-849,00', description: ' Concentrado premium de cera cristalizada com alto teor de THCA. (80,08% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
-  { id: 9, images: ['/images/wsc-import-5.png'], title: 'Ketama Gold | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-719,00', description: ' Textura suave e cremosa com tons dourados, processo de altíssima qualidade. (70,64% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-719/' },
-  { id: 10, images: ['/images/wsc-import-6.png'], title: 'La mousse | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-749,00', description: ' Combina técnicas tradicionais de peneiramento seco, conhecido pela textura rica. (53,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-749/' },
-  { id: 11, images: ['/images/wsc-import-7.png'], title: 'Temple Ball | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-729,00', description: ' Resultado da lendária tradição nepalesa esfregada à mão. (75,92% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-729/' },
-  { id: 12, images: ['/images/wsc-import-8.png'], title: 'Static Sift | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-829,00', description: ' Resina refinada criada por meio de separação estática moderna. (79,01% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-829/' },
-  { id: 13, images: ['/images/wsc-import-9.png'], title: 'THCA Budder | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-849,00', description: ' Consistência cremosa e efeitos potentes, equilíbrio entre edificante e relaxante. (94,1% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
-  { id: 14, images: ['/images/wsc-import-10.png'], title: 'THCA Rosin | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-869,00', description: ' Extrato obtido sem solventes através de calor e pressão. (61,28 CANAB.) Resina translúcida.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-869/' },
-  {
+},
+{ id: 5, images: ['/images/wsc-import-1.png'], title: 'Piatella | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-879,00', description: ' Um concentrado sem solvente elaborado através de um meticuloso processo de cura a frio. (78,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-879/' },
+{ id: 6, images: ['/images/wsc-import-2.png'], title: '00 SIFT | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-749,00', description: ' Concentrado da primeira e mais fina peneiração a seco. (70,77% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/00/' },
+{ id: 7, images: ['/images/wsc-import-3.png'], title: 'Gold Seal | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-759,00', description: ' Concentrado artesanal que celebra os métodos afegãos de resinas prensadas à mão. (70,11% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-759/' },
+{ id: 8, images: ['/images/wsc-import-4.png'], title: 'THCA Sugar | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-849,00', description: ' Concentrado premium de cera cristalizada com alto teor de THCA. (80,08% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
+{ id: 9, images: ['/images/wsc-import-5.png'], title: 'Ketama Gold | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-719,00', description: ' Textura suave e cremosa com tons dourados, processo de altíssima qualidade. (70,64% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-719/' },
+{ id: 10, images: ['/images/wsc-import-6.png'], title: 'La mousse | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-749,00', description: ' Combina técnicas tradicionais de peneiramento seco, conhecido pela textura rica. (53,09% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-749/' },
+{ id: 11, images: ['/images/wsc-import-7.png'], title: 'Temple Ball | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-729,00', description: ' Resultado da lendária tradição nepalesa esfregada à mão. (75,92% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-729/' },
+{ id: 12, images: ['/images/wsc-import-8.png'], title: 'Static Sift | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-829,00', description: ' Resina refinada criada por meio de separação estática moderna. (79,01% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-829/' },
+{ id: 13, images: ['/images/wsc-import-9.png'], title: 'THCA Budder | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-849,00', description: ' Consistência cremosa e efeitos potentes, equilíbrio entre edificante e relaxante. (94,1% CANAB.)', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-849/' },
+{ id: 14, images: ['/images/wsc-import-10.png'], title: 'THCA Rosin | D9', location: '3g', deliveryTime: '15-50 dias úteis (sob encomenda)', price: 'WSC-869,00', description: ' Extrato obtido sem solventes através de calor e pressão. (61,28 CANAB.) Resina translúcida.', cta: 'IMPORT', link: 'https://ws-connectioncommerce.com/produto/wsc-869/' },
+{
     id: 128,
     images: ['/images/drops1.png'],
     title: 'GreenBudzCBD Gummies Chill Vibe THC 10mg 1:1 CBD 10mg – gomas',
@@ -756,22 +757,22 @@ const propertiesImpData = [
 {
     id: 133,
     images: ['/images/drops6.png'],
-    title: 'Drops By GreenBudzCBD Gummies 5mg THCΔ9 2.5mg CBG per ct Rodeo Queen – 20ct',
+    title: 'Drops By GreenBudzCBD Gummies 5mg THC 2.5mg CBD 2.5mg CBG per ct Sativa MOJAVE – 20ct',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-369,00',
-    description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabigerol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Strawberry. Indicações: Insônia, Falta de Energia, Depressão, TDHA.',
+    description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol, Canabidiol e Canabigerol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Pêssego.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops6/'
 },
 {
     id: 134,
     images: ['/images/drops7.png'],
-    title: 'Drops By GreenBudzCBD Gummies 5mg THC 5mg CBN 5mg CBD per ct Nightshade – 20ct',
+    title: 'Drops By GreenBudzCBD Gummies 5mg THC 10mg CBD per ct Indica DEEP WOODS – 20ct',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-369,00',
-    description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol, Canabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Groselha.',
+    description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Uva.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops7/'
 },
@@ -785,37 +786,40 @@ const propertiesImpData = [
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Blackberry.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-drops8/'
-},*/
-];
+}
+*/
 
 const PropertyCard = ({ item }) => {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
   const touchStart = useRef(0);
   const touchEnd = useRef(0);
+
   const hasMultipleImages = item.images && item.images.length > 1;
 
-  // Slide automático inteligente a cada 5 segundos
   useEffect(() => {
-    if (!hasMultipleImages) return;
-    const autoSlider = setInterval(() => {
-      setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
-    }, 5000);
-    return () => clearInterval(autoSlider);
-  }, [hasMultipleImages, item.images.length]);
+    let interval;
+    if (hasMultipleImages) {
+      interval = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % item.images.length);
+      }, 3000);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [hasMultipleImages, item.images]);
 
   const handleNext = () => {
     if (hasMultipleImages) {
-      setCurrentImgIndex((prev) => (prev + 1) % item.images.length);
+      setCurrentImage((prev) => (prev + 1) % item.images.length);
     }
   };
 
   const handlePrev = () => {
     if (hasMultipleImages) {
-      setCurrentImgIndex((prev) => (prev - 1 + item.images.length) % item.images.length);
+      setCurrentImage((prev) => (prev - 1 + item.images.length) % item.images.length);
     }
   };
 
-  // Lógica invisível e responsiva para Touch (Swipe)
   const handleTouchStart = (e) => {
     touchStart.current = e.targetTouches[0].clientX;
   };
@@ -836,50 +840,66 @@ const PropertyCard = ({ item }) => {
   };
 
   return (
-    <div className="property-card">
+    <div className="property-imp-card">
       <div 
-        className="property-image-wrapper"
+        className="property-imp-image-wrapper"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {item.badge && <div className="property-badge">{item.badge}</div>}
+        {item.badge && <span className="badge">{item.badge}</span>}
         
-        {item.images.map((imgUrl, idx) => (
-          <img
-            key={idx}
-            src={imgUrl}
-            alt={`${item.title} - ${idx + 1}`}
-            className={`property-image ${idx === currentImgIndex ? 'active' : ''}`}
-            loading="lazy"
-          />
-        ))}
-        
-        <span className="property-price">{item.price}</span>
+        {hasMultipleImages && (
+          <button className="carousel-control prev" onClick={handlePrev}>
+            &#10094;
+          </button>
+        )}
+
+        <img 
+          src={item.images[currentImage]} 
+          alt={item.title} 
+          className="property-imp-image fade-in" 
+        />
+
+        {hasMultipleImages && (
+          <button className="carousel-control next" onClick={handleNext}>
+            &#10095;
+          </button>
+        )}
+
+        {hasMultipleImages && (
+          <div className="carousel-dots">
+            {item.images.map((_, idx) => (
+              <span 
+                key={idx} 
+                className={`dot ${idx === currentImage ? 'active' : ''}`}
+                onClick={() => setCurrentImage(idx)}
+              ></span>
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className="property-info">
-        <h3 className="property-title">{item.title}</h3>
+      <div className="property-imp-content">
+        <h3 className="property-imp-title">{item.title}</h3>
+        <p className="property-imp-location">{item.location}</p>
         
-        <div className="property-meta-row">
-          <span className="property-location">{item.location}</span>
-          <span className="meta-divider">•</span>
-          <span className="property-delivery">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-            {item.deliveryTime}
-          </span>
+        <div className="property-imp-details">
+          <span><i className="fas fa-shipping-fast"></i> {item.deliveryTime}</span>
         </div>
         
-        <p className="property-description">{item.description}</p>
+        <p className="property-imp-description">{item.description}</p>
         
-        <a 
-          href={item.link} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className={`property-cta ${item.cta === 'SOLD OUT' ? 'sold-out' : ''}`}
-        >
-          {item.cta}
-        </a>
+        <div className="property-imp-footer">
+          <span className="property-imp-price">{item.price}</span>
+          {item.link ? (
+            <a href={item.link} className="cta-btn" target="_blank" rel="noopener noreferrer">
+              {item.cta}
+            </a>
+          ) : (
+            <button className="cta-btn">{item.cta}</button>
+          )}
+        </div>
       </div>
     </div>
   );
