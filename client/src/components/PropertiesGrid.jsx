@@ -5,7 +5,7 @@ import './PropertiesGrid.scss';
 // Dados dos imóveis com as imagens fornecidas e informações atualizadas
 const propertiesData = [
   {
-    id: 152,
+    id: 1,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
@@ -16,7 +16,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
   },
   {
-    id: 153,
+    id: 2,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
@@ -27,7 +27,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
   },
   {
-    id: 154,
+    id: 3,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
@@ -38,7 +38,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
   },
   {
-    id: 155,
+    id: 4,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
@@ -49,7 +49,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
   },
   {
-    id: 156,
+    id: 5,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
     location: '30ml',
@@ -60,7 +60,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
   },
   {
-    id: 157,
+    id: 6,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
     location: '30ml',
@@ -75,7 +75,7 @@ const propertiesData = [
   // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
   // ==========================================
     /*{
-    id: 158,
+    id: 7,
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29% ',
     location: '10g', 
@@ -86,7 +86,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd10/'
   },
   {
-    id: 160,
+    id: 8,
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29% ',
     location: '20g', 
@@ -97,7 +97,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd20/'
   },
   {
-    id: 161,
+    id: 9,
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29%',
     location: '40g', 
@@ -112,7 +112,7 @@ const propertiesData = [
   // OPÇÕES: INFLORESCÊNCIA RICA EM THC (Híbrida)
   // ==========================================
   {
-    id: 159,
+    id: 10,
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '10g',
@@ -123,7 +123,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc10/'
   },
   {
-    id: 162,
+    id: 11,
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '20g',
@@ -134,7 +134,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc20/'
   },
   {
-    id: 163,
+    id: 12,
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '40g',
@@ -145,7 +145,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc40/'
   },
    {
-    id: 1,
+    id: 13,
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash Fullspectrum 90u ',
     location: '5g',
@@ -155,7 +155,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 2,
+    id: 14,
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK | THC',
     location: '10g',
@@ -165,7 +165,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 3,
+    id: 15,
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie THC',
     location: '10g',
@@ -175,7 +175,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 4,
+    id: 16,
     image: '/images/hash-legalizado-anvisa-capa.jpg',
     title: 'Hash Full spectrum 45u ',
     location: '5g',
@@ -185,7 +185,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 5,
+    id: 17,
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP | THC',
     location: '10g',
@@ -195,7 +195,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 6,
+    id: 18,
     image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple | THC',
     location: '10g',
@@ -205,7 +205,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 7,
+    id: 19,
     image: '/images/wsc-flower-24k.png',
     title: '24K Gold | THC',
     location: '10g',
@@ -215,7 +215,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 8,
+    id: 20,
     image: '/images/wsc-flower-kk.png',
     title: 'Cherry Pie Homie | THC',
     location: '10g',
@@ -225,7 +225,7 @@ const propertiesData = [
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 9,
+    id: 21,
     image: '/images/wsc-nacional-12.png',
     title: 'Hash FullSpectrum 45u ',
     location: '5g',
