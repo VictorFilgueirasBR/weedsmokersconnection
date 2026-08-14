@@ -101,6 +101,7 @@ const propertiesImpData = [
     price: 'WSC-989,00',
     description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
     cta: 'IMPORT',
+    badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
   },
   {
@@ -112,6 +113,7 @@ const propertiesImpData = [
     price: 'WSC-1889,00',
     description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
     cta: 'IMPORT',
+    badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
   },
   {
