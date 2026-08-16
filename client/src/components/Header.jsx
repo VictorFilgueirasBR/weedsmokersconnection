@@ -73,8 +73,8 @@ const Header = ({ onShowPopup }) => {
         {!isLoggedIn ? (
           <>
             
-            <Link to="https://ws-connectioncommerce.com/begin" onClick={handleLinkClick} translate="no" lang="en">WS | PLANS</Link>
-            <Link to="/" onClick={handleLinkClick} translate="no" lang="en">WS | ABOUT</Link>
+            <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid" onClick={handleLinkClick} translate="no" lang="en">WS | NACIONAL</Link>
+            <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp" onClick={handleLinkClick} translate="no" lang="en">WS | IMPORTS</Link>
             <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
           </>
         ) : (
