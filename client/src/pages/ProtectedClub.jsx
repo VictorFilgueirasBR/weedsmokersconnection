@@ -83,6 +83,7 @@ export default function WSCClub() {
 
       <MemberTreatmentFlow />
 
+      <HeroHashLegal />
       
       <GlassCardNacional />
       <GlassCardImport />
@@ -94,14 +95,13 @@ export default function WSCClub() {
 
       <ListNacional />
 
-      <PropertiesUtils id="properties-utils" />
-
       <PropertiesImp id="properties-imp" />
+
+      <PropertiesUtils id="properties-utils" />
 
 
       <IceSection />
 
-      <HeroHashLegal />
 
       {isContactsOpen && (
         <ContactsModal onClose={() => setIsContactsOpen(false)} />
