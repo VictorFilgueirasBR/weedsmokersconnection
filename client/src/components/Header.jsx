@@ -69,17 +69,15 @@ const Header = ({ onShowPopup }) => {
         
         {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>}
         
+        {/* Links acessíveis para todos */}
+        <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid" onClick={handleLinkClick} translate="no" lang="en">WS | NACIONAL</Link>
+        <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp" onClick={handleLinkClick} translate="no" lang="en">WS | IMPORTS</Link>
+        <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
+        <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
 
-        {!isLoggedIn ? (
+        {/* Botões restritos a usuários logados */}
+        {isLoggedIn && (
           <>
-            
-            <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid" onClick={handleLinkClick} translate="no" lang="en">WS | NACIONAL</Link>
-            <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp" onClick={handleLinkClick} translate="no" lang="en">WS | IMPORTS</Link>
-            <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
-          </>
-        ) : (
-          <>
-            <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
             <button onClick={handleEditProfile} className="edit-profile-btn">
               Edit
             </button>
