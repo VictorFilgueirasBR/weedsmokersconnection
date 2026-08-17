@@ -109,7 +109,7 @@ const Header = ({ onShowPopup }) => {
         </a>
 
         <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
-        <Link to="/CLUB" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
+        
 
         {/* Botões restritos a usuários logados */}
         {isLoggedIn && (
