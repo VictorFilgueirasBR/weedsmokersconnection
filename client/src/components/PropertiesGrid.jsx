@@ -70,6 +70,28 @@ const propertiesData = [
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl6/'
   },
+  {
+    id: 7,
+    image: '/images/punch-ws.jpeg',
+    title: 'Punch Line | THC',
+    location: '10g',
+    price: 'WSC-859,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'PEDIR',
+    badge: 'Laçamento',
+    link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
+  },
+  {
+    id: 8,
+    image: '/images/buds-thc-w-valley.jpeg',
+    title: 'Valley Kush THC 15-20% - Híbrida',
+    location: '10g',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-710,00', 
+    description: 'Inflorescência - Cultivo Outdoor 30% Sativa - 70% Indica, 19% THC. ',
+    cta: 'INDISPONÍVEL',
+    link: 'https://wa.me/5561995276936'
+  },
 
   // ==========================================
   // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
