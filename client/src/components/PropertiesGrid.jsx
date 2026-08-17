@@ -6,72 +6,6 @@ import './PropertiesGrid.scss';
 const propertiesData = [
   {
     id: 1,
-    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil CBD Full Spectrum 3000mg',
-    location: '30ml',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-620,00', // R$ 500,00 + 120,00
-    description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
-  },
-  {
-    id: 2,
-    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil CBD Full Spectrum 6000mg',
-    location: '30ml',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-920,00', // R$ 800,00 + 120,00
-    description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
-  },
-  {
-    id: 3,
-    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil THC Full Spectrum 600mg',
-    location: '30ml',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-420,00', // R$ 300,00 + 120,00
-    description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
-  },
-  {
-    id: 4,
-    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil THC Full Spectrum 1200mg',
-    location: '30ml',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-520,00', // R$ 400,00 + 120,00
-    description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
-  },
-  {
-    id: 5,
-    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
-    location: '30ml',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-520,00', // R$ 400,00 + 120,00
-    description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
-  },
-  {
-    id: 6,
-    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
-    title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
-    location: '30ml',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-620,00', // R$ 500,00 + 120,00
-    description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl6/'
-  },
-  {
-    id: 7,
     image: '/images/punch-ws.jpeg',
     title: 'Punch Line | THC',
     location: '10g',
@@ -82,7 +16,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
   },
   {
-    id: 8,
+    id: 2,
     image: '/images/buds-thc-w-valley.jpeg',
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '10g',
@@ -92,6 +26,73 @@ const propertiesData = [
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
+  {
+    id: 3,
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
+    title: 'Hemp Oil CBD Full Spectrum 3000mg',
+    location: '30ml',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-620,00', // R$ 500,00 + 120,00
+    description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
+  },
+  {
+    id: 4,
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
+    title: 'Hemp Oil CBD Full Spectrum 6000mg',
+    location: '30ml',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-920,00', // R$ 800,00 + 120,00
+    description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
+  },
+  {
+    id: 5,
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
+    title: 'Hemp Oil THC Full Spectrum 600mg',
+    location: '30ml',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-420,00', // R$ 300,00 + 120,00
+    description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
+  },
+  {
+    id: 6,
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
+    title: 'Hemp Oil THC Full Spectrum 1200mg',
+    location: '30ml',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-520,00', // R$ 400,00 + 120,00
+    description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
+  },
+  {
+    id: 7,
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
+    title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
+    location: '30ml',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-520,00', // R$ 400,00 + 120,00
+    description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
+  },
+  {
+    id: 8,
+    image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
+    title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
+    location: '30ml',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-620,00', // R$ 500,00 + 120,00
+    description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl6/'
+  },
+  
 
   // ==========================================
   // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
