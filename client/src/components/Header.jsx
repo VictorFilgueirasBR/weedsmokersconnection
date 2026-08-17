@@ -48,6 +48,27 @@ const Header = ({ onShowPopup }) => {
     setIsMenuOpen(false);
   };
 
+  // Manipulador específico para âncoras na mesma página/rota
+  const handleAnchorClick = (e, targetId) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    const scrollToElement = () => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    if (location.pathname !== '/club') {
+      navigate('/club');
+      // Aguarda a renderização da página /club para realizar o scroll
+      setTimeout(scrollToElement, 100);
+    } else {
+      scrollToElement();
+    }
+  };
+
   // Sincroniza o estado do menu com o body para o bloqueio de scroll
   useEffect(() => {
     if (isMenuOpen) {
@@ -69,11 +90,26 @@ const Header = ({ onShowPopup }) => {
         
         {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">MY ACCOUNT</Link>}
         
-        {/* Links acessíveis para todos */}
-        <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-grid" onClick={handleLinkClick} translate="no" lang="en">WS | NACIONAL</Link>
-        <Link to="https://weedsmokersconnection.com/club?access=wsc-club-ice#properties-imp" onClick={handleLinkClick} translate="no" lang="en">WS | IMPORTS</Link>
+        {/* Âncoras internas para as seções da página */}
+        <a 
+          href="#properties-grid" 
+          onClick={(e) => handleAnchorClick(e, 'properties-grid')} 
+          translate="no" 
+          lang="en"
+        >
+          WS | NACIONAL
+        </a>
+        <a 
+          href="#properties-imp" 
+          onClick={(e) => handleAnchorClick(e, 'properties-imp')} 
+          translate="no" 
+          lang="en"
+        >
+          WS | IMPORTS
+        </a>
+
         <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
-        <Link to="/club" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
+        <Link to="/CLUB" onClick={handleLinkClick} translate="no" lang="en">Club</Link>
 
         {/* Botões restritos a usuários logados */}
         {isLoggedIn && (
