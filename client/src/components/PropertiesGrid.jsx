@@ -18,7 +18,7 @@ const propertiesData = [
   {
     id: 2,
     image: '/images/buds-thc-w-valley.jpeg',
-    title: 'Valley Kush THC 15-20% - Híbrida',
+    title: 'Valley Kush | THC',
     location: '10g',
     deliveryTime: '3-14 dias úteis',
     price: 'WSC-710,00', 
