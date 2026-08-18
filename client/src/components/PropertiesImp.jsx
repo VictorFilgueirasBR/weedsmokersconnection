@@ -99,7 +99,7 @@ const propertiesImpData = [
     location: '5g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-989,00',
-    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
+    description: 'HEMP OIL Budder THC/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
@@ -111,7 +111,7 @@ const propertiesImpData = [
     location: '10g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1889,00',
-    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
+    description: 'HEMP OIL Budder THC/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
@@ -123,7 +123,7 @@ const propertiesImpData = [
     location: '3g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-621,00',
-    description: 'Cristais com 99,55% de CBD Isolado - Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%',
+    description: 'Cristais com 99,55% de CBD Isolado - Δ-9 - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-cbdislt/'
 },
@@ -132,7 +132,7 @@ const propertiesImpData = [
   location: '10g', 
   deliveryTime: '15-50 dias úteis (sob encomenda)', 
   price: 'WSC-1489,00', 
-  description: ' THCa Diamantes formados a partir de extração a frio. Genética Papaya (Indica).', 
+  description: ' THCa Diamantes formados a partir de extração a frio. Extração Genética Papaya (Indica).', 
   cta: 'IMPORT', 
   link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
 },
@@ -142,7 +142,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1489,00', 
-    description: ' THCa Cristais puros com mistura de terpenos. Genética OG Kush (Híbrida).', 
+    description: ' THCa Cristais puros com mistura de terpenos. Extração Genética OG Kush (Híbrida).', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
   },
@@ -152,7 +152,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1489,00', 
-    description: ' O THC-A se transforma em THC quando aquecido. Genética Sour Diesel (Sativa).', 
+    description: ' O THC-A se transforma em THC quando aquecido. Extração Genética Sour Diesel (Sativa).', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
   },
@@ -162,7 +162,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1199,00', 
-    description: ' Extração a frio. Genética Zkittlez (Sativa): Criatividade e foco.', 
+    description: ' Extração a frio Genética Zkittlez (Sativa) - Criatividade e foco.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
   },
@@ -172,7 +172,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1199,00', 
-    description: ' Genética Berry White (Indica): Relaxamento e sono profundo.', 
+    description: ' Extração Genética Berry White (Indica) - Relaxamento e sono profundo.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
   },
@@ -182,7 +182,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1199,00', 
-    description: ' Genética Kush Mints (Híbrida): Relaxamento e alívio.', 
+    description: 'Extração Genética Kush Mints (Híbrida) - Relaxamento e alívio.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
   },
@@ -192,7 +192,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1259,00', 
-    description: ' Delta-8 oferece efeitos mais suaves que o Delta-9. Genética Gelato.', 
+    description: ' Delta-8 oferece efeitos mais suaves que o Delta-9. Extração Genética Gelato.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
   },
@@ -202,7 +202,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1259,00', 
-    description: '  Delta-8 Genética Grape Ape (Indica): Relaxamento e sono. Terpenos naturais.', 
+    description: '  Delta-8 extração Genética Grape Ape (Indica) - Relaxamento e sono. Terpenos naturais.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
   },
@@ -212,7 +212,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1259,00', 
-    description: ' Delta-8 Genética Durban Poison (Sativa): Energia e foco.', 
+    description: ' Delta-8 extração Genética Durban Poison (Sativa) - Energia e foco.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
   },
@@ -222,7 +222,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1459,00', 
-    description: ' Rosin Vivo feito com flores frescas congeladas (Fresh Frozen).', 
+    description: 'Live Rosin feito com flores frescas congeladas (Fresh Frozen).', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
   },
@@ -232,7 +232,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1459,00', 
-    description: ' Extração ICE do material fresco, prensado até consistência ideal.', 
+    description: 'ThHCa extração laboratorial do material fresco,  até consistência ideal.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
   },
@@ -242,19 +242,9 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1459,00', 
-    description: ' Genética Maui Wowie (Sativa): Euforia e ânimo premium.', 
+    description: ' THCa extração Genética Maui Wowie (Sativa) - Euforia e ânimo premium.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
-  },
-  { id: 25, 
-    images: ['/images/wsc-import-15.png'], 
-    title: 'Bubble Hash Blackberry CBD', 
-    location: '10g', 
-    deliveryTime: '15-50 dias úteis (sob encomenda)', 
-    price: 'WSC-1249,00', 
-    description: ' Feito com água gelada para separar os tricomas. Relaxamento. (CBD)', 
-    cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1249/' 
   },
   { id: 26, 
     images: ['/images/wsc-import-16.png'], 
