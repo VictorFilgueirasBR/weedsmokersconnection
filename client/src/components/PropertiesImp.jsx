@@ -10,7 +10,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1750,00',
-    description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
@@ -22,7 +22,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1550,00',
-    description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
   },
@@ -33,7 +33,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1750,00',
-    description: 'Flor medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    description: 'Flores in Natura medicinal importada de alta qualidade - 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
   },
@@ -44,7 +44,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1550,00',
-    description: 'Flor medicinal importada de alta qualidade. 55% Indica - 45% Sativa.',
+    description: 'Flores in Natura medicinal importada de alta qualidade - 55% Indica - 45% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
   },
@@ -55,7 +55,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.250,00',
-    description: 'Energético, Foco, Sem Psicoatividade. Ingredientes: Flores in Natura ricas em CBD. Dosagem: 25% Indica 75% Sativa - 14g',
+    description: 'Energético, Foco, Sem Psicoatividade. Flores in Natura ricas em CBD - 25% Indica 75% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct1/'
 },
@@ -66,7 +66,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.250,00',
-    description: 'Relaxante, Calmante muscular, Sedativo leve Limoneno, Mirceno, Cariofileno Dor, Ansiedade, Insônia. Ingredientes: Flores In Natura Ricas em CBD. Dosagem: 80% INDICA - 20% SATIVA - 14g',
+    description: 'Relaxante, Dor, Ansiedade, Insônia. Flores In Natura Ricas em CBD - 80% Indica - 20% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct2/'
 },
@@ -77,7 +77,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.650,00',
-    description: 'Aumento no Foco, Energia, Criatividade e melhora no humor. Ingredientes: Flores In Natura Ricas em THCa. Dosagem: 70% Indica - 30% Sativa',
+    description: 'Aumento no Foco, Energia, Criatividade e melhora no humor. Flores In Natura Ricas em THCa - 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct3/'
 },
@@ -88,7 +88,7 @@ const propertiesImpData = [
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.650,00',
-    description: 'Promove o relaxamento, melhora o apetite e melhora o humor. Ingredientes: Flores In Natura Ricas em THCa. Dosagem: 70% Sativa 30% Indica',
+    description: 'Promove o relaxamento, melhora o apetite e melhora o humor. Flores In Natura Ricas em THCa - 70% Sativa 30% Indica.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
 },
@@ -99,7 +99,7 @@ const propertiesImpData = [
     location: '5g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-989,00',
-    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
+    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hoil-flwrmd22/'
@@ -111,7 +111,7 @@ const propertiesImpData = [
     location: '10g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1889,00',
-    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH. SENSAÇÃO PROFUNDA DE RELAXAMENTO CORPORAL',
+    description: 'HEMP OIL Budder THC 0.3%/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
@@ -123,7 +123,7 @@ const propertiesImpData = [
     location: '3g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-621,00',
-    description: ' Ingredientes: Cristais com 99,55% de CBD Isolado Dosagem: Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%',
+    description: 'Cristais com 99,55% de CBD Isolado - Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN - <0,01%Canabinoides totais = 99,55%',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-cbdislt/'
 },
@@ -202,7 +202,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1259,00', 
-    description: ' Genética Grape Ape (Indica): Relaxamento e sono. Terpenos naturais.', 
+    description: '  Delta-8 Genética Grape Ape (Indica): Relaxamento e sono. Terpenos naturais.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
   },
@@ -212,7 +212,7 @@ const propertiesImpData = [
     location: '10g', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-1259,00', 
-    description: ' Genética Durban Poison (Sativa): Energia e foco.', 
+    description: ' Delta-8 Genética Durban Poison (Sativa): Energia e foco.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
   },
@@ -259,10 +259,10 @@ const propertiesImpData = [
   { id: 26, 
     images: ['/images/wsc-import-16.png'], 
     title: 'Vegan Gummies Sleep CBD', 
-    location: '113g', 
+    location: '20 und', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-529,00', 
-    description: ' Gomas veganas sabor Mix de Frutas (60mg/GUMMY). CBN para auxílio no sono. (20 unid)', 
+    description: ' Gomas veganas sabor Mix de Frutas - 60mg/unid. CBN para auxílio no sono.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-529/' 
   },
@@ -271,40 +271,40 @@ const propertiesImpData = [
     location: '30ml', 
     deliveryTime: '15-50 dias úteis (sob encomenda)', 
     price: 'WSC-629,00', 
-    description: ' Óleo de CBN de alta concentração com CBD (200mg/ml). Diluição em MCT.', 
+    description: ' Óleo de CBN de alta concentração com CBD 200mg/ml. Diluição em MCT.', 
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-629/' 
   },
   {
     id: 28,
     images: ['/images/gumm-pn-w-blue.png'],
-    title: 'CBD Gummies Midnight Blue Dream 30mg',
+    title: 'Gummies Midnight Blue Dream',
     location: '30und',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-889,90',
-    description: 'Durma melhor com Midnight Blue Dream 30mg 10mg THC, 10mg CBD e 10mg CBN. Desbloqueie um sono profundo e restaurador com nossas gomas premium. Inspiradas no perfil relaxante da Blue Dream, cada unidade contém 30mg de CBD de amplo espectro para transformar sua rotina noturna de forma natural.',
+    description: 'Durma melhor com Midnight Blue Dream - 30mg THC, 10mg CBD e 10mg CBN. Gomas FullSpectrum premium.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummblue/'
 },
 {
     id: 29,
     images: ['/images/gumm-pn-w-green.png'],
-    title: 'Gummies Chill Bites 20mg com 30und',
+    title: 'Gummies Chill Bites',
     location: '30und',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-889,90',
-    description: 'Relaxe e adoce o seu dia com as Chill Bites da . Nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade, offering uma forma prática e deliciosa de encontrar o seu centro em meio à rotina.',
+    description: 'Relaxe seu dia com nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade para sua rotina.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
 },
   {
     id: 30,
     images: ['/images/d9-gumm-w.png'],
-    title: 'Cherry D9 Gummies - 140mg',
+    title: 'Gummies Cherry D9',
     location: '10Unidades',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-289,90',
-    description: 'Ingredientes: Cada goma contém uma dose medida de 14mg de Delta-9, facilitando o monitoramento do seu consumo - Contém 10 unidades. Dosagem: Δ-9 - 0,29%THCa - 0,007%CDB - 0,006%CBG - 0,007%CBN - 0,065%Canabinoides totais - 20,1 mgSe você está procurando uma guloseima saborosa e com um efeito poderoso, deixe-me apresentar as deliciosas Gomas Cherry D9 Gummies - 140 mg! Essas gomas não são apenas balas comuns; elas são infundidas com Delta-9 de alta qualidade para',
+    description: 'Cada goma contém uma dose medida de 14mg de Delta-9, Δ-9 - 0,29%THCa - infundidas com Delta-9 de alta qualidade para',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
@@ -312,22 +312,22 @@ const propertiesImpData = [
 {
     id: 31,
     images: ['/images/d9-gumm-vanilla-w.png'],
-    title: 'Cherry Vanilla D9 Gummies - 250mg',
+    title: 'Gummies Cherry Vanilla D9',
     location: '5Unidades',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-279,90',
-    description: 'Se você é fã de comestíveis e gosta de explorar novos sabores no mundo da cannabis, apresentamos uma delícia: As Gomas Cherry Vanilla D9 - 250mg. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada de',
+    description: ' As Gomas Cherry Vanilla D9 - 250mg de Delta-9, Δ-9 - 0,29%THCa. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
 },
 {
     id: 32,
     images: ['/images/d9-tropical-w.png'],
-    title: 'Green Gene Vegan Gummies Delta-9 THC',
-    location: '25capsulas',
+    title: 'Gummies Green Gene Vegan D9',
+    location: '25unid',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-445,00',
-    description: 'Nossas gomas de Delta-9 de 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar. Formuladas com extrato de cânhamo de espectro completo de alta qualidade, essas gomas combinam',
+    description: 'Gomas de Delta-9 com 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar.',
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
 },  
