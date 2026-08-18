@@ -6,11 +6,13 @@ import { FaCommentDots } from "react-icons/fa";
 
 export default function InstructionGlass({
   title = "Bem vindo ao CLUB",
+  subtitle = "Temos grupo cryptografado",
   whatsappUrl = "https://wa.me/5561995276936",
   
   // URL aponta para o Signal, mantida a variável telegramUrl por compatibilidade
   telegramUrl = "https://wa.me/5561995276936",
   
+  contactTitle = "Fale Conosco",
   contactSubtitle = "Suporte | Dúvidas | Pagamentos",
 }) {
   const cardRef = useRef(null);
