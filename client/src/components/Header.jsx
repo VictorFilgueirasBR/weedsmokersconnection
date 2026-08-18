@@ -108,7 +108,7 @@ const Header = ({ onShowPopup }) => {
           WS | IMPORTS
         </a>
 
-        <Link to="https://wa.me/message/WQS3YHS6QHS2I1" onClick={handleLinkClick} translate="no" lang="en">SUPPORT</Link>
+        
         
 
         {/* Botões restritos a usuários logados */}
