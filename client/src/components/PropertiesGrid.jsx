@@ -9,7 +9,7 @@ const propertiesData = [
     image: '/images/punch-ws.jpeg',
     title: 'Punch Line | THC',
     location: '10g',
-    price: 'WSC-829,90',
+    price: 'WSC-789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'PEDIR',
     badge: 'Laçamento',
