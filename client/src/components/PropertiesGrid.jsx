@@ -17,17 +17,6 @@ const propertiesData = [
   },
   {
     id: 2,
-    image: '/images/buds-thc-w-valley.jpeg',
-    title: 'Valley Kush | THC',
-    location: '10g',
-    deliveryTime: '3-14 dias úteis',
-    price: 'WSC-710,00', 
-    description: 'Inflorescência - Cultivo Outdoor 30% Sativa - 70% Indica, 19% THC. ',
-    cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
-  },
-  {
-    id: 3,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
@@ -38,7 +27,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
   },
   {
-    id: 4,
+    id: 3,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
@@ -49,7 +38,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
   },
   {
-    id: 5,
+    id: 4,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
@@ -60,7 +49,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
   },
   {
-    id: 6,
+    id: 5,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
@@ -71,7 +60,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
   },
   {
-    id: 7,
+    id: 6,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
     location: '30ml',
@@ -82,7 +71,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
   },
   {
-    id: 8,
+    id: 7,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
     location: '30ml',
@@ -98,6 +87,17 @@ const propertiesData = [
   // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
   // ==========================================
     /*{
+    {
+    id: 2,
+    image: '/images/buds-thc-w-valley.jpeg',
+    title: 'Valley Kush | THC',
+    location: '10g',
+    deliveryTime: '3-14 dias úteis',
+    price: 'WSC-710,00', 
+    description: 'Inflorescência - Cultivo Outdoor 30% Sativa - 70% Indica, 19% THC. ',
+    cta: 'INDISPONÍVEL',
+    link: 'https://wa.me/5561995276936'
+  },
     id: 7,
     image: '/images/buds-cbd1.jpeg', 
     title: 'Valley Kush CBD 29% ',
