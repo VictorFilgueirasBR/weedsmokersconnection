@@ -16,6 +16,16 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
   },
   {
+    id: 19,
+    image: '/images/wsc-corked.png',
+    title: 'Corked | THC',
+    location: '10g',
+    price: 'WSC-717,90',
+    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/ws-flwrcrkd/'
+  },
+  {
     id: 2,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
