@@ -4,19 +4,9 @@ import './PropertiesGrid.scss';
 
 // Dados dos imóveis com as imagens fornecidas e informações atualizadas
 const propertiesData = [
+  
   {
     id: 1,
-    image: '/images/punch-ws.jpeg',
-    title: 'Punch Line | THC',
-    location: '10g',
-    price: 'WSC-789,90',
-    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
-    cta: 'PEDIR',
-    badge: 'Laçamento',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
-  },
-  {
-    id: 19,
     image: '/images/wsc-corked.png',
     title: 'Corked | THC',
     location: '10g',
@@ -97,6 +87,17 @@ const propertiesData = [
   // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
   // ==========================================
     /*{
+    {
+    id: 11,
+    image: '/images/punch-ws.jpeg',
+    title: 'Punch Line | THC',
+    location: '10g',
+    price: 'WSC-789,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'PEDIR',
+    badge: 'Laçamento',
+    link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
+  },
     {
     id: 2,
     image: '/images/buds-thc-w-valley.jpeg',
