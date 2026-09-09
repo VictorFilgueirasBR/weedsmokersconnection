@@ -431,7 +431,7 @@ const propertiesImpData = [
   {
     id: 38,
     images: ['/images/drops2.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
@@ -442,7 +442,7 @@ const propertiesImpData = [
 {
     id: 39,
     images: ['/images/drops3.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
@@ -453,7 +453,7 @@ const propertiesImpData = [
 {
     id: 40,
     images: ['/images/drops4.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
@@ -464,7 +464,7 @@ const propertiesImpData = [
 {
     id: 41,
     images: ['/images/drops5.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
@@ -475,7 +475,7 @@ const propertiesImpData = [
 {
     id: 42,
     images: ['/images/drops6.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
@@ -486,7 +486,7 @@ const propertiesImpData = [
 {
     id: 43,
     images: ['/images/drops7.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
@@ -497,7 +497,7 @@ const propertiesImpData = [
 {
     id: 44,
     images: ['/images/drops8.png'],
-    title: 'Drops • Gummies 5mg THC per ct',
+    title: 'Drops • Gummies 5mg THC • und',
     location: '20 gomas',
     deliveryTime: '15-35 dias úteis',
     price: '• 369,00',
