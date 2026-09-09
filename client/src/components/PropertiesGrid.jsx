@@ -7,7 +7,7 @@ const propertiesData = [
   
   {
     id: 1,
-    image: '/images/• corked.png',
+    image: '/images/wsc-corked.png',
     title: 'Corked | THC',
     location: '10g',
     price: '• 717,90',
