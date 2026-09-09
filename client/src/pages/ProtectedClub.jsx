@@ -12,7 +12,7 @@ import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
 import PropertiesUtils from "../components/PropertiesUtils";
 import PropertiesImp from "../components/PropertiesImp";
-import ListNacional from "../components/ListNacional";
+
 
 // 🔐 TOKEN DE ACESSO (VOCÊ CONTROLA ISSO)
 const SECRET_ACCESS_TOKEN = "wsc-club-ice";
@@ -93,7 +93,6 @@ export default function WSCClub() {
       {/* IDs internos para suporte às âncoras */}
       <PropertiesGrid id="properties-grid" />
 
-      <ListNacional />
 
       <PropertiesImp id="properties-imp" />
 
