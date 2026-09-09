@@ -7,10 +7,10 @@ const propertiesData = [
   
   {
     id: 1,
-    image: '/images/wsc-corked.png',
+    image: '/images/• corked.png',
     title: 'Corked | THC',
     location: '10g',
-    price: 'WSC-717,90',
+    price: '• 717,90',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flwrcrkd/'
@@ -21,10 +21,10 @@ const propertiesData = [
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-620,00', // R$ 500,00 + 120,00
+    price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl1/'
+    link: 'https://ws-connectioncommerce.com/produto/• oilncnl1/'
   },
   {
     id: 3,
@@ -32,10 +32,10 @@ const propertiesData = [
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-920,00', // R$ 800,00 + 120,00
+    price: '• 920,00', // R$ 800,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl2/'
+    link: 'https://ws-connectioncommerce.com/produto/• oilncnl2/'
   },
   {
     id: 4,
@@ -43,10 +43,10 @@ const propertiesData = [
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-420,00', // R$ 300,00 + 120,00
+    price: '• 420,00', // R$ 300,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl3/'
+    link: 'https://ws-connectioncommerce.com/produto/• oilncnl3/'
   },
   {
     id: 5,
@@ -54,10 +54,10 @@ const propertiesData = [
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-520,00', // R$ 400,00 + 120,00
+    price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl4/'
+    link: 'https://ws-connectioncommerce.com/produto/• oilncnl4/'
   },
   {
     id: 6,
@@ -65,10 +65,10 @@ const propertiesData = [
     title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
     location: '30ml',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-520,00', // R$ 400,00 + 120,00
+    price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl5/'
+    link: 'https://ws-connectioncommerce.com/produto/• oilncnl5/'
   },
   {
     id: 7,
@@ -76,10 +76,10 @@ const propertiesData = [
     title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
     location: '30ml',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-620,00', // R$ 500,00 + 120,00
+    price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-oilncnl6/'
+    link: 'https://ws-connectioncommerce.com/produto/• oilncnl6/'
   },
   
 
@@ -92,7 +92,7 @@ const propertiesData = [
     image: '/images/punch-ws.jpeg',
     title: 'Punch Line | THC',
     location: '10g',
-    price: 'WSC-789,90',
+    price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'PEDIR',
     badge: 'Laçamento',
@@ -104,7 +104,7 @@ const propertiesData = [
     title: 'Valley Kush | THC',
     location: '10g',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-710,00', 
+    price: '• 710,00', 
     description: 'Inflorescência - Cultivo Outdoor 30% Sativa - 70% Indica, 19% THC. ',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
@@ -114,7 +114,7 @@ const propertiesData = [
     title: 'Valley Kush CBD 29% ',
     location: '10g', 
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-710,00', 
+    price: '• 710,00', 
     description: 'Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd10/'
@@ -125,7 +125,7 @@ const propertiesData = [
     title: 'Valley Kush CBD 29% ',
     location: '20g', 
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-1400,00', 
+    price: '• 1400,00', 
     description: '}Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd20/'
@@ -136,7 +136,7 @@ const propertiesData = [
     title: 'Valley Kush CBD 29%',
     location: '40g', 
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-2700,00', 
+    price: '• 2700,00', 
     description: 'Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd40/'
@@ -151,7 +151,7 @@ const propertiesData = [
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '10g',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-710,00', 
+    price: '• 710,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc10/'
@@ -162,7 +162,7 @@ const propertiesData = [
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '20g',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-1400,00', 
+    price: '• 1400,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc20/'
@@ -173,7 +173,7 @@ const propertiesData = [
     title: 'Valley Kush THC 15-20% - Híbrida',
     location: '40g',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-2700,00', 
+    price: '• 2700,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc40/'
@@ -183,7 +183,7 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa.jpg',
     title: 'Hash Fullspectrum 90u ',
     location: '5g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 90 micras).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
@@ -193,7 +193,7 @@ const propertiesData = [
     image: '/images/beautiful-buds.jpg',
     title: 'Flores HK | THC',
     location: '10g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
@@ -203,7 +203,7 @@ const propertiesData = [
     image: '/images/club-flores.jpeg',
     title: 'Flores Z-Kittlez Pie THC',
     location: '10g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
@@ -213,7 +213,7 @@ const propertiesData = [
     image: '/images/hash-legalizado-anvisa-capa.jpg',
     title: 'Hash Full spectrum 45u ',
     location: '5g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 25 micras).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
@@ -223,7 +223,7 @@ const propertiesData = [
     image: '/images/buds-pp-alianca.png',
     title: 'Buds PP | THC',
     location: '10g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
@@ -233,41 +233,41 @@ const propertiesData = [
     image: '/images/cherry-pie-nacional.png',
     title: 'Cherry Pie Purple | THC',
     location: '10g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Indoor 63% Sativa - 37% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
     id: 19,
-    image: '/images/wsc-flower-24k.png',
+    image: '/images/• flower-24k.png',
     title: '24K Gold | THC',
     location: '10g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
     id: 20,
-    image: '/images/wsc-flower-kk.png',
+    image: '/images/• flower-kk.png',
     title: 'Cherry Pie Homie | THC',
     location: '10g',
-    price: 'WSC-SOLDOUT',
+    price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 34% Sativa - 66% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
     link: 'https://wa.me/5561995276936'
   },
   {
     id: 21,
-    image: '/images/wsc-nacional-12.png',
+    image: '/images/• nacional-12.png',
     title: 'Hash FullSpectrum 45u ',
     location: '5g',
     deliveryTime: '3-14 dias úteis',
-    price: 'WSC-869,90',
+    price: '• 869,90',
     description: 'Fullspectrum ICEOLATOR THC HANDMADE. (Malha de 45 micras).',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-ncnl45u/'
+    link: 'https://ws-connectioncommerce.com/produto/• ncnl45u/'
   }*/
 ];
 
