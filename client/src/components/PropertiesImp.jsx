@@ -13,7 +13,7 @@ const propertiesImpData = [
     price: '• 757,49',
     description: 'Cold-Sifted Hemp Formula THCa340mg per serving Terps Profiles: Pinene, Caryophyllene, Linalool (BG)',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-coldsifted5/'
 },
 {
@@ -25,7 +25,7 @@ const propertiesImpData = [
     price: '• 1297,49',
     description: 'Cold-Sifted Hemp Formula THCa340mg per serving Terps Profiles: Pinene, Caryophyllene, Linalool (BG)',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-coldsifted10/'
 },
 {
@@ -37,7 +37,7 @@ const propertiesImpData = [
     price: '• 2427,49',
     description: 'Cold-Sifted Hemp Formula THCa340mg per serving Terps Profiles: Pinene, Caryophyllene, Linalool (BG)',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-coldsifted20/'
 },
 {
@@ -49,7 +49,7 @@ const propertiesImpData = [
     price: '• 577,49',
     description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-dried5/'
 },
 {
@@ -61,7 +61,7 @@ const propertiesImpData = [
     price: '• 987,49',
     description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-dried10/'
 },
   {
@@ -73,7 +73,7 @@ const propertiesImpData = [
     price: '• 1859,80',
     description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: 10 servings 70$USD 40 Servings 1. Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-dried20/'
   },
   {
@@ -85,7 +85,7 @@ const propertiesImpData = [
     price: '• 769,49',
     description: 'Stirred Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-live5/'
   },
   {
@@ -97,7 +97,7 @@ const propertiesImpData = [
     price: '• 1319,49',
     description: 'Stirred Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-live10/'
   },
   {
@@ -109,7 +109,7 @@ const propertiesImpData = [
     price: '• 2447,52',
     description: 'Stirred Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-live20/'
   },
   {
@@ -121,7 +121,7 @@ const propertiesImpData = [
     price: '• 798,49',
     description: 'Granulated Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-crmbl5/'
   },
   {
@@ -133,7 +133,7 @@ const propertiesImpData = [
     price: '• 1287,52',
     description: 'Granulated Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-crmbl10/'
   },
   {
@@ -145,7 +145,7 @@ const propertiesImpData = [
     price: '• 2387,49',
     description: 'Granulated Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-crmbl20/'
   },
   {
@@ -157,7 +157,7 @@ const propertiesImpData = [
     price: '• 788,49',
     description: 'Crystalized Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-diamond5/'
   },
   {
@@ -169,7 +169,7 @@ const propertiesImpData = [
     price: '• 1319,49',
     description: 'Crystalized Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-diamond10/'
   },
   {
@@ -181,7 +181,7 @@ const propertiesImpData = [
     price: '• 2445,49',
     description: 'Crystalized Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
-    badge: 'Lançamento',
+    badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-diamond20/'
   },
   {
