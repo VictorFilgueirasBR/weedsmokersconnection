@@ -85,14 +85,14 @@ export default function WSCClub() {
 
       <HeroHashLegal />
       
-      <GlassCardNacional />
-      <GlassCardImport />
 
       <Instruction />
 
       {/* IDs internos para suporte às âncoras */}
       <PropertiesGrid id="properties-grid" />
 
+      <GlassCardNacional />
+      <GlassCardImport />
 
       <PropertiesImp id="properties-imp" />
 

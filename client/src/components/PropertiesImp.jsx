@@ -71,7 +71,7 @@ const propertiesImpData = [
     location: '20g',
     deliveryTime: '15-35 dias úteis',
     price: '• 1859,80',
-    description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: 10 servings 70$USD 40 Servings 1. Caryophillene, Limonene (PR)',
+    description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
     link: 'https://ws-connectioncommerce.com/produto/ws-dried20/'
