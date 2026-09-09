@@ -10,7 +10,7 @@ const propertiesData = [
     image: '/images/wsc-corked.png',
     title: 'Corked | THC',
     location: '10g',
-    price: '• 717,90',
+    price: '• 729,90',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/ws-flwrcrkd/'
