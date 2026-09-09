@@ -3,95 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './PropertiesImp.scss';
 
 const propertiesImpData = [
-  {
-    id: 1,
-    images: ['/images/glitter-bombbud.jpg'],
-    title: 'Glitter Bomb • THCa',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1750,00',
-    description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
-    cta: 'IMPORT',
-    badge: 'Mais Vendido',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
-  },
-  {
-    id: 2,
-    images: ['/images/Forbidden-Fruit.webp'],
-    title: 'Forbidden Fruit • D8',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1550,00',
-    description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
-  },
-  {
-    id: 3,
-    images: ['/images/astrocand-thca.jpeg'],
-    title: 'Astro Candy • THCa',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1750,00',
-    description: 'Flores in Natura medicinal importada de alta qualidade - 70% Indica - 30% Sativa.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
-  },
-  {
-    id: 4,
-    images: ['/images/gellato-flwrimp.webp'],
-    title: 'Gellato • D8',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1550,00',
-    description: 'Flores in Natura medicinal importada de alta qualidade - 55% Indica - 45% Sativa.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
-  },
-  {
-    id: 5,
-    images: ['/images/flwrct1.png', '/images/flwrct1a.png'],
-    title: 'Inflorescência Sour Lifter • CBD',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1250,00',
-    description: 'Energético, Foco, Sem Psicoatividade. Flores in Natura ricas em CBD - 25% Indica 75% Sativa.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct1/'
-},
-{
-    id: 6,
-    images: ['/images/flwrct2.png', '/images/flwrct2a.png'],
-    title: 'Inflorescência Lemon Octane • CBD',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1250,00',
-    description: 'Relaxante, Dor, Ansiedade, Insônia. Flores In Natura Ricas em CBD - 80% Indica - 20% Sativa.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct2/'
-},
-{
-    id: 7,
-    images: ['/images/flwrct3.png'],
-    title: 'Inflorescência Tropicana Banana • THCa',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1650,00',
-    description: 'Aumento no Foco, Energia, Criatividade e melhora no humor. Flores In Natura Ricas em THCa - 70% Indica - 30% Sativa.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct3/'
-},
-{
-    id: 8,
-    images: ['/images/flwrct4.png'],
-    title: 'Girl Scout Cookies • THCa',
-    location: '14g',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WS•1650,00',
-    description: 'Promove o relaxamento, melhora o apetite e melhora o humor. Flores In Natura Ricas em THCa - 70% Sativa 30% Indica.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
-},
+  
 {
     id: 9,
     images: ['/images/blubblegbdz.jpg'],
@@ -427,6 +339,95 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
   },
+  {
+    id: 1,
+    images: ['/images/glitter-bombbud.jpg'],
+    title: 'Glitter Bomb • THCa',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1750,00',
+    description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    badge: 'Mais Vendido',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
+  },
+  {
+    id: 2,
+    images: ['/images/Forbidden-Fruit.webp'],
+    title: 'Forbidden Fruit • D8',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1550,00',
+    description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
+  },
+  {
+    id: 3,
+    images: ['/images/astrocand-thca.jpeg'],
+    title: 'Astro Candy • THCa',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1750,00',
+    description: 'Flores in Natura medicinal importada de alta qualidade - 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
+  },
+  {
+    id: 4,
+    images: ['/images/gellato-flwrimp.webp'],
+    title: 'Gellato • D8',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1550,00',
+    description: 'Flores in Natura medicinal importada de alta qualidade - 55% Indica - 45% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
+  },
+  {
+    id: 5,
+    images: ['/images/flwrct1.png', '/images/flwrct1a.png'],
+    title: 'Inflorescência Sour Lifter • CBD',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1250,00',
+    description: 'Energético, Foco, Sem Psicoatividade. Flores in Natura ricas em CBD - 25% Indica 75% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct1/'
+},
+{
+    id: 6,
+    images: ['/images/flwrct2.png', '/images/flwrct2a.png'],
+    title: 'Inflorescência Lemon Octane • CBD',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1250,00',
+    description: 'Relaxante, Dor, Ansiedade, Insônia. Flores In Natura Ricas em CBD - 80% Indica - 20% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct2/'
+},
+{
+    id: 7,
+    images: ['/images/flwrct3.png'],
+    title: 'Inflorescência Tropicana Banana • THCa',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1650,00',
+    description: 'Aumento no Foco, Energia, Criatividade e melhora no humor. Flores In Natura Ricas em THCa - 70% Indica - 30% Sativa.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct3/'
+},
+{
+    id: 8,
+    images: ['/images/flwrct4.png'],
+    title: 'Girl Scout Cookies • THCa',
+    location: '14g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WS•1650,00',
+    description: 'Promove o relaxamento, melhora o apetite e melhora o humor. Flores In Natura Ricas em THCa - 70% Sativa 30% Indica.',
+    cta: 'IMPORT',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
+},
   {
     id: 38,
     images: ['/images/drops2.png'],
