@@ -185,6 +185,42 @@ const propertiesImpData = [
     link: 'https://ws-connectioncommerce.com/produto/ws-diamond20/'
   },
   {
+    id: 477,
+    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg  05 Caps',
+    location: '5cps',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-989,70',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    cta: 'IMPORT',
+    badge: 'MAIS VENDIDO',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh5/'
+},
+{
+    id: 478,
+    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 10 Caps',
+    location: '10cps',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-1.897,90',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    cta: 'IMPORT',
+    badge: 'MAIS VENDIDO',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh10/'
+},
+{
+    id: 479,
+    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
+    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 20 Caps',
+    location: '20cps',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-3589,70',
+    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
+    cta: 'IMPORT',
+    badge: 'MAIS VENDIDO',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
+},
+  {
     id: 23,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold • THCa',
@@ -747,40 +783,8 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil100/'
 },
+
 {
-    id: 48,
-    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg  05 Caps',
-    location: '5cps',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-900,00',
-    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh5/'
-},
-{
-    id: 49,
-    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 10 Caps',
-    location: '10cps',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-1.500,00',
-    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh10/'
-},
-{
-    id: 50,
-    images: ['/images/caps-cap-w.png', '/images/freshq-w.jpeg', '/images/caps-fresh.jpeg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 20 Caps',
-    location: '20cps',
-    deliveryTime: '15-35 dias úteis',
-    price: 'WSC-2.900,00',
-    description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
-    cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
-},
-  ,{
     id: 51,
     images: ['/images/cannac.jpg'],
     title: 'KETAMA GOLD INTEGRAL | D9',
