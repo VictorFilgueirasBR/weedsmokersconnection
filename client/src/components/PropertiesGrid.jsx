@@ -7,16 +7,6 @@ const propertiesData = [
   
   {
     id: 1,
-    image: '/images/wsc-corked.png',
-    title: 'Corked | THC',
-    location: '10g',
-    price: '• 729,90',
-    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
-    cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flwrcrkd/'
-  },
-  {
-    id: 2,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 3000mg',
     location: '30ml',
@@ -27,7 +17,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/• oilncnl1/'
   },
   {
-    id: 3,
+    id: 2,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil CBD Full Spectrum 6000mg',
     location: '30ml',
@@ -38,7 +28,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/• oilncnl2/'
   },
   {
-    id: 4,
+    id: 3,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 600mg',
     location: '30ml',
@@ -49,7 +39,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/• oilncnl3/'
   },
   {
-    id: 5,
+    id: 4,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil THC Full Spectrum 1200mg',
     location: '30ml',
@@ -60,7 +50,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/• oilncnl4/'
   },
   {
-    id: 6,
+    id: 5,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 1800mg',
     location: '30ml',
@@ -71,7 +61,7 @@ const propertiesData = [
     link: 'https://ws-connectioncommerce.com/produto/• oilncnl5/'
   },
   {
-    id: 7,
+    id: 6,
     image: '/images/ncnloil.png', // CORRIGIDO: de 'images' para 'image'
     title: 'Hemp Oil Full Spectrum CBD + THC 3600mg',
     location: '30ml',
@@ -81,23 +71,32 @@ const propertiesData = [
     cta: 'PEDIR',
     link: 'https://ws-connectioncommerce.com/produto/• oilncnl6/'
   },
-  
-
-  // ==========================================
-  // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
-  // ==========================================
-    /*{
+  {
+    id: 7,
+    image: '/images/wsc-corked.png',
+    title: 'Corked | THC',
+    location: '10g',
+    price: '• 729,90',
+    description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
+    cta: 'PEDIR',
+    link: 'https://ws-connectioncommerce.com/produto/ws-flwrcrkd/'
+  },
     {
-    id: 11,
+    id: 8,
     image: '/images/punch-ws.jpeg',
     title: 'Punch Line | THC',
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'PEDIR',
-    badge: 'Laçamento',
     link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
   },
+  
+
+  // ==========================================
+  // OPÇÕES: INFLORESCÊNCIA RICA EM CBD (Valley Kush)
+  // ==========================================
+    /*
     {
     id: 2,
     image: '/images/buds-thc-w-valley.jpeg',
