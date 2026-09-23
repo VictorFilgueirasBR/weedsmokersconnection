@@ -16,8 +16,11 @@ import Profile from './pages/Profile';
 import ChatPage from './pages/ChatPage';
 import ChatWsc from './pages/ChatWsc';
 
-// ✅ IMPORT NECESSÁRIO PARA O CLUB POR LINK
+// Club existente
 import WSCClub from "./pages/ProtectedClub";
+
+// Novo Club sem restrição de acesso
+import WSCClubNew from "./pages/WSCClubNew";
 
 export const AuthContext = createContext();
 
@@ -76,8 +79,11 @@ export default function App() {
               }
             />
 
-            {/* 🔓 CLUB LIBERADO DE LOGIN (PROTEÇÃO É NO WSCClub) */}
+            {/* 🔓 CLUB EXISTENTE */}
             <Route path="/club" element={<WSCClub />} />
+
+            {/* 🆕 NOVA PÁGINA DO CLUB — SEM RESTRIÇÃO DE ACESSO */}
+            <Route path="/club-new" element={<WSCClubNew />} />
 
             <Route path="/chat" element={<ChatPage />} />
 
