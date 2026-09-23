@@ -423,7 +423,7 @@ const propertiesImpData = [
   {
     id: 5,
     images: ['/images/flwrct1.png', '/images/flwrct1a.png'],
-    title: 'Inflorescência Sour Lifter • CBD',
+    title: 'Sour Lifter • CBD',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: '• 1250,00',
