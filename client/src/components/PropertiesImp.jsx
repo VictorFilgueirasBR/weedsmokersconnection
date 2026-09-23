@@ -434,7 +434,7 @@ const propertiesImpData = [
 {
     id: 6,
     images: ['/images/flwrct2.png', '/images/flwrct2a.png'],
-    title: 'Inflorescência Lemon Octane • CBD',
+    title: 'Lemon Octane • CBD',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: '• 1250,00',
@@ -445,7 +445,7 @@ const propertiesImpData = [
 {
     id: 7,
     images: ['/images/flwrct3.png'],
-    title: 'Inflorescência Tropicana Banana • THCa',
+    title: 'Tropicana Banana • THCa',
     location: '14g',
     deliveryTime: '15-35 dias úteis',
     price: '• 1650,00',
