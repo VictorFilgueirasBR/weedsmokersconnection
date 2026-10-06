@@ -14,7 +14,7 @@ const propertiesImpData = [
     description: 'Cold-Sifted Hemp Formula THCa 340mg per serving Terps Profiles: Pinene, Caryophyllene, Linalool (BG)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-coldsifted5/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 10,
@@ -26,7 +26,7 @@ const propertiesImpData = [
     description: 'Cold-Sifted Hemp Formula THCa 340mg per serving Terps Profiles: Pinene, Caryophyllene, Linalool (BG)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-coldsifted10/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 11,
@@ -38,7 +38,7 @@ const propertiesImpData = [
     description: 'Cold-Sifted Hemp Formula THCa 340mg per serving Terps Profiles: Pinene, Caryophyllene, Linalool (BG)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-coldsifted20/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 12,
@@ -50,7 +50,7 @@ const propertiesImpData = [
     description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-dried5/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 13,
@@ -62,7 +62,7 @@ const propertiesImpData = [
     description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-dried10/'
+    link: 'https://wa.me/5561995276936'
 },
   {
     id: 14,
@@ -74,7 +74,7 @@ const propertiesImpData = [
     description: 'Dried Hemp Formula THCa 65mg per serving Terps Profiles: Caryophillene, Limonene (PR)',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-dried20/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 15,
@@ -86,7 +86,7 @@ const propertiesImpData = [
     description: 'Stirred Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-live5/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 15,
@@ -98,7 +98,7 @@ const propertiesImpData = [
     description: 'Stirred Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-live10/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 16,
@@ -110,7 +110,7 @@ const propertiesImpData = [
     description: 'Stirred Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-live20/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 17,
@@ -122,7 +122,7 @@ const propertiesImpData = [
     description: 'Granulated Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-crmbl5/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 18,
@@ -134,7 +134,7 @@ const propertiesImpData = [
     description: 'Granulated Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-crmbl10/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 19,
@@ -146,7 +146,7 @@ const propertiesImpData = [
     description: 'Granulated Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-crmbl20/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 20,
@@ -158,7 +158,7 @@ const propertiesImpData = [
     description: 'Crystalized Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-diamond5/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 21,
@@ -170,7 +170,7 @@ const propertiesImpData = [
     description: 'Crystalized Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-diamond10/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 22,
@@ -182,7 +182,7 @@ const propertiesImpData = [
     description: 'Crystalized Hemp Formula THCa 369mg CBD 104mg CBG 8.5mg per Serving Terps Profiles: Profiles: Myrcene, Caryophyllene, Limonene (AH) ',
     cta: 'IMPORT',
     badge: 'NEW DROP',
-    link: 'https://ws-connectioncommerce.com/produto/ws-diamond20/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 477,
@@ -194,7 +194,7 @@ const propertiesImpData = [
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     badge: 'MAIS VENDIDO',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh5/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 478,
@@ -206,7 +206,7 @@ const propertiesImpData = [
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     badge: 'MAIS VENDIDO',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh10/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 479,
@@ -218,7 +218,7 @@ const propertiesImpData = [
     description: 'Desbloqueie o bem-estar com as Cápsulas de THCa . Com 120mg (Fresh frozen), esta é a nossa fórmula mais potente, processada meticulosamente para garantir equilíbrio e saúde em cada dose. Extração premium de alta pureza e tecnologia avançada com acesso restrito.',
     cta: 'IMPORT',
     badge: 'MAIS VENDIDO',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-capsfrsh20/'
+    link: 'https://wa.me/5561995276936'
 },
   {
     id: 23,
@@ -230,7 +230,7 @@ const propertiesImpData = [
     description: 'HEMP OIL Budder THC/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
-    link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 24,
@@ -242,7 +242,7 @@ const propertiesImpData = [
     description: 'HEMP OIL Budder THC/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
-    link: 'https://ws-connectioncommerce.com/produto/ws-hmpo10/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 25,
@@ -253,7 +253,7 @@ const propertiesImpData = [
     price: '• 621,00',
     description: 'Cristais com 99,55% de CBD Isolado - Δ-9 - <0,01%Canabinoides totais = 99,55%Δ-9 - <0,01%THCa - <0,01%CBD - 99,55%CBG - <0,01%CBN',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-cbdislt/'
+    link: 'https://wa.me/5561995276936'
   },
   { id: 26, 
     images: ['/images/wsc-import-11.png'], 
@@ -263,7 +263,7 @@ const propertiesImpData = [
     price: '• 1489,00', 
     description: ' THCa Diamantes formados a partir de extração a frio. Extração Genética Papaya (Indica).', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 27, 
     images: ['/images/wsc-import-11.png'], 
@@ -273,7 +273,7 @@ const propertiesImpData = [
     price: '• 1489,00', 
     description: ' THCa Cristais puros com mistura de terpenos. Extração Genética OG Kush (Híbrida).', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 28, 
     images: ['/images/wsc-import-11.png'], 
@@ -283,7 +283,7 @@ const propertiesImpData = [
     price: '• 1489,00', 
     description: ' O THC-A se transforma em THC quando aquecido. Extração Genética Sour Diesel (Sativa).', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1489/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 29, 
     images: ['/images/wsc-import-12.png'], 
@@ -293,7 +293,7 @@ const propertiesImpData = [
     price: '• 1199,00', 
     description: ' Extração a frio Genética Zkittlez (Sativa) - Criatividade e foco.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 30, 
     images: ['/images/wsc-import-12.png'], 
@@ -303,7 +303,7 @@ const propertiesImpData = [
     price: '• 1199,00', 
     description: ' Extração Genética Berry White (Indica) - Relaxamento e sono profundo.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 31, 
     images: ['/images/wsc-import-12.png'], 
@@ -313,7 +313,7 @@ const propertiesImpData = [
     price: '• 1199,00', 
     description: 'Extração Genética Kush Mints (Híbrida) - Relaxamento e alívio.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1199/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 32, 
     images: ['/images/wsc-import-13.png'], 
@@ -323,7 +323,7 @@ const propertiesImpData = [
     price: '• 1259,00', 
     description: ' Delta-8 oferece efeitos mais suaves que o Delta-9. Extração Genética Gelato.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 33, 
     images: ['/images/wsc-import-13.png'], 
@@ -333,7 +333,7 @@ const propertiesImpData = [
     price: '• 1259,00', 
     description: '  Delta-8 extração Genética Grape Ape (Indica) - Relaxamento e sono. Terpenos naturais.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 34, 
     images: ['/images/wsc-import-13.png'], 
@@ -343,7 +343,7 @@ const propertiesImpData = [
     price: '• 1259,00', 
     description: ' Delta-8 extração Genética Durban Poison (Sativa) - Energia e foco.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1259/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 35, 
     images: ['/images/wsc-import-14.png'], 
@@ -353,7 +353,7 @@ const propertiesImpData = [
     price: '• 1459,00', 
     description: 'Live Rosin feito com flores frescas congeladas (Fresh Frozen).', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 36, 
     images: ['/images/wsc-import-14.png'], 
@@ -363,7 +363,7 @@ const propertiesImpData = [
     price: '• 1459,00', 
     description: 'ThHCa extração laboratorial do material fresco,  até consistência ideal.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 37, 
     images: ['/images/wsc-import-14.png'], 
@@ -373,7 +373,7 @@ const propertiesImpData = [
     price: '• 1459,00', 
     description: ' THCa extração Genética Maui Wowie (Sativa) - Euforia e ânimo premium.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-1459/' 
+    link: 'https://wa.me/5561995276936' 
   },
   {
     id: 1,
@@ -385,7 +385,7 @@ const propertiesImpData = [
     description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 2,
@@ -396,7 +396,7 @@ const propertiesImpData = [
     price: '• 1550,00',
     description: 'Flores in Natura medicinal importada de alta qualidade. 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 3,
@@ -407,7 +407,7 @@ const propertiesImpData = [
     price: '• 1750,00',
     description: 'Flores in Natura medicinal importada de alta qualidade - 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp1/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 4,
@@ -418,7 +418,7 @@ const propertiesImpData = [
     price: '• 1550,00',
     description: 'Flores in Natura medicinal importada de alta qualidade - 55% Indica - 45% Sativa.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrimp2/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 5,
@@ -429,7 +429,7 @@ const propertiesImpData = [
     price: '• 1250,00',
     description: 'Energético, Foco, Sem Psicoatividade. Flores in Natura ricas em CBD - 25% Indica 75% Sativa.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct1/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 6,
@@ -440,7 +440,7 @@ const propertiesImpData = [
     price: '• 1250,00',
     description: 'Relaxante, Dor, Ansiedade, Insônia. Flores In Natura Ricas em CBD - 80% Indica - 20% Sativa.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct2/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 7,
@@ -451,7 +451,7 @@ const propertiesImpData = [
     price: '• 1650,00',
     description: 'Aumento no Foco, Energia, Criatividade e melhora no humor. Flores In Natura Ricas em THCa - 70% Indica - 30% Sativa.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct3/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 8,
@@ -462,7 +462,7 @@ const propertiesImpData = [
     price: '• 1650,00',
     description: 'Promove o relaxamento, melhora o apetite e melhora o humor. Flores In Natura Ricas em THCa - 70% Sativa 30% Indica.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-flwrct4/'
+    link: 'https://wa.me/5561995276936'
 },
   {
     id: 38,
@@ -473,7 +473,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural e rico em terpenos. Sabores/Strains: Beethoven Sativa (Laranja), Formula One Sativa (Limão), Evergreen Híbrida (Lima), 100 Sheep Indica (Cereja), River Float Indica (Melancia).',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops2/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 39,
@@ -484,7 +484,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol, Canabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Blueberry. Indicação: Relaxamento, Insônia, Bruxismo, Tensão Muscular, Espasmos, Inflamações, Dor Crônica.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops3/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 40,
@@ -495,7 +495,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol, Canabigerol, Canabinocromeno e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Cranberry.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops4/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 41,
@@ -506,7 +506,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Raspberry.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops5/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 42,
@@ -517,7 +517,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabigerol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Strawberry. Indicações: Insônia, Falta de Energia, Depressão, TDHA.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops6/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 43,
@@ -528,7 +528,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol, Canabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Groselha.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops7/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 44,
@@ -539,7 +539,7 @@ const propertiesImpData = [
     price: '• 369,00',
     description: 'Extrato de cannabis tipo "Live Rosin" sem solvente rico em Tetrahidrocanabinol e Canabidiol diluído em 20 gomas sem aditivos químicos e veganas feitas a partir de pectina com sabor natural de Blackberry.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-drops8/'
+    link: 'https://wa.me/5561995276936'
 },
   {
     id: 45,
@@ -550,7 +550,7 @@ const propertiesImpData = [
     price: '• 889,90',
     description: 'Durma melhor com Midnight Blue Dream - 30mg THC, 10mg CBD e 10mg CBN. Gomas FullSpectrum premium.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gummblue/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 46,
@@ -561,7 +561,7 @@ const propertiesImpData = [
     price: '• 889,90',
     description: 'Relaxe seu dia com nossas gomas de frutas contêm 20mg Delta-8 THC de alta qualidade para sua rotina.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gummgreen/'
+    link: 'https://wa.me/5561995276936'
 },
   {
     id: 47,
@@ -573,7 +573,7 @@ const propertiesImpData = [
     description: 'Cada goma contém uma dose medida de 14mg de Delta-9, Δ-9 - 0,29%THCa - infundidas com Delta-9 de alta qualidade para',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-gummd9/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 48,
@@ -584,7 +584,7 @@ const propertiesImpData = [
     price: '• 279,90',
     description: ' As Gomas Cherry Vanilla D9 - 250mg de Delta-9, Δ-9 - 0,29%THCa. Essas deliciosas gomas têm um efeito incrível com sua mistura equilibrada',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-vnllgummd9/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 49,
@@ -595,7 +595,7 @@ const propertiesImpData = [
     price: '• 445,00',
     description: 'Gomas de Delta-9 com 30 mg oferecem uma dose precisa e consistente para quem busca uma experiência mais intensa de relaxamento e bem-estar.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-vegand9gumm/'
+    link: 'https://wa.me/5561995276936'
   },
   { id: 50, 
     images: ['/images/wsc-import-16.png'], 
@@ -605,7 +605,7 @@ const propertiesImpData = [
     price: '• 529,00', 
     description: ' Gomas veganas sabor Mix de Frutas - 60mg/unid. CBN para auxílio no sono.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-529/' 
+    link: 'https://wa.me/5561995276936' 
   },
   { id: 51, 
     images: ['/images/wsc-import-17.png'], 
@@ -615,7 +615,7 @@ const propertiesImpData = [
     price: '• 629,00', 
     description: ' Óleo de CBN de alta concentração com CBD 200mg/ml. Diluição em MCT.', 
     cta: 'IMPORT', 
-    link: 'https://ws-connectioncommerce.com/produto/wsc-629/' 
+    link: 'https://wa.me/5561995276936' 
   },  
 {
     id: 52,
@@ -626,7 +626,7 @@ const propertiesImpData = [
     price: '• 694,90',
     description: 'O óleo de 6000 mg corresponde a uma alta concentração de canabidiol full spectrum.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-genecbd6000/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 53,
@@ -637,7 +637,7 @@ const propertiesImpData = [
     price: '• 605,00',
     description: 'O óleo de CBD Full Spectrum reúne múltiplos canabinoides para o efeito comitiva.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-genecbd3000/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 54,
@@ -648,7 +648,7 @@ const propertiesImpData = [
     price: '• 659,90',
     description: 'Óleo focado em emagrecimento natural e controle de apetite com a combinação de THCV e CBD.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-genethcv/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 55,
@@ -659,7 +659,7 @@ const propertiesImpData = [
     price: '• 789,90',
     description: 'O Óleo de CBD + CBG 3000 mg (10%) da Alpha-Cat foi desenvolvido para oferecer um suporte natural ao corpo e à mente. Sua fórmula combina canabidiol (CBD) e canabigerol (CBG).',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbg3000/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 56,
@@ -670,7 +670,7 @@ const propertiesImpData = [
     price: '• 689,90',
     description: 'A Alpha-cat oferece a melhor qualidade de CBD, disponível em um concentrado de óleo de 10%. Nossos óleos de CBD de amplo espectro de 3000 mg são feitos de cânhamo europeu e têm garantia de serem livres de pesticidas.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd3000/'
+    link: 'https://wa.me/5561995276936'
 },
 {
     id: 57,
@@ -681,7 +681,7 @@ const propertiesImpData = [
     price: '• 849,90',
     description: 'Óleo de CBD de 6000 mg de qualidade de laboratório, misturado com azeite de oliva extravirgem orgânico da Provença. Disponível em frasco de 30 ml com concentração de óleo de 20%.',
     cta: 'IMPORT',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-alphacbd6000/'
+    link: 'https://wa.me/5561995276936'
 },
 
 /*{

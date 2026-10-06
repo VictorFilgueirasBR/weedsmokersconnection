@@ -14,7 +14,7 @@ const propertiesData = [
     price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/• oilncnl1/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const propertiesData = [
     price: '• 920,00', // R$ 800,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/• oilncnl2/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const propertiesData = [
     price: '• 420,00', // R$ 300,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/• oilncnl3/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const propertiesData = [
     price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/• oilncnl4/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const propertiesData = [
     price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/• oilncnl5/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const propertiesData = [
     price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/• oilncnl6/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const propertiesData = [
     price: '• 729,90',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flwrcrkd/'
+    link: 'https://wa.me/5561995276936'
   },
     {
     id: 8,
@@ -89,7 +89,7 @@ const propertiesData = [
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'PEDIR',
-    link: 'https://ws-connectioncommerce.com/produto/ws-flwrpuch/'
+    link: 'https://wa.me/5561995276936'
   },
   
 
