@@ -84,7 +84,18 @@ const propertiesData = [
     {
     id: 8,
     image: '/images/punch-ws.jpeg',
-    title: 'Punch Line | THC',
+    title: 'TTRS | THC',
+    location: '10g',
+    price: '• 789,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'PEDIR',
+    link: 'https://wa.me/5561995276936'
+  },
+  ,
+    {
+    id: 9,
+    image: '/images/wsc-flower-kk.png',
+    title: 'Creamsicle | THC',
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
