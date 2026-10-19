@@ -9,7 +9,7 @@ const propertiesUtilsData = [
     image: '/images/ws-life.png',
     title: 'WSC Consulta | ANVISA',
     location: 'R$ 400,00',
-    price: 'WSC-COMPLETE',
+    price: '• COMPLETE',
     description: (
   <>
     Renovação 6 meses para pacientes:
@@ -18,14 +18,14 @@ const propertiesUtilsData = [
   </>
 ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/702/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 2,
     image: '/images/ws-life.png',
     title: 'WSC | Frete Nacional',
     location: 'R$ 45,00',
-    price: 'WSC-JET-BR',
+    price: '• JET-BR',
    description: (
   <>
     Logística de transporte nacional.
@@ -34,14 +34,14 @@ const propertiesUtilsData = [
   </>
 ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-jet-br/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 3,
     image: '/images/ws-life.png',
     title: 'WSC | Frete Import',
     location: 'R$ 175,00',
-    price: 'WSC-JET-USA',
+    price: '• JET-USA',
     description: (
     <>
       Logística de importação facilitada.
@@ -50,14 +50,14 @@ const propertiesUtilsData = [
     </>
   ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-frete-import/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 4,
     image: '/images/ws-life.png',
     title: 'WSC | Import 50k',
     location: 'R$ 50.000,00',
-    price: 'WSC-50k',
+    price: '• 50k',
     description: (
   <>
     Logística de importação facilitada 700G.
@@ -66,14 +66,14 @@ const propertiesUtilsData = [
   </>
 ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-support50k/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 5,
     image: '/images/ws-life.png',
     title: 'WSC | Import 10k',
     location: 'R$ 10.000,00',
-    price: 'WSC-10k',
+    price: '• 10k',
     description: (
   <>
     Logística de importação facilitada 120G.
@@ -82,14 +82,14 @@ const propertiesUtilsData = [
   </>
 ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-support-b2c/'
+    link: 'https://wa.me/5561995276936'
   },
   {
     id: 6,
     image: '/images/ws-life.png',
     title: 'WSC | HC de Cultivo',
     location: 'R$ 35.000,00',
-    price: 'WSC-35k',
+    price: '• 35k',
     description: (
   <>
     Processo Completo
