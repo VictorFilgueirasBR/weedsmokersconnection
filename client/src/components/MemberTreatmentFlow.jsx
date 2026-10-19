@@ -103,7 +103,7 @@ export default function MemberTreatmentFlow() {
             <User size={30} strokeWidth={1.8} style={styles.icon} />
 
             <h3 style={styles.optionTitle}>
-              Opção 1: Com Médico
+              Siga a prescrição Médica
             </h3>
 
             <p style={styles.optionText}>
@@ -136,14 +136,13 @@ export default function MemberTreatmentFlow() {
             <Package size={30} strokeWidth={1.8} style={styles.icon} />
 
             <h3 style={styles.optionTitle}>
-              Opção 2: Com Fornecedor
+              Escolha direto no Catálogo
             </h3>
 
             <p style={styles.optionText}>
-              A partir do seu segundo pedido damos a liberdade para
-              que escolha um{" "}
-              <strong>FORNECEDOR LEGALIZADO</strong> na plataforma e
-              tenha acesso a um catálogo premium de{" "}
+              A partir do seu segundo pedido Escolha um{" "}
+              <strong>TRATAMENTO LEGALIZADO</strong> na plataforma e
+              tenha sua atualização de receituário{" "}
               <strong>
                 Gummies, Flores, Óleos e Extrações ricas em THC,
                 THCa, THCV, CBD, CBG, D-9 e D-8
