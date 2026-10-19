@@ -87,18 +87,18 @@ const propertiesUtilsData = [
   {
     id: 6,
     image: '/images/ws-life.png',
-    title: 'WSC | Import 20k',
-    location: 'R$ 20.000,00',
-    price: 'WSC-20k',
+    title: 'WSC | HC de Cultivo',
+    location: 'R$ 35.000,00',
+    price: 'WSC-35k',
     description: (
   <>
-    Logística de importação facilitada 250G.
+    Processo Completo
     <br />
-    Califórnia - Miami - Brasil
+    Jurídico - Médico - Agrônomo
   </>
 ),
     cta: 'Contratar',
-    link: 'https://ws-connectioncommerce.com/produto/wsc-support-20k/'
+    link: 'https://wa.me/5561995276936'
   }
 ];
 
