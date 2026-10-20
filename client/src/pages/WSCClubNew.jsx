@@ -13,6 +13,7 @@ import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
 import PropertiesUtils from "../components/PropertiesUtils";
 import PropertiesImp from "../components/PropertiesImp";
+import WSCCompliance from "../components/WSCCcompliance";
 
 /*
  * WSC CLUB ACCESS GATE
@@ -389,7 +390,7 @@ function AccessGate({ onUnlock }) {
           id="wsc-access-description"
           className="wsc-access-description"
         >
-          Esta área é protegida. Insira sua senha para acessar o WS Club.
+          ÁREA EXCLUSIVA PARA PACIENTES WS.
         </p>
 
         <form
@@ -560,7 +561,11 @@ export default function WSCClubNew() {
         <GlassCardNacional />
         <GlassCardImport />
 
+
+
         <Instruction />
+
+        <WSCCompliance />
 
         <PropertiesGrid id="properties-grid" />
 
