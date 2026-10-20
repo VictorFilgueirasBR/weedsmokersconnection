@@ -383,14 +383,14 @@ function AccessGate({ onUnlock }) {
         <p className="wsc-access-eyebrow">WS | CONNECTION</p>
 
         <h1 id="wsc-access-title" className="wsc-access-title">
-          Acesso restrito
+          ÁREA EXCLUSIVA
         </h1>
 
         <p
           id="wsc-access-description"
           className="wsc-access-description"
         >
-          ÁREA EXCLUSIVA PARA PACIENTES WS.
+          ACESSO RESTRITO PARA PACIENTES WS.
         </p>
 
         <form
