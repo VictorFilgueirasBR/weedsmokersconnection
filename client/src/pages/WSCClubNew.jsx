@@ -22,7 +22,7 @@ import WSCCompliance from "../components/WSCCcompliance";
  * A senha abaixo é validada no frontend.
  * Para segurança real, implemente validação no servidor.
  */
-const WSC_CLUB_PASSWORD = "vaitomando!Meu$&gg#hashnapromo!";
+const WSC_CLUB_PASSWORD = "!W$&gg#hashnapromo!";
 
 const WSC_CLUB_IMAGE = "/images/first-start.png";
 
