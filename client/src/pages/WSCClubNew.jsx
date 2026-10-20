@@ -1,5 +1,5 @@
 
- // src/pages/WSCClubNew.jsx
+// src/pages/WSCClubNew.jsx
 import React, { useState, useEffect, useRef } from "react";
 
 import HeroHashLegal from "../components/HeroHashLegal";
@@ -17,11 +17,11 @@ import PropertiesImp from "../components/PropertiesImp";
 /*
  * WSC CLUB ACCESS GATE
  *
- * IMPORTANTE:
- * Esta é uma proteção de interface no frontend.
- * Não utilizar como controle de acesso para dados privados.
+ * ATENÇÃO:
+ * A senha abaixo é validada no frontend.
+ * Para segurança real, implemente validação no servidor.
  */
-const WSC_CLUB_PASSWORD = "wwwww1516";
+const WSC_CLUB_PASSWORD = "vaitomando1717!";
 
 const WSC_CLUB_IMAGE = "/images/first-start.png";
 
@@ -37,7 +37,8 @@ const WSC_CLUB_STYLES = `
     z-index: 2147483000;
     width: 100%;
     height: 100%;
-    min-height: 100dvh;
+    height: 100dvh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,11 +144,6 @@ const WSC_CLUB_STYLES = `
     margin: 0;
   }
 
-  #wsc-access-root .wsc-access-input-wrap {
-    position: relative;
-    width: 100%;
-  }
-
   #wsc-access-root .wsc-access-input {
     display: block;
     width: 100%;
@@ -217,11 +213,6 @@ const WSC_CLUB_STYLES = `
     outline-offset: 4px;
   }
 
-  #wsc-access-root .wsc-access-button:disabled {
-    opacity: 0.65;
-    cursor: wait;
-  }
-
   #wsc-access-root .wsc-access-error {
     margin: 0;
     padding: 10px 12px;
@@ -234,7 +225,8 @@ const WSC_CLUB_STYLES = `
     text-align: left;
   }
 
-  #wsc-access-root .wsc-access-error[hidden] {
+  #wsc-access-root .wsc-access-error[hidden],
+  #wsc-access-root .wsc-access-image-error[hidden] {
     display: none;
   }
 
@@ -263,8 +255,18 @@ const WSC_CLUB_STYLES = `
     text-align: center;
   }
 
-  #wsc-access-root .wsc-access-image-error[hidden] {
-    display: none;
+  /*
+   * ÂNCORA DO PRIMEIRO COMPONENTE
+   * Evita margem superior e permite o posicionamento no início do Club.
+   */
+  #wsc-club-top-anchor {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-margin-top: 0 !important;
+    scroll-snap-align: start;
   }
 
   @keyframes wscGateEnter {
@@ -395,30 +397,25 @@ function AccessGate({ onUnlock }) {
           onSubmit={handleSubmit}
           autoComplete="on"
         >
-          <div className="wsc-access-input-wrap">
-            <input
-              ref={inputRef}
-              className="wsc-access-input"
-              type={showPassword ? "text" : "password"}
-              name="wsc-club-password"
-              placeholder="Digite sua senha"
-              aria-label="Senha de acesso ao WS Club"
-              aria-invalid={Boolean(error)}
-              aria-describedby={error ? "wsc-access-error" : undefined}
-              autoComplete="current-password"
-              value={password}
-              onChange={(event) => {
-                setPassword(event.target.value);
-                if (error) setError("");
-              }}
-              required
-            />
-          </div>
+          <input
+            ref={inputRef}
+            className="wsc-access-input"
+            type={showPassword ? "text" : "password"}
+            name="wsc-club-password"
+            placeholder="Digite sua senha"
+            aria-label="Senha de acesso ao WS Club"
+            aria-invalid={Boolean(error)}
+            aria-describedby={error ? "wsc-access-error" : undefined}
+            autoComplete="current-password"
+            value={password}
+            onChange={(event) => {
+              setPassword(event.target.value);
+              if (error) setError("");
+            }}
+            required
+          />
 
-          <button
-            className="wsc-access-button"
-            type="submit"
-          >
+          <button className="wsc-access-button" type="submit">
             Desbloquear acesso
             <span aria-hidden="true">↗</span>
           </button>
@@ -467,7 +464,13 @@ export default function WSCClubNew() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  /*
+   * Bloqueia o scroll durante a autenticação e restaura
+   * o valor original quando o componente é desmontado.
+   */
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
     if (!isAuthenticated) {
       document.body.style.overflow = "hidden";
     } else {
@@ -475,7 +478,55 @@ export default function WSCClubNew() {
     }
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isAuthenticated]);
+
+  /*
+   * APÓS DESBLOQUEAR:
+   * 1. Aguarda o conteúdo protegido aparecer no DOM.
+   * 2. Posiciona a janela no início do documento.
+   * 3. Leva a âncora diretamente ao primeiro componente.
+   *
+   * O segundo requestAnimationFrame ajuda a garantir que
+   * o layout já esteja renderizado antes do posicionamento.
+   */
+  useEffect(() => {
+    if (!isAuthenticated) return undefined;
+
+    let secondFrame = null;
+
+    const firstFrame = window.requestAnimationFrame(() => {
+      secondFrame = window.requestAnimationFrame(() => {
+        const anchor = document.getElementById(
+          "wsc-club-top-anchor"
+        );
+
+        if (!anchor) {
+          window.scrollTo(0, 0);
+          return;
+        }
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "auto",
+        });
+
+        anchor.scrollIntoView({
+          behavior: "auto",
+          block: "start",
+          inline: "nearest",
+        });
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+
+      if (secondFrame !== null) {
+        window.cancelAnimationFrame(secondFrame);
+      }
     };
   }, [isAuthenticated]);
 
@@ -484,7 +535,9 @@ export default function WSCClubNew() {
       <style>{WSC_CLUB_STYLES}</style>
 
       {!isAuthenticated && (
-        <AccessGate onUnlock={() => setIsAuthenticated(true)} />
+        <AccessGate
+          onUnlock={() => setIsAuthenticated(true)}
+        />
       )}
 
       <div
@@ -495,7 +548,10 @@ export default function WSCClubNew() {
           display: isAuthenticated ? undefined : "none",
         }}
       >
-        <FirstClub />
+        {/* ÂNCORA: TOPO DO PRIMEIRO COMPONENTE */}
+        <div id="wsc-club-top-anchor">
+          <FirstClub />
+        </div>
 
         <MemberTreatmentFlow />
 

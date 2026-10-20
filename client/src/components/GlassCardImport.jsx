@@ -11,7 +11,7 @@ const WallStyle = () => {
 
         <div className="overlay-text">
           <h2>Catálogo Importados</h2>
-          <p>Emitimos sua autorização de importação ANVISA no GOV.</p>
+          <p>Com autorização de importação ANVISA pelo GOV.</p>
         </div>
       </div>
     </section>
