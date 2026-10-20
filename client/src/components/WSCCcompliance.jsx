@@ -170,7 +170,7 @@ export default function WSCCcompliance() {
       }
 
       .wscc-compliance__title {
-        font-size: 24px;
+        font-size: 10px;
       }
 
       .wscc-compliance__text {
