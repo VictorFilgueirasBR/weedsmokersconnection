@@ -174,7 +174,7 @@ export default function WSCCcompliance() {
       }
 
       .wscc-compliance__text {
-        font-size: 13px;
+        font-size: 10px;
         line-height: 1.65;
       }
     }
@@ -219,13 +219,14 @@ export default function WSCCcompliance() {
           className="wscc-compliance__title"
           id="wscc-compliance-title"
         >
-          Importante: Prescrição Médica Obrigatória
+          IMPORTANTE: PRESCRIÇÃO MÉDICA OBRIGATÓRIA
         </h2>
 
         <p className="wscc-compliance__text">
-          Todos os medicamentos canabinoides requerem prescrição médica válida
-          e certificado ANVISA conforme RDC 660/2022. Para fazer pedidos, é
-          necessário ter uma conta e estar autenticado na área do paciente.
+          TODOS OS MEDICAMENTOS CANABINOIDES REQUEREM PRESCRIÇÃO 
+          MÉDICA VÁLIDA E CERTIFICADO ANVISA CONFORME RDC 660/2022. 
+          PARA FAZER PEDIDOS, É NECESSÁRIO TER UMA CONTA E ESTAR 
+          AUTENTICADO NA ÁREA DO PACIENTE.
         </p>
       </div>
     </section>
