@@ -88,25 +88,11 @@ const Header = ({ onShowPopup }) => {
 
       <nav ref={menuRef} className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         
-        {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">WS | ACCOUNT</Link>}
+
+        {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/" onClick={handleLinkClick} translate="no" lang="en">WS | HOME</Link>}
+        {!isLoggedIn && <Link to="https://ws-connectioncommerce.com/minha-conta/" onClick={handleLinkClick} translate="no" lang="en">WS | ACESS</Link>}
         
-        {/* Âncoras internas para as seções da página */}
-        <a 
-          href="#properties-grid" 
-          onClick={(e) => handleAnchorClick(e, 'properties-grid')} 
-          translate="no" 
-          lang="en"
-        >
-          WS | NACIONAL
-        </a>
-        <a 
-          href="#properties-imp" 
-          onClick={(e) => handleAnchorClick(e, 'properties-imp')} 
-          translate="no" 
-          lang="en"
-        >
-          WS | IMPORTS
-        </a>
+        
 
         
         
