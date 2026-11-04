@@ -11,7 +11,6 @@ import Instruction from "../components/Instruction";
 import IceSection from "../components/IceSection";
 import ContactsModal from "../components/ContactsModal";
 import PropertiesGrid from "../components/PropertiesGrid";
-import PropertiesUtils from "../components/PropertiesUtils";
 import PropertiesImp from "../components/PropertiesImp";
 import WSCCompliance from "../components/WSCCcompliance";
 
@@ -571,7 +570,6 @@ export default function WSCClubNew() {
 
         <PropertiesImp id="properties-imp" />
 
-        <PropertiesUtils id="properties-utils" />
 
         <IceSection />
 
