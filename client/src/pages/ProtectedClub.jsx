@@ -96,7 +96,6 @@ export default function WSCClub() {
 
       <PropertiesImp id="properties-imp" />
 
-      <PropertiesUtils id="properties-utils" />
 
 
       <IceSection />
