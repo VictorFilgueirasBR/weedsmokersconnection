@@ -114,8 +114,8 @@ export default function MemberTreatmentFlow() {
               com COAS e autorizadas pela ANVISA.
               <strong>
                 {" "}
-                Sempre recomendamos que faça sua aquisição conosco
-                para garantir a segurança do seu tratamento.
+                Sempre recomendamos que faça sua consultoria e aquisição diretamente conosco
+                para garantir a segurança do seu tratamento (Garantia WS).
               </strong>
             </p>
           </motion.div>
