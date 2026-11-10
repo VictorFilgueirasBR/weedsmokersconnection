@@ -13,7 +13,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -24,7 +24,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 920,00', // R$ 800,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -35,7 +35,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 420,00', // R$ 300,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -46,7 +46,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -57,7 +57,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -68,7 +68,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   {
@@ -78,7 +78,7 @@ const propertiesData = [
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
     {
@@ -88,7 +88,7 @@ const propertiesData = [
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   ,
@@ -99,7 +99,7 @@ const propertiesData = [
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936'
   },
   
@@ -126,7 +126,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 710,00', 
     description: 'Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd10/'
   },
   {
@@ -137,7 +137,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 1400,00', 
     description: '}Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd20/'
   },
   {
@@ -148,7 +148,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 2700,00', 
     description: 'Outdoor rica em CBD (alto teor de 29%) e níveis muito baixos de THC. Seus benefícios terapêuticos incluem: alívio de ansiedade, tensões e estresse; auxílio no sono revigorante e reparador; redução de inflamações; e promoção de bem-estar e clareza mental. Estritamente para uso terapêutico com orientação médica.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrscbd40/'
   },
 
@@ -163,7 +163,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 710,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc10/'
   },
   {
@@ -174,7 +174,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 1400,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc20/'
   },
   {
@@ -185,7 +185,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 2700,00', 
     description: 'Genética híbrida (Sativa/Indica) cultivada em outdoor. Possui alta concentração de THC (entre 15% a 20%) e baixo teor de CBD. O uso desta genética é estritamente para uso terapêutico com a devida orientação médica e acompanhamento profissional de saúde qualificado.',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/ws-flrsthc40/'
   },
    {
@@ -276,7 +276,7 @@ const propertiesData = [
     deliveryTime: '3-14 dias úteis',
     price: '• 869,90',
     description: 'Fullspectrum ICEOLATOR THC HANDMADE. (Malha de 45 micras).',
-    cta: 'PEDIR',
+    cta: 'NACIONAL',
     link: 'https://ws-connectioncommerce.com/produto/• ncnl45u/'
   }*/
 ];
