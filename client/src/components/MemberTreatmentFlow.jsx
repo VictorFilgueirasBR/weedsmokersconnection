@@ -115,7 +115,7 @@ export default function MemberTreatmentFlow() {
               <strong>
                 {" "}
                 Sempre recomendamos que faça sua consultoria e aquisição diretamente conosco
-                para garantir a segurança do seu tratamento (Garantia WS).
+                para garantir a segurança do seu tratamento. (Garantia WS | Connection)
               </strong>
             </p>
           </motion.div>
