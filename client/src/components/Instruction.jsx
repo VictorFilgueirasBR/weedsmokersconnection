@@ -6,7 +6,7 @@ import { FaCommentDots } from "react-icons/fa";
 
 export default function InstructionGlass({
   title = "Bem vindo ao CLUB",
-  subtitle = "Temos grupo cryptografado",
+  subtitle = "Conteúdo educacional e consultoria",
   whatsappUrl = "https://wa.me/5561995276936",
   
   // URL aponta para o Signal, mantida a variável telegramUrl por compatibilidade
@@ -294,7 +294,7 @@ export default function InstructionGlass({
               }}
             >
               <FaCommentDots size={20} />
-              Encrypted Chat
+              Consultoria Especializada
             </button>
           </div>
         </div>
