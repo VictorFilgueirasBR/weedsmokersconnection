@@ -220,8 +220,32 @@ const propertiesImpData = [
     badge: 'MAIS VENDIDO',
     link: 'https://wa.me/5561995276936'
 },
-  {
+{
     id: 23,
+    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
+    title: 'Hemp Oil  Badder Full-Spectrum 36250mg',
+    location: '50g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-4750,00',
+    description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
+    cta: 'IMPORT',
+    badge: 'Mais Vendido',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil50/'
+},
+{
+    id: 24,
+    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
+    title: 'Hemp Oil  Badder Full-Spectrum',
+    location: '100g',
+    deliveryTime: '15-35 dias úteis',
+    price: 'WSC-9000,00',
+    description: 'Extração Premium Full-Spectrum de Cannabis em condições de pré-venda exclusiva. Produto de qualidade premium, extração avançada, 100% natural e sem aditivos. Padrão Lineage com acesso limitado.',
+    cta: 'IMPORT',
+    badge: 'Mais Vendido',
+    link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil100/'
+},
+  {
+    id: 25,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold • THCa',
     location: '5g',
@@ -229,11 +253,10 @@ const propertiesImpData = [
     price: '• 989,00',
     description: 'HEMP OIL Budder THC/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
-    badge: 'Mais Vendido',
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 24,
+    id: 26,
     images: ['/images/rosin-flower.png'],
     title: 'Hemp Oil Gold • THCa',
     location: '10g',
@@ -241,11 +264,10 @@ const propertiesImpData = [
     price: '• 1889,00',
     description: 'HEMP OIL Budder THC/THCa. Extração Premium com textura budder e coloração dourada intensa - OG KUSH.',
     cta: 'IMPORT',
-    badge: 'Mais Vendido',
     link: 'https://wa.me/5561995276936'
   },
   {
-    id: 25,
+    id: 27,
     images: ['/images/cbd-isolate-white.jpg', '/images/cbd-isolate-white1.jpg'],
     title: 'Isolate Powder • CBD',
     location: '3g',
@@ -255,7 +277,7 @@ const propertiesImpData = [
     cta: 'IMPORT',
     link: 'https://wa.me/5561995276936'
   },
-  { id: 26, 
+  { id: 28, 
     images: ['/images/wsc-import-11.png'], 
     title: 'Diamond Sauce Papaya • THCa', 
     location: '10g', 
@@ -265,7 +287,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 27, 
+  { id: 29, 
     images: ['/images/wsc-import-11.png'], 
     title: 'Diamond Sauce OG Kush • THCa', 
     location: '10g', 
@@ -275,7 +297,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 28, 
+  { id: 30, 
     images: ['/images/wsc-import-11.png'], 
     title: 'Diamond Sauce Diesel • THCa', 
     location: '10g', 
@@ -285,7 +307,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 29, 
+  { id: 31, 
     images: ['/images/wsc-import-12.png'], 
     title: 'Diamond Zkittlez • CBD', 
     location: '10g', 
@@ -295,7 +317,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 30, 
+  { id: 32, 
     images: ['/images/wsc-import-12.png'], 
     title: 'Diamond Berry White • CBD', 
     location: '10g', 
@@ -305,7 +327,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 31, 
+  { id: 33, 
     images: ['/images/wsc-import-12.png'], 
     title: 'Diamond Kush Mints • CBD', 
     location: '10g', 
@@ -315,7 +337,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 32, 
+  { id: 34, 
     images: ['/images/wsc-import-13.png'], 
     title: 'Diamond Gelato • D8', 
     location: '10g', 
@@ -325,7 +347,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 33, 
+  { id: 35, 
     images: ['/images/wsc-import-13.png'], 
     title: 'Diamond Grape Ape • D8', 
     location: '10g', 
@@ -335,7 +357,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 34, 
+  { id: 36, 
     images: ['/images/wsc-import-13.png'], 
     title: 'Diamond Durban Poison • D8', 
     location: '10g', 
@@ -345,7 +367,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 35, 
+  { id: 37, 
     images: ['/images/wsc-import-14.png'], 
     title: 'Live Rosin Blue Dream • THCa', 
     location: '10g', 
@@ -355,7 +377,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 36, 
+  { id: 38, 
     images: ['/images/wsc-import-14.png'], 
     title: 'Live Rosin Watermelon • THCa', 
     location: '10g', 
@@ -365,7 +387,7 @@ const propertiesImpData = [
     cta: 'IMPORT', 
     link: 'https://wa.me/5561995276936' 
   },
-  { id: 37, 
+  { id: 39, 
     images: ['/images/wsc-import-14.png'], 
     title: 'Live Rosin Maui Wowie • THCa', 
     location: '10g', 
