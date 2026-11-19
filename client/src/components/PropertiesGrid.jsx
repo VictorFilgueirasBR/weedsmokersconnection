@@ -14,7 +14,7 @@ const propertiesData = [
     price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 3000mg em frasco de 30ml.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const propertiesData = [
     price: '• 920,00', // R$ 800,00 + 120,00
     description: 'Sem os efeitos psicoativos do THC. Promove alívio para ansiedade, dor, inflamação e melhora do sono. Óleo Medicinal de CBD Full Spectrum, 6000mg em frasco de 30ml.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const propertiesData = [
     price: '• 420,00', // R$ 300,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 600mg em frasco de 30ml.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const propertiesData = [
     price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Indicado para aqueles interessados em uma abordagem canabinóide mais completa. Óleo Medicinal de THC Full Spectrum, 1200mg em frasco de 30ml.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const propertiesData = [
     price: '• 520,00', // R$ 400,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação contendo 30mg/ml de CBD e 30mg/ml de THC, totalizando 1800mg em frasco de 30ml.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const propertiesData = [
     price: '• 620,00', // R$ 500,00 + 120,00
     description: 'Ideal para tratamentos complexos onde a sinergia entre CBD e THC é desejada. Formulação de alta concentração contendo 80mg/ml de CBD e 40mg/ml de THC, totalizando 3600mg em frasco de 30ml.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const propertiesData = [
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
     {
     id: 8,
@@ -89,7 +89,7 @@ const propertiesData = [
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   ,
     {
@@ -100,7 +100,7 @@ const propertiesData = [
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'NACIONAL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   
 
@@ -117,7 +117,7 @@ const propertiesData = [
     price: '• 710,00', 
     description: 'Inflorescência - Cultivo Outdoor 30% Sativa - 70% Indica, 19% THC. ',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
     id: 7,
     image: '/images/buds-cbd1.jpeg', 
@@ -196,7 +196,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 90 micras).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 14,
@@ -206,7 +206,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 15,
@@ -216,7 +216,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Indica - 40% Indica (23% THC).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 16,
@@ -226,7 +226,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Fullspectrum Hash tipo ICE THC HANDMADE. (Malha de 25 micras).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 17,
@@ -236,7 +236,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Fornecedor Nacional de Flores com THC com buds pequenos. (Entrega qualidade porém buds pequenos).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 18,
@@ -246,7 +246,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Indoor 63% Sativa - 37% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 19,
@@ -256,7 +256,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 20,
@@ -266,7 +266,7 @@ const propertiesData = [
     price: '• SOLDOUT',
     description: 'Inflorescência - Cultivo Outdoor 34% Sativa - 66% Indica (24% THC).',
     cta: 'INDISPONÍVEL',
-    link: 'https://wa.me/5561995276936'
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
   },
   {
     id: 21,
