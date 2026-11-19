@@ -5,7 +5,7 @@ import * as THREE from "three";
 import { FaCommentDots } from "react-icons/fa";
 
 export default function InstructionGlass({
-  title = "Bem vindo ao CLUB",
+  title = "WS | CONNECTION",
   subtitle = "Conteúdo educacional e consultoria",
   whatsappUrl = "https://wa.me/5561995276936",
   
