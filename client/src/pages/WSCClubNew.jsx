@@ -449,7 +449,7 @@ function AccessGate({ onUnlock }) {
 
         <p className="wsc-access-footer">
           <span aria-hidden="true">●</span>
-          WS CLUB · ACCESS CONTROL
+          WS ACCESS CONTROL
         </p>
       </section>
 
