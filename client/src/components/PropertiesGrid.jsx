@@ -73,7 +73,7 @@ const propertiesData = [
   },
   {
     id: 7,
-    image: '/images/wsc-corked.png',
+    image: '/images/cnslt-ncnl.jpg',
     title: 'Corked | THC',
     location: '10g',
     price: '• 789,90',
@@ -83,7 +83,7 @@ const propertiesData = [
   },
     {
     id: 8,
-    image: '/images/punch-ws.jpeg',
+    image: '/images/cnslt-ncnl.jpg',
     title: 'TTRS | THC',
     location: '10g',
     price: '• 789,90',
@@ -94,7 +94,7 @@ const propertiesData = [
   ,
     {
     id: 9,
-    image: '/images/wsc-flower-kk.png',
+    image: '/images/cnslt-ncnl.jpg',
     title: 'Creamsicle | THC',
     location: '10g',
     price: '• 789,90',
