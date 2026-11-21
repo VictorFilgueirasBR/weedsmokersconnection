@@ -140,7 +140,7 @@ export default function MemberTreatmentFlow() {
             </h3>
 
             <p style={styles.optionText}>
-              Agora que você é paciente  pode escolher um{" "}
+              Agora que você é paciente pode escolher um{" "}
               <strong>TRATAMENTO LEGALIZADO</strong> na plataforma e
               tenha sua atualização de receituário{" "}
               <strong>
