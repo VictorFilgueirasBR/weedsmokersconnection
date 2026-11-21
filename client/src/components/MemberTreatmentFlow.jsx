@@ -147,10 +147,10 @@ export default function MemberTreatmentFlow() {
                 Gummies, Flores, Óleos e Extrações ricas em THC,
                 THCa, THCV, CBD, CBG, D-9 e D-8
               </strong>{" "}
-              (Fresh Frozen, Hemp Oil, Bubble Hash, Rosin, Wax,
-              Full Spectrum e Diamonds).
-              Para fornecimento de terceiros, você deverá solicitar
-              atualizações das prescrições para a empresa responsável
+              (Fresh Frozen, Hemp Oil, Bubble Hash, Rosin, Crumble,
+              Full Spectrum, Diamonds e mais).
+              Para fornecimento de terceiros, o paciente deve solicitar 
+              atualização das prescrições para a empresa responsável
               pela aquisição.
             </p>
           </motion.div>
