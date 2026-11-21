@@ -557,13 +557,16 @@ export default function WSCClubNew() {
 
         <HeroHashLegal />
 
-        <GlassCardNacional />
-        <GlassCardImport />
+       
 
 
         <WSCCompliance />
 
+        <GlassCardNacional />
+
         <PropertiesGrid id="properties-grid" />
+
+        <GlassCardImport />
 
         <PropertiesImp id="properties-imp" />
 
