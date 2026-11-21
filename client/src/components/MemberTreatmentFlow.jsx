@@ -107,7 +107,7 @@ export default function MemberTreatmentFlow() {
             </h3>
 
             <p style={styles.optionText}>
-              Agende a sua consulta com um dos{" "}
+              Agora que fez sua consulta com um dos{" "}
               <strong>Médicos colaboradores WS</strong>.
               Eles prescrevem todo nosso catálogo de aquisição,
               garantindo qualidade e acesso seguro às medicações
@@ -115,7 +115,7 @@ export default function MemberTreatmentFlow() {
               <strong>
                 {" "}
                 Sempre recomendamos que faça sua consultoria e aquisição diretamente conosco
-                para garantir a segurança do seu tratamento. (Garantia)
+                para garantir a segurança do seu tratamento. (Garantia WS)
               </strong>
             </p>
           </motion.div>
@@ -140,7 +140,7 @@ export default function MemberTreatmentFlow() {
             </h3>
 
             <p style={styles.optionText}>
-              A partir do seu segundo pedido Escolha um{" "}
+              Agora que você é paciente  pode escolher um{" "}
               <strong>TRATAMENTO LEGALIZADO</strong> na plataforma e
               tenha sua atualização de receituário{" "}
               <strong>
@@ -161,7 +161,7 @@ export default function MemberTreatmentFlow() {
           <strong>
             tratamentos personalizados, com máxima qualidade
           </strong>
-          , utilizando THC, THCa, CBD, Flores Indicas, Sativas e
+          , utilizando THC, THCa, CBD, em forma de: Extratos, Óleos e Flores Indicas, Sativas e
           Híbridas de forma legal, simples, tranquila e segura.
         </motion.p>
       </motion.div>
