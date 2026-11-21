@@ -186,8 +186,8 @@ const propertiesImpData = [
   },
   {
     id: 477,
-    images: [ '/images/hmp-caps-fresh.jpg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg  05 Caps',
+    images: [ '/images/hmp-caps-fresh.jpg', '/images/caps-fresh.jpg'],
+    title: 'Hemp Capsule  Fresh Purified 05 Caps',
     location: '5g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-989,70',
@@ -198,8 +198,8 @@ const propertiesImpData = [
 },
 {
     id: 478,
-    images: [ '/images/hmp-caps-fresh.jpg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 10 Caps',
+    images: [ '/images/hmp-caps-fresh.jpg', '/images/caps-fresh.jpg'],
+    title: 'Hemp Capsule Fresh Purified 10 Caps',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-1.897,90',
@@ -210,8 +210,8 @@ const propertiesImpData = [
 },
 {
     id: 479,
-    images: [ '/images/hmp-caps-fresh.jpg'],
-    title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 20 Caps',
+    images: [ '/images/hmp-caps-fresh.jpg', '/images/caps-fresh.jpg'],
+    title: 'Hemp Capsule Fresh Purified 20 Caps',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-3589,70',
