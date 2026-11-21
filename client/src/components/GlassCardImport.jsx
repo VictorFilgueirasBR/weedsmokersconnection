@@ -10,7 +10,7 @@ const WallStyle = () => {
         <img src="/images/hash-legalizado-anvisa26.jpg" alt="Wall Background" />
 
         <div className="overlay-text">
-          <h2>Catálogo Importados</h2>
+          <h2>Catálogo Importado</h2>
           <p>Com autorização de importação ANVISA pelo GOV.</p>
         </div>
       </div>
