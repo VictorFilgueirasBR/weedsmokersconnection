@@ -561,9 +561,6 @@ export default function WSCClubNew() {
         <GlassCardImport />
 
 
-
-        <Instruction />
-
         <WSCCompliance />
 
         <PropertiesGrid id="properties-grid" />
@@ -572,6 +569,8 @@ export default function WSCClubNew() {
 
 
         <IceSection />
+
+        <Instruction />
 
         {isContactsOpen && (
           <ContactsModal
