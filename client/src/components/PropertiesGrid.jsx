@@ -74,7 +74,7 @@ const propertiesData = [
   {
     id: 7,
     image: '/images/cnslt-ncnl.jpg',
-    title: 'Corked | THC',
+    title: 'Corked • THC',
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 60% Sativa - 40% Indica, 24% THC.',
@@ -84,7 +84,7 @@ const propertiesData = [
     {
     id: 8,
     image: '/images/cnslt-ncnl.jpg',
-    title: 'TTRS | THC',
+    title: 'TTRS • THC',
     location: '10g',
     price: '• 789,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
@@ -95,9 +95,53 @@ const propertiesData = [
     {
     id: 9,
     image: '/images/cnslt-ncnl.jpg',
-    title: 'Creamsicle | THC',
+    title: 'Creamsicle • THC',
     location: '10g',
     price: '• 789,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'NACIONAL',
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
+  },
+  ,
+    {
+    id: 10,
+    image: '/images/cnslt-ncnl.jpg',
+    title: 'Grape Pie • THC',
+    location: '10g',
+    price: '• 789,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'NACIONAL',
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
+  },
+  ,
+    {
+    id: 11,
+    image: '/images/cnslt-ncnl.jpg',
+    title: 'Mandarina OG • THC',
+    location: '10g',
+    price: '• 689,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'NACIONAL',
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
+  },
+  ,
+    {
+    id: 12,
+    image: '/images/cnslt-ncnl.jpg',
+    title: 'Bubba - 25K • THC',
+    location: '10g',
+    price: '• 689,90',
+    description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
+    cta: 'NACIONAL',
+    link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
+  },
+  ,
+    {
+    id: 13,
+    image: '/images/cnslt-ncnl.jpg',
+    title: 'White Window • THC',
+    location: '10g',
+    price: '• 689,90',
     description: 'Inflorescência - Cultivo Outdoor 47% Sativa - 53% Indica, 24% THC.',
     cta: 'NACIONAL',
     link: 'https://wa.me/5561995276936?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20aquisi%C3%A7%C3%A3o.%20Como%20prosseguir?'
