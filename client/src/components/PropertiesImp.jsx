@@ -223,11 +223,11 @@ const propertiesImpData = [
 {
     id: 23,
     images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
-    title: 'Hemp Oil  Badder Full-Spectrum 36250mg',
+    title: 'Hemp Oil  Badder Full-Spectrum',
     location: '50g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-4750,00',
-    description: 'Alcance o equilíbrio máximo com o nosso Hemp Oil Full-Spectrum. (BADDER) Esta fórmula premium utiliza todo o potencial da planta para garantir um bem-estar profundo e eficaz. Rico em compostos naturais e desenvolvido com cânhamo de alta qualidade, nosso óleo de alta potência oferece o suporte ideal para o corpo e a mente com total pureza e segurança. Purity Standards: Contains less than 0.3% Delta 9 THC, organic non-GMO hemp oil, triple lab tested for purity, no artificial additives used, highest pharmaceutical grade CBD.',
+    description: 'Extração Premium Full-Spectrum 7250mg. Produto de qualidade 100% natural e sem aditivos. Padrão Lineage com acesso limitado.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil50/'
@@ -239,7 +239,7 @@ const propertiesImpData = [
     location: '100g',
     deliveryTime: '15-35 dias úteis',
     price: 'WSC-9000,00',
-    description: 'Extração Premium Full-Spectrum de Cannabis em condições de pré-venda exclusiva. Produto de qualidade premium, extração avançada, 100% natural e sem aditivos. Padrão Lineage com acesso limitado.',
+    description: 'Extração Premium Full-Spectrum 7250mg. Produto de qualidade 100% natural e sem aditivos. Padrão Lineage com acesso limitado.',
     cta: 'IMPORT',
     badge: 'Mais Vendido',
     link: 'https://ws-connectioncommerce.com/produto/wsc-hmpoil100/'
