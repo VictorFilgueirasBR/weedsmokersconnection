@@ -186,7 +186,7 @@ const propertiesImpData = [
   },
   {
     id: 477,
-    images: [ '/images/freshq-w.jpeg'],
+    images: [ '/images/hmp-caps-fresh.jpg'],
     title: 'Hemp Capsule  Fresh-Frozen Purified 120mg  05 Caps',
     location: '5g',
     deliveryTime: '15-35 dias úteis',
@@ -198,7 +198,7 @@ const propertiesImpData = [
 },
 {
     id: 478,
-    images: [ '/images/freshq-w.jpeg'],
+    images: [ '/images/hmp-caps-fresh.jpg'],
     title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 10 Caps',
     location: '10g',
     deliveryTime: '15-35 dias úteis',
@@ -210,7 +210,7 @@ const propertiesImpData = [
 },
 {
     id: 479,
-    images: [ '/images/freshq-w.jpeg'],
+    images: [ '/images/hmp-caps-fresh.jpg'],
     title: 'Hemp Capsule  Fresh-Frozen Purified 120mg 20 Caps',
     location: '20g',
     deliveryTime: '15-35 dias úteis',
@@ -222,7 +222,7 @@ const propertiesImpData = [
 },
 {
     id: 23,
-    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
+    images: ['/images/hmp-oil-badder.jpg', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum',
     location: '50g',
     deliveryTime: '15-35 dias úteis',
@@ -234,7 +234,7 @@ const propertiesImpData = [
 },
 {
     id: 24,
-    images: ['/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
+    images: ['/images/hmp-oil-badder.jpg', '/images/hmpoilq-w.jpeg', '/images/hmpoilq1-w.jpeg' ],
     title: 'Hemp Oil  Badder Full-Spectrum',
     location: '100g',
     deliveryTime: '15-35 dias úteis',
