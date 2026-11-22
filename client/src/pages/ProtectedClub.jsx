@@ -88,7 +88,6 @@ export default function WSCClub() {
       <GlassCardNacional />
       <GlassCardImport />
 
-      <Instruction />
 
       {/* IDs internos para suporte às âncoras */}
       <PropertiesGrid id="properties-grid" />
@@ -99,6 +98,8 @@ export default function WSCClub() {
 
 
       <IceSection />
+
+      <Instruction />
 
 
       {isContactsOpen && (
